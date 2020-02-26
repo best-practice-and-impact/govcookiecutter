@@ -1,4 +1,4 @@
-.PHONY: requirements example_build
+.PHONY: requirements docs example_build
 
 .DEFAULT_GOAL := help
 
@@ -7,11 +7,16 @@ requirements:
 	python3 -m pip install -U pip setuptools
 	python3 -m pip install -r requirements.txt
 
+## Compile the Sphinx documentation in HTML format in the `docs/_build` folder
+docs: requirements
+	$(MAKE) -C docs html
+
 ## Test build the cookiecutter template in the `example_build` folder - note this will delete any existing example build
 example_build: requirements
 	if [ ! -d "./example_build" ]; then mkdir ./example_build; fi
 	if [ -d "./example_build/your-new-project-name" ]; then rm -rf ./example_build/your-new-project-name; fi
 	python3 -m cookiecutter . -o ./example_build --no-input
+
 
 ## Get help on all make commands; taken from https://github.com/drivendata/cookiecutter-data-science
 help:

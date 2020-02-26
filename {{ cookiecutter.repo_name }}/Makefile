@@ -1,4 +1,4 @@
-.PHONY: requirements help
+.PHONY: requirements docs help
 
 .DEFAULT_GOAL := help
 
@@ -6,6 +6,10 @@
 requirements:
 	python3 -m pip install -U pip setuptools
 	python3 -m pip install -r requirements.txt
+
+## Compile the Sphinx documentation in HTML format in the `docs/_build` folder
+docs: requirements
+	$(MAKE) -C docs html
 
 ## Get help on all make commands; taken from https://github.com/drivendata/cookiecutter-data-science
 help:
