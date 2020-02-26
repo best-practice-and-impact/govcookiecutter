@@ -1,3 +1,5 @@
 flake8
 cookiecutter
+recommonmark
 Sphinx
+sphinx-markdown-tables
