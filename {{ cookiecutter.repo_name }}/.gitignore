@@ -130,3 +130,6 @@ dmypy.json
 
 # Pycharm
 .idea
+
+# Ignore the `data` folder
+data/
