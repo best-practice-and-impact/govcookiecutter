@@ -1,4 +1,4 @@
-.PHONY: requirements docs example_build
+.PHONY: requirements docs example
 
 .DEFAULT_GOAL := help
 
@@ -12,7 +12,7 @@ docs: requirements
 	$(MAKE) -C docs html
 
 ## Test build the cookiecutter template in the `example_build` folder - note this will delete any existing example build
-example_build: requirements
+example: requirements
 	if [ ! -d "./example_build" ]; then mkdir ./example_build; fi
 	if [ -d "./example_build/your-new-project-name" ]; then rm -rf ./example_build/your-new-project-name; fi
 	python3 -m cookiecutter . -o ./example_build --no-input

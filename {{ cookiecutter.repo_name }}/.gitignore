@@ -133,3 +133,6 @@ dmypy.json
 
 # Ignore the `data` folder
 data/
+
+# Ignore the `.secrets` file
+.secrets
