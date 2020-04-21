@@ -254,7 +254,7 @@ man_pages = [
 texinfo_documents = [
     ("index", "{{ cookiecutter.repo_name }}", u"{{ cookiecutter.project_name }} Documentation",
      u"{{ cookiecutter.author_name }}", "{{ cookiecutter.project_name }}",
-     "{{ cookiecutter.description }}", "Miscellaneous"),
+     "{{ cookiecutter.overview }}", "Miscellaneous"),
 ]
 
 # Documents to append as an appendix to all manuals.
