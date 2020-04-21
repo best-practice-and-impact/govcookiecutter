@@ -1,3 +1,3 @@
 # `docs` folder
 
-All documentation for the project should be included in this folder.
+For folder usage, please refer to the documentation [here](../docs/structure/README.md#docs-folder).

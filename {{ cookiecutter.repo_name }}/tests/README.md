@@ -1,3 +1,3 @@
 # `tests` folder
 
-All tests for the functions defined in the [`src`](../src/README.md) package should be stored here.
+For folder usage, please refer to the documentation [here](../docs/structure/README.md#tests-folder).
