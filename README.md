@@ -7,7 +7,7 @@ template for now!
 
 ## Requirements
 
-This project runs on Python 3.5+. To install required Python packages via pip, run the following command:
+This project runs on Python 3.5+. To install required Python packages via `pip`, run the following command:
 
 ```shell script
 make requirements
