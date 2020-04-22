@@ -1,0 +1,6 @@
+flake8
+cookiecutter
+pytest
+recommonmark
+Sphinx
+sphinx-markdown-tables

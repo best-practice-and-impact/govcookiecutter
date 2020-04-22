@@ -1,14 +1,19 @@
-.PHONY: requirements docs example
+.PHONY: requirements requirements-dev docs example
 
 .DEFAULT_GOAL := help
 
-## Install the Python requirements
+## Install the minimum Python requirements to run the cookiecutter
 requirements:
 	python3 -m pip install -U pip setuptools
 	python3 -m pip install -r requirements.txt
 
+## Install the Python requirements to develop the cookiecutter
+requirements-dev:
+	python3 -m pip install -U pip setuptools
+	python3 -m pip install -r requirements-dev.txt
+
 ## Compile the Sphinx documentation in HTML format in the `docs/_build` folder from a clean build
-docs: requirements
+docs: requirements-dev
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 

@@ -7,10 +7,20 @@ template for now!
 
 ## Requirements
 
-This project runs on Python 3.5+. To install required Python packages via `pip`, run the following command:
+This cookiecutter runs on Python 3.5+, and there are additional 
+[requirements](./%7B%7B%20cookiecutter.repo_name%20%7D%7D/README.md#requirements) for the output.
+
+To create a new repository structure from this cookiecutter, install the required Python packages via `pip` by running 
+the following command:
 
 ```shell script
 make requirements
+```
+
+To make developments to this project, install the development Python packages via `pip` using:
+
+```shell script
+make requirements-dev
 ```
 
 ## Creating a new project
