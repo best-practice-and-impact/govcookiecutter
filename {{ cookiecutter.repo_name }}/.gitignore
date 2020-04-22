@@ -131,8 +131,21 @@ dmypy.json
 # Pycharm
 .idea
 
-# Ignore the `data` folder
-data/
+# Ignore the contents of the `data` folder, except for the `README.md` file
+data/*
+!data/README.md
+
+# Ignore the contents of the `data` sub-folders, except for their `.gitkeep` files; adapted from
+# https://stackoverflow.com/a/20652768
+!data/**/
+data/external/*
+data/raw/*
+data/interim/*
+data/processed/*
+!data/external/.gitkeep
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
 
 # Ignore the `.secrets` file
 .secrets
