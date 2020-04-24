@@ -49,6 +49,8 @@ top-level of this Git repository.
 make docs
 ```
 
+For further information about writing Sphinx documentation, see the `README.md` file in the `docs` folder.
+
 ### `notebooks` folder
 
 All Jupyter notebooks should be stored in this folder. The [`.envrc`](#envrc) file should automatically add the entire
