@@ -11,5 +11,7 @@ The sub-folders should be used as follows:
 - `make_visualisations`: Functions to produce visualisations;
 - `utils`: Utility functions that are helpful in the project.
 
-It is strongly suggested that you import functions in the `src` [`__init__.py`](__init__.py) script, and that you try 
-and use absolute imports in this script whenever possible.
+It is strongly suggested that you import functions in the `src` [`__init__.py`](__init__.py) script. You should also 
+try and use absolute imports in this script whenever possible; relative imports are not discouraged, but can be an 
+issue for projects where the directory structure is likely to change. See 
+[PEP 328](https://www.python.org/dev/peps/pep-0328/) for further information.
