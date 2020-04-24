@@ -13,9 +13,9 @@ docs: requirements
 
 ## Test build the cookiecutter template in the `example_build` folder - note this will delete any existing example build
 example: requirements
-	if [ ! -d "./example_build" ]; then mkdir ./example_build; fi
-	if [ -d "./example_build/your-new-project-name" ]; then rm -rf ./example_build/your-new-project-name; fi
-	python3 -m cookiecutter . -o ./example_build --no-input
+	if [ ! -d "./example" ]; then mkdir ./example; fi
+	if [ -d "./example/your-new-project-name" ]; then rm -rf ./example/your-new-project-name; fi
+	python3 -m cookiecutter . -o ./example --no-input
 
 
 ## Get help on all make commands; taken from https://github.com/drivendata/cookiecutter-data-science
