@@ -90,7 +90,7 @@ issue for projects where the directory structure is likely to change. See
 
 ### `tests` folder
 
-All tests for the functions defined in the [`src`](#src-folder) package should be stored here.
+All tests for the functions defined in the [`src`](#src-package) package should be stored here.
 
 ## Top-level files
 

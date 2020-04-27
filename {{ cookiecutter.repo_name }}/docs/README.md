@@ -38,7 +38,8 @@ the `recommonmark` API
 #### Referencing headings in other documentation files
 
 To reference headings in other files within the `docs` folder, use the Sphinx `autosectionlabel` extension, as 
-described in the `recommonmark` [documentation](https://recommonmark.readthedocs.io/en/latest/index.html).
+described in the `recommonmark` 
+[documentation](https://recommonmark.readthedocs.io/en/latest/index.html#linking-to-headings-in-other-files).
 
 ### Automatically documenting Python docstrings
 
@@ -52,7 +53,7 @@ generated ReStructuredText files of the entire docstring. The
 of these extensions.
 
 > If you are generating content in Markdown, you need to enter the code below in ``eval_rst`` code blocks. See 
-> [here](#embedding-restructuredtext-elements) for further details.
+> the 'Embedding ReStructuredText elements' section for further details.
 
 First, add a `currentmodule` Sphinx directive pointing to `src` near the top of the file, say after the first heading.
 
