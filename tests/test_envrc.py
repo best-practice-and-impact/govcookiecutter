@@ -7,10 +7,12 @@ DIR_COOKIECUTTER = "{{ cookiecutter.repo_name }}"
 # Initialise an empty list to store the expected filepaths
 DIRS_EXPECTED = []
 
-# Get all the directories within `DIR_COOKIECUTTER`, including all subfolders (unless they are `docs` subfolders)
-for root, dirs, files in os.walk(DIR_COOKIECUTTER):
-    if not os.path.join(DIR_COOKIECUTTER, "docs") in root:
-        DIRS_EXPECTED += list(map(lambda d: os.path.join(os.getcwd(), root, d), dirs))
+# Get all the directories within `DIR_COOKIECUTTER`, including all subfolders (unless they are `docs`, or `__pycache__`
+# subfolders)
+for root, dirs, _ in os.walk(DIR_COOKIECUTTER):
+    if (not os.path.join(DIR_COOKIECUTTER, "docs") in root) and ("__pycache__" not in root):
+        DIRS_EXPECTED += list(map(lambda d: os.path.join(os.getcwd(), root, d),
+                                  [d for d in dirs if "__pycache__" not in d]))
 
 # Get the expected environment variable names for the directories in `DIRS_EXPECTED`; we expect directory environment
 # variables to start with "DIR_", and then the path from the top-level to the folder in uppercase, where "/" is
