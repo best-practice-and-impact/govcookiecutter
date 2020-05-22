@@ -97,3 +97,28 @@ This is the reference documentation for the ``src`` package.
     world
 
 ```
+
+A Markdown version would look like this:
+
+````
+# Heading
+
+This is the reference documentation for the ``src`` package.
+
+```eval_rst
+.. currentmodule:: src
+
+```            
+
+## ``src`` package
+
+```eval_rst
+.. autosummary::
+    :toctree: api/
+    
+    hello
+    world
+
+```
+
+````
