@@ -9,11 +9,3 @@ Here is the documentation for the {{ cookiecutter.project_name }} project.
     structure/README.md
 
 ```
-
-## Indices and tables
-
-```eval_rst
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-```
