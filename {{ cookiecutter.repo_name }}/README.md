@@ -79,3 +79,7 @@ Follow the documentation of your chosen method to create a Python virtual enviro
 If you are using [Anaconda or `conda`](https://www.anaconda.com/), following their
 [documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) to set up a
 conda environment.
+
+## Folder structure
+
+An overview of the folder structure, and the top-level files can be found [here](docs/structure/README.md).

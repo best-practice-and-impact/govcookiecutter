@@ -1,14 +1,20 @@
-.PHONY: requirements docs example
+.PHONY: requirements requirements-dev docs example
 
 .DEFAULT_GOAL := help
 
-## Install the Python requirements
+## Install the minimum Python requirements to run the cookiecutter
 requirements:
 	python3 -m pip install -U pip setuptools
 	python3 -m pip install -r requirements.txt
 
-## Compile the Sphinx documentation in HTML format in the `docs/_build` folder
-docs: requirements
+## Install the Python requirements to develop the cookiecutter
+requirements-dev:
+	python3 -m pip install -U pip setuptools
+	python3 -m pip install -r requirements-dev.txt
+
+## Compile the Sphinx documentation in HTML format in the `docs/_build` folder from a clean build
+docs: requirements-dev
+	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 
 ## Test build the cookiecutter template in the `example_build` folder - note this will delete any existing example build
@@ -17,8 +23,7 @@ example: requirements
 	if [ -d "./example/your-new-project-name" ]; then rm -rf ./example/your-new-project-name; fi
 	python3 -m cookiecutter . -o ./example --no-input
 
-
-## Get help on all make commands; taken from https://github.com/drivendata/cookiecutter-data-science
+## Get help on all make commands; referenced from https://github.com/drivendata/cookiecutter-data-science
 help:
 	@echo "$$(tput bold)Available rules:$$(tput sgr0)"
 	@echo

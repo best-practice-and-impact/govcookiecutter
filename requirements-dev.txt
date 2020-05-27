@@ -1,4 +1,5 @@
 flake8
+cookiecutter
 pytest
 recommonmark
 Sphinx
