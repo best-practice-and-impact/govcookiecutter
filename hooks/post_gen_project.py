@@ -17,7 +17,7 @@ if require_secrets == "Yes":
     #   --------------------------------------------------------
     #
     # This file is NOT version-controlled!
-    
+
     # Google Cloud authentication credentials
     export GOOGLE_APPLICATION_CREDENTIALS=""
     """
