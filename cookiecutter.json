@@ -5,5 +5,6 @@
   "overview": "Brief overview of your project.",
   "project_version": "0.0.1",
   "create_secrets_file": ["No", "Yes"],
-  "departmental_aqa_framework": ["GDS"]
+  "departmental_aqa_framework": ["GDS"],
+  "repository_hosting_platform": ["GitHub", "GitLab"]
 }
