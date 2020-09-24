@@ -56,7 +56,7 @@ def select_dept_aqa_framework(user_option: str, default_option: str = "GDS") -> 
     """Create analytical quality assurance (AQA) documents for a specific HM Government department.
 
     Args:
-        user_option (str): User option that defines a HM Government departmental AQA framework to use
+        user_option (str): User option that defines a HM Government departmental AQA framework to use.
         default_option (str): Default: GDS. Default option if user_option is not an existing framework.
 
     Returns:
