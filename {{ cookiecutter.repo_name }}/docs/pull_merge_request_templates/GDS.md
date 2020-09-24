@@ -16,7 +16,7 @@ Incomplete pull/merge requests MAY be blocked until actions are resolved, or clo
 ### General checks
 
 - [ ] Code runs
-- [ ] Developments are **secure** and **ethical**
+- [ ] Developments are **secure** and [**ethical**](https://www.gov.uk/government/publications/data-ethics-framework))
 - [ ] You have made proportionate checks that the code works correctly
 - [ ] Test suite passes
 - [ ] Assumptions, and caveats log updated (see `docs/aqa/assumptions_caveats.md`), if necessary
