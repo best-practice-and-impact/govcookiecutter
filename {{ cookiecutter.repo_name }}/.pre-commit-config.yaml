@@ -1,0 +1,29 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: master
+    hooks:
+    -   id: flake8
+        args: ['src']
+-   repo: https://github.com/Yelp/detect-secrets
+    rev: v0.13.1
+    hooks:
+    -   id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+        exclude: .*/tests/.*
+-   repo: https://github.com/aflc/pre-commit-jupyter
+    rev: v1.1.0
+    hooks:
+    -   id: jupyter-notebook-cleanup
+        args:
+        -   --remove-kernel-metadata
+        -   --pin-patterns
+        -   "[keep_output]"
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.4.0
+    hooks:
+    -   id: check-added-large-files
+        args: ['--maxkb=5120']
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
