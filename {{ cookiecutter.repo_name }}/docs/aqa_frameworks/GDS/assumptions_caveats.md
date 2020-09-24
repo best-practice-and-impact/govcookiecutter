@@ -43,14 +43,14 @@ The log contains the following assumptions and caveats:
     :depth: 1
 ```
 
-### A1: 
+### Assumption 1: Insert plain English title here
 
 * **Quality**: Insert RAG rating here
 * **Impact**: Insert RAG rating here
 
 Add plain English description here.
 
-### A2: 
+### Assumption 2: Insert plain English title here
 
 * **Quality**: Insert RAG rating here
 * **Impact**: Insert RAG rating here
