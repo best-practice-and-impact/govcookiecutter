@@ -1,17 +1,16 @@
-# [WIP] govcookiecutter
+# govcookiecutter
 A cookiecutter template for data science projects within UK Government.
 
-This repository is under development - please use the 
-[`cookiecutter-data-science-gds`](https://github.com/ukgovdatascience/cookiecutter-data-science-gds) cookiecutter 
-template for now!
+This repository replaces the original
+[`cookiecutter-data-science-gds`](https://github.com/ukgovdatascience/cookiecutter-data-science-gds), which has been archived.  Please start using this one.
 
 ## Requirements
 
-This project runs on Python 3.5+. To install required Python packages via `pip`, first [set up a Python virtual 
-environment](#creating-a-python-virtual-environment); this ensures you do not install the packages globally. Note there 
+This project runs on Python 3.5+. To install required Python packages via `pip`, first [set up a Python virtual
+environment](#creating-a-python-virtual-environment); this ensures you do not install the packages globally. Note there
 are additional [requirements](./%7B%7B%20cookiecutter.repo_name%20%7D%7D/README.md#requirements) for the output.
 
-To create a new repository structure from this cookiecutter, install the required Python packages via `pip` by running 
+To create a new repository structure from this cookiecutter, install the required Python packages via `pip` by running
 the following command:
 
 ```shell script
@@ -28,30 +27,30 @@ Once you have installed the packages, remember to [set up pre-commit hooks](#ins
 
 ### Creating a Python virtual environment
 
-Creating a Python virtual environment depends on whether you are using [base Python](#base-python-interpreter) or 
+Creating a Python virtual environment depends on whether you are using [base Python](#base-python-interpreter) or
 [Anaconda](#anaconda-interpreter) as your interpreter.
 
 #### Base Python interpreter
 
-If you are using base Python, there are multiple ways to create virtual environments in Python using `pip`, including 
+If you are using base Python, there are multiple ways to create virtual environments in Python using `pip`, including
 (but not limited to):
 
 - [`venv`](https://docs.python.org/3/tutorial/venv.html);
 - [`virtualenv`](https://virtualenv.pypa.io/en/stable/);
-- [`pipenv`](https://github.com/pypa/pipenv); and 
+- [`pipenv`](https://github.com/pypa/pipenv); and
 - [`pyenv`](https://github.com/pyenv/pyenv) with its `virtualenv` [plugin](https://github.com/pyenv/pyenv-virtualenv).
 
 Follow the documentation of your chosen method to create a Python virtual environment.
 
 #### Anaconda interpreter
 
-If you are using [Anaconda or `conda`](https://www.anaconda.com/), following their 
-[documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) to set up a 
+If you are using [Anaconda or `conda`](https://www.anaconda.com/), following their
+[documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) to set up a
 conda environment.
 
 ## Creating a new project
 
-To create a new project using this template, in the folder where you want your project to be located, run the following 
+To create a new project using this template, in the folder where you want your project to be located, run the following
 code in your terminal:
 
 ```shell script
@@ -62,7 +61,7 @@ Then following the prompts in your terminal to create the project structure.
 
 ## Installing pre-commit hooks
 
-This repo uses the Python package [`pre-commit`](https://pre-commit.com) to manage pre-commit hooks. Pre-commit hooks 
+This repo uses the Python package [`pre-commit`](https://pre-commit.com) to manage pre-commit hooks. Pre-commit hooks
 are actions which are run automatically, typically on each commit, to perform some common set of tasks. For example, a
 pre-commit hook might be used to run any code linting automatically, providing any warnings before code is committed,
 ensuring that all of our code adheres to a certain quality standard.
@@ -76,7 +75,7 @@ We have configured `pre-commit` to run automatically on _every commit_. By runni
 that `pre-commit` will be able to detect all contraventions and keep our repo in a healthy state.
 
 In order for `pre-commit` to run, action is needed to configure it on your system.
-- [Install](#installing-python-packages) the `pre-commit` package into your Python environment from 
+- [Install](#installing-python-packages) the `pre-commit` package into your Python environment from
 `requirements-dev.txt`; and
 - Run `pre-commit install` to set-up `pre-commit` to run when code is _committed_.
 
@@ -102,7 +101,7 @@ accordingly.
 
 ### If `pre-commit` detects secrets during commit:
 
-If `pre-commit` detects any secrets when you try to create a commit, it will detail what it found and where to go to 
+If `pre-commit` detects any secrets when you try to create a commit, it will detail what it found and where to go to
 check the secret.
 
 If the detected secret is a false-positive, you should update the secrets baseline through the following steps:
@@ -132,6 +131,6 @@ This will tell `pre-commit` not to strip the resulting output of this cell, allo
 
 ## Acknowledgements
 
-This template is based off the 
-[DrivenData Cookiecutter Data Science](http://drivendata.github.io/cookiecutter-data-science/) project, especially 
+This template is based off the
+[DrivenData Cookiecutter Data Science](http://drivendata.github.io/cookiecutter-data-science/) project, especially
 around the `data` and `src` folder structures, and the `make help` command.
