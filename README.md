@@ -6,6 +6,10 @@ This repository replaces the original
 
 ## Requirements
 
+You need to have
+[cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.2/installation.html#install-cookiecutter)
+installed.
+
 This project runs on Python 3.5+. To install required Python packages via `pip`, first [set up a Python virtual
 environment](#creating-a-python-virtual-environment); this ensures you do not install the packages globally. Note there
 are additional [requirements](./%7B%7B%20cookiecutter.repo_name%20%7D%7D/README.md#requirements) for the output.
