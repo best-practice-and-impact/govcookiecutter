@@ -11,7 +11,7 @@ This log contains a list of assumptions and caveats used in this analysis.
 
 ## Definitions
 
-Assumptions are RAG-rated according to the following definitions for quality and impact:
+Assumptions are RAG-rated according to the following definitions for quality and impact<sup>1</sup>:
 
 <!-- Using reStructuredText table here, otherwise the raw Markdown is greater than the 120-character line width -->
 ```eval_rst
@@ -31,6 +31,7 @@ Assumptions are RAG-rated according to the following definitions for quality and
 |       | methodology.                                         |                                                       |
 +-------+------------------------------------------------------+-------------------------------------------------------+
 ```
+<sup><sup>1</sup> With thanks to the Home Office Analytical Quality Assurance team for these definitions.</sup>
 
 ## Assumptions and caveats
 
