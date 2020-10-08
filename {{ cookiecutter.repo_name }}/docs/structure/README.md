@@ -51,6 +51,12 @@ make docs
 
 For further information about writing Sphinx documentation, see the `README.md` file in the `docs` folder.
 
+#### Analytical quality assurance (AQA)
+
+All analytical quality assurance (AQA) documents can be found in the `docs/aqa` folder. These files document how this 
+project meets HM Government guidance on producing quality analysis, as described in the 
+[Aqua book](https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government).
+
 ### `notebooks` folder
 
 All Jupyter notebooks should be stored in this folder. The [`.envrc`](#envrc) file should automatically add the entire
