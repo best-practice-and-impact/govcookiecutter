@@ -1,140 +1,95 @@
 # govcookiecutter
-A cookiecutter template for data science projects within UK Government.
 
-This repository replaces the original
-[`cookiecutter-data-science-gds`](https://github.com/ukgovdatascience/cookiecutter-data-science-gds), which has been archived.  Please start using this one.
+A cookiecutter template for analytical, code-based projects within Her Majesty's Government.
 
-## Requirements
+- [Who/what is this for?](#whowhat-is-this-for)
+- [Getting started](#getting-started)
+  - [Requirements](#requirements)
+- [Things to consider changing post-creation](#things-to-consider-changing-post-creation)
+- [Licence](#licence)
+- [Contributing](#contributing)
+- [Acknowledgements](#acknowledgements)
 
-You need to have
-[cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.2/installation.html#install-cookiecutter)
-installed.
+## Who/what is this for?
 
-This project runs on Python 3.5+. To install required Python packages via `pip`, first [set up a Python virtual
-environment](#creating-a-python-virtual-environment); this ensures you do not install the packages globally. Note there
-are additional [requirements](./%7B%7B%20cookiecutter.repo_name%20%7D%7D/README.md#requirements) for the output.
+This template is for any HM Government analyst(s) who codes! It's main purpose is to:
 
-To create a new repository structure from this cookiecutter, install the required Python packages via `pip` by running
-the following command:
+1. Provide a lightweight, Agile-like approach to Analytical Quality Assurance (AQA)
+2. Help quickly set up standardised project structures.
 
-```shell script
-make requirements
-```
+For more information about AQA, see [The Aqua Book][aqua-book], and its [resources][aqua-book-resources].
 
-To make developments to this project, install the development Python packages via `pip` using:
+Rather than using different files and locations to store AQA and documentation, our intention is to centralise as much
+of this as possible onto your Git repository hosting platform, e.g. GitHub or GitLab.
 
-```shell script
-make requirements-dev
-```
+We use nudges, such as checklists in pull/merge requests, to minimise the burden on contributors and reviewers to
+complete AQA checks. This results in faster iterative development and deployment, whilst ensuring HM Government-wide
+standards on assurance are met.
 
-Once you have installed the packages, remember to [set up pre-commit hooks](#installing-pre-commit-hooks).
+We have also included [pre-commit hooks][pre-commit] to prevent accidental committing of secrets, large data files, and
+Jupyter notebook outputs for security purposes.
 
-### Creating a Python virtual environment
+## Getting started
 
-Creating a Python virtual environment depends on whether you are using [base Python](#base-python-interpreter) or
-[Anaconda](#anaconda-interpreter) as your interpreter.
+> ⚠️ Only Unix-based systems (macOS, Linux, ...), and Python projects for GitHub or GitLab are supported — feel free to
+> [contribute](#contributing) to support other operating systems/programming languages!
 
-#### Base Python interpreter
+To use this template to start your next coding project, make sure your system meets the [requirements](#requirements).
 
-If you are using base Python, there are multiple ways to create virtual environments in Python using `pip`, including
-(but not limited to):
-
-- [`venv`](https://docs.python.org/3/tutorial/venv.html);
-- [`virtualenv`](https://virtualenv.pypa.io/en/stable/);
-- [`pipenv`](https://github.com/pypa/pipenv); and
-- [`pyenv`](https://github.com/pyenv/pyenv) with its `virtualenv` [plugin](https://github.com/pyenv/pyenv-virtualenv).
-
-Follow the documentation of your chosen method to create a Python virtual environment.
-
-#### Anaconda interpreter
-
-If you are using [Anaconda or `conda`](https://www.anaconda.com/), following their
-[documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) to set up a
-conda environment.
-
-## Creating a new project
-
-To create a new project using this template, in the folder where you want your project to be located, run the following
-code in your terminal:
+Once you're all set up, open your terminal, navigate to the directory where you want your new repository to exist, and
+run the following commands:
 
 ```shell script
+pip install cookiecutter
 cookiecutter https://github.com/ukgovdatascience/govcookiecutter
 ```
 
-Then following the prompts in your terminal to create the project structure.
+Follow the prompts, and that's it, you're good to go — happy coding!
 
-## Installing pre-commit hooks
+There are a few optional things you should consider doing in your new project, and we've detailed them
+[here](#things-to-consider-changing-post-creation).
 
-This repo uses the Python package [`pre-commit`](https://pre-commit.com) to manage pre-commit hooks. Pre-commit hooks
-are actions which are run automatically, typically on each commit, to perform some common set of tasks. For example, a
-pre-commit hook might be used to run any code linting automatically, providing any warnings before code is committed,
-ensuring that all of our code adheres to a certain quality standard.
+### Requirements
 
-For this repo, we are using `pre-commit` for a number of purposes:
-- Checking for any secrets being committed accidentally;
-- Checking for any large files (over 5MB) being committed; and
-- Cleaning Jupyter notebooks, which means removing all outputs and execution counts.
+> ℹ️ Contributors have some additional requirements! Check out the [contributing guidelines][contributing] for further
+> details.
 
-We have configured `pre-commit` to run automatically on _every commit_. By running on each commit, we ensure
-that `pre-commit` will be able to detect all contraventions and keep our repo in a healthy state.
+To get started your system should meet the following requirements:
 
-In order for `pre-commit` to run, action is needed to configure it on your system.
-- [Install](#installing-python-packages) the `pre-commit` package into your Python environment from
-`requirements-dev.txt`; and
-- Run `pre-commit install` to set-up `pre-commit` to run when code is _committed_.
+1. Unix-based system (macOS, Linux, ...)
+2. Python 3.5+ installed
+3. \[Recommended\] A Python virtual environment set up and activated
 
-### Setting up a baseline for the `detect-secrets` hook (if one doesn't already exist)
+There are **many** ways to set up a virtual environment, so we'll let you decide what's best for you!
 
-The `detect-secrets` hook requires that you generate a baseline file if one is not already present within the root
-directory. This is done via running the following at the root of the repo:
+## Things to consider changing post-creation
 
-```shell script
-detect-secrets scan > .secrets.baseline
-```
+Here's a few things you should consider changing once you've created your new project:
 
-Next, audit the baseline that has been generated by running:
+- Git is not set up by default — open your terminal, navigate to your new project, run `git init` to set it up
+- Make sure the `README.md` reflects what **you** want to do with your project!
+- Have a look inside the `docs/aqa` folder; you may want to modify some of them, e.g. the AQA plan
+- Want to add some project-specific checklists to the pull/merge request template? See the relevant Markdown files
+  within the `.github` (GitHub) or `.gitlab/merge_request_templates` (GitLab) folder
 
-```shell script
-detect-secrets audit .secrets.baseline
-```
+## Licence
 
-When you run this command, you'll enter an interactive console and be presented with a list of high-entropy string /
-anything which _could_ be a secret, and asked to verify whether or not this is the case. By doing this, the hook will
-be in a position to know if you're later committing any _new_ secrets to the repo and it will be able to alert you
-accordingly.
+Unless stated otherwise, the codebase is released under the MIT License. This covers both the codebase and any sample
+code in the documentation. The documentation is © Crown copyright and available under the terms of the Open Government
+3.0 licence.
 
-### If `pre-commit` detects secrets during commit:
+## Contributing
 
-If `pre-commit` detects any secrets when you try to create a commit, it will detail what it found and where to go to
-check the secret.
-
-If the detected secret is a false-positive, you should update the secrets baseline through the following steps:
-
-- Run `detect-secrets scan --update .secrets.baseline` to index the false-positive(s);
-- Next, audit all indexed secrets via `detect-secrets audit .secrets.baseline` (the same as during initial set-up, if a
-secrets baseline doesn't exist); and
-- Finally, ensure that you commit the updated secrets baseline in the same commit as the false-positive(s) it has been
-updated for.
-
-If the detected secret is actually a secret (or other sensitive information), remove the secret and re-commit. There is
-no need to update the secrets baseline in this case.
-
-If your commit contains a mixture of false-positives and actual secrets, remove the actual secrets first before
-updating and auditing the secrets baseline.
-
-### Note on Jupyter notebook cleaning
-
-It may be necessary or useful to keep certain output cells of a Jupyter notebook, for example charts or graphs
-visualising some set of data. To do this, add the following comment at the top of the input block:
-
-```shell script
-# [keep_output]
-```
-
-This will tell `pre-commit` not to strip the resulting output of this cell, allowing it to be committed.
+If you want to help us build, and improve `govcookiecutter`, view our [contributing guidelines][contributing].
 
 ## Acknowledgements
 
-This template is based off the
-[DrivenData Cookiecutter Data Science](http://drivendata.github.io/cookiecutter-data-science/) project, especially
-around the `data` and `src` folder structures, and the `make help` command.
+This template is based off the [DrivenData Cookiecutter Data Science][drivendata] project, especially around the
+template data and src folder structures, and the `make help` commands in the Makefiles.
+
+[aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
+[aqua-book-resources]: https://www.gov.uk/government/collections/aqua-book-resources
+[contributing]: ./CONTRIBUTING.md
+[cookiecutter]: https://github.com/cookiecutter/cookiecutter
+[drivendata]: http://drivendata.github.io/cookiecutter-data-science/
+[pre-commit]: https://pre-commit.com/

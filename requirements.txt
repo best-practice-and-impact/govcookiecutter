@@ -1,1 +1,8 @@
 cookiecutter
+detect-secrets
+flake8
+pre-commit
+pytest
+recommonmark
+Sphinx
+sphinx-markdown-tables

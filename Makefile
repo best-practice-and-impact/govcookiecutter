@@ -1,20 +1,15 @@
-.PHONY: docs example example_with_options help prepare_example_folder requirements requirements-dev
+.PHONY: docs example example_with_options help prepare_example_folder requirements
 
 .DEFAULT_GOAL := help
 
-## Install the minimum Python requirements to run the cookiecutter
+## Install the Python requirements for contributors, and install pre-commit hooks
 requirements:
 	python3 -m pip install -U pip setuptools
 	python3 -m pip install -r requirements.txt
-
-## Install the Python requirements for contributors, and install pre-commit hooks
-requirements-dev:
-	python3 -m pip install -U pip setuptools
-	python3 -m pip install -r requirements-dev.txt
 	pre-commit install
 
-## Compile the Sphinx documentation in HTML format in the `docs/_build` folder from a clean build
-docs: requirements-dev
+## Compile the Sphinx documentation in HTML format in the docs/_build folder from a clean build
+docs: requirements
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 
