@@ -1,4 +1,4 @@
-.PHONY: requirements docs help
+.PHONY: docs help prepare_docs_folder requirements
 
 .DEFAULT_GOAL := help
 
@@ -8,10 +8,14 @@ requirements:
 	python3 -m pip install -r requirements.txt
 	pre-commit install
 
-## Compile the Sphinx documentation in HTML format in the `docs/_build` folder from a clean build
-docs: requirements
-	$(MAKE) -C docs clean
-	$(MAKE) -C docs html
+## Create a `docs/_build` folder, if it doesn't exist. Otherwise delete any subfolders and their contents within it
+prepare_docs_folder:
+	if [ ! -d "./docs/_build" ]; then mkdir ./docs/_build; fi
+	find ./docs/_build -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
+
+## Compile the Sphinx documentation in HTML format in the docs/_build folder from a clean build
+docs: prepare_docs_folder requirements
+	sphinx-build -b html ./docs ./docs/_build
 
 ## Get help on all make commands; referenced from https://github.com/drivendata/cookiecutter-data-science
 help:
