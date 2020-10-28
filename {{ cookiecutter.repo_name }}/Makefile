@@ -2,10 +2,11 @@
 
 .DEFAULT_GOAL := help
 
-## Install the Python requirements
+## Install the Python requirements for contributors, and install pre-commit hooks
 requirements:
 	python3 -m pip install -U pip setuptools
 	python3 -m pip install -r requirements.txt
+	pre-commit install
 
 ## Compile the Sphinx documentation in HTML format in the `docs/_build` folder from a clean build
 docs: requirements
