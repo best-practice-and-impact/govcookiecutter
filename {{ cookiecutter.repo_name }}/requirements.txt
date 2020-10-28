@@ -1,5 +1,6 @@
-flake8
 detect-secrets
+coverage
+flake8
 pre-commit
 pytest
 recommonmark

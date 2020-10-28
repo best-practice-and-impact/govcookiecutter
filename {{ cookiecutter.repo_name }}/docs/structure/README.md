@@ -102,6 +102,19 @@ All tests for the functions defined in the [`src`](#src-package) package should 
 
 Each subsection here contains a brief description about the files at the top-level of this Git repository.
 
+### `.coveragerc`
+
+A file containing configuration settings for the [`coverage`][coverage] Python package. When executed with
+[`pytest`][pytest] using the following command:
+
+```shell
+coverage run -m pytest
+coverage html
+```
+
+a code coverage report in HTML will be produced on the code in the [hooks][docs-hooks], and
+`{{ cookiecutter.repo_name }}/src` folders. This HTMl report can be accessed at `htmlcov/index.html`.
+
 ### `.envrc`
 
 A file containing environment variables for the Git repository that can be selectively loaded. This uses the
@@ -142,6 +155,16 @@ top-level of the Git repository.
 
 ```
 make help
+```
+
+### `pytest.ini`
+
+A file containing configuration settings for the [`pytest`][pytest] Python package. To run tests within the
+[`tests`][docs-tests], and `{{ cookiecutter.repo_name }}/tests` folders, execute the following
+command:
+
+```shell
+pytest
 ```
 
 ### `README.md`
