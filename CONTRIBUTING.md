@@ -29,7 +29,8 @@ It is better to use the above make command, rather than `pip install -r requirem
 the command will ensure your pre-commit hooks are up-to-date with any changes made.
 
 The pre-commit hooks are a security feature to ensure no secrets, large data files, and Jupyter notebooks are
-accidentally committed into the repository.
+accidentally committed into the repository. For more information about the pre-commit hooks used in this repository,
+see the [documentation][docs-pre-commit-hooks].
 
 ## Code conventions
 
@@ -98,6 +99,7 @@ Further information on how to write Sphinx documentation can be found [here][doc
 [code-of-conduct]: ./CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/
 [coveragerc]: ./.coveragerc
+[docs-pre-commit-hooks]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
 [docs-write-sphinx-documentation]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
 [email]: mailto:gdsdatascience@digital.cabinet-office.gov.uk
 [gds-way]: https://gds-way.cloudapps.digital/

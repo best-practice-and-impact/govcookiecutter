@@ -58,7 +58,7 @@ exclusions with your new programming language/IDE exclusions; only add project-s
 
 ### `.pre-commit-config.yaml`
 
-A pre-commit hook configuration file. See the `pre-commit` package [documentation][pre-commit] for further details.
+A pre-commit hook configuration file. See the [contributor guide][docs-pre-commit-hooks] for further details.
 {% if cookiecutter.create_secrets_file == "Yes" %}
 ### `.secrets`
 
@@ -110,8 +110,8 @@ make requirements
 
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [direnv]: https://direnv.net/
+[docs-pre-commit-hooks]: ../contributor_guide/pre_commit_hooks.md
 [flake8]: https://gitlab.com/pycqa/flake8
 [gds-way]: https://gds-way.cloudapps.digital
 [gds-way-flake8]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#common-configuration
 [gitignore-io]: https://www.toptal.com/developers/gitignore
-[pre-commit]: https://pre-commit.com/
