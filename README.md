@@ -1,4 +1,4 @@
-# govcookiecutter
+# `govcookiecutter`
 
 A cookiecutter template for analytical, code-based projects within Her Majesty's Government.
 
