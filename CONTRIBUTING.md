@@ -10,6 +10,7 @@ still have questions, please [contact us][email] and we'd be happy to help!
   - [Python](#python)
   - [Markdown](#markdown)
 - [Testing](#testing)
+- [Documentation](#documentation)
 
 ## Code of Conduct
 
@@ -87,15 +88,24 @@ coverage html
 
 The HTMl report can be accessed at `htmlcov/index.html`.
 
+## Documentation
+
+We write our documentation in [MyST Markdown][myst] for use in Sphinx. This is mainly stored in the `docs` folder,
+unless it's more appropriate to store it elsewhere, like this file.
+
+Further information on how to write Sphinx documentation can be found [here][docs-write-sphinx-documentation].
+
 [code-of-conduct]: ./CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/
 [coveragerc]: ./.coveragerc
+[docs-write-sphinx-documentation]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
 [email]: mailto:gdsdatascience@digital.cabinet-office.gov.uk
 [gds-way]: https://gds-way.cloudapps.digital/
 [gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide
 [govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter
 [hooks]: ./hooks
+[myst]: https://myst-parser.readthedocs.io/
 [pre-commit]: https://pre-commit.com/
 [pytest]: https://docs.pytest.org/
 [pytest-ini]: ./pytest.ini
