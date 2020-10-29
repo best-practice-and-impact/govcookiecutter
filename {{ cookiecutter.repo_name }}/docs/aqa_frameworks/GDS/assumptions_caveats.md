@@ -2,11 +2,9 @@
 
 This log contains a list of assumptions and caveats used in this analysis.
 
-<!-- Use reStructuredText contents directive to generate a local contents -->
-```eval_rst
-.. contents::
-    :local:
-    :depth: 1
+```{contents}
+:local:
+:depth: 1
 ```
 
 ## Definitions
@@ -14,7 +12,7 @@ This log contains a list of assumptions and caveats used in this analysis.
 Assumptions are RAG-rated according to the following definitions for quality and impact<sup>1</sup>:
 
 <!-- Using reStructuredText table here, otherwise the raw Markdown is greater than the 120-character line width -->
-```eval_rst
+```{eval-rst}
 +-------+------------------------------------------------------+-------------------------------------------------------+
 | RAG   | Assumption quality                                   | Assumption impact                                     |
 +=======+======================================================+=======================================================+
@@ -38,10 +36,9 @@ Assumptions are RAG-rated according to the following definitions for quality and
 The log contains the following assumptions and caveats:
 
 <!-- Use reStructuredText contents directive to generate a local contents -->
-```eval_rst
-.. contents::
-    :local:
-    :depth: 1
+```{contents}
+:local:
+:depth: 1
 ```
 
 ### Assumption 1: Insert plain English title here
