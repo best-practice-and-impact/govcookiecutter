@@ -42,6 +42,9 @@ We use Git to version control the source code; please read [The GDS Way][gds-way
 information about writing good commit messages, using `git rebase` for local branches, and `git merge --no-ff` for
 merges, as well as the entry on `git push --force-with-lease` instead of `git push -f`.
 
+If you want to modify the `.gitignore` files, see the template [documentation][docs-updating-gitignore] for further
+details.
+
 Our source code is stored on GitHub at [https://github.com/ukgovdatascience/govcookiecutter][govcookiecutter]. Pull
 requests into `master` require at least one approved review.
 
@@ -100,6 +103,7 @@ Further information on how to write Sphinx documentation can be found [here][doc
 [coverage]: https://coverage.readthedocs.io/
 [coveragerc]: ./.coveragerc
 [docs-pre-commit-hooks]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
+[docs-updating-gitignore]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
 [docs-write-sphinx-documentation]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
 [email]: mailto:gdsdatascience@digital.cabinet-office.gov.uk
 [gds-way]: https://gds-way.cloudapps.digital/

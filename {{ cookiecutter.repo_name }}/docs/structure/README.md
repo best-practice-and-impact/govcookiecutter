@@ -50,11 +50,8 @@ A configuration file for the [`flake8`][flake8] Python package that provides lin
 
 ### `.gitignore`
 
-A `.gitignore` file to ignore certain files and folders from this Git repository. This was created with generic
-exclusions using [gitignore.io][gitignore-io], with repository-specific exclusions listed afterwards.
-
-If you want to add exclusions for new programming languages and/or IDEs, use the first line to recreate the generic
-exclusions with your new programming language/IDE exclusions; only add project-specific exclusions afterwards.
+A `.gitignore` file to ignore certain files and folders from this Git repository. See the
+[contributor guide][docs-updating-gitignore] for further information about modifying this file.
 
 ### `.pre-commit-config.yaml`
 
@@ -111,7 +108,7 @@ make requirements
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [direnv]: https://direnv.net/
 [docs-pre-commit-hooks]: ../contributor_guide/pre_commit_hooks.md
+[docs-updating-gitignore]: ../contributor_guide/updating_gitignore.md
 [flake8]: https://gitlab.com/pycqa/flake8
 [gds-way]: https://gds-way.cloudapps.digital
 [gds-way-flake8]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#common-configuration
-[gitignore-io]: https://www.toptal.com/developers/gitignore
