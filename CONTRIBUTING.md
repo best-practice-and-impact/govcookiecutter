@@ -69,9 +69,9 @@ example with long hyperlinks.
 
 ## Testing
 
-Tests are written using the [pytest][pytest] framework, with its configuration in the [`pytest.ini`][pytest-ini].
-Note, only tests in the [`tests`][tests] and [`{{ cookiecutter.repo_name }}/tests`][tests-template] folder are
-executed. To run the tests, execute the following command in your terminal:
+Tests are written using the [pytest][pytest] framework, with its configuration in the `pytest.ini` file. Note, only
+tests in the `tests`, and `{{ cookiecutter.repo_name }}/tests` folders are executed. To run the tests, execute the
+following command in your terminal:
 
 ```shell
 pytest
@@ -80,8 +80,8 @@ pytest
 ### Code coverage
 
 Code coverage of Python scripts is measured using the [`coverage`][coverage] Python package; its configuration can be
-found in [`.coveragerc`][coveragerc]. Note coverage only extends to Python scripts in the [`hooks`][hooks], and
-[`{{ cookiecutter.repo_name }}/src`][src-template] folders.
+found in `.coveragerc`. Note coverage only extends to Python scripts in the `hooks`, and
+`{{ cookiecutter.repo_name }}/src` folders.
 
 To run code coverage, and view it as a HTML report, execute the following commands in your terminal:
 
@@ -97,11 +97,11 @@ The HTMl report can be accessed at `htmlcov/index.html`.
 We write our documentation in [MyST Markdown][myst] for use in Sphinx. This is mainly stored in the `docs` folder,
 unless it's more appropriate to store it elsewhere, like this file.
 
-Further information on how to write Sphinx documentation can be found [here][docs-write-sphinx-documentation].
+Further information on how to write Sphinx documentation, and how to build it into a searchable website can be found
+[here][docs-write-sphinx-documentation].
 
 [code-of-conduct]: ./CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/
-[coveragerc]: ./.coveragerc
 [docs-pre-commit-hooks]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
 [docs-updating-gitignore]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
 [docs-write-sphinx-documentation]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
@@ -110,12 +110,7 @@ Further information on how to write Sphinx documentation can be found [here][doc
 [gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide
 [govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter
-[hooks]: ./hooks
 [myst]: https://myst-parser.readthedocs.io/
 [pre-commit]: https://pre-commit.com/
 [pytest]: https://docs.pytest.org/
-[pytest-ini]: ./pytest.ini
 [readme-requirements]: ./README.md#requirements
-[src-template]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/src
-[tests]: ./tests
-[tests-template]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/tests
