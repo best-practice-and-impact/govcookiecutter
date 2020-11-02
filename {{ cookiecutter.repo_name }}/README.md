@@ -14,10 +14,12 @@ To run the code in this GitHub repository, please make sure your system meets th
 [below](#allowingtrusting-envrc);
 {%- if cookiecutter.create_secrets_file == "Yes" %}
 - If missing, [create a `.secrets` file](#creating-a-secrets-file) to store untracked secrets;{% endif %}
-- Python 3.5 or above; and
-- Python packages installed from the `requirements.txt` file.
+- Python 3.5 or above;
+- Python packages installed from the `requirements.txt` file;
+{%- if cookiecutter.add_r_precommit_hooks == "Yes" %}
+- R 4.0.3 or above (earlier versions may work);{% endif %}
 
-Note there may be some Python IDE-specific requirements around loading environment variables, which are not considered
+> Note there may be some Python IDE-specific requirements around loading environment variables, which are not considered
 here.
 
 ### Allowing/trusting `.envrc`
@@ -144,7 +146,10 @@ no need to update the secrets baseline in this case.
 
 If your commit contains a mixture of false-positives and actual secrets, remove the actual secrets first before
 updating and auditing the secrets baseline.
+
 {% if cookiecutter.add_r_precommit_hooks == "Yes" %}
+***
+
 ## Using this with R
 Please follow all the above steps.
 
@@ -158,7 +163,15 @@ renv::restore()
 ```
 
 This will install additional packages that are necessary to work alongside the pre-commit hooks for R code.
+
+> Note, if you subsequently uninstall R after creating a project from this template with R hooks installed, then you will get the pre-commit hooks failing with `Executable Rscript not found`.*
+>
+> This is because the pre-commit hooks in `.pre-commit-config.yaml` require R packages. To remove this error message, manually remove the R pre-commit hooks from `.pre-commit-config.yaml` and re-run in your terminal, `pre-commit install`, to re-install your pre-commit hooks without the R-dependencies.
+
 {% endif -%}
+
+***
+
 ### Note on Jupyter notebook cleaning
 
 It may be necessary or useful to keep certain output cells of a Jupyter notebook, for example charts or graphs

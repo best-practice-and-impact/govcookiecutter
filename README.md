@@ -1,5 +1,7 @@
 # govcookiecutter
-A cookiecutter template for data science projects written in Python or R within UK Government.
+A cookiecutter template for data science projects written in Python within UK Government.
+
+This template also works with data science projects written in R though support for R is still in development, so please file problems as [Issues](https://github.com/ukgovdatascience/govcookiecutter/issues).
 
 This repository replaces the original
 [`cookiecutter-data-science-gds`](https://github.com/ukgovdatascience/cookiecutter-data-science-gds), which has been archived.  Please start using this one.
@@ -102,20 +104,6 @@ If the detected secret is a false-positive, you should update the secrets baseli
 If the detected secret is actually a secret (or other sensitive information), remove the secret and re-commit. There is no need to update the secrets baseline in this case.
 
 If your commit contains a mixture of false-positives and actual secrets, remove the actual secrets first before updating and auditing the secrets baseline.
-
-## Using this with R
-Please follow all the above steps.
-
-After that, we use [renv](https://github.com/rstudio/renv) to manage package dependencies here. Thus, before writing any code, run the following R code in your R session:
-
-```r
-# installs packages for pre-commit hooks in DESCRIPTION file
-renv::install()
-# installs packages for project captured in renv.lock
-renv::restore()
-```
-
-This will install additional packages that are necessary to work alongside the pre-commit hooks for R code.
 
 ### Note on Jupyter notebook cleaning
 
