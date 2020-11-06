@@ -13,7 +13,8 @@ repos:
         args: ['--baseline', '.secrets.baseline']
         exclude: >
             (?x)^(
-            .*/tests/.*
+            .*/tests/.*|
+            renv.lock
             )$
 -   repo: https://github.com/aflc/pre-commit-jupyter
     rev: v1.1.0

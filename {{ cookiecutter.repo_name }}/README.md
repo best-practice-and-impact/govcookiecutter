@@ -147,10 +147,9 @@ no need to update the secrets baseline in this case.
 If your commit contains a mixture of false-positives and actual secrets, remove the actual secrets first before
 updating and auditing the secrets baseline.
 
-{% if cookiecutter.add_r_precommit_hooks == "Yes" %}
-***
-
+{% if cookiecutter.add_r_precommit_hooks == "Yes" -%}
 ## Using this with R
+
 Please follow all the above steps.
 
 After that, we use [renv](https://github.com/rstudio/renv) to manage package dependencies here. Thus, before writing any code, run the following R code in your R session:
@@ -169,8 +168,6 @@ This will install additional packages that are necessary to work alongside the p
 > This is because the pre-commit hooks in `.pre-commit-config.yaml` require R packages. To remove this error message, manually remove the R pre-commit hooks from `.pre-commit-config.yaml` and re-run in your terminal, `pre-commit install`, to re-install your pre-commit hooks without the R-dependencies.
 
 {% endif -%}
-
-***
 
 ### Note on Jupyter notebook cleaning
 
