@@ -1,5 +1,5 @@
-from itertools import permutations
 import os
+import re
 
 # Define the cookiecutter directory
 DIR_COOKIECUTTER = "{{ cookiecutter.repo_name }}"
@@ -7,8 +7,8 @@ DIR_COOKIECUTTER = "{{ cookiecutter.repo_name }}"
 # Initialise an empty list to store the expected filepaths
 DIRS_EXPECTED = []
 
-# Get all the directories within `DIR_COOKIECUTTER`, including all subfolders (unless they are `docs`, or `__pycache__`
-# subfolders)
+# Get all the directories within `DIR_COOKIECUTTER`, including all sub-folders (unless they are `docs`, or
+# `__pycache__` sub-folders)
 for root, dirs, _ in os.walk(DIR_COOKIECUTTER):
     if (not os.path.join(DIR_COOKIECUTTER, "docs") in root) and ("__pycache__" not in root):
         DIRS_EXPECTED += list(map(lambda d: os.path.join(os.getcwd(), root, d),
@@ -28,16 +28,23 @@ PATH_ENVRC = os.path.join(DIR_COOKIECUTTER, ".envrc")
 # Initialise an empty dictionary to store the environment variables
 dict_envrc = {}
 
-# Parse the entire `.envrc` file
+# Open the `.envrc` file for parsing
 with open(PATH_ENVRC) as f:
-    for line in f.readlines():
-        if not (line.startswith("#") or line == "\n"):
-            env_name, env_value = line.lstrip("export ").rstrip("\n").split("=", maxsplit=1)
-            dict_envrc[env_name] = env_value.replace("$(pwd)", os.path.join(os.getcwd(), DIR_COOKIECUTTER))
 
-# Recursively replace environment variables used in other environment variables
-for k1, k2 in permutations(dict_envrc, r=2):
-    dict_envrc[k1] = dict_envrc[k1].replace(f"${k2}", dict_envrc[k2])
+    # For each line, check if it starts with `export `
+    for line in f.readlines():
+        if line.startswith("export "):
+
+            # Split out the value assigned to each environment variable
+            env_name, env_value = line.lstrip("export ").rstrip("\n").split("=", maxsplit=1)
+
+            # Replace any uses of `$(pwd)` with the current working directory
+            env_value = env_value.replace("$(pwd)", os.path.join(os.getcwd(), DIR_COOKIECUTTER))
+
+            # Convert any relative paths to absolute paths, and assign to `dict_envrc`
+            dict_envrc[env_name] = os.path.abspath(
+                os.path.join(DIR_COOKIECUTTER, env_value) if re.match(r"^\.+/", env_value) else env_value
+            )
 
 # Get just the directory environment variables from `dict_envrc`
 dict_envrc_dir = {k: v for k, v in dict_envrc.items() if k.startswith("DIR_")}

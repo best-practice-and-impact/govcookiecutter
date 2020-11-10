@@ -43,6 +43,23 @@ a code coverage report in HTML will be produced on the code in the [hooks][docs-
 A file containing environment variables for the Git repository that can be selectively loaded. This uses the
 [`direnv`][direnv] shell extension; see their documentation for further information.
 
+This file contains a `sed` command to output a `.env` file with all the environment variables. This may be useful for
+sourcing environment variables, for example in conjunction with PyCharm's EnvFile plugin.
+{% if cookiecutter.create_secrets_file == "Yes" %}
+To ensure this `sed` command works correctly, make sure any file paths listed in this file, and the
+[`.secrets`](#secrets) are absolute file paths, or relative file paths that do not use other environment variables.
+For example:
+{% else %}
+To ensure this `sed` command works correctly, make sure any file paths listed in this file are absolute file paths, or
+relative file paths that do not use other environment variables. For example:
+{% endif %}
+```shell
+export DIR_DATA=$(pwd)/data  # fine
+export DIR_DATA_EXTERNAL=$(pwd)/data/external  # fine
+export DIR_DATA_EXTERNAL=./data/external  # fine
+export DIR_DATA_EXTERNAL=$DIR_DATA/external  # will break the `sed` command!
+```
+
 ### `.flake8`
 
 A configuration file for the [`flake8`][flake8] Python package that provides linting. This file is based on the
