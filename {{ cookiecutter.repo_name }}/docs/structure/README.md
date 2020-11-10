@@ -68,6 +68,12 @@ Baseline file for the [`detect-secrets`][detect-secrets] package; this package d
 with `pre-commit`, prevents them from being committed to the repository. The baseline file flags secret-like data that
 the user deliberately wishes to commit the to repository.
 
+### `LICENSE`
+
+The licence for this project. Unless stated otherwise, the codebase is released under the MIT License. This covers both
+the codebase and any sample code in the documentation. The documentation is © Crown copyright and available under the
+terms of the Open Government 3.0 licence.
+
 ### `Makefile`
 
 The `Makefile` contains a set of commands for the `make` utility. Run the `help` command for further information at the

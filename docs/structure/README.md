@@ -69,7 +69,9 @@ The [contributing guidelines][contributing] for this project.
 ### `cookiecutter.json`
 
 A JSON file containing the prompts and default values during template generation. Note any keys beginning with an
-underscore are not shown to users. For further information, see the [cookiecutter][cookiecutter] package documentation.
+underscore are not shown to users, and extensions are listed first.
+
+For further information, see the [cookiecutter][cookiecutter] package documentation.
 
 ### `LICENSE`
 
