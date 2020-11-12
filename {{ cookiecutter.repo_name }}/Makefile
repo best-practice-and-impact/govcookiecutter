@@ -1,4 +1,4 @@
-.PHONY: docs help prepare_docs_folder requirements
+.PHONY: docs docs_check_external_links help prepare_docs_folder requirements
 
 .DEFAULT_GOAL := help
 
@@ -8,7 +8,7 @@ requirements:
 	python3 -m pip install -r requirements.txt
 	pre-commit install
 
-## Create a `docs/_build` folder, if it doesn't exist. Otherwise delete any subfolders and their contents within it
+## Create a `docs/_build` folder, if it doesn't exist. Otherwise delete any sub-folders and their contents within it
 prepare_docs_folder:
 	if [ ! -d "./docs/_build" ]; then mkdir ./docs/_build; fi
 	find ./docs/_build -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
@@ -16,6 +16,10 @@ prepare_docs_folder:
 ## Compile the Sphinx documentation in HTML format in the docs/_build folder from a clean build
 docs: prepare_docs_folder requirements
 	sphinx-build -b html ./docs ./docs/_build
+
+## Check external links in the Sphinx documentation using linkcheck in the docs/_build folder from a clean build
+docs_check_external_links: prepare_docs_folder requirements
+	sphinx-build -b linkcheck ./docs ./docs/_build
 
 ## Get help on all make commands; referenced from https://github.com/drivendata/cookiecutter-data-science
 help:
@@ -38,7 +42,7 @@ help:
 	| LC_ALL='C' sort --ignore-case \
 	| awk -F '---' \
 		-v ncol=$$(tput cols) \
-		-v indent=19 \
+		-v indent=25 \
 		-v col_on="$$(tput setaf 6)" \
 		-v col_off="$$(tput sgr0)" \
 	'{ \
