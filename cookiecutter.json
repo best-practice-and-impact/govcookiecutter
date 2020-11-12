@@ -3,7 +3,7 @@
 
   "project_name": "Your new project name",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-  "author_name": "Your Name/Organisation",
+  "organisation_name": "Your organisation",
   "overview": "Brief overview of your project.",
   "project_version": "0.0.1",
   "create_secrets_file": ["No", "Yes"],
