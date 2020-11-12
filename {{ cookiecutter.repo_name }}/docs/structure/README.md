@@ -85,6 +85,15 @@ Baseline file for the [`detect-secrets`][detect-secrets] package; this package d
 with `pre-commit`, prevents them from being committed to the repository. The baseline file flags secret-like data that
 the user deliberately wishes to commit the to repository.
 
+### `CODE_OF_CONDUCT.md`
+
+The [Code of Conduct][code-of-conduct] for contributors to this project, including maintainers and `ukgovdatascience`
+organisation owners.
+
+### `CONTRIBUTING.md`
+
+The [contributing guidelines][contributing] for this project.
+
 ### `LICENSE`
 
 The licence for this project. Unless stated otherwise, the codebase is released under the MIT License. This covers both
@@ -128,6 +137,8 @@ Alternatively, to install the requirements file along with pre-commit hooks, run
 make requirements
 ```
 
+[code-of-conduct]:../contributor_guide/CODE_OF_CONDUCT.md
+[contributing]: ../contributor_guide/CONTRIBUTING.md
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [direnv]: https://direnv.net/
 [docs-pre-commit-hooks]: ../contributor_guide/pre_commit_hooks.md
