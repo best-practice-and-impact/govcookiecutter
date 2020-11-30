@@ -39,8 +39,7 @@ To use this template to start your next coding project, make sure your system me
 Once you're all set up, open your terminal, navigate to the directory where you want your new repository to exist, and
 run the following commands:
 
-```shell script
-pip install cookiecutter
+```shell
 cookiecutter https://github.com/ukgovdatascience/govcookiecutter
 ```
 
@@ -58,9 +57,31 @@ To get started your system should meet the following requirements:
 
 1. Unix-based system (macOS, Linux, ...)
 2. Python 3.5+ installed
-3. \[Recommended\] A Python virtual environment set up and activated
+3. The [`cookiecutter` package installed](#installing-cookiecutter)
 
-There are **many** ways to set up a virtual environment, so we'll let you decide what's best for you!
+#### Installing cookiecutter
+
+There are many ways to install the [`cookiecutter`][cookiecutter] package. **Our recommendation is to install it at the
+system or user level**, rather than as a Python package via `pip` or `conda`. This ensures it is isolated from the rest
+of your system, and always available.
+
+For macOS, install `cookiecutter` via [Homebrew][homebrew]:
+
+```shell
+brew install cookiecutter
+```
+
+For Debian/Ubuntu, use the following commands:
+
+```shell
+sudo apt-get install cookiecutter
+```
+
+Otherwise, you can install `cookiecutter` via `pip` — you may wish to create a virtual environment first:
+
+```shell
+python3 -m pip install --user cookiecutter
+```
 
 ## Things to consider changing post-creation
 
@@ -92,4 +113,5 @@ template data and src folder structures, and the `make help` commands in the Mak
 [contributing]: ./CONTRIBUTING.md
 [cookiecutter]: https://github.com/cookiecutter/cookiecutter
 [drivendata]: http://drivendata.github.io/cookiecutter-data-science/
+[homebrew]: https://brew.sh/
 [pre-commit]: https://pre-commit.com/
