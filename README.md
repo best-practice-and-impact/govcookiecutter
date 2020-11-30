@@ -5,7 +5,8 @@ A cookiecutter template for analytical, code-based projects within Her Majesty's
 - [Who/what is this for?](#whowhat-is-this-for)
 - [Getting started](#getting-started)
   - [Requirements](#requirements)
-- [Things to consider changing post-creation](#things-to-consider-changing-post-creation)
+- [Changes to make post-creation](#changes-to-make-post-creation)
+- [Changes to consider post-creation](#changes-to-consider-post-creation)
 - [Licence](#licence)
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
@@ -43,10 +44,11 @@ run the following commands:
 cookiecutter https://github.com/ukgovdatascience/govcookiecutter
 ```
 
-Follow the prompts, and that's it, you're good to go — happy coding!
+Follow the prompts, and that's it — you've created your project structure! Post-creation, there are a few
+[mandatory changes](#changes-to-make-post-creation) to make, as well as a some
+[optional changes](#changes-to-consider-post-creation) you should also consider making.
 
-There are a few optional things you should consider doing in your new project, and we've detailed them
-[here](#things-to-consider-changing-post-creation).
+Otherwise, that's it — happy coding! 🎉
 
 ### Requirements
 
@@ -83,11 +85,18 @@ Otherwise, you can install `cookiecutter` via `pip` — you may wish to create a
 python3 -m pip install --user cookiecutter
 ```
 
-## Things to consider changing post-creation
+## Changes to make post-creation
 
-Here's a few things you should consider changing once you've created your new project:
+Here's a few changes you **must** do once you've created your new project:
 
+- Set up a Python virtual environment — there are **many** ways to set up a virtual environment, so we'll let you
+  decide what's best for you!
 - Git is not set up by default — open your terminal, navigate to your new project, run `git init` to set it up
+
+## Changes to consider post-creation
+
+Here's a few changes you should consider changing once you've created your new project:
+
 - Make sure the `README.md` reflects what **you** want to do with your project!
 - Have a look inside the `docs/aqa` folder; you may want to modify some of them, e.g. the AQA plan
 - Want to add some project-specific checklists to the pull/merge request template? See the relevant Markdown files
