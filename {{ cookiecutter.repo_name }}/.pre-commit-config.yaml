@@ -13,8 +13,8 @@ repos:
         args: ['--baseline', '.secrets.baseline']
         exclude: >
             (?x)^(
-            .*/tests/.*|
-            renv.lock
+            renv.lock|
+            .*/tests/.*
             )$
 -   repo: https://github.com/aflc/pre-commit-jupyter
     rev: v1.1.0
@@ -56,7 +56,6 @@ repos:
           (.*/|)appveyor.yml|
           (.*/|)\.Rbuildignore|
           (.*/|)\.pre-commit-.*|
-          .*\.[rR]|
           .*\.Rproj|
           .*\.py|
           .*\.feather|
@@ -64,7 +63,18 @@ repos:
           .*\.Rds|
           .*\.sh|
           .*\.RData|
-          renv.lock
+          renv.lock|
+          pytest.ini|
+          requirements.txt|
+          (.*/|).secrets.baseline|
+          .envrc|
+          .flake8|
+          Makefile|
+          (.*/|)conf.py|
+          (.*/|)index.md|
+          (.*/|)make.bat|
+          (.*/|)activate.R|
+          (.*/|)settings.dcf
           )$
     -   id: lintr
         exclude: renv/activate.R
