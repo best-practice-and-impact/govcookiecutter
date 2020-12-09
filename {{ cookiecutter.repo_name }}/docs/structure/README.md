@@ -139,10 +139,13 @@ make requirements
 
 [code-of-conduct]:../contributor_guide/CODE_OF_CONDUCT.md
 [contributing]: ../contributor_guide/CONTRIBUTING.md
+[coverage]: https://coverage.readthedocs.io/
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [direnv]: https://direnv.net/
 [docs-pre-commit-hooks]: ../contributor_guide/pre_commit_hooks.md
+[docs-tests]: ./tests.md
 [docs-updating-gitignore]: ../contributor_guide/updating_gitignore.md
 [flake8]: https://gitlab.com/pycqa/flake8
 [gds-way]: https://gds-way.cloudapps.digital
 [gds-way-flake8]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#common-configuration
+[pytest]: https://docs.pytest.org/
