@@ -15,7 +15,7 @@ Keeping as much of the documentation in a centralised location is a good thing â
 anyone else can quickly find as much information as they need to understand and/or run what you've done.
 
 Sphinx is a Python-based package to compile documentation into different formats, including HTML. This means you can
-write your documentation and, with a single terminal command, build it into a searchable website containing.
+write your documentation and, with a single terminal command, build it into a searchable website.
 
 It's widely used, such as for the documentation of the [pandas][pandas], and [PyTorch][pytorch] Python packages as well
 as many [others][sphinx-examples], and is highly customisable with different extensions, and themes. Included with this
@@ -137,7 +137,7 @@ file within the `docs` folder with the following lines:
 [pytorch]: https://pytorch.org/docs/stable/index.html
 [rest]: https://docutils.readthedocs.io/en/sphinx-docs/user/rst/quickstart.html
 [sphinx]: https://www.sphinx-doc.org/
-[sphinx-autosummaru]: https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html
+[sphinx-autosummary]: https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html
 [sphinx-examples]: https://www.sphinx-doc.org/en/master/examples.html
 [sphinx-rst]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 [writethedocs]: https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/
