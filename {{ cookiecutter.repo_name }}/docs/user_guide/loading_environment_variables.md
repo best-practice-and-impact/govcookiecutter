@@ -45,8 +45,8 @@ of installing `direnv`, and its shell hooks, consult the package's [documentatio
    cat ~/.bash_profile
    ```
    - This should display `eval "$(direnv hook bash)"`
-5. Restart your terminal.
-{% if cookiecutter.create_secrets_file == "Yes" %}
+5. Restart your terminal.{% if cookiecutter.create_secrets_file == "Yes" %}
+
 ## Storing secrets and credentials
 
 Secrets and credentials must be stored in the `.secrets` file. **This file is not version-controlled**, so no secrets
@@ -71,7 +71,7 @@ Once complete, make sure the `.secrets` file has the following line uncommented 
 source_env ".secrets"
 ```
 
-This ensures [`direnv`][direnv] loads the `.secrets` file via `.envrc` **without** version-controlling `.secrets`.
-{% endif %}
+This ensures [`direnv`][direnv] loads the `.secrets` file via `.envrc` **without** version-controlling `.secrets`.{% endif %}
+
 [direnv]: https://direnv.net/
 [homebrew]: https://brew.sh/
