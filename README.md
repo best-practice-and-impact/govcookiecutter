@@ -67,7 +67,7 @@ There are many ways to install the [`cookiecutter`][cookiecutter] package. **Our
 system or user level**, rather than as a Python package via `pip` or `conda`. This ensures it is isolated from the rest
 of your system, and always available.
 
-For macOS, install `cookiecutter` via [Homebrew][homebrew]:
+For macOS, open your terminal, and install `cookiecutter` via [Homebrew][homebrew]:
 
 ```shell
 brew install cookiecutter
@@ -89,8 +89,8 @@ python3 -m pip install --user cookiecutter
 
 Here's a few changes you **must** do once you've created your new project:
 
-- Set up a Python virtual environment — there are **many** ways to set up a virtual environment, so we'll let you
-  decide what's best for you!
+- Set up a Python virtual environment — there are **many** ways to [set up a virtual environment][pluralsight], so
+  we'll let you decide what's best for you!
 - Git is not set up by default — open your terminal, navigate to your new project, run `git init` to set it up
 
 ## Changes to consider post-creation
@@ -123,4 +123,5 @@ template data and src folder structures, and the `make help` commands in the Mak
 [cookiecutter]: https://github.com/cookiecutter/cookiecutter
 [drivendata]: http://drivendata.github.io/cookiecutter-data-science/
 [homebrew]: https://brew.sh/
+[pluralsight]: https://www.pluralsight.com/tech-blog/managing-python-environments/
 [pre-commit]: https://pre-commit.com/
