@@ -35,7 +35,7 @@ coverage html
 ```
 
 a code coverage report in HTML will be produced on the code in the [hooks][docs-hooks], and
-`{{ cookiecutter.repo_name }}/src` folders. This HTMl report can be accessed at `htmlcov/index.html`.
+`{{ cookiecutter.repo_name }}/src` folders. This HTML report can be accessed at `htmlcov/index.html`.
 
 ### `.flake8`
 
@@ -55,7 +55,7 @@ A pre-commit hook configuration file. See the [contributor guide][docs-pre-commi
 
 Baseline file for the [`detect-secrets`][detect-secrets] package; this package detects secrets, and, in conjunction
 with `pre-commit`, prevents them from being committed to the repository. The baseline file flags secret-like data that
-the user deliberately wishes to commit the to repository.
+the user deliberately wishes to commit to the repository.
 
 ### `CODE_OF_CONDUCT.md`
 

@@ -28,7 +28,7 @@ socio-economic status, nationality, personal appearance, race, religion, or sexu
 
 ### Our Standards
 
-Examples of behavior that contributes to creating a positive environment include:
+Examples of behaviour that contributes to creating a positive environment include:
 
 - Using welcoming and inclusive language
 - Being respectful of differing viewpoints and experiences
@@ -51,7 +51,7 @@ appropriate and fair corrective action in response to any instances of unaccepta
 
 Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits,
 issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any
-contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.
+contributor for other behaviours that they deem inappropriate, threatening, offensive, or harmful.
 
 ### Scope
 
@@ -62,7 +62,7 @@ online or offline event. Representation of a project may be further defined and 
 
 ### Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at
+Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported by contacting the project team at
 [{{ cookiecutter.contact_email }}][email-address]. All complaints will be reviewed and investigated and
 will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated
 to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement

@@ -90,7 +90,7 @@ coverage run -m pytest
 coverage html
 ```
 
-The HTMl report can be accessed at `htmlcov/index.html`.
+The HTML report can be accessed at `htmlcov/index.html`.
 
 ## Documentation
 
