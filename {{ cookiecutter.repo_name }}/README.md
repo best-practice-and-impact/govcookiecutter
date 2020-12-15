@@ -24,15 +24,18 @@ To be added.
 {% if cookiecutter.create_secrets_file == "Yes" %}
 ## Required secrets and credentials
 
-To run this project, first make sure [you have a `.secrets` file][docs-loading-environment-variables-secrets]. Then,
-add the following lines to it to load secrets and credentials as environment variables:
+To run this project, you need a `.secrets` file with secrets/credentials as environmental variables; see the
+[documentation][docs-loading-environment-variables-secrets] for further guidance. The secrets/credentials should have
+the following environment variable name(s):
 
-```shell
-export SOME_VARIABLE=SOME_VALUE
-```
+| Secret/credential | Environment variable name | Description                                |
+|-------------------|---------------------------|--------------------------------------------|
+| Secret 1          | `SECRET_VARIABLE_1`       | Plain English description of Secret 1.     |
+| Credential 1      | `CREDENTIAL_VARIABLE_1`   | Plain English description of Credential 1. |
 
-Once you've made this change you will need to [load these variables via `.envrc`][docs-loading-environment-variables].
-{% endif -%}
+Once you've added these environment variables to `.secrets` you will need to
+[load them via `.envrc`][docs-loading-environment-variables].
+{% endif %}
 ## Licence
 
 Unless stated otherwise, the codebase is released under the MIT License. This covers both the codebase and any sample
