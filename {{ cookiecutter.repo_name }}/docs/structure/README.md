@@ -45,14 +45,11 @@ A file containing environment variables for the Git repository that can be selec
 
 This file contains a `sed` command to output a `.env` file with all the environment variables. This may be useful for
 sourcing environment variables, for example in conjunction with PyCharm's EnvFile plugin.
-{% if cookiecutter.create_secrets_file == "Yes" %}
+
 To ensure this `sed` command works correctly, make sure any file paths listed in this file, and the
 [`.secrets`](#secrets) are absolute file paths, or relative file paths that do not use other environment variables.
 For example:
-{% else %}
-To ensure this `sed` command works correctly, make sure any file paths listed in this file are absolute file paths, or
-relative file paths that do not use other environment variables. For example:
-{% endif %}
+
 ```shell
 export DIR_DATA=$(pwd)/data  # fine
 export DIR_DATA_EXTERNAL=$(pwd)/data/external  # fine
@@ -73,12 +70,12 @@ A `.gitignore` file to ignore certain files and folders from this Git repository
 ### `.pre-commit-config.yaml`
 
 A pre-commit hook configuration file. See the [contributor guide][docs-pre-commit-hooks] for further details.
-{% if cookiecutter.create_secrets_file == "Yes" %}
+
 ### `.secrets`
 
 A file to store all secrets and credentials as environment variables. This is read-in by [`.envrc`](#envrc) using the
 [`direnv`][direnv] shell extension, but is **not** tracked by Git.
-{% endif %}
+
 ### `.secrets.baseline`
 
 Baseline file for the [`detect-secrets`][detect-secrets] package; this package detects secrets, and, in conjunction
