@@ -10,6 +10,5 @@
   "project_name": "Your new project name",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
   "overview": "Brief overview of your project.",
-  "project_version": "0.0.1",
-  "create_secrets_file": ["No", "Yes"]
+  "project_version": "0.0.1"
 }
