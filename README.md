@@ -3,8 +3,8 @@
 A cookiecutter template for analytical, code-based projects within Her Majesty's Government.
 
 - [Who/what is this for?](#whowhat-is-this-for)
-- [Getting started](#getting-started)
-  - [Requirements](#requirements)
+- [Getting started](#getting-started-with-govcookiecutter-for-your-projects)
+  - [Requirements](#requirements-to-create-a-cookiecutter-template)
 - [Changes to make post-creation](#changes-to-make-post-creation)
 - [Changes to consider post-creation](#changes-to-consider-post-creation)
 - [Licence](#licence)
@@ -35,7 +35,7 @@ Jupyter notebook outputs for security purposes.
 > ⚠️ Only Unix-based systems (macOS, Linux, ...), and Python projects for GitHub or GitLab are supported — feel free to
 > [contribute](#contributing) to support other operating systems/programming languages!
 
-To use this template to start your next coding project, make sure your system meets the [requirements](#requirements).
+To use this template to start your next coding project, make sure your system meets the [requirements](#requirements-to-create-a-cookiecutter-template).
 
 Once you're all set up, open your terminal, navigate to the directory where you want your new repository to exist, and
 run the following commands:

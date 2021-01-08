@@ -18,7 +18,7 @@ Please read [`CODE_OF_CONDUCT.md`][code-of-conduct] before contributing.
 
 ## Getting started
 
-To start contributing, first ensure your system meets the [requirements][readme-requirements]. Next, install the
+To start contributing, first ensure your system meets the [requirements][readme-requirements-to-create-a-cookiecutter-template]. Next, install the
 required Python packages, and [pre-commit hooks][pre-commit] using:
 
 ```shell
