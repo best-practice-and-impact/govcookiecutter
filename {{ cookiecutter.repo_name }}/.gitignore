@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/vim,venv,pydev,flask,dotenv,django,direnv,python,virtualenv,pycharm+all,visualstudio,jupyternotebooks,macos,linux,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=vim,venv,pydev,flask,dotenv,django,direnv,python,virtualenv,pycharm+all,visualstudio,jupyternotebooks,macos,linux,windows
+# Created by https://www.toptal.com/developers/gitignore/api/vim,venv,pydev,linux,macos,flask,dotenv,django,direnv,python,windows,virtualenv,pycharm+all,visualstudio,jupyternotebooks,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=vim,venv,pydev,linux,macos,flask,dotenv,django,direnv,python,windows,virtualenv,pycharm+all,visualstudio,jupyternotebooks,visualstudiocode
 
 ### direnv ###
 .direnv
@@ -464,6 +464,17 @@ tags
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
 
+### VisualStudioCode ###
+.vscode/*
+#!.vscode/tasks.json
+#!.vscode/launch.json
+*.code-workspace
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -841,7 +852,7 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-# End of https://www.toptal.com/developers/gitignore/api/vim,venv,pydev,flask,dotenv,django,direnv,python,virtualenv,pycharm+all,visualstudio,jupyternotebooks,macos,linux,windows
+# End of https://www.toptal.com/developers/gitignore/api/vim,venv,pydev,linux,macos,flask,dotenv,django,direnv,python,windows,virtualenv,pycharm+all,visualstudio,jupyternotebooks,visualstudiocode
 
 ### {{ cookiecutter.project_name }} ###
 
