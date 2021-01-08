@@ -1,0 +1,4 @@
+[run]
+source =
+    ./hooks
+    ./{{ cookiecutter.repo_name }}/src

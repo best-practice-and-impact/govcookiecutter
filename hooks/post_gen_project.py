@@ -33,12 +33,12 @@ def create_secrets_file(user_option: str) -> None:
 
         # Define a header for the `.secrets file`
         secrets_file = """
-        # Secrets go here, and can be read in by Python using `os.environ.get`:
+        # Secrets go here, and can be read in by Python using `os.getenv`:
         #
         #   --------------------------------------------------------
         #   import os
         #
-        #   EXAMPLE_SECRET = os.environ.get("EXAMPLE_SECRET")
+        #   EXAMPLE_SECRET = os.getenv("EXAMPLE_SECRET")
         #   --------------------------------------------------------
         #
         # This file is NOT version-controlled!

@@ -9,8 +9,6 @@
 # If extensions (or modules to document with autodoc) are in another directory, add these directories to sys.path here.
 # If the directory is relative to the documentation root, use os.path.abspath to make it absolute, like shown here.
 
-from recommonmark.transform import AutoStructify
-import os
 # import sys
 # sys.path.insert(0, os.path.abspath("."))
 
@@ -26,8 +24,7 @@ extensions = [
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.autosummary",
     "sphinx.ext.napoleon",
-    "sphinx_markdown_tables",
-    "recommonmark",
+    "myst_parser",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -296,20 +293,7 @@ autosummary_generate = True
 # napoleon_use_param = True
 # napoleon_use_rtype = True
 
-# -- recommonmark.transform.AutoStructify function - MUST BE LAST IN conf.py -------------------------------------------
+# -- Options for MySt --------------------------------------------------------------------------------------------------
 
-
-# At the bottom of conf.py
-def setup(app):
-    app.add_config_value("recommonmark_config", {
-        "auto_toc_maxdepth": 2,
-        "auto_toc_tree_section": None,
-        "enable_auto_toc_tree": True,
-        "enable_eval_rst": True,
-        "enable_math": True,
-        "enable_inline_math": True,
-        "commonmark_suffixes": [".md"],
-        "url_resolver": lambda url: os.path.join("..", url),  # allows TOC trees in nested Markdown files
-        "known_url_schemes": None
-    }, True)
-    app.add_transform(AutoStructify)
+# Enforce heading anchors for h1 to h6 headings
+myst_heading_anchors = 6

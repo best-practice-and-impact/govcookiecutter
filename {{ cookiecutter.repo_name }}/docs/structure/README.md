@@ -1,147 +1,126 @@
-# Project structure
+# `{{ cookiecutter.repo_name }}` structure
 
-```eval_rst
-.. contents::
-    :local:
-    :depth: 2
+This page provides information on the repository's structure.
 
+```{contents}
+:local:
+:depth: 2
 ```
 
 ## Folder structure
 
-Each subsection here contains a brief description about the suggested usage of these folders.
+The repository's folder structure is explained here:
 
-### `data` folder
-
-Any data that needs to be stored locally should be saved in this location. This folder, and all its sub-folders are not
-version-controlled.
-
-The sub-folders should be used as follows:
-
-- `external`: Any data that will **not** be processed at all, such as reference data;
-- `raw`: Any raw data before any processing;
-- `interim`: Any raw data that has been partially processed and, for whatever reason, needs to be stored before further
-processing is completed; and
-- `processed`: Any raw or interim data that has been fully processed into its final state.
-
-The folder paths for these directories are loaded as environment variables by the [`.envrc`](#envrc) file; to load them
-in Python, use any or all of the following code:
-
-```python
-import os
-
-DIR_DATA = os.environ.get("DIR_DATA")
-DIR_DATA_EXTERNAL = os.environ.get("DIR_DATA_EXTERNAL")
-DIR_DATA_RAW = os.environ.get("DIR_DATA_RAW")
-DIR_DATA_INTERIM = os.environ.get("DIR_DATA_INTERIM")
-DIR_DATA_PROCESSED = os.environ.get("DIR_DATA_PROCESSED")
+```{toctree}
+:maxdepth: 2
+./data.md
+./docs.md
+./notebooks.md
+./outputs.md
+./src.md
+./tests.md
 ```
-
-### `docs` folder
-
-All documentation for the project should be included in this folder in either Markdown or ReStructuredText files, with
-acceptable formatting for Sphinx.
-
-To build the documentation, run the `docs` command from the [`Makefile`](#makefile) using the `make` utility at the
-top-level of this Git repository.
-
-```
-make docs
-```
-
-For further information about writing Sphinx documentation, see the `README.md` file in the `docs` folder.
-
-#### Analytical quality assurance (AQA)
-
-All analytical quality assurance (AQA) documents can be found in the `docs/aqa` folder. These files document how this 
-project meets HM Government guidance on producing quality analysis, as described in the 
-[Aqua book](https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government).
-
-### `notebooks` folder
-
-All Jupyter notebooks should be stored in this folder. The [`.envrc`](#envrc) file should automatically add the entire
-project path into the `PYTHONPATH` environment variable - this should allow you to directly import `src` in your
-notebook.
-
-### `outputs` folder
-
-All outputs from the project should be stored here. This folder path for these directories is loaded as an environment
-variable by the [`.envrc`](#envrc) file; to load them in Python, use the following code:
-
-```python
-import os
-
-DIR_OUTPUT = os.environ.get("DIR_OUTPUT")
-```
-
-### `src` package
-
-All functions for this project, should be stored in this folder. **All tests should be stored in the
-[`tests`](#tests-folder) folder**, which is one-level above this folder in the main project directory.
-
-The sub-folders should be used as follows:
-
-- `make_data`: Data processing-related functions;
-- `make_features`: Feature-related functions, for example, functions to create features from processed data;
-- `make_models`: Model-related functions;
-- `make_visualisations`: Functions to produce visualisations;
-- `utils`: Utility functions that are helpful in the project.
-
-Feel free to create/rename/delete these folders as required, as they will not be necessary for each and every project.
-
-It is strongly suggested that you import functions in the `src` `__init__.py` script. You should also
-try and use absolute imports in this script whenever possible; relative imports are not discouraged, but can be an
-issue for projects where the directory structure is likely to change. See
-[PEP 328](https://www.python.org/dev/peps/pep-0328/) for further information.
-
-### `tests` folder
-
-All tests for the functions defined in the [`src`](#src-package) package should be stored here.
 
 ## Top-level files
 
 Each subsection here contains a brief description about the files at the top-level of this Git repository.
 
+### `.coveragerc`
+
+A file containing configuration settings for the [`coverage`][coverage] Python package. When executed with
+[`pytest`][pytest] using the following command:
+
+```shell
+coverage run -m pytest
+coverage html
+```
+
+a code coverage report in HTML will be produced on the code in the [hooks][docs-hooks], and
+`{{ cookiecutter.repo_name }}/src` folders. This HTMl report can be accessed at `htmlcov/index.html`.
+
 ### `.envrc`
 
 A file containing environment variables for the Git repository that can be selectively loaded. This uses the
-[`direnv`](https://direnv.net/) shell extension; see their documentation for further information.
+[`direnv`][direnv] shell extension; see their documentation for further information.
+
+This file contains a `sed` command to output a `.env` file with all the environment variables. This may be useful for
+sourcing environment variables, for example in conjunction with PyCharm's EnvFile plugin.
+{% if cookiecutter.create_secrets_file == "Yes" %}
+To ensure this `sed` command works correctly, make sure any file paths listed in this file, and the
+[`.secrets`](#secrets) are absolute file paths, or relative file paths that do not use other environment variables.
+For example:
+{% else %}
+To ensure this `sed` command works correctly, make sure any file paths listed in this file are absolute file paths, or
+relative file paths that do not use other environment variables. For example:
+{% endif %}
+```shell
+export DIR_DATA=$(pwd)/data  # fine
+export DIR_DATA_EXTERNAL=$(pwd)/data/external  # fine
+export DIR_DATA_EXTERNAL=./data/external  # fine
+export DIR_DATA_EXTERNAL=$DIR_DATA/external  # will break the `sed` command!
+```
 
 ### `.flake8`
 
-A configuration file for the [`flake8`](https://gitlab.com/pycqa/flake8) Python package that provides linting. This
-file is based on the
-[common configuration](https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#common-configuration)
-described on [The GDS Way](https://gds-way.cloudapps.digital).
+A configuration file for the [`flake8`][flake8] Python package that provides linting. This file is based on the
+[common configuration][gds-way-flake8] described on [The GDS Way][gds-way].
 
 ### `.gitignore`
 
 A `.gitignore` file to ignore certain files and folders from this Git repository. See the
-[GitHub Help pages](https://help.github.com/en/github/using-git/ignoring-files) for further information.
+[contributor guide][docs-updating-gitignore] for further information about modifying this file.
 
 ### `.pre-commit-config.yaml`
 
-A pre-commit hook configuration file. See the `pre-commit` package [documentation](https://pre-commit.com/) for further
-details.
+A pre-commit hook configuration file. See the [contributor guide][docs-pre-commit-hooks] for further details.
 {% if cookiecutter.create_secrets_file == "Yes" %}
 ### `.secrets`
 
 A file to store all secrets and credentials as environment variables. This is read-in by [`.envrc`](#envrc) using the
-[`direnv`](https://direnv.net/) shell extension, but is **not** tracked by Git.
+[`direnv`][direnv] shell extension, but is **not** tracked by Git.
 {% endif %}
 ### `.secrets.baseline`
 
-Optional baseline file for the [`detect-secrets`](https://github.com/Yelp/detect-secrets) package; this package detects
-secrets, and, in conjunction with `pre-commit`, prevents them from being committed to the repository. The baseline file
-flags secret-like data that the user deliberately wishes to commit the to repository.
+Baseline file for the [`detect-secrets`][detect-secrets] package; this package detects secrets, and, in conjunction
+with `pre-commit`, prevents them from being committed to the repository. The baseline file flags secret-like data that
+the user deliberately wishes to commit the to repository.
+
+### `CODE_OF_CONDUCT.md`
+
+The [Code of Conduct][code-of-conduct] for contributors to this project, including maintainers and `ukgovdatascience`
+organisation owners.
+
+### `conftest.py`
+
+File to contain shared fixture functions for the [pytest][pytest] tests in the `tests` folder.
+
+### `CONTRIBUTING.md`
+
+The [contributing guidelines][contributing] for this project.
+
+### `LICENSE`
+
+The licence for this project. Unless stated otherwise, the codebase is released under the MIT License. This covers both
+the codebase and any sample code in the documentation. The documentation is © Crown copyright and available under the
+terms of the Open Government 3.0 licence.
 
 ### `Makefile`
 
 The `Makefile` contains a set of commands for the `make` utility. Run the `help` command for further information at the
 top-level of the Git repository.
 
-```
+```shell
 make help
+```
+
+### `pytest.ini`
+
+A file containing configuration settings for the [`pytest`][pytest] Python package. To run tests within the
+[`tests`][docs-tests], and `{{ cookiecutter.repo_name }}/tests` folders, execute the following
+command:
+
+```shell
+pytest
 ```
 
 ### `README.md`
@@ -152,6 +131,25 @@ An overview of the Git repository, including all necessary instructions to execu
 
 A list of Python package requirements for this Git repository, which can be installed using the `pip install` command.
 
-```
+```shell
 pip install --requirement requirements.txt
 ```
+
+Alternatively, to install the requirements file along with pre-commit hooks, run the following command:
+
+```shell
+make requirements
+```
+
+[code-of-conduct]:../contributor_guide/CODE_OF_CONDUCT.md
+[contributing]: ../contributor_guide/CONTRIBUTING.md
+[coverage]: https://coverage.readthedocs.io/
+[detect-secrets]: https://github.com/Yelp/detect-secrets
+[direnv]: https://direnv.net/
+[docs-pre-commit-hooks]: ../contributor_guide/pre_commit_hooks.md
+[docs-tests]: ./tests.md
+[docs-updating-gitignore]: ../contributor_guide/updating_gitignore.md
+[flake8]: https://gitlab.com/pycqa/flake8
+[gds-way]: https://gds-way.cloudapps.digital
+[gds-way-flake8]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#common-configuration
+[pytest]: https://docs.pytest.org/
