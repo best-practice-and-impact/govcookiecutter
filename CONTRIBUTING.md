@@ -18,7 +18,7 @@ Please read [`CODE_OF_CONDUCT.md`][code-of-conduct] before contributing.
 
 ## Getting started
 
-To start contributing, first ensure your system meets the [requirements][readme-requirements-to-create-a-cookiecutter-template]. Next, install the
+To start contributing, first ensure your system meets the [requirements][readme-requirements]. Next, install the
 required Python packages, and [pre-commit hooks][pre-commit] using:
 
 ```shell
@@ -113,4 +113,4 @@ Further information on how to write Sphinx documentation, and how to build it in
 [myst]: https://myst-parser.readthedocs.io/
 [pre-commit]: https://pre-commit.com/
 [pytest]: https://docs.pytest.org/
-[readme-requirements]: ./README.md#requirements
+[readme-requirements]: ./README.md#requirements-to-create-a-cookiecutter-template
