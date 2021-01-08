@@ -90,6 +90,10 @@ the user deliberately wishes to commit the to repository.
 The [Code of Conduct][code-of-conduct] for contributors to this project, including maintainers and `ukgovdatascience`
 organisation owners.
 
+### `conftest.py`
+
+File to contain shared fixture functions for the [pytest][pytest] tests in the `tests` folder.
+
 ### `CONTRIBUTING.md`
 
 The [contributing guidelines][contributing] for this project.

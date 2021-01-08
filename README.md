@@ -30,7 +30,7 @@ standards on assurance are met.
 We have also included [pre-commit hooks][pre-commit] to prevent accidental committing of secrets, large data files, and
 Jupyter notebook outputs for security purposes.
 
-## Getting started
+## Getting started with `govcookiecutter` for your projects
 
 > ⚠️ Only Unix-based systems (macOS, Linux, ...), and Python projects for GitHub or GitLab are supported — feel free to
 > [contribute](#contributing) to support other operating systems/programming languages!
@@ -50,7 +50,7 @@ Follow the prompts, and that's it — you've created your project structure! Pos
 
 Otherwise, that's it — happy coding! 🎉
 
-### Requirements
+### Requirements to create a cookiecutter template
 
 > ℹ️ Contributors have some additional requirements! Check out the [contributing guidelines][contributing] for further
 > details.
