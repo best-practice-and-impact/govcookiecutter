@@ -35,7 +35,8 @@ Jupyter notebook outputs for security purposes.
 > ⚠️ Only Unix-based systems (macOS, Linux, ...), and Python projects for GitHub or GitLab are supported — feel free to
 > [contribute](#contributing) to support other operating systems/programming languages!
 
-To use this template to start your next coding project, make sure your system meets the [requirements](#requirements-to-create-a-cookiecutter-template).
+To use this template to start your next coding project, make sure your system meets the
+[requirements](#requirements-to-create-a-cookiecutter-template).
 
 Once you're all set up, open your terminal, navigate to the directory where you want your new repository to exist, and
 run the following commands:

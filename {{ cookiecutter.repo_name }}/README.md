@@ -49,7 +49,7 @@ If you want to help us build, and improve `{{ cookiecutter.project_name }}`, vie
 
 ## Acknowledgements
 
-This project structure is based on the `govcookiecutter` template project.
+This project structure is based on the [`govcookiecutter`][govcookiecutter] template project.
 
 [contributing]: ./CONTRIBUTING.md
 [govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter

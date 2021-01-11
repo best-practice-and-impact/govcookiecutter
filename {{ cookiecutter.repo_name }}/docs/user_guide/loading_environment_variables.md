@@ -1,7 +1,7 @@
 # Loading environment variables
 
 We use [`direnv`][direnv] to load environment variables, as it ensures you only have project-specific variables loaded
-_when you are inside the project_, otherwise these variables are not loaded. This can prevents accidental conflicts
+_when you are inside the project_, otherwise these variables are not loaded. This can prevent accidental conflicts
 with identically named variables.
 
 ```{contents}

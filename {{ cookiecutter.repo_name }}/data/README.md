@@ -1,6 +1,6 @@
 # `data` folder
 
-Any data that needs to be stored locally should be saved in this location. This folder, and all its sub-folders are not
+Any data that needs to be stored locally should be saved in this location. This folder, and its sub-folders, are not
 version-controlled.
 
 The sub-folders should be used as follows:

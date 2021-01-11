@@ -35,7 +35,7 @@ project:
 make docs
 ```
 
-This should create a HTML version of your documentation accessible from `docs/_build/index.html`.
+This should create an HTML version of your documentation accessible from `docs/_build/index.html`.
 
 ## Writing in reStructuredText
 
@@ -102,9 +102,9 @@ stub files.
 ```
 ````
 
-### Including Markdown files outside of the `docs` folder
+### Including Markdown files outside the `docs` folder
 
-MyST lets you include Markdown files outside of the `docs` folder [easily][myst-include].
+MyST lets you include Markdown files outside the `docs` folder [easily][myst-include].
 
 If a Markdown file (`../example.md`) only contains links that do not reference anything else in this project (including
 images), create a Markdown file within the `docs` folder with the following lines:

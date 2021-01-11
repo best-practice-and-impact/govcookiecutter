@@ -64,7 +64,7 @@ Use a local link to reference the [`README.md`](./README.md) file, but an extern
 [gov-uk]: https://www.gov.uk/
 ```
 
-We also try and wrap Markdown to a line length of 120 characters, but this is not strictly enforced in all cases, for
+We also try to wrap Markdown to a line length of 120 characters, but this is not strictly enforced in all cases, for
 example with long hyperlinks.
 
 ## Testing
@@ -83,7 +83,7 @@ Code coverage of Python scripts is measured using the [`coverage`][coverage] Pyt
 found in `.coveragerc`. Note coverage only extends to Python scripts in the `hooks`, and
 `{{ cookiecutter.repo_name }}/src` folders.
 
-To run code coverage, and view it as a HTML report, execute the following commands in your terminal:
+To run code coverage, and view it as an HTML report, execute the following commands in your terminal:
 
 ```shell
 coverage run -m pytest

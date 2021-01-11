@@ -15,7 +15,7 @@ ensuring that all of our code adheres to a certain quality standard.
 For this repository, we are using `pre-commit` for a number of purposes:
 
 - Checking for any secrets being committed accidentally;
-- Checking for any large files (over 5MB) being committed; and
+- Checking for any large files (over 5 MB) being committed; and
 - Cleaning Jupyter notebooks, which means removing all outputs and execution counts.
 
 We have configured `pre-commit` to run automatically on _every commit_. By running on each commit, we ensure that
@@ -26,7 +26,7 @@ We have configured `pre-commit` to run automatically on _every commit_. By runni
 In order for `pre-commit` to run, action is needed to configure it on your system.
 
 - Install the `pre-commit` package into your Python environment from `requirements.txt`; and
-- Run `pre-commit install` in your terminal to set-up `pre-commit` to run when code is _committed_.
+- Run `pre-commit install` in your terminal to set up `pre-commit` to run when code is _committed_.
 
 ## Using the `detect-secrets` pre-commit hook
 
@@ -45,8 +45,8 @@ detect-secrets audit .secrets.baseline
 ```
 
 When you run this command, you'll enter an interactive console and be presented with a list of high-entropy string
-and/or anything which _could_ be a secret, and asked to verify whether or not this is the case. By doing this, the hook
-will be in a position to know if you're later committing any _new_ secrets to the repo and it will be able to alert you
+and/or anything which _could_ be a secret, and asked to verify whether this is the case. By doing this, the hook will
+be in a position to know if you're later committing any _new_ secrets to the repo, and it will be able to alert you
 accordingly.
 
 ### If `pre-commit` detects secrets during commit
@@ -64,10 +64,10 @@ If the detected secret is a false-positive, you should update the `.secrets.base
   been updated for.
 
 If the detected secret is actually a secret (or other sensitive information), remove the secret and re-commit. There is
-no need to update the secrets baseline in this case.
+no need to update the `.secrets.baseline` file in this case.
 
 If your commit contains a mixture of false-positives and actual secrets, remove the actual secrets first before
-updating and auditing the secrets baseline.
+updating and auditing the `.secrets.baseline` file.
 
 ## Keeping specific Jupyter notebook outputs
 
