@@ -113,4 +113,4 @@ Further information on how to write Sphinx documentation, and how to build it in
 [myst]: https://myst-parser.readthedocs.io/
 [pre-commit]: https://pre-commit.com/
 [pytest]: https://docs.pytest.org/
-[readme-requirements]: ./README.md#requirements
+[readme-requirements]: ./README.md#requirements-to-create-a-cookiecutter-template
