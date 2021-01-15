@@ -27,15 +27,16 @@ We use nudges, such as checklists in pull/merge requests, to minimise the burden
 complete AQA checks. This results in faster iterative development and deployment, whilst ensuring HM Government-wide
 standards on assurance are met.
 
-We have also included [pre-commit hooks][pre-commit] to prevent accidental committing of secrets, large data files, and
-Jupyter notebook outputs for security purposes.
+We have also included [pre-commit hooks][pre-commit] to prevent accidental committing of
+secrets<sup>[1](#footnote-1)</sup>, large data files, and Jupyter notebook outputs for security purposes.
 
 ## Getting started with `govcookiecutter` for your projects
 
 > ⚠️ Only Unix-based systems (macOS, Linux, ...), and Python projects for GitHub or GitLab are supported — feel free to
 > [contribute](#contributing) to support other operating systems/programming languages!
 
-To use this template to start your next coding project, make sure your system meets the [requirements](#requirements-to-create-a-cookiecutter-template).
+To use this template to start your next coding project, make sure your system meets the
+[requirements](#requirements-to-create-a-cookiecutter-template).
 
 Once you're all set up, open your terminal, navigate to the directory where you want your new repository to exist, and
 run the following commands:
@@ -117,8 +118,14 @@ If you want to help us build, and improve `govcookiecutter`, view our [contribut
 This template is based off the [DrivenData Cookiecutter Data Science][drivendata] project, especially around the
 template data and src folder structures, and the `make help` commands in the Makefiles.
 
+---
+
+<a name="footnote-1">[1]</a>: Only secrets of specific patterns are detected by the pre-commit hooks. See
+[here][docs-pre-commit-hooks-secrets-definition] for further details.
+
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
 [aqua-book-resources]: https://www.gov.uk/government/collections/aqua-book-resources
+[docs-pre-commit-hooks-secrets-definition]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [contributing]: ./CONTRIBUTING.md
 [cookiecutter]: https://github.com/cookiecutter/cookiecutter
 [drivendata]: http://drivendata.github.io/cookiecutter-data-science/

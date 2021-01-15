@@ -13,7 +13,7 @@ The sub-folders should be used as follows:
 
 Feel free to create/rename/delete these folders as required, as they will not be necessary for each and every project.
 
-It is strongly suggested that you import functions in the `src` `__init__.py` script. You should also try and use
+It is strongly suggested that you import functions in the `src` `__init__.py` script. You should also try to use
 absolute imports in this script whenever possible; relative imports are not discouraged, but can be an issue for
 projects where the directory structure is likely to change. See [PEP 328][pep-328] for further information.
 

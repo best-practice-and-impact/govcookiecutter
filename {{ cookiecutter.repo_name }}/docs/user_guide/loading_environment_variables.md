@@ -1,7 +1,7 @@
 # Loading environment variables
 
 We use [`direnv`][direnv] to load environment variables, as it ensures you only have project-specific variables loaded
-_when you are inside the project_, otherwise these variables are not loaded. This can prevents accidental conflicts
+_when you are inside the project_, otherwise these variables are not loaded. This can prevent accidental conflicts
 with identically named variables.
 
 ```{contents}
@@ -11,7 +11,8 @@ with identically named variables.
 
 ## Using `direnv`
 
-To load the environment variables, first [install `direnv`](#installing-direnv){% if cookiecutter.create_secrets_file == "Yes" %}, and make sure you have a `.secrets` file to [store secrets and credentials](#storing-secrets-and-credentials){% endif %}; then:
+To load the environment variables, first [install `direnv`](#installing-direnv), and make sure you have a `.secrets`
+file to [store secrets and credentials](#storing-secrets-and-credentials). Then:
 
 1. Open your terminal;
 2. Navigate to the project folder; and
@@ -24,7 +25,7 @@ To load the environment variables, first [install `direnv`](#installing-direnv){
    direnv allow
    ```
 
-You only need to do this **once**, and again each time `.envrc` {% if cookiecutter.create_secrets_file == "No" %}is{% else %}and `.secrets` are{% endif %} modified.
+You only need to do this **once**, and again each time `.envrc` and `.secrets` are modified.
 
 ### Installing `direnv`
 
@@ -45,7 +46,7 @@ of installing `direnv`, and its shell hooks, consult the package's [documentatio
    cat ~/.bash_profile
    ```
    - This should display `eval "$(direnv hook bash)"`
-5. Restart your terminal.{% if cookiecutter.create_secrets_file == "Yes" %}
+5. Restart your terminal.
 
 ## Storing secrets and credentials
 
@@ -71,7 +72,7 @@ Once complete, make sure the `.secrets` file has the following line uncommented 
 source_env ".secrets"
 ```
 
-This ensures [`direnv`][direnv] loads the `.secrets` file via `.envrc` **without** version-controlling `.secrets`.{% endif %}
+This ensures [`direnv`][direnv] loads the `.secrets` file via `.envrc` **without** version-controlling `.secrets`.
 
 [direnv]: https://direnv.net/
 [homebrew]: https://brew.sh/

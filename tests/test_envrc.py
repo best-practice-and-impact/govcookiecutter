@@ -4,7 +4,7 @@ import re
 # Define the cookiecutter directory
 DIR_COOKIECUTTER = "{{ cookiecutter.repo_name }}"
 
-# Initialise an empty list to store the expected filepaths
+# Initialise an empty list to store the expected file paths
 DIRS_EXPECTED = []
 
 # Get all the directories within `DIR_COOKIECUTTER`, including all sub-folders (unless they are `docs`, or

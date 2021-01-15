@@ -1,4 +1,12 @@
-.PHONY: docs docs_check_external_links example example_with_options help prepare_docs_folder prepare_example_folder requirements
+.PHONY:
+	docs
+	docs_check_external_links
+	example
+	example_with_options
+	help
+	prepare_docs_folder
+	prepare_example_folder
+	requirements
 
 .DEFAULT_GOAL := help
 

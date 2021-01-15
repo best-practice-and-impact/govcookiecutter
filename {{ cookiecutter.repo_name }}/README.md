@@ -6,7 +6,7 @@
 
 - [Getting started](#getting-started)
   - [Requirements](#requirements)
-{% if cookiecutter.create_secrets_file == "Yes" %}- [Required secrets and credentials](#required-secrets-and-credentials){% endif -%}
+- [Required secrets and credentials](#required-secrets-and-credentials)
 - [Licence](#licence)
 - [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
@@ -17,11 +17,11 @@ To be added.
 
 ### Requirements
 
-{% if cookiecutter.create_secrets_file == "Yes" %}- A `.secrets` file with the [required secrets and credentials](#required-secrets-and-credentials){% endif -%}
+- A `.secrets` file with the [required secrets and credentials](#required-secrets-and-credentials)
 - [Load environment variables][docs-loading-environment-variables] from `.envrc`
 
 To be added.
-{% if cookiecutter.create_secrets_file == "Yes" %}
+
 ## Required secrets and credentials
 
 To run this project, you need a `.secrets` file with secrets/credentials as environmental variables; see the
@@ -35,7 +35,7 @@ the following environment variable name(s):
 
 Once you've added these environment variables to `.secrets` you will need to
 [load them via `.envrc`][docs-loading-environment-variables].
-{% endif %}
+
 ## Licence
 
 Unless stated otherwise, the codebase is released under the MIT License. This covers both the codebase and any sample
@@ -49,7 +49,7 @@ If you want to help us build, and improve `{{ cookiecutter.project_name }}`, vie
 
 ## Acknowledgements
 
-This project structure is based on the `govcookiecutter` template project.
+This project structure is based on the [`govcookiecutter`][govcookiecutter] template project.
 
 [contributing]: ./CONTRIBUTING.md
 [govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter

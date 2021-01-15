@@ -15,13 +15,14 @@ Where this Code of Conduct says:
 
 - "Project", we mean this `govcookiecutter` GitHub repository;
 - "Maintainer", we mean the `ukgovdatascience` organisation owners; and
-- "Leadership", we mean both `ukgovdatascience` organisation owners, line managers, and other leadership within GDS.
+- "Leadership", we mean both `ukgovdatascience` organisation owners, line managers, and other leadership within the
+  Government Digital Service.
 
 ### Our Pledge
 
 In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to make
-participation in our project and our community a harassment-free experience for everyone, regardless of age, body size,
-disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education,
+participation in our project, and our community a harassment-free experience for everyone, regardless of age, body
+size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education,
 socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
 ### Our Standards

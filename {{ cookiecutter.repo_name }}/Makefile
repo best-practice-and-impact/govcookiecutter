@@ -1,4 +1,9 @@
-.PHONY: docs docs_check_external_links help prepare_docs_folder requirements
+.PHONY:
+	docs
+	docs_check_external_links
+	help
+	prepare_docs_folder
+	requirements
 
 .DEFAULT_GOAL := help
 

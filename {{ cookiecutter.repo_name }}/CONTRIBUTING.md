@@ -28,9 +28,9 @@ make requirements
 It is better to use the above make command, rather than `pip install -r requirements.txt` and `pre-commit install`, as
 the command will ensure your pre-commit hooks are up-to-date with any changes made.
 
-The pre-commit hooks are a security feature to ensure no secrets, large data files, and Jupyter notebooks are
-accidentally committed into the repository. For more information about the pre-commit hooks used in this repository,
-see the [documentation][docs-pre-commit-hooks].
+The pre-commit hooks are a security feature to ensure no secrets<sup>[1](#footnote-1)</sup>, large data files, and
+Jupyter notebook outputs are accidentally committed into the repository. For more information about the pre-commit hooks used
+in this repository, see the [documentation][docs-pre-commit-hooks].
 
 ## Code conventions
 
@@ -64,7 +64,7 @@ Use a local link to reference the [`README.md`](./README.md) file, but an extern
 [gov-uk]: https://www.gov.uk/
 ```
 
-We also try and wrap Markdown to a line length of 120 characters, but this is not strictly enforced in all cases, for
+We also try to wrap Markdown to a line length of 120 characters, but this is not strictly enforced in all cases, for
 example with long hyperlinks.
 
 ## Testing
@@ -83,7 +83,7 @@ Code coverage of Python scripts is measured using the [`coverage`][coverage] Pyt
 found in `.coveragerc`. Note coverage only extends to Python scripts in the `hooks`, and
 `{{ cookiecutter.repo_name }}/src` folders.
 
-To run code coverage, and view it as a HTML report, execute the following commands in your terminal:
+To run code coverage, and view it as an HTML report, execute the following commands in your terminal:
 
 ```shell
 coverage run -m pytest
@@ -100,9 +100,15 @@ unless it's more appropriate to store it elsewhere, like this file.
 Further information on how to write Sphinx documentation, and how to build it into a searchable website can be found
 [here][docs-write-sphinx-documentation].
 
+---
+
+<a name="footnote-1">[1]</a>: Only secrets of specific patterns are detected by the pre-commit hooks. See
+[here][docs-pre-commit-hooks-secrets-definition] for further details.
+
 [code-of-conduct]: ./CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/
 [docs-pre-commit-hooks]: ./docs/contributor_guide/pre_commit_hooks.md
+[docs-pre-commit-hooks-secrets-definition]: ./docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [docs-updating-gitignore]: ./docs/contributor_guide/updating_gitignore.md
 [docs-write-sphinx-documentation]: ./docs/contributor_guide/writing_sphinx_documentation.md
 [email]: mailto:{{ cookiecutter.contact_email }}
