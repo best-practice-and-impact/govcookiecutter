@@ -1,4 +1,4 @@
-# `{{ cookiecutter.project_name }}`
+# `{{ cookiecutter.repo_name }}`
 
 {{ cookiecutter.overview }}
 
@@ -44,7 +44,7 @@ code in the documentation. The documentation is © Crown copyright and available
 
 ## Contributing
 
-If you want to help us build, and improve `{{ cookiecutter.project_name }}`, view our
+If you want to help us build, and improve `{{ cookiecutter.repo_name }}`, view our
 [contributing guidelines][contributing].
 
 ## Acknowledgements
