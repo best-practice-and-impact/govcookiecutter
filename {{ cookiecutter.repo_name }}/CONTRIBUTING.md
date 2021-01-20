@@ -29,8 +29,8 @@ It is better to use the above make command, rather than `pip install -r requirem
 the command will ensure your pre-commit hooks are up-to-date with any changes made.
 
 The pre-commit hooks are a security feature to ensure no secrets<sup>[1](#footnote-1)</sup>, large data files, and
-Jupyter notebook outputs are accidentally committed into the repository. For more information about the pre-commit hooks used
-in this repository, see the [documentation][docs-pre-commit-hooks].
+Jupyter notebook outputs are accidentally committed into the repository. For more information about the pre-commit
+hooks used in this repository, see the [documentation][docs-pre-commit-hooks].
 
 ## Code conventions
 
