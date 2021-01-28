@@ -35,8 +35,8 @@ coverage run -m pytest
 coverage html
 ```
 
-a code coverage report in HTML will be produced on the code in the [hooks][docs-hooks], and
-`{{ cookiecutter.repo_name }}/src` folders. This HTMl report can be accessed at `htmlcov/index.html`.
+a code coverage report in HTML will be produced on the code in the `src` folder. This HTMl report can be accessed at
+`htmlcov/index.html`.
 
 ### `.envrc`
 
@@ -113,8 +113,7 @@ make help
 ### `pytest.ini`
 
 A file containing configuration settings for the [`pytest`][pytest] Python package. To run tests within the
-[`tests`][docs-tests], and `{{ cookiecutter.repo_name }}/tests` folders, execute the following
-command:
+[`tests`][docs-tests] folder, execute the following command:
 
 ```shell
 pytest
