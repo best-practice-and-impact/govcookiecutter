@@ -29,8 +29,8 @@ It is better to use the above make command, rather than `pip install -r requirem
 the command will ensure your pre-commit hooks are up-to-date with any changes made.
 
 The pre-commit hooks are a security feature to ensure no secrets<sup>[1](#footnote-1)</sup>, large data files, and
-Jupyter notebook outputs are accidentally committed into the repository. For more information about the pre-commit hooks used
-in this repository, see the [documentation][docs-pre-commit-hooks].
+Jupyter notebook outputs are accidentally committed into the repository. For more information about the pre-commit
+hooks used in this repository, see the [documentation][docs-pre-commit-hooks].
 
 ## Code conventions
 
@@ -70,8 +70,7 @@ example with long hyperlinks.
 ## Testing
 
 Tests are written using the [pytest][pytest] framework, with its configuration in the `pytest.ini` file. Note, only
-tests in the `tests`, and `{{ cookiecutter.repo_name }}/tests` folders are executed. To run the tests, execute the
-following command in your terminal:
+tests in the `tests` folder are executed. To run the tests, execute the following command in your terminal:
 
 ```shell
 pytest
@@ -80,8 +79,7 @@ pytest
 ### Code coverage
 
 Code coverage of Python scripts is measured using the [`coverage`][coverage] Python package; its configuration can be
-found in `.coveragerc`. Note coverage only extends to Python scripts in the `hooks`, and
-`{{ cookiecutter.repo_name }}/src` folders.
+found in `.coveragerc`. Note coverage only extends to Python scripts in the `src` folder.
 
 To run code coverage, and view it as an HTML report, execute the following commands in your terminal:
 

@@ -1,6 +1,6 @@
-# {{ cookiecutter.project_name }} documentation
+# `{{ cookiecutter.repo_name }}` documentation
 
-Here is the documentation for the {{ cookiecutter.project_name }} project.
+Here is the documentation for the `{{ cookiecutter.repo_name }}` project.
 
 ```{toctree}
 :maxdepth: 2
