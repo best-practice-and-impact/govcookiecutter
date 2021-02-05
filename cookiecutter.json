@@ -12,5 +12,5 @@
   "overview": "Brief overview of your project.",
   "project_version": "0.0.1",
 
-  "add_r_precommit_hooks": ["Yes", "No"]
+  "add_r_precommit_hooks": ["No", "Yes"]
 }
