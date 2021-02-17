@@ -50,6 +50,6 @@ repos:
         name: Don't commit common R artifacts
         entry: Cannot commit .Rhistory, .RData, .Rds or .rds.
         language: fail
-        files: '\.Rhistory|\.RData|\.Rds|\.rds$'
+        files: '\.Rhistory|\.RData|\.Rds|\.rds$|\.Renviron'
         # `exclude: <regex>` to allow committing specific files.
 {% endif -%}
