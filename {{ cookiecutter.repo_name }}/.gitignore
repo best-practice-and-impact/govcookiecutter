@@ -874,3 +874,7 @@ data/processed/*
 
 # Ignore the `.secrets` file
 .secrets
+
+# Ignore r artifacts
+*.Renviron
+*.Rhistory
