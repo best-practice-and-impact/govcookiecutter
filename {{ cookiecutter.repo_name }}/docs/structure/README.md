@@ -35,7 +35,7 @@ coverage run -m pytest
 coverage html
 ```
 
-a code coverage report in HTML will be produced on the code in the `src` folder. This HTMl report can be accessed at
+a code coverage report in HTML will be produced on the code in the `src` folder. This HTML report can be accessed at
 `htmlcov/index.html`.
 
 ### `.envrc`
@@ -136,6 +136,21 @@ Alternatively, to install the requirements file along with pre-commit hooks, run
 ```shell
 make requirements
 ```
+
+{%- if cookiecutter.add_r_precommit_hooks == "Yes" %}
+### `DESCRIPTION`
+Information related to the project including the name, authors and packages necessary for the project.
+
+### `startup.R`
+Installs necessary packages specified in the `DESCRIPTION` file upon starting R via `.Rprofile`.
+
+### `.Rprofile`
+Initialisation file that runs automatically when starting R.
+
+### `.lintr`
+Configuration file for styling R code that's used by pre-commit hooks to check R code.
+
+{% endif %}
 
 [code-of-conduct]:../contributor_guide/CODE_OF_CONDUCT.md
 [contributing]: ../contributor_guide/CONTRIBUTING.md
