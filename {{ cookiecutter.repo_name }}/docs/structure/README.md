@@ -137,20 +137,18 @@ Alternatively, to install the requirements file along with pre-commit hooks, run
 make requirements
 ```
 
-{%- if cookiecutter.add_r_precommit_hooks == "Yes" %}
 ### `DESCRIPTION`
-Information related to the project including the name, authors and packages necessary for the project.
+R-specific. Information related to the project including the name, authors and packages necessary for the project.
 
 ### `startup.R`
-Installs necessary packages specified in the `DESCRIPTION` file upon starting R via `.Rprofile`.
+R-specific. Installs necessary packages specified in the `DESCRIPTION` file upon starting R via `.Rprofile`.
 
 ### `.Rprofile`
-Initialisation file that runs automatically when starting R.
+R-specific. Initialisation file that runs automatically when starting R.
 
 ### `.lintr`
-Configuration file for styling R code that's used by pre-commit hooks to check R code.
+R-specific. Configuration file for styling R code that's used by pre-commit hooks to check R code.
 
-{% endif %}
 
 [code-of-conduct]:../contributor_guide/CODE_OF_CONDUCT.md
 [contributing]: ../contributor_guide/CONTRIBUTING.md

@@ -92,7 +92,8 @@ Here's a few changes you **must** do once you've created your new project:
 
 - Set up a Python virtual environment — there are **many** ways to [set up a virtual environment][pluralsight], so
   we'll let you decide what's best for you!
-- Git is not set up by default — open your terminal, navigate to your new project, run `git init` to set it up
+- Git is not set up by default — open your terminal, navigate to your new project, run `git init` in your shell to set it up.
+- Install the packages necessary by running `make requirements` in your shell.
 
 ## Changes to consider post-creation
 
