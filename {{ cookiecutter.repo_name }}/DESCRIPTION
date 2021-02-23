@@ -1,14 +1,12 @@
-Package: govcookiecutter
-Title: A Template Data Science Project
-Version: 0.0.0.9000
+Package: {{ cookiecutter.repo_name }}
+Title: {{ cookiecutter.project_name }}
+Version: {{ cookiecutter.project_version }}
 Authors@R:
-    person(given = "First",
-           family = "Last",
+    person(given = "{{ cookiecutter.organisation_name }}",
            role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           email = "{{ cookiecutter.contact_email }}")
+Description: {{ cookiecutter.overview }}
+License: MIT + file LICENSE
 Imports:
     docopt,
     git2r,
