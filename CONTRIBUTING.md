@@ -46,7 +46,7 @@ If you want to modify the `.gitignore` files, see the template [documentation][d
 details.
 
 Our source code is stored on GitHub at [https://github.com/ukgovdatascience/govcookiecutter][govcookiecutter]. Pull
-requests into `master` require at least one approved review.
+requests into `main` require at least one approved review.
 
 ### Python
 

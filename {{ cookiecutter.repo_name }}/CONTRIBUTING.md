@@ -45,7 +45,7 @@ merges, as well as the entry on `git push --force-with-lease` instead of `git pu
 If you want to modify the `.gitignore` files, see the template [documentation][docs-updating-gitignore] for further
 details.
 
-Our source code is stored on {{ cookiecutter.repository_hosting_platform }}. Pull requests into `master` require at
+Our source code is stored on {{ cookiecutter.repository_hosting_platform }}. Pull requests into `main` require at
 least one approved review.
 
 ### Python
