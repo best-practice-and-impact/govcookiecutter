@@ -13,7 +13,11 @@
 
 ## Getting started
 
-To be added.
+To start contributing to `{{ cookiecutter.repo_name }}`, run the following commands in your shell:
+
+``` shell script
+make requirements
+```
 
 ### Requirements
 

@@ -26,4 +26,22 @@ repos:
     -   id: check-added-large-files
         args: ["--maxkb=5120"]
     -   id: end-of-file-fixer
+        exclude: '\.Rd'
     -   id: trailing-whitespace
+{% if cookiecutter.add_r_precommit_hooks == "Yes" %}
+# R specific hooks: https://github.com/lorenzwalthert/precommit
+-   repo: https://github.com/lorenzwalthert/precommit
+    rev: v0.1.2
+    hooks:
+    -   id: style-files
+        args: [--style_pkg=styler, --style_fun=tidyverse_style]
+    -   id: roxygenize
+    # codemeta must be above use-tidy-description when both are used
+    # -   id: codemeta-description-updated
+    -   id: use-tidy-description
+    -   id: lintr
+        exclude: renv/activate.R
+    -   id: readme-rmd-rendered
+    -   id: parsable-R
+    -   id: no-browser-statement
+{% endif -%}

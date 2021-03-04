@@ -10,5 +10,7 @@
   "project_name": "Your new project name",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
   "overview": "Brief overview of your project.",
-  "project_version": "0.0.1"
+  "project_version": "0.0.1",
+
+  "add_r_precommit_hooks": ["No", "Yes"]
 }
