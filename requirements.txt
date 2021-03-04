@@ -1,7 +1,6 @@
 cookiecutter
 coverage
 detect-secrets
-flake8
 myst-parser
 pre-commit
 pytest

@@ -17,7 +17,8 @@ For this repository, we are using `pre-commit` for a number of purposes:
 - Checking for secrets being committed accidentally — see [here](#definition-of-a-secret-according-to-detect-secrets)
   for the definition of a "secret";
 - Checking for any large files (over 5 MB) being committed; and
-- Cleaning Jupyter notebooks, which means removing all outputs and execution counts.
+- Cleaning Jupyter notebooks, which means removing all outputs, execution counts, Python kernels, and, for Google
+  Colaboratory (Colab), stripping out user information.
 
 We have configured `pre-commit` to run automatically on _every commit_. By running on each commit, we ensure that
 `pre-commit` will be able to detect all contraventions and keep our repository in a healthy state.
@@ -93,17 +94,34 @@ updating and auditing the `.secrets.baseline` file.
 
 ## Keeping specific Jupyter notebook outputs
 
-It may be necessary or useful to keep certain output cells of a Jupyter notebook, for example charts or graphs
-visualising some set of data. To do this, add the following comment at the top of the input block:
+>  ℹ️ Currently (March 2020) there is no way to add tags and/or metadata to Google Colab notebooks. It's strongly
+> suggested that you download the Colab as a .ipynb file, and edit tags and/or metadata using Jupyter _before_
+> committing the code if you want to keep some outputs.
 
-```julia
-# [keep_output]
+It may be necessary or useful to keep certain output cells of a Jupyter notebook, for example charts or graphs
+visualising some set of data. To do this, according to the documentation for the [`nbstripout`][nbstripout] package,
+either:
+
+1. Add a `keep_output` tag to the desired cell; or
+2. Add `"keep_output": true` to the desired cell's metadata.
+
+You can access cell tags or metadata in Jupyter by enabling the "Tags" or "Edit Metadata" toolbar
+(View > Cell Toolbar > Tags; View > Cell Toolbar > Edit Metadata). For the tags approach, enter `keep_output` in the
+text field for each desired cell, and press the "Add tag" button. For the metadata approach, press the "Edit Metadata"
+button on each desired cell, and edit the metadata to look like this:
+
+```json
+{
+  "keep_output": true
+}
 ```
 
-This will tell the hook not to strip the resulting output of this cell, allowing it to be committed.
+This will tell the hook not to strip the resulting output of the desired cell(s), allowing the output(s) to be
+committed.
 
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [detect-secrets-caveats]: https://github.com/Yelp/detect-secrets#caveats
 [detect-secrets-keyword-detector]: https://github.com/Yelp/detect-secrets/blob/master/detect_secrets/plugins/keyword.py
 [detect-secrets-plugins]: https://github.com/Yelp/detect-secrets#currently-supported-plugins
+[nbstripout]: https://github.com/kynan/nbstripout
 [pre-commit]: https://pre-commit.com/
