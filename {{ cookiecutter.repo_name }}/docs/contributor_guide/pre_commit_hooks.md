@@ -79,7 +79,7 @@ check the secret.
 
 If the detected secret is a false-positive, you should update the `.secrets.baseline` through the following steps:
 
-- Run `detect-secrets scan --update .secrets.baseline` from the root folder in the terminal to index the
+- Run `detect-secrets scan --baseline .secrets.baseline` from the root folder in the terminal to index the
   false-positive(s);
 - Next, audit all indexed secrets via `detect-secrets audit .secrets.baseline` (the same as during initial set-up, if a
   `.secrets.baseline` doesn't exist); and
