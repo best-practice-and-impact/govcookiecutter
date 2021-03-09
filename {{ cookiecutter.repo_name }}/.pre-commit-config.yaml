@@ -18,7 +18,7 @@ repos:
     - id: nbstripout
       args:
         - --extra-keys
-        - "metadata.kernelspec cell.metadata.executionInfo"
+        - "metadata.colab metadata.kernelspec cell.metadata.colab cell.metadata.executionInfo cell.metadata.id cell.metadata.outputId"
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.4.0
     hooks:
