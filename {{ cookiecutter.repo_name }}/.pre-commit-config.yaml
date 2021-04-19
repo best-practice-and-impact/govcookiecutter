@@ -7,19 +7,18 @@ repos:
     -   id: flake8
         args: ["src"]
 -   repo: https://github.com/Yelp/detect-secrets
-    rev: v0.14.3
+    rev: v1.0.3
     hooks:
     -   id: detect-secrets
         args: ["--baseline", ".secrets.baseline"]
         exclude: .*/tests/.*
--   repo: https://github.com/aflc/pre-commit-jupyter
-    rev: v1.1.0
-    hooks:
-    -   id: jupyter-notebook-cleanup
-        args:
-        -   --remove-kernel-metadata
-        -   --pin-patterns
-        -   "[keep_output]"
+- repo: https://github.com/kynan/nbstripout
+  rev: 0.3.9
+  hooks:
+    - id: nbstripout
+      args:
+        - --extra-keys
+        - "metadata.colab metadata.kernelspec cell.metadata.colab cell.metadata.executionInfo cell.metadata.id cell.metadata.outputId"
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.4.0
     hooks:

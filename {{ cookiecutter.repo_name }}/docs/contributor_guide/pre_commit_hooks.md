@@ -17,10 +17,15 @@ For this repository, we are using `pre-commit` for a number of purposes:
 - Checking for secrets being committed accidentally — see [here](#definition-of-a-secret-according-to-detect-secrets)
   for the definition of a "secret";
 - Checking for any large files (over 5 MB) being committed; and
-- Cleaning Jupyter notebooks, which means removing all outputs and execution counts.
+- Cleaning Jupyter notebooks, which means removing all outputs, execution counts, Python kernels, and, for Google
+  Colaboratory (Colab), stripping out user information.
 
 We have configured `pre-commit` to run automatically on _every commit_. By running on each commit, we ensure that
 `pre-commit` will be able to detect all contraventions and keep our repository in a healthy state.
+
+> ⚠️ **No pre-commit hooks will be run on Google Colab notebooks pushed directly to GitHub**. For security reasons, it
+> is highly recommended that you manually download your notebook, and commit up locally to ensure pre-commit hooks are
+> executed on your changes
 
 ## Installation
 
@@ -76,34 +81,81 @@ contain words that will trip the KeywordDetector plugin; see the `DENYLIST` vari
 If `pre-commit` detects any secrets when you try to create a commit, it will detail what it found and where to go to
 check the secret.
 
-If the detected secret is a false-positive, you should update the `.secrets.baseline` through the following steps:
+If the detected secret is a false positive, there are two options to resolve this, and prevent your commit from being
+blocked: [inline allowlisting (recommended)](#inline-allowlisting-recommended) or
+[updating `.secrets.baseline`](#updating-secretsbaseline).
 
-- Run `detect-secrets scan --update .secrets.baseline` from the root folder in the terminal to index the
-  false-positive(s);
+In either case, if an actual secret is detected (or a combination of actual secrets and false positives), first remove
+the actual secret before following either of these processes.
+
+#### Inline allowlisting (recommended)
+
+To exclude a false positive, add a `pragma` comment such as:
+
+```python
+secret = "Password123"  # pragma: allowlist secret
+```
+
+or
+
+```python
+#  pragma: allowlist nextline secret
+secret = "Password123"
+```
+
+If the detected secret is actually a secret (or other sensitive information), remove the secret and re-commit; there is
+no need to add any `pragma` comments.
+
+If your commit contains a mixture of false positives and actual secrets, remove the actual secrets first before adding
+`pragma` comments to the false positives.
+
+#### Updating `.secrets.baseline`
+
+To exclude a false positive, you can also update the `.secrets.baseline` through the following steps:
+
+- Run `detect-secrets scan --baseline .secrets.baseline` from the root folder in the terminal to index the
+  false positive(s);
 - Next, audit all indexed secrets via `detect-secrets audit .secrets.baseline` (the same as during initial set-up, if a
   `.secrets.baseline` doesn't exist); and
-- Finally, ensure that you commit the updated `.secrets.baseline` in the same commit as the false-positive(s) it has
+- Finally, ensure that you commit the updated `.secrets.baseline` in the same commit as the false positive(s) it has
   been updated for.
 
 If the detected secret is actually a secret (or other sensitive information), remove the secret and re-commit. There is
 no need to update the `.secrets.baseline` file in this case.
 
-If your commit contains a mixture of false-positives and actual secrets, remove the actual secrets first before
+If your commit contains a mixture of false positives and actual secrets, remove the actual secrets first before
 updating and auditing the `.secrets.baseline` file.
 
 ## Keeping specific Jupyter notebook outputs
 
 It may be necessary or useful to keep certain output cells of a Jupyter notebook, for example charts or graphs
-visualising some set of data. To do this, add the following comment at the top of the input block:
+visualising some set of data. To do this, according to the documentation for the [`nbstripout`][nbstripout] package,
+either:
 
-```julia
-# [keep_output]
+1. Add a `keep_output` tag to the desired cell; or
+2. Add `"keep_output": true` to the desired cell's metadata.
+
+You can access cell tags or metadata in Jupyter by enabling the "Tags" or "Edit Metadata" toolbar
+(View > Cell Toolbar > Tags; View > Cell Toolbar > Edit Metadata). For the tags approach, enter `keep_output` in the
+text field for each desired cell, and press the "Add tag" button. For the metadata approach, press the "Edit Metadata"
+button on each desired cell, and edit the metadata to look like this:
+
+```json
+{
+  "keep_output": true
+}
 ```
 
-This will tell the hook not to strip the resulting output of this cell, allowing it to be committed.
+This will tell the hook not to strip the resulting output of the desired cell(s), allowing the output(s) to be
+committed.
+
+>  ℹ️ Currently (March 2020) there is no way to add tags and/or metadata to Google Colab notebooks. It's strongly
+> suggested that you download the Colab as a .ipynb file, and edit tags and/or metadata using Jupyter _before_
+> committing the code if you want to keep some outputs.
 
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [detect-secrets-caveats]: https://github.com/Yelp/detect-secrets#caveats
 [detect-secrets-keyword-detector]: https://github.com/Yelp/detect-secrets/blob/master/detect_secrets/plugins/keyword.py
 [detect-secrets-plugins]: https://github.com/Yelp/detect-secrets#currently-supported-plugins
+[nbstripout]: https://github.com/kynan/nbstripout
 [pre-commit]: https://pre-commit.com/
