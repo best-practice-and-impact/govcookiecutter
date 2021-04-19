@@ -94,10 +94,6 @@ updating and auditing the `.secrets.baseline` file.
 
 ## Keeping specific Jupyter notebook outputs
 
->  ℹ️ Currently (March 2020) there is no way to add tags and/or metadata to Google Colab notebooks. It's strongly
-> suggested that you download the Colab as a .ipynb file, and edit tags and/or metadata using Jupyter _before_
-> committing the code if you want to keep some outputs.
-
 It may be necessary or useful to keep certain output cells of a Jupyter notebook, for example charts or graphs
 visualising some set of data. To do this, according to the documentation for the [`nbstripout`][nbstripout] package,
 either:
@@ -118,6 +114,10 @@ button on each desired cell, and edit the metadata to look like this:
 
 This will tell the hook not to strip the resulting output of the desired cell(s), allowing the output(s) to be
 committed.
+
+>  ℹ️ Currently (March 2020) there is no way to add tags and/or metadata to Google Colab notebooks. It's strongly
+> suggested that you download the Colab as a .ipynb file, and edit tags and/or metadata using Jupyter _before_
+> committing the code if you want to keep some outputs.
 
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [detect-secrets-caveats]: https://github.com/Yelp/detect-secrets#caveats
