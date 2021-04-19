@@ -23,6 +23,10 @@ For this repository, we are using `pre-commit` for a number of purposes:
 We have configured `pre-commit` to run automatically on _every commit_. By running on each commit, we ensure that
 `pre-commit` will be able to detect all contraventions and keep our repository in a healthy state.
 
+> ⚠️ **No pre-commit hooks will be run on Google Colab notebooks pushed directly to GitHub**. For security reasons, it
+> is highly recommended that you manually download your notebook, and commit up locally to ensure pre-commit hooks are
+> executed on your changes
+
 ## Installation
 
 In order for `pre-commit` to run, action is needed to configure it on your system.
@@ -77,19 +81,49 @@ contain words that will trip the KeywordDetector plugin; see the `DENYLIST` vari
 If `pre-commit` detects any secrets when you try to create a commit, it will detail what it found and where to go to
 check the secret.
 
-If the detected secret is a false-positive, you should update the `.secrets.baseline` through the following steps:
+If the detected secret is a false positive, there are two options to resolve this, and prevent your commit from being
+blocked: [inline allowlisting (recommended)](#inline-allowlisting-recommended) or
+[updating `.secrets.baseline`](#updating-secretsbaseline).
+
+In either case, if an actual secret is detected (or a combination of actual secrets and false positives), first remove
+the actual secret before following either of these processes.
+
+#### Inline allowlisting (recommended)
+
+To exclude a false positive, add a `pragma` comment such as:
+
+```python
+secret = "Password123"  # pragma: allowlist secret
+```
+
+or
+
+```python
+#  pragma: allowlist nextline secret
+secret = "Password123"
+```
+
+If the detected secret is actually a secret (or other sensitive information), remove the secret and re-commit; there is
+no need to add any `pragma` comments.
+
+If your commit contains a mixture of false positives and actual secrets, remove the actual secrets first before adding
+`pragma` comments to the false positives.
+
+#### Updating `.secrets.baseline`
+
+To exclude a false positive, you can also update the `.secrets.baseline` through the following steps:
 
 - Run `detect-secrets scan --baseline .secrets.baseline` from the root folder in the terminal to index the
-  false-positive(s);
+  false positive(s);
 - Next, audit all indexed secrets via `detect-secrets audit .secrets.baseline` (the same as during initial set-up, if a
   `.secrets.baseline` doesn't exist); and
-- Finally, ensure that you commit the updated `.secrets.baseline` in the same commit as the false-positive(s) it has
+- Finally, ensure that you commit the updated `.secrets.baseline` in the same commit as the false positive(s) it has
   been updated for.
 
 If the detected secret is actually a secret (or other sensitive information), remove the secret and re-commit. There is
 no need to update the `.secrets.baseline` file in this case.
 
-If your commit contains a mixture of false-positives and actual secrets, remove the actual secrets first before
+If your commit contains a mixture of false positives and actual secrets, remove the actual secrets first before
 updating and auditing the `.secrets.baseline` file.
 
 ## Keeping specific Jupyter notebook outputs
