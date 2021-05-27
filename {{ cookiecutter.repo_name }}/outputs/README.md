@@ -6,8 +6,8 @@ variable by the [`.envrc`][docs-envrc] file; to load them in Python, use the fol
 ```python
 import os
 
-# Load environment variables for the `output` folder
-DIR_OUTPUT = os.getenv("DIR_OUTPUT")
+# Load environment variables for the `outputs` folder
+DIR_OUTPUTS = os.getenv("DIR_OUTPUTS")
 ```
 
 [docs-envrc]: ../docs/structure/README.md#envrc
