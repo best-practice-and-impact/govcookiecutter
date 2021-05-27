@@ -82,7 +82,7 @@ the user deliberately wishes to commit the to repository.
 ### `CODE_OF_CONDUCT.md`
 
 The [Code of Conduct][code-of-conduct] for contributors to this project, including maintainers and
-`{{ cookiecutter.organisation_name }}` organisation owners.
+`{{ cookiecutter.organisation_handle }}` organisation owners.
 
 ### `conftest.py`
 

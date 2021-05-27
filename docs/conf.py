@@ -253,7 +253,7 @@ man_pages = [
 texinfo_documents = [
     ("index", "govcookiecutter", u"govcookiecutter Documentation",
      u"Government Digital Service", "govcookiecutter",
-     "A cookiecutter template for data science projects within UK Government.", "Miscellaneous"),
+     "A cookiecutter template for data science projects within UK public sector.", "Miscellaneous"),
 ]
 
 # Documents to append as an appendix to all manuals.

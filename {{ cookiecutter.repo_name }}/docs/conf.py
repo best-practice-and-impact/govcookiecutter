@@ -47,7 +47,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "{{ cookiecutter.project_name }}"
-author = "{{ cookiecutter.organisation_name }}"
+author = "{{ cookiecutter.organisation_handle }}"
 
 # The version info for the project you're documenting, acts as replacement for |version| and |release|, also used in
 # various other places throughout the built documents.
@@ -212,7 +212,7 @@ latex_documents = [
     ("index",
      "{{ cookiecutter.repo_name }}.tex",
      u"{{ cookiecutter.project_name }} Documentation",
-     u"{{ cookiecutter.organisation_name }}", "manual"),
+     u"{{ cookiecutter.organisation_handle }}", "manual"),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of the title page.
@@ -239,7 +239,7 @@ latex_documents = [
 # One entry per manual page. List of tuples (source start file, name, description, authors, manual section).
 man_pages = [
     ("index", "{{ cookiecutter.repo_name }}", u"{{ cookiecutter.project_name }} Documentation",
-     [u"{{ cookiecutter.organisation_name }}"], 1)
+     [u"{{ cookiecutter.organisation_handle }}"], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -252,7 +252,7 @@ man_pages = [
 # menu entry, description, category)
 texinfo_documents = [
     ("index", "{{ cookiecutter.repo_name }}", u"{{ cookiecutter.project_name }} Documentation",
-     u"{{ cookiecutter.organisation_name }}", "{{ cookiecutter.project_name }}",
+     u"{{ cookiecutter.organisation_handle }}", "{{ cookiecutter.project_name }}",
      "{{ cookiecutter.overview }}", "Miscellaneous"),
 ]
 
