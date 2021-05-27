@@ -15,7 +15,7 @@ make requirements
 ### Requirements
 
 - Python 3.6+ installed
-{% if cookiecutter.add_r_precommit_hooks == "Yes" -%}
+{% if cookiecutter.using_R == "Yes" -%}
 - R 4.0.4+ installed
 {% endif -%}
 - A `.secrets` file with the [required secrets and credentials](#required-secrets-and-credentials)
