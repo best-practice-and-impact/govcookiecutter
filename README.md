@@ -23,8 +23,12 @@ secrets<sup>[1](#footnote-1)</sup>, large data files, and Jupyter notebook outpu
 
 ## Getting started with `govcookiecutter` for your projects
 
-> ⚠️ Only Unix-based systems (macOS, Linux, ...), and Python projects for GitHub or GitLab are supported — feel free to
-> [contribute](#contributing) to support other operating systems/programming languages!
+> ⚠️ Full functionality is only available for Unix-based systems (macOS, Linux, ...). For Windows systems, you will
+> need your own way of handling secrets, and will not have access to helper commands in the `Makefile`; further details
+> are available in this [issue][issue-windows-os]!
+
+> ⚠️ Python or Python with R projects for GitHub or GitLab are supported — feel free to [contribute](#contributing) to
+> support other operating systems/programming languages!
 
 To use this template to start your next coding project, make sure your system meets the
 [requirements](#requirements-to-create-a-cookiecutter-template).
@@ -49,8 +53,8 @@ Otherwise, that's it — happy coding! 🎉
 
 To get started your system should meet the following requirements:
 
-1. Unix-based system (macOS, Linux, ...)
-2. Python 3.5+ installed
+1. Python 3.6+ installed
+2. R 4.0.4+ installed (for combined Python and R projects)
 3. The [`cookiecutter` package installed](#installing-cookiecutter)
 
 #### Installing cookiecutter
@@ -123,5 +127,6 @@ template data and src folder structures, and the `make help` commands in the Mak
 [cookiecutter]: https://github.com/cookiecutter/cookiecutter
 [drivendata]: http://drivendata.github.io/cookiecutter-data-science/
 [homebrew]: https://brew.sh/
+[issue-windows-os]: https://github.com/ukgovdatascience/govcookiecutter/issues/20
 [pluralsight]: https://www.pluralsight.com/tech-blog/managing-python-environments/
 [pre-commit]: https://pre-commit.com/
