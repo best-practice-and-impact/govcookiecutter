@@ -60,7 +60,7 @@ example with long hyperlinks.
 
 ## Testing
 
-Tests are written using the [pytest][pytest] framework, with its configuration in the `pytest.ini` file. Note, only
+Tests are written using the [pytest][pytest] framework, with its configuration in the `pyproject.toml` file. Note, only
 tests in the `tests`, and `{{ cookiecutter.repo_name }}/tests` folders are executed. To run the tests, execute the
 following command in your terminal:
 
@@ -71,7 +71,7 @@ pytest
 ### Code coverage
 
 Code coverage of Python scripts is measured using the [`coverage`][coverage] Python package; its configuration can be
-found in `.coveragerc`. Note coverage only extends to Python scripts in the `hooks`, and
+found in `pyproject.toml`. Note coverage only extends to Python scripts in the `hooks`, and
 `{{ cookiecutter.repo_name }}/src` folders.
 
 To run code coverage, and view it as an HTML report, execute the following commands in your terminal:

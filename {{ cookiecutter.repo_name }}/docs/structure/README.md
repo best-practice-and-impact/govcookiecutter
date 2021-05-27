@@ -20,19 +20,6 @@ The repository's folder structure is explained here:
 
 Each subsection here contains a brief description about the files at the top-level of this Git repository.
 
-### `.coveragerc`
-
-A file containing configuration settings for the [`coverage`][coverage] Python package. When executed with
-[`pytest`][pytest] using the following command:
-
-```shell
-coverage run -m pytest
-coverage html
-```
-
-a code coverage report in HTML will be produced on the code in the `src` folder. This HTML report can be accessed at
-`htmlcov/index.html`.
-
 ### `.envrc`
 
 A file containing environment variables for the Git repository that can be selectively loaded. This uses the
@@ -107,14 +94,34 @@ top-level of the Git repository.
 make help
 ```
 
-### `pytest.ini`
+### `pyproject.toml`
 
-A file containing configuration settings for the [`pytest`][pytest] Python package. To run tests within the
-[`tests`][docs-tests] folder, execute the following command:
+A file containing Python project settings. This includes configuration settings for:
+
+- [`pytest`](#pytest)
+- [Code coverage](#code-coverage)
+
+#### `pytest`
+
+To run the tests within the [`tests`][docs-tests] folder using the [`pytest`][pytest] Python package, execute the
+following command:
 
 ```shell
 pytest
 ```
+
+#### Code coverage
+
+To run code coverage using the [`coverage`][coverage] Python package with [`pytest`][pytest], execute the following
+command:
+
+```shell
+coverage run -m pytest
+coverage html
+```
+
+A code coverage report in HTML will be produced on the code in the `src` folder. This HTML report can be accessed at
+`htmlcov/index.html`.
 
 ### `README.md`
 
