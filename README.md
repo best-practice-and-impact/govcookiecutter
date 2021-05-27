@@ -2,15 +2,6 @@
 
 A cookiecutter template for analytical, code-based projects within Her Majesty's Government.
 
-- [Who/what is this for?](#whowhat-is-this-for)
-- [Getting started](#getting-started-with-govcookiecutter-for-your-projects)
-  - [Requirements](#requirements-to-create-a-cookiecutter-template)
-- [Changes to make post-creation](#changes-to-make-post-creation)
-- [Changes to consider post-creation](#changes-to-consider-post-creation)
-- [Licence](#licence)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-
 ## Who/what is this for?
 
 This template is for any HM Government analyst(s) who codes! It's main purpose is to:

@@ -4,13 +4,6 @@
 
 > ℹ️ Where this documentation refers to the **root folder** we mean where this README.md is located.
 
-- [Getting started](#getting-started)
-  - [Requirements](#requirements)
-- [Required secrets and credentials](#required-secrets-and-credentials)
-- [Licence](#licence)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-
 ## Getting started
 
 To start contributing to `{{ cookiecutter.repo_name }}`, run the following commands in your shell:

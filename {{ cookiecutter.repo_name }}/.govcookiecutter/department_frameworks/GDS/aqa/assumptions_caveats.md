@@ -2,11 +2,6 @@
 
 This log contains a list of assumptions and caveats used in this analysis.
 
-```{contents}
-:local:
-:depth: 1
-```
-
 ## Definitions
 
 Assumptions are RAG-rated according to the following definitions for quality and impact<sup>1</sup>:
@@ -34,12 +29,6 @@ Assumptions are RAG-rated according to the following definitions for quality and
 ## Assumptions and caveats
 
 The log contains the following assumptions and caveats:
-
-<!-- Use reStructuredText contents directive to generate a local contents -->
-```{contents}
-:local:
-:depth: 1
-```
 
 ### Assumption 1: Insert plain English title here
 

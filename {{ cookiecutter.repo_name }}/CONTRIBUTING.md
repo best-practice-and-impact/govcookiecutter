@@ -3,15 +3,6 @@
 We love contributions! We've compiled this documentation to help you understand our contributing guidelines. If you
 still have questions, please [contact us][email] and we'd be happy to help!
 
-- [Code of Conduct](#code-of-conduct)
-- [Getting started](#getting-started)
-- [Code conventions](#code-conventions)
-  - [Git and GitHub](#git-and-github)
-  - [Python](#python)
-  - [Markdown](#markdown)
-- [Testing](#testing)
-- [Documentation](#documentation)
-
 ## Code of Conduct
 
 Please read [`CODE_OF_CONDUCT.md`][code-of-conduct] before contributing.

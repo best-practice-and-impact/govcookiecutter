@@ -5,11 +5,6 @@ actions which are run automatically, typically on each commit, to perform some c
 pre-commit hook might be used to run any code linting automatically, providing any warnings before code is committed,
 ensuring that all of our code adheres to a certain quality standard.
 
-```{contents}
-:local:
-:depth: 2
-```
-
 ## Purpose
 
 For this repository, we are using `pre-commit` for a number of purposes:

@@ -2,11 +2,6 @@
 
 This page provides information on the repository's structure.
 
-```{contents}
-:local:
-:depth: 2
-```
-
 ## Folder structure
 
 The repository's folder structure is explained here:

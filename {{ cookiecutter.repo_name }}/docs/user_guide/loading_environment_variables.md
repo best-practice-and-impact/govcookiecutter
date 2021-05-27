@@ -4,11 +4,6 @@ We use [`direnv`][direnv] to load environment variables, as it ensures you only 
 _when you are inside the project_, otherwise these variables are not loaded. This can prevent accidental conflicts
 with identically named variables.
 
-```{contents}
-:local:
-:depth: 2
-```
-
 ## Using `direnv`
 
 To load the environment variables, first [install `direnv`](#installing-direnv), and make sure you have a `.secrets`

@@ -4,11 +4,6 @@ This folder contains all HM Government department-specific frameworks. Each sub-
 the name must be listed in the `departmental_framework` variable in the root-level `cookiecutter.json` file to be used;
 see the `GDS` folder for an example framework structure.
 
-```{contents}
-:local:
-:depth: 2
-```
-
 ## Analytical quality assurance (AQA) framework
 
 Within each department folder, there must be a `aqa` folder that contains templates for the:

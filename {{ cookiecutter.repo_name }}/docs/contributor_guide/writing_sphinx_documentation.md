@@ -4,11 +4,6 @@ This project is set up to produce documentation using [Sphinx][sphinx]; this pag
 how to write documentation for it. If you're looking for information on how to write **good** documentation take a look
 [here][writethedocs]; for Agile projects, consider [documenting late][agilemodeling] as well.
 
-```{contents}
-:local:
-:depth: 2
-```
-
 ## Why should I bother? And why Sphinx?
 
 Keeping as much of the documentation in a centralised location is a good thing — it means contributors, users, and
