@@ -4,6 +4,9 @@ A cookiecutter template for analytical, code-based projects within Her Majesty's
 
 ## Who/what is this for?
 
+> ℹ️ Want to learn more? Want to see `govcookiecutter` in action? Check out this [presentation and demo][youtube] from
+> March 2021!
+
 This template is for any public sector analyst(s) who codes! It's main purpose is to:
 
 1. Provide a lightweight, Agile-like approach to Analytical Quality Assurance (AQA)
@@ -29,6 +32,8 @@ secrets<sup>[1](#footnote-1)</sup>, large data files, and Jupyter notebook outpu
 
 > ⚠️ Python or Python with R projects for GitHub or GitLab are supported — feel free to [contribute](#contributing) to
 > support other operating systems/programming languages!
+
+> ℹ️ See a live demo [here][youtube-creation]!
 
 To use this template to start your next coding project, make sure your system meets the
 [requirements](#requirements-to-create-a-cookiecutter-template).
@@ -130,3 +135,5 @@ template data and src folder structures, and the `make help` commands in the Mak
 [issue-windows-os]: https://github.com/ukgovdatascience/govcookiecutter/issues/20
 [pluralsight]: https://www.pluralsight.com/tech-blog/managing-python-environments/
 [pre-commit]: https://pre-commit.com/
+[youtube]: https://www.youtube.com/watch?v=N7_d3k3uQ_M
+[youtube-creation]: https://youtu.be/N7_d3k3uQ_M?t=907
