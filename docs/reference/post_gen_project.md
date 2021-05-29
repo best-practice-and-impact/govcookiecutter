@@ -13,8 +13,18 @@ These `hooks` package functions are executed after the project structure has bee
 .. autosummary::
     :toctree: api/
 
-    remove_folder
     set_aqa_framework
     set_request_template
+
+```
+
+## Post-generation clean up
+
+```{eval-rst}
+.. autosummary::
+    :toctree: api/
+
+    delete_files_and_folders
+    parse_features_json
 
 ```

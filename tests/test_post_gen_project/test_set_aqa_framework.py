@@ -1,13 +1,13 @@
-from hooks.post_gen_project import remove_folder, set_aqa_framework
+from hooks.post_gen_project import delete_files_and_folders, set_aqa_framework
 from pathlib import Path
 from unittest.mock import MagicMock
 import pytest
 
 
 @pytest.fixture
-def patch_remove_folder(mocker) -> MagicMock:
-    """Patch the `remove_folder` function."""
-    return mocker.patch("hooks.post_gen_project.remove_folder", side_effect=remove_folder)
+def patch_delete_files_and_folders(mocker) -> MagicMock:
+    """Patch the ``delete_files_and_folders`` function."""
+    return mocker.patch("hooks.post_gen_project.delete_files_and_folders", side_effect=delete_files_and_folders)
 
 
 # Define test cases for the `TestSetAqaFramework` test class
@@ -23,9 +23,10 @@ args_test_set_aqa_framework_temporary_frameworks = [
                          args_test_set_aqa_framework_temporary_frameworks)
 class TestSetAqaFramework:
 
-    def test_remove_folder_called_once_correctly(self, temporary_frameworks: Path, patch_remove_folder: MagicMock,
-                                                 test_input_dir_cookiecutter_docs_aqa: str) -> None:
-        """Test the `remove_folder` function is called once correctly."""
+    def test_delete_files_and_folders_called_once_correctly(self, temporary_frameworks: Path,
+                                                            patch_delete_files_and_folders: MagicMock,
+                                                            test_input_dir_cookiecutter_docs_aqa: str) -> None:
+        """Test the ``delete_files_and_folders`` function is called once correctly."""
 
         # Define a path to the example output folder, which is the parent of `temporary_frameworks`, and create a
         # directory with an example text file
@@ -36,8 +37,9 @@ class TestSetAqaFramework:
         # Execute the `set_aqa_framework` function
         set_aqa_framework(temporary_frameworks, dir_docs_aqa)
 
-        # Assert `remove_folder` is called once correctly, then delete the output folder for the next test execution
-        patch_remove_folder.assert_called_once_with(dir_docs_aqa)
+        # Assert `delete_files_and_folders` is called once correctly, then delete the output folder for the next test
+        # execution
+        patch_delete_files_and_folders.assert_called_once_with(dir_docs_aqa)
 
     def test_aqa_framework_folder_moved_correctly(self, temporary_frameworks: Path, test_input_request_template: str,
                                                   test_input_aqa: str,

@@ -20,7 +20,7 @@ class TestSetRequestTemplate:
                              args_test_set_request_template_valueerror_for_bad_repository_hosting_platform)
     def test_valueerror_for_bad_repository_hosting_platform(self, temporary_frameworks: Path,
                                                             test_input_repository_hosting_platform: str) -> None:
-        """Test a `ValueError` is raised if the repository hosting platform is not Github or GitLab."""
+        """Test a ``ValueError`` is raised if the repository hosting platform is not Github or GitLab."""
         with pytest.raises(ValueError):
             set_request_template(temporary_frameworks.joinpath("request_template.md"), temporary_frameworks.parent,
                                  test_input_repository_hosting_platform)

@@ -1,0 +1,10 @@
+{
+  "features": [
+    {
+      "name": "R files",
+      "description": "R files that are removed if not enabled.",
+      "remove": {% if cookiecutter.using_R == "No" %}true{% else %}false{% endif %},
+      "resources": [".Rprofile", ".lintr", "DESCRIPTION", "startup.R"]
+    }
+  ]
+}

@@ -51,9 +51,23 @@ A configuration file for the [`flake8`][flake8] Python package that provides lin
 A `.gitignore` file to ignore certain files and folders from this Git repository. See the
 [contributor guide][docs-updating-gitignore] for further information about modifying this file.
 
+{% if cookiecutter.using_R == "Yes" -%}
+### `.lintr`
+
+R-specific. Configuration file for styling R code that's used by pre-commit hooks to check R code.
+
+{% endif -%}
+
 ### `.pre-commit-config.yaml`
 
 A pre-commit hook configuration file. See the [contributor guide][docs-pre-commit-hooks] for further details.
+
+{% if cookiecutter.using_R == "Yes" -%}
+### `.Rprofile`
+
+R-specific. Initialisation file that runs automatically when starting R.
+
+{% endif -%}
 
 ### `.secrets`
 
@@ -78,6 +92,13 @@ File to contain shared fixture functions for the [pytest][pytest] tests in the `
 ### `CONTRIBUTING.md`
 
 The [contributing guidelines][contributing] for this project.
+
+{% if cookiecutter.using_R == "Yes" -%}
+### `DESCRIPTION`
+
+R-specific. Information related to the project including the name, authors and packages necessary for the project.
+
+{% endif -%}
 
 ### `LICENSE`
 
@@ -141,18 +162,12 @@ Alternatively, to install the requirements file along with pre-commit hooks, run
 make requirements
 ```
 
-### `DESCRIPTION`
-R-specific. Information related to the project including the name, authors and packages necessary for the project.
-
+{% if cookiecutter.using_R == "Yes" -%}
 ### `startup.R`
+
 R-specific. Installs necessary packages specified in the `DESCRIPTION` file upon starting R via `.Rprofile`.
 
-### `.Rprofile`
-R-specific. Initialisation file that runs automatically when starting R.
-
-### `.lintr`
-R-specific. Configuration file for styling R code that's used by pre-commit hooks to check R code.
-
+{% endif -%}
 
 [code-of-conduct]:../contributor_guide/CODE_OF_CONDUCT.md
 [contributing]: ../contributor_guide/CONTRIBUTING.md

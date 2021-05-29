@@ -1,19 +1,24 @@
+from json import load
 from pathlib import Path
 from shutil import rmtree
-from typing import Union
+from typing import List, Union
 
 
-def remove_folder(folder: Union[Path, str]) -> None:
-    """Remove a folder.
+def delete_files_and_folders(paths: Union[Path, str, List[Path], List[str]]) -> None:
+    """Delete files and folders for given file and/or folder paths.
 
     Args:
-        folder: A folder path to be removed.
+        paths: A ``pathlib.Path`` object or string, or list of ``pathlib.Path`` or strings.
 
     Returns:
-        None - removes the `folder` folder.
+        None - deletes the files and/or folders defined in ``paths``.
 
     """
-    rmtree(folder)
+
+    # Coerce `paths` into a list of `pathlib.Path` objects. Then remove each folder and file
+    paths = [Path(p) for p in paths] if isinstance(paths, List) else [Path(paths)]
+    _ = [rmtree(d) for d in paths if d.is_dir() and d.exists()]
+    _ = [f.unlink() for f in paths if f.is_file() and f.exists()]
 
 
 def set_aqa_framework(dir_organisational_framework_aqa: Union[Path, str],
@@ -30,8 +35,8 @@ def set_aqa_framework(dir_organisational_framework_aqa: Union[Path, str],
 
     """
 
-    # Remove the default `docs/aqa` folder, and its contents. Then recursively create a new folder path to here
-    remove_folder(dir_cookiecutter_docs_aqa)
+    # Remove the default `docs/aqa` folder, and its contents
+    delete_files_and_folders(dir_cookiecutter_docs_aqa)
 
     # Copy the relevant organisational AQA framework to the `docs/aqa` folder
     _ = Path(dir_organisational_framework_aqa).rename(dir_cookiecutter_docs_aqa)
@@ -80,6 +85,28 @@ def set_request_template(path_organisational_framework_request_template: Union[P
     _ = Path(path_organisational_framework_request_template).rename(path_request_template)
 
 
+def parse_features_json(file: Union[Path, str]) -> List[Path]:
+    """Parse a JSON file containing filepaths.
+
+    Args:
+        file: A filepath to a JSON file containing a ``features`` field, which contains a list of dictionaries, where
+            each dictionary must have at least an ``remove`` and a `resources` field.
+
+    Returns:
+        A list of file paths from the ``resources`` field, if the ``remove`` field is True.
+
+    """
+
+    # Load the JSON file, extract the nested `resources` field from the loaded JSON file, if the `enabled` is True.
+    # Coerce to a list, then return the list of paths
+    with open(file) as json_file:
+        d = load(json_file)
+    resources = [
+        f["resources"] if isinstance(f["resources"], list) else [f["resources"]] for f in d["features"] if f["remove"]
+    ]
+    return [Path(e).resolve() for r in resources for e in r]
+
+
 if __name__ == "__main__":
 
     # Define the folder path to `.govcookiecutter`
@@ -98,5 +125,8 @@ if __name__ == "__main__":
         set_request_template(DIR_ORGANISATIONAL_FRAMEWORKS.joinpath("request_template.md"), Path.cwd(),
                              "{{ cookiecutter.repository_hosting_platform }}")
 
+    # Delete files defined in the `manifest.json` file
+    delete_files_and_folders(parse_features_json(Path(".govcookiecutter", "manifest.json")))
+
     # Remove `DIR_GOVCOOKIECUTTER`
-    remove_folder(DIR_GOVCOOKIECUTTER)
+    delete_files_and_folders(DIR_GOVCOOKIECUTTER)

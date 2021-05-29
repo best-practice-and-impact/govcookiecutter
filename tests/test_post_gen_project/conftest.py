@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import List
 import pytest
 
 
@@ -19,3 +20,24 @@ def temporary_frameworks(tmp_path, test_input_request_template: str, test_input_
 
     # Return the path to the temporary frameworks folder
     return dir_framework
+
+
+@pytest.fixture
+def make_temporary_folders_and_files(tmp_path, test_input_folder_names: List[str], test_extra_folder_names: List[str],
+                                     test_input_filenames: List[str], test_extra_filenames: List[str]) -> Path:
+    """Make temporary folders and files."""
+
+    # Create a temporary parent directory where all these temporary folders, and files will be stored
+    folder_parent = tmp_path.joinpath("temporary_dir")
+
+    # Compile the folder and file names together
+    test_folder_names = [*test_input_folder_names, *test_extra_folder_names]
+    test_filenames = [*test_input_filenames, *test_extra_filenames]
+
+    # Create all the temporary folders and files requested
+    _ = [folder_parent.joinpath(d).mkdir(parents=True, exist_ok=True) for d in test_folder_names]
+    for f in test_filenames:
+        file_path = folder_parent.joinpath(f)
+        file_path.parent.mkdir(parents=True, exist_ok=True)
+        file_path.touch()
+    return folder_parent
