@@ -32,3 +32,9 @@ repos:
         name: Check for a blank line at the end of scripts (auto-fixes)
     -   id: trailing-whitespace
         name: Check for trailing whitespaces (auto-fixes)
+-   repo: https://github.com/pycqa/isort
+    rev: 5.8.0
+    hooks:
+    -   id: isort
+        name: isort - Sort Python imports (auto-fixes)
+        types: [cython, pyi, python]

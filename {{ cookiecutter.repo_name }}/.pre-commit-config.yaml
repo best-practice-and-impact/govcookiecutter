@@ -33,6 +33,12 @@ repos:
         exclude: '\.Rd'
     -   id: trailing-whitespace
         name: Check for trailing whitespaces (auto-fixes)
+-   repo: https://github.com/pycqa/isort
+    rev: 5.8.0
+    hooks:
+    -   id: isort
+        name: isort - Sort Python imports (auto-fixes)
+        types: [cython, pyi, python]
 {% if cookiecutter.using_R == "Yes" %}
 # R specific hooks: https://github.com/lorenzwalthert/precommit
 -   repo: https://github.com/lorenzwalthert/precommit
