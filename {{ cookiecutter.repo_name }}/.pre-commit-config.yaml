@@ -5,17 +5,20 @@ repos:
     rev: 3.8.4
     hooks:
     -   id: flake8
+        name: flake8 - Python linting
         args: ["src"]
 -   repo: https://github.com/Yelp/detect-secrets
     rev: v1.0.3
     hooks:
     -   id: detect-secrets
+        name: detect-secrets - Detect secrets in staged code
         args: ["--baseline", ".secrets.baseline"]
         exclude: .*/tests/.*
 - repo: https://github.com/kynan/nbstripout
   rev: 0.3.9
   hooks:
     - id: nbstripout
+      name: nbstripout - Strip outputs from notebooks (auto-fixes)
       args:
         - --extra-keys
         - "metadata.colab metadata.kernelspec cell.metadata.colab cell.metadata.executionInfo cell.metadata.id cell.metadata.outputId"
@@ -23,24 +26,34 @@ repos:
     rev: v3.4.0
     hooks:
     -   id: check-added-large-files
+        name: Check for files larger than 5 MB
         args: ["--maxkb=5120"]
     -   id: end-of-file-fixer
+        name: Check for a blank line at the end of scripts (auto-fixes)
         exclude: '\.Rd'
     -   id: trailing-whitespace
+        name: Check for trailing whitespaces (auto-fixes)
 {% if cookiecutter.using_R == "Yes" %}
 # R specific hooks: https://github.com/lorenzwalthert/precommit
 -   repo: https://github.com/lorenzwalthert/precommit
     rev: v0.1.2
     hooks:
     -   id: style-files
+        name: Style files using styler
         args: [--style_pkg=styler, --style_fun=tidyverse_style]
     -   id: roxygenize
+        name: Run roxygen2::roxygenize()
     # codemeta must be above use-tidy-description when both are used
     # -   id: codemeta-description-updated
     -   id: use-tidy-description
+        name: Run sethis::use_tidy_description()
     -   id: lintr
+        name: Run lintr::lint()
         exclude: renv/activate.R
     -   id: readme-rmd-rendered
+        name: Check README.Rmd has been rendered to README.md
     -   id: parsable-R
+        name: Check for valid R code using the parse() function
     -   id: no-browser-statement
+        name: Check for accidential browser() statements
 {% endif -%}
