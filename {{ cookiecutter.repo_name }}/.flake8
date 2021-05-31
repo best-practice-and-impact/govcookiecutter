@@ -5,4 +5,5 @@
 exclude = venv*,__pycache__,node_modules,bower_components,migrations
 ignore = D203,W503
 max-complexity = 9
-max-line-length = 120
+max-line-length = 88
+extend-ignore = E203

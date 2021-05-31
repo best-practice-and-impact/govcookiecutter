@@ -39,6 +39,13 @@ repos:
     -   id: isort
         name: isort - Sort Python imports (auto-fixes)
         types: [cython, pyi, python]
+        args: [ "--profile", "black", "--filter-files" ]
+-   repo: https://github.com/psf/black
+    rev: 21.5b2 # Replace by any tag/version: https://github.com/psf/black/tags
+    hooks:
+    -   id: black
+        name: black - consistent Python code formatting (auto-fixes)
+        language_version: python3 # Should be a command that runs python3.6+
 {% if cookiecutter.using_R == "Yes" %}
 # R specific hooks: https://github.com/lorenzwalthert/precommit
 -   repo: https://github.com/lorenzwalthert/precommit

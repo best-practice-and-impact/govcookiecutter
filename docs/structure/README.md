@@ -80,8 +80,13 @@ make help
 
 A file containing Python project settings. This includes configuration settings for:
 
+- [`isort`](#isort)
 - [`pytest`](#pytest)
 - [Code coverage](#code-coverage)
+
+#### `isort`
+
+Python imports are arranged according to the specification defined by [`black`][black].
 
 #### `pytest`
 
@@ -123,6 +128,7 @@ Alternatively, to install the requirements file along with pre-commit hooks, run
 make requirements
 ```
 
+[black]: https://black.readthedocs.io/en/stable/
 [code-of-conduct]: ../guides/CODE_OF_CONDUCT.md
 [contributing]: ../guides/CONTRIBUTING.md
 [cookiecutter]: https://cookiecutter.readthedocs.io/

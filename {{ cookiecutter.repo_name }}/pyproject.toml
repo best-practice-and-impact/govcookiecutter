@@ -9,6 +9,10 @@ exclude_lines = [
     "if __name__ == .__main__.:"
 ]
 
+# `isort` configurations
+[tool.isort]
+profile = "black"
+
 # `pytest` configurations
 [tool.pytest.ini_options]
 addopts = [

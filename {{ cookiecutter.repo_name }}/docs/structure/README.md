@@ -119,8 +119,13 @@ make help
 
 A file containing Python project settings. This includes configuration settings for:
 
+- [`isort`](#isort)
 - [`pytest`](#pytest)
 - [Code coverage](#code-coverage)
+
+#### `isort`
+
+Python imports are arranged according to the specification defined by [`black`][black].
 
 #### `pytest`
 
@@ -169,6 +174,7 @@ R-specific. Installs necessary packages specified in the `DESCRIPTION` file upon
 
 {% endif -%}
 
+[black]: https://black.readthedocs.io/en/stable/
 [code-of-conduct]:../contributor_guide/CODE_OF_CONDUCT.md
 [contributing]: ../contributor_guide/CONTRIBUTING.md
 [coverage]: https://coverage.readthedocs.io/
