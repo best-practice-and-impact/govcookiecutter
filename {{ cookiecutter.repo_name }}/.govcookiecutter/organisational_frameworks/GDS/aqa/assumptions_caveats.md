@@ -1,4 +1,4 @@
-# Assumptions and caveats Log
+# Assumptions and caveats log
 
 This log contains a list of assumptions and caveats used in this analysis.
 
@@ -26,18 +26,14 @@ Assumptions are RAG-rated according to the following definitions for quality and
 ```
 <sup><sup>1</sup> With thanks to the Home Office Analytical Quality Assurance team for these definitions.</sup>
 
-## Assumptions and caveats
-
-The log contains the following assumptions and caveats:
-
-### Assumption 1: Insert plain English title here
+## Assumption 1: Insert plain English title here
 
 * **Quality**: Insert RAG rating here
 * **Impact**: Insert RAG rating here
 
 Add plain English description here.
 
-### Assumption 2: Insert plain English title here
+## Assumption 2: Insert plain English title here
 
 * **Quality**: Insert RAG rating here
 * **Impact**: Insert RAG rating here

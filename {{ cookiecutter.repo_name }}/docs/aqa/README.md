@@ -5,5 +5,6 @@ These pages summarise analytical quality assurance (AQA) required for this proje
 ```{toctree}
 :maxdepth: 2
 ./aqa_plan.md
+./data_log.md
 ./assumptions_caveats.md
 ```
