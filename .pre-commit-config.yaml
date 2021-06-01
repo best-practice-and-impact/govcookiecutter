@@ -1,61 +1,61 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
--   repo: https://gitlab.com/pycqa/flake8
-    rev: 3.9.2
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.4.0
     hooks:
-    -   id: flake8
-        name: flake8 - Python linting
-        args: ["hooks", "tests", "{{ cookiecutter.repo_name }}/src"]
--   repo: https://github.com/Yelp/detect-secrets
-    rev: v1.1.0
-    hooks:
-    -   id: detect-secrets
-        name: detect-secrets - Detect secrets in staged code
-        args: ["--baseline", ".secrets.baseline"]
-        exclude: .*/tests/.*
-- repo: https://github.com/kynan/nbstripout
-  rev: 0.4.0
-  hooks:
-    - id: nbstripout
-      name: nbstripout - Strip outputs from notebooks (auto-fixes)
-      args:
-        - --extra-keys
-        - "metadata.colab metadata.kernelspec cell.metadata.colab cell.metadata.executionInfo cell.metadata.id cell.metadata.outputId"
--   repo: https://github.com/pre-commit/pre-commit-hooks
+      - id: nbstripout
+        name: nbstripout - Strip outputs from notebooks (auto-fixes)
+        args:
+          - --extra-keys
+          - "metadata.colab metadata.kernelspec cell.metadata.colab cell.metadata.executionInfo cell.metadata.id cell.metadata.outputId"
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
     hooks:
-    -   id: check-added-large-files
+      - id: check-added-large-files
         name: Check for files larger than 5 MB
-        args: ["--maxkb=5120"]
-    -   id: end-of-file-fixer
+        args: [ "--maxkb=5120" ]
+      - id: end-of-file-fixer
         name: Check for a blank line at the end of scripts (auto-fixes)
-    -   id: trailing-whitespace
+      - id: trailing-whitespace
         name: Check for trailing whitespaces (auto-fixes)
--   repo: https://github.com/pycqa/isort
+  - repo: https://github.com/pycqa/isort
     rev: 5.8.0
     hooks:
-    -   id: isort
+      - id: isort
         name: isort - Sort Python imports (auto-fixes)
-        types: [cython, pyi, python]
-        args: ["--profile", "black", "--filter-files"]
--   repo: https://github.com/psf/black
+        types: [ cython, pyi, python ]
+        args: [ "--profile", "black", "--filter-files" ]
+  - repo: https://github.com/psf/black
     rev: 21.5b2 # Replace by any tag/version: https://github.com/psf/black/tags
     hooks:
-    -   id: black
+      - id: black
         name: black - consistent Python code formatting (auto-fixes)
         language_version: python3 # Should be a command that runs python3.6+
--   repo: https://github.com/nbQA-dev/nbQA
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.9.2
+    hooks:
+      - id: flake8
+        name: flake8 - Python linting
+        args: [ "hooks", "tests", "{{ cookiecutter.repo_name }}/src" ]
+  - repo: https://github.com/nbQA-dev/nbQA
     rev: 0.10.0
     hooks:
-    -   id: nbqa-flake8
-        name: nbqa-flake8 - Python linting (notebooks)
-        additional_dependencies: [flake8==3.9.2]
-    -   id: nbqa-isort
+      - id: nbqa-isort
         name: nbqa-isort - Sort Python imports (notebooks; auto-fixes)
-        args: [--nbqa-mutate]
-        additional_dependencies: [isort==5.8.0]
-    -   id: nbqa-black
+        args: [ --nbqa-mutate ]
+        additional_dependencies: [ isort==5.8.0 ]
+      - id: nbqa-black
         name: nbqa-black - consistent Python code formatting (notebooks; auto-fixes)
-        args: [--nbqa-mutate]
-        additional_dependencies: [black==21.5b2]
+        args: [ --nbqa-mutate ]
+        additional_dependencies: [ black==21.5b2 ]
+      - id: nbqa-flake8
+        name: nbqa-flake8 - Python linting (notebooks)
+        additional_dependencies: [ flake8==3.9.2 ]
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.1.0
+    hooks:
+      - id: detect-secrets
+        name: detect-secrets - Detect secrets in staged code
+        args: [ "--baseline", ".secrets.baseline" ]
+        exclude: .*/tests/.*
