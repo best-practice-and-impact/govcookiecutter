@@ -1,7 +1,7 @@
 # Contributing
 
 We love contributions! We've compiled this documentation to help you understand our contributing guidelines. If you
-still have questions, please [contact us][email] and we'd be happy to help!
+still have questions, please [contact us][email-address] and we'd be happy to help!
 
 ## Code of Conduct
 
@@ -100,7 +100,7 @@ Further information on how to write Sphinx documentation, and how to build it in
 [docs-pre-commit-hooks-secrets-definition]: ./docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [docs-updating-gitignore]: ./docs/contributor_guide/updating_gitignore.md
 [docs-write-sphinx-documentation]: ./docs/contributor_guide/writing_sphinx_documentation.md
-[email]: mailto:{{ cookiecutter.contact_email }}
+[email-address]: mailto:{{ cookiecutter.contact_email }}
 [gds-way]: https://gds-way.cloudapps.digital/
 [gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide

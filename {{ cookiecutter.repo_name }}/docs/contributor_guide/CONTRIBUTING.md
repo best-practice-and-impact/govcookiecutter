@@ -4,7 +4,7 @@ We love contributions! To help you understand our contributing guidelines, pleas
 project repository on {{ cookiecutter.repository_hosting_platform }}; you might want to read out
 [Code of Conduct][code-of-conduct] first!
 
-If you still have questions, please [contact us][email] and we'd be happy to help!
+If you still have questions, please [contact us][email-address] and we'd be happy to help!
 
 [code-of-conduct]: ./CODE_OF_CONDUCT.md
-[email]: mailto:{{ cookiecutter.contact_email }}
+[email-address]: mailto:{{ cookiecutter.contact_email }}
