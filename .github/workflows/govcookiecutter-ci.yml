@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ ubuntu-latest ]
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
         python-version: [ 3.6, 3.7, 3.8, 3.9 ]
 
     steps:
@@ -19,15 +19,31 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          if [ "$RUNNER_OS" == "Linux" ]; then
+          if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
             make requirements
+          elif [ "$RUNNER_OS" == "Windows" ]; then
+            pip install -U pip setuptools
+            pip install -r requirements.txt
+            pre-commit install
           else
             echo "$RUNNER_OS not supported"
             exit 1
           fi;
+        shell: bash
       - name: Run pre-commit hooks
         run: pre-commit run --all-files
       - name: Execute tests
         run: pytest
       - name: Create documentation
-        run: make docs
+        run: |
+          if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
+            make docs
+          elif [ "$RUNNER_OS" == "Windows" ]; then
+            if [ ! -d "./docs/_build" ]; then mkdir ./docs/_build; fi
+            find ./docs/_build -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
+            sphinx-build -b html ./docs ./docs/_build
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi;
+        shell: bash
