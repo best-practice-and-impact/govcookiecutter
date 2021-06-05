@@ -4,6 +4,7 @@ detect-secrets==1.1.0
 myst-parser
 pre-commit
 pytest
+pytest-cookies
 pytest-mock
 pytest-xdist
 Sphinx
