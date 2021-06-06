@@ -14,7 +14,7 @@ make requirements
 
 ### Requirements
 
-- Python 3.6+ installed
+- Python 3.6.1+ installed
 {% if cookiecutter.using_R == "Yes" -%}
 - R 4.0.4+ installed
 {% endif -%}

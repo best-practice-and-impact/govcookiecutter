@@ -58,7 +58,7 @@ Otherwise, that's it — happy coding! 🎉
 
 To get started your system should meet the following requirements:
 
-1. Python 3.6+ installed
+1. Python 3.6.1+ installed
 2. R 4.0.4+ installed (for combined Python and R projects)
 3. The [`cookiecutter` package installed](#installing-cookiecutter)
 
