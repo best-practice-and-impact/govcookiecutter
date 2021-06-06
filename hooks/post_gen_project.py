@@ -122,7 +122,7 @@ def parse_features_json(file: Union[Path, str]) -> List[Path]:
     # Load the JSON file, extract the nested `resources` field from the loaded JSON
     # file, if the `enabled` is True.
     # Coerce to a list, then return the list of paths
-    with open(file) as json_file:
+    with open(file, encoding="utf-8") as json_file:
         d = load(json_file)
     resources = [
         f["resources"] if isinstance(f["resources"], list) else [f["resources"]]

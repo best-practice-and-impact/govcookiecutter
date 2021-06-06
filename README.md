@@ -80,10 +80,12 @@ For Debian/Ubuntu, use the following commands:
 sudo apt-get install cookiecutter
 ```
 
+> ℹ️ We assume your `python` command loads Python 3.6+!
+
 Otherwise, you can install `cookiecutter` via `pip` — you may wish to create a virtual environment first:
 
 ```shell
-python3 -m pip install --user cookiecutter
+python -m pip install --user cookiecutter
 ```
 
 ## Changes to make post-creation

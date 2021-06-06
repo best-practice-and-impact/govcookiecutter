@@ -22,7 +22,7 @@ def make_temporary_features_json(
     # Define the file path for the temporary features JSON file, then write its contents
     temp_json_path = make_temporary_folders_and_files.joinpath(test_input_json_filename)
     temp_json_path.touch()
-    with open(temp_json_path, "w") as f:
+    with open(temp_json_path, "w", encoding="utf-8") as f:
         json.dump(test_input_json, f)
     return temp_json_path
 
@@ -85,7 +85,9 @@ class TestParseFeaturesJson:
 
         # Execute the function, and check the patches are called appropriately
         _ = parse_features_json(make_temporary_features_json)
-        patch_open.assert_called_once_with(make_temporary_features_json)
+        patch_open.assert_called_once_with(
+            make_temporary_features_json, encoding="utf-8"
+        )
         patch_json_load.assert_called_once_with(patch_open())
 
     def test_returns_correctly(

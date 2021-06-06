@@ -124,7 +124,7 @@ def recursive_open_and_count_search_terms(
     word_count = Counter()
     for file in all_files:
         try:
-            with open(file) as f:
+            with open(file, encoding="utf-8") as f:
                 word_count.update(Counter(f.read().split()))
                 if word_count.get("cookiecutter.using_R"):
                     print(file)

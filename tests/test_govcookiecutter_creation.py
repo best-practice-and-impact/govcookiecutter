@@ -128,7 +128,7 @@ def test_builds_correctly(
     all_files = [f for f in test_output_project.project_path.rglob("*") if f.is_file()]
     for file in all_files:
         try:
-            with open(file) as f:
+            with open(file, encoding="utf-8") as f:
                 assert re.search(r"{+ ?cookiecutter\.\w+ ?}+", f.read()) is None
         except UnicodeDecodeError:
             continue
