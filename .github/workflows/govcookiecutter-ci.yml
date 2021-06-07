@@ -37,8 +37,6 @@ jobs:
           if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
             make docs
           elif [ "$RUNNER_OS" == "Windows" ]; then
-            if [ ! -d "./docs/_build" ]; then mkdir ./docs/_build; fi
-            find ./docs/_build -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
             sphinx-build -b html ./docs ./docs/_build
           else
             echo "$RUNNER_OS not supported"
@@ -62,3 +60,74 @@ jobs:
         with:
           files: ./coverage.xml
           env_vars: OS=${{ matrix.os }},PYTHON=${{ matrix.python }}
+
+  template-build:
+
+    needs: build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        # TODO: Fix R pre-commit hook issues with Windows
+        os: [ ubuntu-latest, macos-latest ]
+        python: [ 3.6, 3.7, 3.8, 3.9 ]
+        R:
+          - {using_R: No, version: N/A}
+          - {using_R: Yes, version: 4.0.4}
+          - {using_R: Yes, version: 4.0.5}
+          - {using_R: Yes, version: 4.1.0}
+
+    steps:
+      - name: Set up Python ${{ matrix.python }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install R ${{ matrix.R.version }}
+        uses: r-lib/actions/setup-r@v1
+        with:
+          r-version: ${{ matrix.R.version }}
+        if: ${{ matrix.R.using_r == 'Yes' }}
+      - name: Install other ${{ matrix.os }} R dependencies
+        run: sudo apt-get install libcurl4-openssl-dev
+        if: ${{ matrix.os == 'ubuntu-latest' && matrix.R.using_R == 'Yes' }}
+      - name: Install cookiecutter
+        run: |
+          if [ "$RUNNER_OS" == "Linux" ]; then
+            # TODO: Add pip alternative, as Ubuntu 20.04LTS not currently supported (June 2021)
+            sudo apt-get install cookiecutter || pip install cookiecutter
+          elif [ "$RUNNER_OS" == "macOS" ]; then
+            brew install cookiecutter
+          elif [ "$RUNNER_OS" == "Windows" ]; then
+            pip install cookiecutter
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi;
+        shell: bash
+      - name: Create project from govcookiecutter for this commit
+        run: |
+          # Relies on the repository being public
+          cookiecutter ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git --no-input --checkout ${GITHUB_SHA} repo_name=example using_R=${{ matrix.R.using_R }}
+        shell: bash
+      - name: Install requirements, and pre-commit hooks, and check Sphinx build
+        run: |
+          cd example
+          git init
+          git add .
+          if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
+            make docs
+          elif [ "$RUNNER_OS" == "Windows" ]; then
+            pip install -U pip setuptools
+            pip install -r requirements.txt
+            pre-commit install
+            sphinx-build -b html ./docs ./docs/_build
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi;
+        shell: bash
+      - name: Run pre-commit hooks
+        run: |
+          cd example
+          pre-commit run --all-files
+          # TODO: Currently no tests - this gives exit code 5, which fails CI, so commenting out for now
+          # pytest
