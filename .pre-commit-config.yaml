@@ -29,7 +29,6 @@ repos:
     hooks:
       - id: flake8
         name: flake8 - Python linting
-        args: [ "hooks", "tests", "{{ cookiecutter.repo_name }}/src" ]
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.1.0
     hooks:

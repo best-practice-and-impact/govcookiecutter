@@ -38,7 +38,6 @@ repos:
     hooks:
       - id: flake8
         name: flake8 - Python linting
-        args: [ "src" ]
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 0.10.0
     hooks:
