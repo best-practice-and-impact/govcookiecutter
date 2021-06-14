@@ -22,6 +22,7 @@ This pull/merge request meets the following requirements:
 - [ ] Developments are **secure** and [**ethical**][data-ethics-framework]
 - [ ] You have made proportionate checks that the code works correctly
 - [ ] Test suite passes
+- [ ] Developments adhere to AQA plan (see `docs/aqa/aqa_plan.md`)
 - [ ] Data log updated (see `docs/aqa/data_log.md`), if necessary
 - [ ] Assumptions, and caveats log updated (see `docs/aqa/assumptions_caveats.md`), if
   necessary
