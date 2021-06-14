@@ -47,7 +47,7 @@ jobs:
       - name: Create project from govcookiecutter for this commit
         run: |
           # Relies on the repository being public
-          cookiecutter ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git --no-input --checkout ${GITHUB_SHA} repo_name=example using_R=${{ matrix.R.using_R }}
+          cookiecutter ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git --no-input --checkout ${GITHUB_HEAD_REF} repo_name=example using_R=${{ matrix.R.using_R }}
         shell: bash
       - name: Install requirements, and pre-commit hooks, and check Sphinx build
         run: |
