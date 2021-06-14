@@ -1,4 +1,4 @@
-```{include} ../../../../../{{ cookiecutter.repo_name }}/docs/contributor_guide/updating_gitignore.md
+```{include} ../../../../{{ cookiecutter.repo_name }}/docs/contributor_guide/updating_gitignore.md
 ```
 
 ## `.gitignore` in the `{{ cookiecutter.repo_name }}` folder

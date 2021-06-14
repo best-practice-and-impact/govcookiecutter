@@ -1,11 +1,12 @@
-# `govcookiecutter` documentation
-
-Here is the documentation for `govcookiecutter`.
+```{include} ../README.md
+:relative-docs: ../ ./contributing_guide
+```
 
 ```{toctree}
+:hidden:
 :maxdepth: 2
-./guides/README.md
-./guides/contributing_guide.md
+self
+./contributing_guide.md
 ./structure/README.md
 ./reference/README.md
 ```

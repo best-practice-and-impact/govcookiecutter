@@ -1,4 +1,4 @@
-```{include} ../../../../../{{ cookiecutter.repo_name }}/docs/contributor_guide/pre_commit_hooks.md
+```{include} ../../../../{{ cookiecutter.repo_name }}/docs/contributor_guide/pre_commit_hooks.md
 ```
 
 ## Pre-commit hooks in the `{{ cookiecutter.repo_name }}` folder

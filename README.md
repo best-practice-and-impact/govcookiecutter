@@ -26,8 +26,11 @@ development and deployment, whilst ensuring organisation-wide standards on assur
 are met.
 
 We have also included [pre-commit hooks][pre-commit] to prevent accidental committing
-of secrets<sup>[1](#footnote-1)</sup>, large data files, and Jupyter notebook outputs
+of secrets[^1], large data files, and Jupyter notebook outputs
 for security purposes.
+
+[^1]: [Only secrets of specific patterns are detected by the pre-commit
+hooks][docs-pre-commit-hooks-secrets-definition].
 
 ## Getting started with `govcookiecutter` for your projects
 
@@ -134,11 +137,6 @@ guidelines][contributing].
 This template is based off the [DrivenData Cookiecutter Data Science][drivendata]
 project, especially around the template data and src folder structures, and the
 `make help` commands in the Makefiles.
-
----
-
-<a name="footnote-1">[1]</a>: [Only secrets of specific patterns are detected by the
-pre-commit hooks][docs-pre-commit-hooks-secrets-definition].
 
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
 [aqua-book-resources]: https://www.gov.uk/government/collections/aqua-book-resources

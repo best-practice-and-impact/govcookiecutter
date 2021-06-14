@@ -23,9 +23,13 @@ It is better to use the above make command, rather than
 your pre-commit hooks are up-to-date with any changes made.
 
 The pre-commit hooks are a security feature to ensure no
-secrets<sup>[1](#footnote-1)</sup>, large data files, and Jupyter notebook outputs are
+secrets[^1], large data files, and Jupyter notebook outputs are
 accidentally committed into the repository. For more information about the pre-commit
 hooks used in this repository, see the [documentation][docs-pre-commit-hooks].
+
+
+[^1]: [Only secrets of specific patterns are detected by the
+pre-commit hooks][docs-pre-commit-hooks-secrets-definition].
 
 ## Code conventions
 
@@ -107,11 +111,6 @@ Organisational frameworks are stored in the
 `.govcookiecutter/organisational_frameworks` folder. If you would like to add your own
 organisation's framework, follow the [instructions][docs-govcookiecutter-frameworks] in
 the `README.md` file in that folder.
-
----
-
-<a name="footnote-1">[1]</a>: [Only secrets of specific patterns are detected by the
-pre-commit hooks][docs-pre-commit-hooks-secrets-definition].
 
 [code-of-conduct]: ./CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/

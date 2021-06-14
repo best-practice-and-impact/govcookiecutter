@@ -139,16 +139,16 @@ make requirements
 ```
 
 [black]: https://black.readthedocs.io/en/stable/
-[code-of-conduct]: ../guides/CODE_OF_CONDUCT.md
-[contributing]: ../guides/CONTRIBUTING.md
+[code-of-conduct]: ../CODE_OF_CONDUCT.md
+[contributing]: ../CONTRIBUTING.md
 [cookiecutter]: https://cookiecutter.readthedocs.io/
 [coverage]: https://coverage.readthedocs.io/
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [direnv]: https://direnv.net/
 [docs-hooks]: ./hooks.md
-[docs-pre-commit-hooks]: ../guides/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
+[docs-pre-commit-hooks]: ../%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
 [docs-tests]: ./tests.md
-[docs-updating-gitignore]: ../guides/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
+[docs-updating-gitignore]: ../%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
 [flake8]: https://gitlab.com/pycqa/flake8
 [gds-way]: https://gds-way.cloudapps.digital
 [gds-way-flake8]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#common-configuration
