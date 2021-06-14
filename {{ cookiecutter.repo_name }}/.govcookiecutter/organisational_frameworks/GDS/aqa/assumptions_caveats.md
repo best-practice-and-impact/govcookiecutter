@@ -4,26 +4,14 @@ This log contains a list of assumptions and caveats used in this analysis.
 
 ## Definitions
 
-Assumptions are RAG-rated according to the following definitions for quality and impact<sup>1</sup>:
+Assumptions are RAG-rated according to the following definitions for quality and
+impact<sup>1</sup>:
 
-<!-- Using reStructuredText table here, otherwise the raw Markdown is greater than the 120-character line width -->
-```{eval-rst}
-+-------+------------------------------------------------------+-------------------------------------------------------+
-| RAG   | Assumption quality                                   | Assumption impact                                     |
-+=======+======================================================+=======================================================+
-| GREEN | Reliable assumption, well understood and/or          | Marginal assumptions; their changes have no or        |
-|       | documented; anything up to a validated & recent set  | limited impact on the outputs.                        |
-|       | of actual data.                                      |                                                       |
-+-------+------------------------------------------------------+-------------------------------------------------------+
-| AMBER | Some evidence to support the assumption; may vary    | Assumptions with a relevant, even if not critical,    |
-|       | from a source with poor methodology to a good source | impact on the outputs.                                |
-|       | that is a few years old.                             |                                                       |
-+-------+------------------------------------------------------+-------------------------------------------------------+
-| RED   | Little evidence to support the assumption; may vary  | Core assumptions of the analysis; the output would be |
-|       | from an opinion to a limited data source with poor   | drastically affected by their change.                 |
-|       | methodology.                                         |                                                       |
-+-------+------------------------------------------------------+-------------------------------------------------------+
-```
+| RAG   | Assumption quality                                                                                                              | Assumption impact                                                                           |
+|-------|---------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| GREEN | Reliable assumption, well understood and/or documented; anything up to a validated & recent set of actual data.                 | Marginal assumptions; their changes have no or limited impact on the outputs.               |
+| AMBER | Some evidence to support the assumption; may vary from a source with poor methodology to a good source that is a few years old. | Assumptions with a relevant, even if not critical, impact on the outputs.                   |
+| RED   | Little evidence to support the assumption; may vary from an opinion to a limited data source with poor methodology.             | Core assumptions of the analysis; the output would be drastically affected by their change. |
 <sup><sup>1</sup> With thanks to the Home Office Analytical Quality Assurance team for these definitions.</sup>
 
 ## Assumption 1: Insert plain English title here
