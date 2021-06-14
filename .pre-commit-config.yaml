@@ -30,7 +30,7 @@ repos:
       - id: flake8
         name: flake8 - Python linting
   - repo: https://github.com/Yelp/detect-secrets
-    rev: v1.1.0
+    rev: v1.0.3
     hooks:
       - id: detect-secrets
         name: detect-secrets - Detect secrets in staged code
