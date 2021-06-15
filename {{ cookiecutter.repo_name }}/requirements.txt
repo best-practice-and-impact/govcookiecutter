@@ -4,3 +4,4 @@ myst-parser
 pre-commit
 pytest
 Sphinx
+toml

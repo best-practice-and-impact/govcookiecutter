@@ -2,18 +2,13 @@
 
 {{ cookiecutter.overview }}
 
-> ℹ️ Where this documentation refers to the **root folder** we mean where this README.md is located.
-
-- [Getting started](#getting-started)
-  - [Requirements](#requirements)
-- [Required secrets and credentials](#required-secrets-and-credentials)
-- [Licence](#licence)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
+> ℹ️ Where this documentation refers to the **root folder** we mean where this
+> README.md is located.
 
 ## Getting started
 
-To start contributing to `{{ cookiecutter.repo_name }}`, run the following commands in your shell:
+To start contributing to `{{ cookiecutter.repo_name }}`, run the following commands in
+your shell:
 
 ``` shell script
 make requirements
@@ -21,16 +16,22 @@ make requirements
 
 ### Requirements
 
-- A `.secrets` file with the [required secrets and credentials](#required-secrets-and-credentials)
+- Python 3.6.1+ installed
+{% if cookiecutter.using_R == "Yes" -%}
+- R 4.0.4+ installed
+{% endif -%}
+- A `.secrets` file with the [required secrets and
+  credentials](#required-secrets-and-credentials)
 - [Load environment variables][docs-loading-environment-variables] from `.envrc`
 
 To be added.
 
 ## Required secrets and credentials
 
-To run this project, you need a `.secrets` file with secrets/credentials as environmental variables; see the
-[documentation][docs-loading-environment-variables-secrets] for further guidance. The secrets/credentials should have
-the following environment variable name(s):
+To run this project, you need a `.secrets` file with secrets/credentials as
+environmental variables; see the
+[documentation][docs-loading-environment-variables-secrets] for further guidance. The
+secrets/credentials should have the following environment variable name(s):
 
 | Secret/credential | Environment variable name | Description                                |
 |-------------------|---------------------------|--------------------------------------------|
@@ -42,9 +43,9 @@ Once you've added these environment variables to `.secrets` you will need to
 
 ## Licence
 
-Unless stated otherwise, the codebase is released under the MIT License. This covers both the codebase and any sample
-code in the documentation. The documentation is © Crown copyright and available under the terms of the Open Government
-3.0 licence.
+Unless stated otherwise, the codebase is released under the MIT License. This covers
+both the codebase and any sample code in the documentation. The documentation is ©
+Crown copyright and available under the terms of the Open Government 3.0 licence.
 
 ## Contributing
 
@@ -53,7 +54,8 @@ If you want to help us build, and improve `{{ cookiecutter.repo_name }}`, view o
 
 ## Acknowledgements
 
-This project structure is based on the [`govcookiecutter`][govcookiecutter] template project.
+This project structure is based on the [`govcookiecutter`][govcookiecutter] template
+project.
 
 [contributing]: ./CONTRIBUTING.md
 [govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter

@@ -1,46 +1,86 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
--   repo: https://gitlab.com/pycqa/flake8
-    rev: 3.8.4
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.4.0
     hooks:
-    -   id: flake8
-        args: ["src"]
--   repo: https://github.com/Yelp/detect-secrets
+      - id: nbstripout
+        name: nbstripout - Strip outputs from notebooks (auto-fixes)
+        args:
+          - --extra-keys
+          - "metadata.colab metadata.kernelspec cell.metadata.colab cell.metadata.executionInfo cell.metadata.id cell.metadata.outputId"
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: check-added-large-files
+        name: Check for files larger than 5 MB
+        args: [ "--maxkb=5120" ]
+      - id: end-of-file-fixer
+        name: Check for a blank line at the end of scripts (auto-fixes)
+        exclude: '\.Rd'
+      - id: trailing-whitespace
+        name: Check for trailing whitespaces (auto-fixes)
+  - repo: https://github.com/pycqa/isort
+    rev: 5.8.0
+    hooks:
+      - id: isort
+        name: isort - Sort Python imports (auto-fixes)
+        types: [ cython, pyi, python ]
+        args: [ "--profile", "black", "--filter-files" ]
+  - repo: https://github.com/psf/black
+    rev: 21.5b2 # Replace by any tag/version: https://github.com/psf/black/tags
+    hooks:
+      - id: black
+        name: black - consistent Python code formatting (auto-fixes)
+        language_version: python # Should be a command that runs python3.6+
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.9.2
+    hooks:
+      - id: flake8
+        name: flake8 - Python linting
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 0.12.0
+    hooks:
+      - id: nbqa-isort
+        name: nbqa-isort - Sort Python imports (notebooks; auto-fixes)
+        args: [ --nbqa-mutate ]
+        additional_dependencies: [ isort==5.8.0 ]
+      - id: nbqa-black
+        name: nbqa-black - consistent Python code formatting (notebooks; auto-fixes)
+        args: [ --nbqa-mutate ]
+        additional_dependencies: [ black==21.5b2 ]
+      # TODO: Disabled for now until it's clear how to add noqa to specific cells of a Jupyter notebook
+      #- id: nbqa-flake8
+      #  name: nbqa-flake8 - Python linting (notebooks)
+      #  additional_dependencies: [ flake8==3.9.2 ]
+  - repo: https://github.com/Yelp/detect-secrets
     rev: v1.0.3
     hooks:
-    -   id: detect-secrets
-        args: ["--baseline", ".secrets.baseline"]
+      - id: detect-secrets
+        name: detect-secrets - Detect secrets in staged code
+        args: [ "--baseline", ".secrets.baseline" ]
         exclude: .*/tests/.*
-- repo: https://github.com/kynan/nbstripout
-  rev: 0.3.9
-  hooks:
-    - id: nbstripout
-      args:
-        - --extra-keys
-        - "metadata.colab metadata.kernelspec cell.metadata.colab cell.metadata.executionInfo cell.metadata.id cell.metadata.outputId"
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.4.0
+{% if cookiecutter.using_R == "Yes" %}
+  # R specific hooks: https://github.com/lorenzwalthert/precommit
+  - repo: https://github.com/lorenzwalthert/precommit
+    rev: v0.1.3
     hooks:
-    -   id: check-added-large-files
-        args: ["--maxkb=5120"]
-    -   id: end-of-file-fixer
-        exclude: '\.Rd'
-    -   id: trailing-whitespace
-{% if cookiecutter.add_r_precommit_hooks == "Yes" %}
-# R specific hooks: https://github.com/lorenzwalthert/precommit
--   repo: https://github.com/lorenzwalthert/precommit
-    rev: v0.1.2
-    hooks:
-    -   id: style-files
-        args: [--style_pkg=styler, --style_fun=tidyverse_style]
-    -   id: roxygenize
-    # codemeta must be above use-tidy-description when both are used
-    # -   id: codemeta-description-updated
-    -   id: use-tidy-description
-    -   id: lintr
+      - id: style-files
+        name: Style files using styler
+        args: [ --style_pkg=styler, --style_fun=tidyverse_style ]
+      - id: roxygenize
+        name: Run roxygen2::roxygenize()
+      # codemeta must be above use-tidy-description when both are used
+      # -   id: codemeta-description-updated
+      - id: use-tidy-description
+        name: Run sethis::use_tidy_description()
+      - id: lintr
+        name: Run lintr::lint()
         exclude: renv/activate.R
-    -   id: readme-rmd-rendered
-    -   id: parsable-R
-    -   id: no-browser-statement
+      - id: readme-rmd-rendered
+        name: Check README.Rmd has been rendered to README.md
+      - id: parsable-R
+        name: Check for valid R code using the parse() function
+      - id: no-browser-statement
+        name: Check for accidential browser() statements
 {% endif -%}

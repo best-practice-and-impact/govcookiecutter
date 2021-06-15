@@ -1,0 +1,25 @@
+# `coverage` configurations
+[tool.coverage.run]
+source = [
+    "./src"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "if __name__ == .__main__.:"
+]
+
+# `isort` configurations
+[tool.isort]
+profile = "black"
+
+# `pytest` configurations
+[tool.pytest.ini_options]
+addopts = [
+    "-vv",
+    "--doctest-modules"
+]
+doctest_optionflags = "NORMALIZE_WHITESPACE"
+testpaths = [
+    "./tests"
+]

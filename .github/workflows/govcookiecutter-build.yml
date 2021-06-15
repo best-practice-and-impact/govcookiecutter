@@ -1,0 +1,63 @@
+name: govcookiecutter build
+
+on: [ push ]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
+        python: [ 3.6, 3.7, 3.8, 3.9 ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install dependencies
+        run: |
+          if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
+            make requirements
+          elif [ "$RUNNER_OS" == "Windows" ]; then
+            pip install -U pip setuptools
+            pip install -r requirements.txt
+            pre-commit install
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi;
+        shell: bash
+      - name: Run pre-commit hooks
+        run: pre-commit run --all-files
+      - name: Create documentation
+        run: |
+          if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
+            sphinx-build -W -b html ./docs ./docs/_build
+          elif [ "$RUNNER_OS" == "Windows" ]; then
+            # TODO: Investigate why Sphinx build raises a warning on Windows but not Unix
+            sphinx-build -b html ./docs ./docs/_build
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi;
+        shell: bash
+      - name: Execute tests, and create coverage report
+        run: |
+          if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
+            make coverage_xml
+          elif [ "$RUNNER_OS" == "Windows" ]; then
+            coverage run -m pytest
+            coverage xml
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi;
+        shell: bash
+      - name: Upload coverage report to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          files: ./coverage.xml
+          env_vars: OS=${{ matrix.os }},PYTHON=${{ matrix.python }}

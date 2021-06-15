@@ -1,16 +1,16 @@
 {
   "_extensions": ["jinja2_time.TimeExtension"],
 
-  "department_name": "Your HM Government department",
+  "organisation_name": "Your public sector organisation name, e.g. Government Digital Service",
   "repository_hosting_platform": ["GitHub", "GitLab"],
-  "organisation_name": "Your GitHub/GitLab organisation name",
+  "organisation_handle": "Your GitHub/GitLab organisation name, e.g. ukgovdatascience",
   "contact_email": "organisation@email.address",
-  "departmental_framework": ["GDS", "N/A"],
+  "organisational_framework": ["GDS", "N/A"],
 
   "project_name": "Your new project name",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
   "overview": "Brief overview of your project.",
   "project_version": "0.0.1",
 
-  "add_r_precommit_hooks": ["No", "Yes"]
+  "using_R": ["No", "Yes"]
 }
