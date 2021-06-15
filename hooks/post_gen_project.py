@@ -12,7 +12,8 @@ def delete_files_and_folders(paths: Union[Path, str, List[Path], List[str]]) -> 
         strings.
 
     Returns:
-        None - deletes the files and/or folders defined in ``paths``.
+        None - deletes the files and/or folders defined in ``paths`` if they exist. If
+        this function raises an error, the files and/or folders have not been removed.
 
     """
 
