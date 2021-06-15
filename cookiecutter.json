@@ -1,7 +1,7 @@
 {
   "_extensions": ["jinja2_time.TimeExtension"],
 
-  "organisation_name": "Your public sector organisation name, e.g. GDS",
+  "organisation_name": "Your public sector organisation name, e.g. Government Digital Service",
   "repository_hosting_platform": ["GitHub", "GitLab"],
   "organisation_handle": "Your GitHub/GitLab organisation name, e.g. ukgovdatascience",
   "contact_email": "organisation@email.address",
