@@ -5,8 +5,8 @@ Government, and wider public sector.
 
 ## Who/what is this for?
 
-> ℹ️ Want to learn more? Want to see `govcookiecutter` in action? Check out this
-> [presentation and demo][youtube] from March 2021!
+> ℹ️ [Want to learn more? Want to see `govcookiecutter` in action? Check out this
+> presentation and demo from March 2021!][youtube]
 
 This template is for any public sector analyst(s) who codes! It's main purpose is to:
 
@@ -42,7 +42,7 @@ hooks][docs-pre-commit-hooks-secrets-definition].
 > ⚠️ Python or Python with R projects for GitHub or GitLab are supported — feel free to
 > [contribute](#contributing) to support other operating systems/programming languages!
 
-> ℹ️ See a live demo [here][youtube-creation]!
+> ℹ️ [A live demo of `govcookiecutter` is available on YouTube][youtube-creation]!
 
 To use this template to start your next coding project, make sure your system meets the
 [requirements](#requirements-to-create-a-cookiecutter-template).

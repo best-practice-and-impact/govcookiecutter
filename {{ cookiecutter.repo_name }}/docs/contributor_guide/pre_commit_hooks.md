@@ -38,8 +38,8 @@ In order for `pre-commit` to run, action is needed to configure it on your syste
 
 > ⚠️ The `detect-secrets` package does its best to prevent accidental committing of
 > secrets, but it can't catch everything. **It doesn't replace good software
-> development practices!** See the definition of a secret
-> [here](#definition-of-a-secret-according-to-detect-secrets) for further information.
+> development practices!** See the [definition of a secret for further
+> information](#definition-of-a-secret-according-to-detect-secrets).
 
 We use [`detect-secrets`][detect-secrets] to check that no
 [secrets](#definition-of-a-secret-according-to-detect-secrets), are accidentally
@@ -58,7 +58,7 @@ detect-secrets audit .secrets.baseline
 ```
 
 When you run this command, you'll enter an interactive console and be presented with a
-list of high-entropy string and/or anything which _could_ be a secret, and asked to
+list of high-entropy strings and/or anything which _could_ be a secret, and asked to
 verify whether this is the case. By doing this, the hook will be in a position to know
 if you're later committing any _new_ secrets to the repository, and it will be able to
 alert you accordingly.
