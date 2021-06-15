@@ -8,7 +8,12 @@ classes and functions exposed in `hooks.*` namespace are public.
 .. currentmodule:: hooks
 ```
 
-## Cookiecutter input validation
+## Cookiecutter pre-generation hooks
+
+These are functions executed after user input, but before project generation. If any
+pre-generation hooks fail, the project will not be generated.
+
+### Prompt input validation
 
 ```{eval-rst}
 .. autosummary::
@@ -17,8 +22,14 @@ classes and functions exposed in `hooks.*` namespace are public.
     check_valid_email_address_format
 
 ```
+## Cookiecutter post-generation hooks
 
-## Public sector organisational framework functions
+These are functions executed after initial project generation by the `cookiecutter`
+package. These include moving the selected organisational frameworks to the correct
+location, as well as deleting unnecessary files and folders. If any post-generation
+hooks fail, the generated project will be rolled-back, and deleted.
+
+### Public sector organisational framework functions
 
 ```{eval-rst}
 .. autosummary::
@@ -29,7 +40,7 @@ classes and functions exposed in `hooks.*` namespace are public.
 
 ```
 
-## Post-generation clean up
+### Post-generation clean up
 
 ```{eval-rst}
 .. autosummary::
