@@ -1,8 +1,8 @@
 # Summary
 
-Add your summary here - keep it brief, to the point, and in plain English. For further
-information about pull requests, check out the
-[GDS Way](https://gds-way.cloudapps.digital/standards/pull-requests.html).
+Add your summary here - keep it brief, to the point, and in plain English. [For further
+information about pull requests, check out the GDS
+Way](https://gds-way.cloudapps.digital/standards/pull-requests.html).
 
 # Checklists
 
@@ -19,7 +19,7 @@ the reviewers' discretion.
 This pull/merge request meets the following requirements:
 
 - [ ] Code runs
-- [ ] Developments are **secure** and [**ethical**][data-ethics-framework]
+- [ ] [Developments are ethical][data-ethics-framework] and secure
 - [ ] You have made proportionate checks that the code works correctly
 - [ ] Test suite passes
 - [ ] Developments adhere to AQA plan (see `docs/aqa/aqa_plan.md`)

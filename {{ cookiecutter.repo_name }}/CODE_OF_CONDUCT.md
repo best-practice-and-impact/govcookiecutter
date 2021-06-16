@@ -6,9 +6,8 @@ are also expected to follow the Civil Service Code.
 
 ## Civil Service Code
 
-Contributors working within Her Majesty's Government must review the
-[Civil Service Code][civil-service-code], and are expected to follow it in their
-contributions.
+Contributors working within Her Majesty's Government must review the [Civil Service
+Code][civil-service-code], and are expected to follow it in their contributions.
 
 ## Contributor Covenant Code of Conduct
 
@@ -19,7 +18,7 @@ Where this Code of Conduct says:
 - "Project", we mean this `{{ cookiecutter.repo_name }}` {{ cookiecutter.repository_hosting_platform }} repository;
 - "Maintainer", we mean the `{{ cookiecutter.organisation_handle }}` organisation owners; and
 - "Leadership", we mean both `{{ cookiecutter.organisation_handle }}` organisation owners, line managers, and other
-  leadership within {{ cookiecutter.organisation_name }}.
+  leadership within the {{ cookiecutter.organisation_name }}.
 
 ### Our Pledge
 
@@ -90,9 +89,9 @@ This Code of Conduct is adapted from the [Contributor Covenant][contributor-cove
 version 1.4, available at
 [https://www.contributor-covenant.org/version/1/4/code-of-conduct.html][contributor-covenant-code-of-conduct],
 and the `alphagov` Code of Conduct available at
-[https://github.com/alphagov/.github/blob/master/CODE_OF_CONDUCT.md][alphagov-code-of-conduct].
+[https://github.com/alphagov/.github/blob/main/CODE_OF_CONDUCT.md][alphagov-code-of-conduct].
 
-[alphagov-code-of-conduct]: https://github.com/alphagov/.github/blob/master/CODE_OF_CONDUCT.md
+[alphagov-code-of-conduct]: https://github.com/alphagov/.github/blob/main/CODE_OF_CONDUCT.md
 [civil-service-code]: https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code
 [contributor-covenant]: https://www.contributor-covenant.org
 [contributor-covenant-code-of-conduct]: https://www.contributor-covenant.org/version/1/4/code-of-conduct.html

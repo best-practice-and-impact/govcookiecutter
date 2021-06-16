@@ -10,11 +10,11 @@ Government, and wider public sector.
 
 This template is for any public sector analyst(s) who codes! It's main purpose is to:
 
-1. Provide a lightweight, Agile-like approach to Analytical Quality Assurance (AQA)
-2. Help quickly set up standardised project structures.
+1. provide a lightweight, Agile-like approach to Analytical Quality Assurance (AQA)
+2. help quickly set up standardised project structures.
 
-For more information about AQA, see [The Aqua Book][aqua-book], and its
-[resources][aqua-book-resources].
+[See the Aqua book for more information about AQA][aqua-book], and [also the Aqua
+book's resources for additional guidance][aqua-book-resources].
 
 Rather than using different files and locations to store AQA and documentation, our
 intention is to centralise as much of this as possible onto your Git repository hosting
@@ -25,9 +25,8 @@ contributors and reviewers to complete AQA checks. This results in faster iterat
 development and deployment, whilst ensuring organisation-wide standards on assurance
 are met.
 
-We have also included [pre-commit hooks][pre-commit] to prevent accidental committing
-of secrets[^1], large data files, and Jupyter notebook outputs
-for security purposes.
+We have also included pre-commit hooks to prevent accidental committing of secrets[^1],
+large data files, and Jupyter notebook outputs for security purposes.
 
 [^1]: [Only secrets of specific patterns are detected by the pre-commit
 hooks][docs-pre-commit-hooks-secrets-definition].
@@ -36,16 +35,14 @@ hooks][docs-pre-commit-hooks-secrets-definition].
 
 > ⚠️ Full functionality is only available for Unix-based systems (macOS, Linux, ...).
 > For Windows systems, you will need your own way of handling secrets, and will not
-> have access to helper commands in the `Makefile`; further details are available in
-> this [issue][issue-windows-os]!
+> have access to helper commands in the `Makefile`; [further details for Windows users
+> are available in this GitHub issue][issue-windows-os]!
 
-> ⚠️ Python or Python with R projects for GitHub or GitLab are supported — feel free to
-> [contribute](#contributing) to support other operating systems/programming languages!
+> ⚠️ Python or Python with R projects for GitHub or GitLab are supported — [feel free to
+> contribute to support other operating systems/programming languages](#contributing)!
 
-> ℹ️ [A live demo of `govcookiecutter` is available on YouTube][youtube-creation]!
-
-To use this template to start your next coding project, make sure your system meets the
-[requirements](#requirements-to-create-a-cookiecutter-template).
+To use this template to start your next coding project, [make sure your system meets
+the requirements](#requirements-to-create-a-cookiecutter-template).
 
 Once you're all set up, open your terminal, navigate to the directory where you want
 your new repository to exist, and run the following commands:
@@ -63,26 +60,24 @@ Otherwise, that's it — happy coding! 🎉
 
 ### Requirements to create a cookiecutter template
 
-> ℹ️ Contributors have some additional requirements! Check out the
-> [contributing guidelines][contributing] for further details.
+> ℹ️ [Contributors have some additional requirements][contributing]!
 
 To get started your system should meet the following requirements:
 
 1. Python 3.6.1+ installed
 2. R 4.0.4+ installed (optional)[^2]
-3. The [`cookiecutter` package installed](#installing-cookiecutter)
+3. The [`cookiecutter` package installed](#installing-the-cookiecutter-package)
 
 [^2]: Only for combined Python and R projects, if selected in the prompts during
 project creation.
 
-#### Installing cookiecutter
+#### Installing the `cookiecutter` package
 
-There are many ways to install the [`cookiecutter`][cookiecutter] package. **Our
-recommendation is to install it at the system or user level**, rather than as a Python
-package via `pip` or `conda`. This ensures it is isolated from the rest of your system,
-and always available.
+There are many ways to install the `cookiecutter` package. Our recommendation is to
+install it at the system or user level, rather than as a Python package via `pip` or
+`conda`. This ensures it is isolated from the rest of your system, and always available.
 
-For macOS, open your terminal, and install `cookiecutter` via [Homebrew][homebrew]:
+For macOS, open your terminal, and [install `cookiecutter` via Homebrew][homebrew]:
 
 ```shell
 brew install cookiecutter
@@ -105,19 +100,27 @@ python -m pip install --user cookiecutter
 
 ## Changes to make post-creation
 
-Here's a few changes you **must** do once you've created your new project:
+Here's a few changes you must do once you've created your new project:
 
-- Set up a Python virtual environment — there are **many** ways to [set up a virtual
+- Set up a Python virtual environment — there are many ways to [set up a virtual
   environment][pluralsight], so we'll let you decide what's best for you!
 - Git is not set up by default — open your terminal, navigate to your new project, run
   `git init` in your shell to set it up.
-- Install the packages necessary by running `make requirements` in your shell.
+- Install the necessary packages using `pip` and the pre-commit hooks:
+  ```shell
+  pip install -r requirements.txt
+  pre-commit install
+  ```
+  or use the `make` command:
+  ```shell
+  make requirements
+  ```
 
 ## Changes to consider post-creation
 
 Here's a few changes you should consider changing once you've created your new project:
 
-- Make sure the `README.md` reflects what **you** want to do with your project!
+- Make sure the `README.md` reflects what you want to do with your project!
 - Have a look inside the `docs/aqa` folder; you may want to modify some of them, e.g.
   the AQA plan
 - Want to add some project-specific checklists to the pull/merge request template? See
@@ -132,24 +135,21 @@ Crown copyright and available under the terms of the Open Government 3.0 licence
 
 ## Contributing
 
-If you want to help us build, and improve `govcookiecutter`, view our [contributing
+[If you want to help us build, and improve `govcookiecutter`, view our contributing
 guidelines][contributing].
 
 ## Acknowledgements
 
-This template is based off the [DrivenData Cookiecutter Data Science][drivendata]
-project, especially around the template data and src folder structures, and the
-`make help` commands in the Makefiles.
+[This template is based off the DrivenData Cookiecutter Data Science
+project][drivendata], especially around the template data and src folder structures,
+and the `make help` commands in the Makefiles.
 
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
 [aqua-book-resources]: https://www.gov.uk/government/collections/aqua-book-resources
 [docs-pre-commit-hooks-secrets-definition]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [contributing]: ./CONTRIBUTING.md
-[cookiecutter]: https://github.com/cookiecutter/cookiecutter
 [drivendata]: http://drivendata.github.io/cookiecutter-data-science/
 [homebrew]: https://brew.sh/
 [issue-windows-os]: https://github.com/ukgovdatascience/govcookiecutter/issues/20
 [pluralsight]: https://www.pluralsight.com/tech-blog/managing-python-environments/
-[pre-commit]: https://pre-commit.com/
 [youtube]: https://www.youtube.com/watch?v=N7_d3k3uQ_M
-[youtube-creation]: https://youtu.be/N7_d3k3uQ_M?t=907

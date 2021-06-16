@@ -1,52 +1,57 @@
 # Contributing
 
 We love contributions! We've compiled this documentation to help you understand our
-contributing guidelines. If you still have questions, please
-[contact us][email-address] and we'd be happy to help!
+contributing guidelines. [If you still have questions, please contact us][email] and
+we'd be happy to help!
 
 ## Code of Conduct
 
-Please read [`CODE_OF_CONDUCT.md`][code-of-conduct] before contributing.
+[Please read `CODE_OF_CONDUCT.md` before contributing][code-of-conduct].
 
 ## Getting started
 
-To start contributing, first ensure your system meets the
-[requirements][readme-requirements]. Next, install the required Python packages, and
-[pre-commit hooks][pre-commit] using:
+To start contributing, install the required Python packages, and [pre-commit
+hooks][pre-commit] using:
+
+```shell
+pip install -r requirements.txt
+pre-commit install
+```
+
+or the `make` command:
 
 ```shell
 make requirements
 ```
 
-It is better to use the above make command, rather than
-`pip install -r requirements.txt` and `pre-commit install`, as the command will ensure
-your pre-commit hooks are up-to-date with any changes made.
+The pre-commit hooks are a security feature to ensure, for example, no secrets[^1],
+large data files, and Jupyter notebook outputs are accidentally committed into the
+repository. [For more information on pre-commit hooks see our
+documentation][docs-pre-commit-hooks].
 
-The pre-commit hooks are a security feature to ensure no
-secrets<sup>[1](#footnote-1)</sup>, large data files, and Jupyter notebook outputs are
-accidentally committed into the repository. For more information about the pre-commit
-hooks used in this repository, see the [documentation][docs-pre-commit-hooks].
+[^1]: [Only secrets of specific patterns are detected by the pre-commit
+      hooks][docs-pre-commit-hooks-secrets-definition].
 
 ## Code conventions
 
-We mainly follow [The GDS Way][gds-way] in our code conventions.
+[We mainly follow the GDS Way in our code conventions][gds-way].
 
 ### Git and GitHub
 
-We use Git to version control the source code; please read [The GDS Way][gds-way-git]
-for further details, including information about writing good commit messages, using
-`git rebase` for local branches, and `git merge --no-ff` for merges, as well as the
-entry on `git push --force-with-lease` instead of `git push -f`.
+We use Git to version control the source code. [Please read the GDS Way for details on
+Git best practice][gds-way-git]. This includes how to write good commit messages, use
+`git rebase` for local branches and `git merge --no-ff` for merges, as well as using
+`git push --force-with-lease` instead of `git push -f`.
 
-If you want to modify the `.gitignore` files, see the template
-[documentation][docs-updating-gitignore] for further details.
+[If you want to modify the `.gitignore` files, see the template
+documentation][docs-updating-gitignore] for further details.
 
-Our source code is stored on {{ cookiecutter.repository_hosting_platform }}. Pull
-requests into `main` require at least one approved review.
+Our source code is stored on {{ cookiecutter.repository_hosting_platform }}. Pull requests into `main` require at least one
+approved review.
 
 ### Python
 
-For Python code, we follow [The GDS Way Python style guide][gds-way-python] with a line
+For Python code, [we follow the GDS Way Python style guide][gds-way-python] with a line
 length of 88; the flake8 pre-commit hook should help with this!
 
 ### Markdown
@@ -55,8 +60,8 @@ Local links can be written as normal, but external links should be referenced at
 bottom of the Markdown file for clarity. For example:
 
 ```md
-Use a local link to reference the [`README.md`](./README.md) file, but an external
-link for [GOV.UK][gov-uk].
+Use a local link to reference the [`README.md`](./README.md) file, but an external link
+for [GOV.UK][gov-uk].
 
 [gov-uk]: https://www.gov.uk/
 ```
@@ -66,9 +71,9 @@ strictly enforced in all cases, for example with long hyperlinks.
 
 ## Testing
 
-Tests are written using the [pytest][pytest] framework, with its configuration in the
-`pyproject.toml` file. Note, only tests in the `tests` folder are executed. To run the
-tests, execute the following command in your terminal:
+[Tests are written using the `pytest` framework][pytest], with its configuration in the
+`pyproject.toml` file. Note, only tests in the `tests` folder are run. To run the
+tests, enter the following command in your terminal:
 
 ```shell
 pytest
@@ -76,11 +81,11 @@ pytest
 
 ### Code coverage
 
-Code coverage of Python scripts is measured using the [`coverage`][coverage] Python
-package; its configuration can be found in `pyproject.toml`. Note coverage only extends
-to Python scripts in the `src` folder.
+[Code coverage of Python scripts is measured using the `coverage` Python
+package][coverage]; its configuration can be found in `pyproject.toml`. Note coverage
+only extends to Python scripts in the `src` folder.
 
-To run code coverage, and view it as an HTML report, execute the following commands in
+To run code coverage, and view it as an HTML report, enter the following command in
 your terminal:
 
 ```shell
@@ -88,21 +93,22 @@ coverage run -m pytest
 coverage html
 ```
 
+or use the `make` command:
+
+```shell
+make coverage_html
+```
+
 The HTML report can be accessed at `htmlcov/index.html`.
 
 ## Documentation
 
-We write our documentation in [MyST Markdown][myst] for use in Sphinx. This is mainly
+[We write our documentation in MyST Markdown for use in Sphinx][myst]. This is mainly
 stored in the `docs` folder, unless it's more appropriate to store it elsewhere, like
 this file.
 
 [Please read our guidance on how to write Sphinx
 documentation][docs-write-sphinx-documentation], and build it into a searchable website.
-
----
-
-<a name="footnote-1">[1]</a>: [Only secrets of specific patterns are detected by the
-pre-commit hooks][docs-pre-commit-hooks-secrets-definition].
 
 [code-of-conduct]: ./CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/
@@ -110,7 +116,7 @@ pre-commit hooks][docs-pre-commit-hooks-secrets-definition].
 [docs-pre-commit-hooks-secrets-definition]: ./docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [docs-updating-gitignore]: ./docs/contributor_guide/updating_gitignore.md
 [docs-write-sphinx-documentation]: ./docs/contributor_guide/writing_sphinx_documentation.md
-[email-address]: mailto:{{ cookiecutter.contact_email }}
+[email]: mailto:{{ cookiecutter.contact_email }}
 [gds-way]: https://gds-way.cloudapps.digital/
 [gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide

@@ -1,15 +1,14 @@
 # Loading environment variables
 
-We use [`direnv`][direnv] to load environment variables, as it ensures you only have
-project-specific variables loaded _when you are inside the project_, otherwise these
-variables are not loaded. This can prevent accidental conflicts with identically named
+[We use `direnv` to load environment variables][direnv], as these are only loaded when
+inside the project folder. This can prevent accidental conflicts with identically named
 variables.
 
 ## Using `direnv`
 
-To load the environment variables, first [install `direnv`](#installing-direnv), and
-make sure you have a `.secrets` file to
-[store secrets and credentials](#storing-secrets-and-credentials). Then:
+To load the environment variables, first [follow the `direnv` installation
+instructions](#installing-direnv), and [make sure you have a `.secrets` file to store
+secrets and credentials](#storing-secrets-and-credentials). Then:
 
 1. Open your terminal;
 2. Navigate to the project folder; and
@@ -22,8 +21,7 @@ make sure you have a `.secrets` file to
    direnv allow
    ```
 
-You only need to do this **once**, and again each time `.envrc` and `.secrets` are
-modified.
+You only need to do this once, and again each time `.envrc` and `.secrets` are modified.
 
 ### Installing `direnv`
 
@@ -32,7 +30,7 @@ a bash terminal. For other ways of installing `direnv`, and its shell hooks, con
 the `direnv` documentation.
 
 1. Open your terminal;
-2. Install `direnv` via [Homebrew][homebrew];
+2. [Install `direnv` using Homebrew][homebrew];
    ```shell
    brew install direnv
    ```
@@ -49,8 +47,8 @@ the `direnv` documentation.
 
 ## Storing secrets and credentials
 
-Secrets and credentials must be stored in the `.secrets` file. **This file is not
-version-controlled**, so no secrets should be committed to {{ cookiecutter.repository_hosting_platform }}.
+Secrets and credentials must be stored in the `.secrets` file. This file is not
+version-controlled, so no secrets should be committed to GitHub.
 
 In your terminal navigate to the root folder, and create a `.secrets` file.
 
@@ -72,7 +70,7 @@ Once complete, make sure the `.secrets` file has the following line uncommented 
 source_env ".secrets"
 ```
 
-This ensures [`direnv`][direnv] loads the `.secrets` file via `.envrc` **without**
+This ensures [`direnv`][direnv] loads the `.secrets` file using `.envrc` without
 version-controlling `.secrets`.
 
 [direnv]: https://direnv.net/

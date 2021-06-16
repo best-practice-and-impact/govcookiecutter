@@ -3,14 +3,13 @@
 This page gives an overview of all public `hooks` objects, functions and methods. All
 classes and functions exposed in `hooks.*` namespace are public.
 
-<!-- Functions should be referenced in the `hooks.__init__.py` -->
 ```{eval-rst}
 .. currentmodule:: hooks
 ```
 
 ## Cookiecutter pre-generation hooks
 
-These are functions executed after user input, but before project generation. If any
+These are functions run after user input, but before project generation. If any
 pre-generation hooks fail, the project will not be generated.
 
 ### Prompt input validation
@@ -24,7 +23,7 @@ pre-generation hooks fail, the project will not be generated.
 ```
 ## Cookiecutter post-generation hooks
 
-These are functions executed after initial project generation by the `cookiecutter`
+These are functions run after initial project generation by the `cookiecutter`
 package. These include moving the selected organisational frameworks to the correct
 location, as well as deleting unnecessary files and folders. If any post-generation
 hooks fail, the generated project will be rolled-back, and deleted.

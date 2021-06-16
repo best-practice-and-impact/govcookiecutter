@@ -3,10 +3,8 @@
 
 ## Pre-commit hooks in the `{{ cookiecutter.repo_name }}` folder
 
-If you are adding or modifying pre-commit hooks, please note that the pre-commit hooks
-in the `{{ cookiecutter.repo_name }}` template folder can be different to those at the
-top-level of the repository, especially around which folders are inspected.
+If you're changing any pre-commit hooks, note that `.pre-commit-config.yaml` can be
+different to `{{ cookiecutter.repo_name }}/.pre-commit-config.yaml`. This includes
+which pre-commit hooks are run, as well as on which folders.
 
-If you wish to add or modify pre-commit hooks in the `.pre-commit-config.yaml` file in
-the template folder, it's strongly recommended that you build an example repository,
-and test out your changes.
+It's strongly recommended that you build an example project to test out your changes.

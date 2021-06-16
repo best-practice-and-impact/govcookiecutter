@@ -1,14 +1,14 @@
 # Writing Sphinx documentation
 
-This project is set up to produce documentation using [Sphinx][sphinx]; this page
-should give you a quick overview on how to write documentation for it. If you're
-looking for information on how to write **good** documentation take a look at
-[Write the Docs guide on writing documentation][writethedocs]; for Agile projects,
-consider [documenting late][agilemodeling] as well.
+[This project is set up to produce documentation using Sphinx][sphinx]; this page
+should give you a quick overview on how to write documentation for it. If you'd like to
+know how to write good documentation take a look at [Write the Docs guide on writing
+documentation][writethedocs]. [For Agile projects, consider documenting
+late][agilemodeling] as well.
 
 ## Why should I bother? And why Sphinx?
 
-Keeping as much of the documentation in a centralised location is a good thing — it
+Keeping as much of the documentation in a centralised location is a good thing. It
 means contributors, users, and anyone else can quickly find as much information as they
 need to understand and/or run what you've done.
 
@@ -16,14 +16,14 @@ Sphinx is a Python-based package to compile documentation into different formats
 including HTML. This means you can write your documentation and, with a single terminal
 command, build it into a searchable website.
 
-It's widely used, such as for the documentation of the [pandas][pandas], and
-[PyTorch][pytorch] Python packages as well as many [others][sphinx-examples], and is
+It's widely used, such as for the documentation of the [`pandas`][pandas], and
+[PyTorch][pytorch] Python packages as well as many [others][sphinx-examples]. It is
 highly customisable with different extensions, and themes. Included with this project
 is:
 
-- Support for both [reStructuredText (ReST)][rest], and [ReST-enabled Markdown][myst];
-- Automatic building of documentation from Python docstrings; and
-- Support for [ReStructuredText][docstring-rst], [NumPy][docstring-numpy], or
+- support for both [reStructuredText (ReST)][rest], and [ReST-enabled Markdown][myst];
+- automatic building of documentation from Python docstrings; and
+- support for [ReStructuredText][docstring-rst], [NumPy][docstring-numpy], or
   [Google][docstring-google] docstring formats.
 
 ### Creating a searchable website
@@ -40,7 +40,7 @@ This should create an HTML version of your documentation accessible from
 
 ## Writing in reStructuredText
 
-Sphinx provides [good documentation][sphinx-rst] on writing in ReST — we would highly
+[Sphinx provides good documentation on writing in ReST][sphinx-rst] — we would highly
 recommend reading that for guidance. We will cover automatically creating docstrings in
 the next subsection.
 
@@ -54,8 +54,8 @@ create a ReST file, and add the following line to reference the `src` module:
 .. currentmodule:: src
 ```
 
-Then, elsewhere in the body, call the [`autosummary`][sphinx-autosummary] directive to
-generate the docstrings as ReST stub files.
+Then, elsewhere in the body, [call the `autosummary` directive to generate the
+docstrings as ReST stub files][sphinx-autosummary].
 
 ```rest
 .. autosummary::
@@ -66,18 +66,18 @@ generate the docstrings as ReST stub files.
 
 ```
 
-This will create something similar to the pandas [API reference][pandas-api-reference].
+[This will create something similar to the `pandas` API
+reference][pandas-api-reference].
 
 ## Writing in ReST-enabled Markdown
 
-We use the [`myst-parser`][myst] package (MyST) to write Markdown that can also include
-ReST elements; the package documentation is detailed, so we would recommend reviewing
+[We use the `myst-parser` package (MyST) to write Markdown that can also include ReST
+elements][myst]. The package documentation is detailed, so we would recommend reviewing
 it. We will cover some of the more widely used elements in the following subsections.
 
 ### Embedding ReST directives
 
-Most ReST directives can be embedded into MyST Markdown — see the
-[MyST documentation][myst-rst-directives] for further details.
+[Most ReST directives can be embedded into MyST Markdown][myst-rst-directives].
 
 ### Automatically creating docstring documentation (MyST Markdown)
 
@@ -91,8 +91,8 @@ create a Markdown file, and add the following line to reference the `src` module
 ```
 ````
 
-Then, elsewhere in the body, call the [`autosummary`][sphinx-autosummary] directive to
-generate the docstrings as ReST stub files.
+Then, elsewhere in the body, [call the `autosummary` directive to generate the
+docstrings as ReST stub files][sphinx-autosummary].
 
 ````md
 ```{eval-rst}
@@ -107,7 +107,7 @@ generate the docstrings as ReST stub files.
 
 ### Including Markdown files outside the `docs` folder
 
-MyST lets you include Markdown files outside the `docs` folder [easily][myst-include].
+[MyST lets you include Markdown files outside the `docs` folder][myst-include].
 
 If a Markdown file (`../example.md`) only contains links that do not reference anything
 else in this project (including images), create a Markdown file within the `docs`
