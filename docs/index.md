@@ -6,7 +6,7 @@
 :hidden:
 :maxdepth: 2
 self
-./contributing_guide.md
+./contributing_guide/README.md
 ./structure/README.md
 ./reference/README.md
 ```
