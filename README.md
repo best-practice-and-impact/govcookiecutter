@@ -1,62 +1,63 @@
 # `govcookiecutter`
 
-A cookiecutter template for analytical, code-based projects within Her Majesty's
-Government, and wider public sector.
+A cookiecutter template for analytical, Python-, or Python and R-based projects within
+Her Majesty's Government, and wider public sector.
 
-## Who/what is this for?
+This template helps to set up standardised project structures, and [includes security
+features using pre-commit hooks][docs-pre-commit].
 
-> ℹ️ [Want to learn more? Want to see `govcookiecutter` in action? Check out this
-> presentation and demo from March 2021!][youtube]
+It also provides an Agile, centralised, and lightweight analytical quality assurance
+(AQA) process. Pull or merge request templates are used to nudge users to complete this
+process. [This helps meet HM Government best practice on producing quality analysis, as
+defined in the Aqua Book][aqua-book].
 
-This template is for any public sector analyst(s) who codes! It's main purpose is to:
+[For reasons why we developed `govcookiecutter`, and a live demonstration, see this
+presentation on version 0.5.3 from March 2021][youtube].
 
-1. provide a lightweight, Agile-like approach to Analytical Quality Assurance (AQA)
-2. help quickly set up standardised project structures.
+## Getting started
 
-[See the Aqua book for more information about AQA][aqua-book], and [also the Aqua
-book's resources for additional guidance][aqua-book-resources].
+> ℹ️ Windows users should [read this GitHub issue around govcookiecutter
+> functionality][issue-windows-os]
 
-Rather than using different files and locations to store AQA and documentation, our
-intention is to centralise as much of this as possible onto your Git repository hosting
-platform, e.g. GitHub or GitLab.
-
-We use nudges, such as checklists in pull/merge requests, to minimise the burden on
-contributors and reviewers to complete AQA checks. This results in faster iterative
-development and deployment, whilst ensuring organisation-wide standards on assurance
-are met.
-
-We have also included pre-commit hooks to prevent accidental committing of secrets[^1],
-large data files, and Jupyter notebook outputs for security purposes.
-
-[^1]: [Only secrets of specific patterns are detected by the pre-commit
-hooks][docs-pre-commit-hooks-secrets-definition].
-
-## Getting started with `govcookiecutter` for your projects
-
-> ⚠️ Full functionality is only available for Unix-based systems (macOS, Linux, ...).
-> For Windows systems, you will need your own way of handling secrets, and will not
-> have access to helper commands in the `Makefile`; [further details for Windows users
-> are available in this GitHub issue][issue-windows-os]!
-
-> ⚠️ Python or Python with R projects for GitHub or GitLab are supported — [feel free to
-> contribute to support other operating systems/programming languages](#contributing)!
-
-To use this template to start your next coding project, [make sure your system meets
-the requirements](#requirements-to-create-a-cookiecutter-template).
-
-Once you're all set up, open your terminal, navigate to the directory where you want
-your new repository to exist, and run the following commands:
+[First, make sure your system meets the
+requirements](#requirements-to-create-a-cookiecutter-template). Next, open your
+terminal, navigate to the directory where you want your new repository to exist, and
+run the following command for the latest stable release:
 
 ```shell
-cookiecutter https://github.com/ukgovdatascience/govcookiecutter
+cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git
 ```
 
-Follow the prompts, and that's it — you've created your project structure!
-Post-creation, there are a few [mandatory changes](#changes-to-make-post-creation) to
-make, as well as a some [optional changes](#changes-to-consider-post-creation) you
-should also consider making.
+or for a specific branch `BRANCH`, run:
 
-Otherwise, that's it — happy coding! 🎉
+```shell
+cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git --checkout BRANCH
+```
+
+Then follow the prompts; if you are asked to re-download `govcookiecutter`, input
+`yes`. Default responses are shown in the squared brackets; to use them, leave your
+response blank, and press enter.
+
+Once you've answered all the prompts, your project will be created. Then:
+
+1. Set up a Python virtual environment — [there are many ways to set up a virtual
+  environment][pluralsight], so we'll let you decide what's best for you!
+2. In your terminal, navigate to your new project, and initialise Git
+   ```shell
+   git init
+   ```
+3. Install the necessary packages using `pip` and the pre-commit hooks:
+   ```shell
+   pip install -r requirements.txt
+   pre-commit install
+   ```
+   or use the `make` command:
+   ```shell
+   make requirements
+   ```
+
+Once you've completed these steps, [consider making some optional changes before making
+your first commit](#optional-changes-to-consider-post-project-creation).
 
 ### Requirements to create a cookiecutter template
 
@@ -65,10 +66,10 @@ Otherwise, that's it — happy coding! 🎉
 To get started your system should meet the following requirements:
 
 1. Python 3.6.1+ installed
-2. R 4.0.4+ installed (optional)[^2]
+2. R 4.0.4+ installed (optional)[^1]
 3. The [`cookiecutter` package installed](#installing-the-cookiecutter-package)
 
-[^2]: Only for combined Python and R projects, if selected in the prompts during
+[^1]: Only for combined Python and R projects, if selected in the prompts during
 project creation.
 
 #### Installing the `cookiecutter` package
@@ -89,8 +90,6 @@ For Debian/Ubuntu, use the following commands:
 sudo apt-get install cookiecutter
 ```
 
-> ℹ️ We assume your `python` command loads Python 3.6+!
-
 Otherwise, you can install `cookiecutter` via `pip` — you may wish to create a virtual
 environment first:
 
@@ -98,34 +97,17 @@ environment first:
 python -m pip install --user cookiecutter
 ```
 
-## Changes to make post-creation
+## Optional changes to consider post-project creation
 
-Here's a few changes you must do once you've created your new project:
+Here are some suggested changes to make before your first commit:
 
-- Set up a Python virtual environment — there are many ways to [set up a virtual
-  environment][pluralsight], so we'll let you decide what's best for you!
-- Git is not set up by default — open your terminal, navigate to your new project, run
-  `git init` in your shell to set it up.
-- Install the necessary packages using `pip` and the pre-commit hooks:
-  ```shell
-  pip install -r requirements.txt
-  pre-commit install
-  ```
-  or use the `make` command:
-  ```shell
-  make requirements
-  ```
-
-## Changes to consider post-creation
-
-Here's a few changes you should consider changing once you've created your new project:
-
-- Make sure the `README.md` reflects what you want to do with your project!
-- Have a look inside the `docs/aqa` folder; you may want to modify some of them, e.g.
-  the AQA plan
-- Want to add some project-specific checklists to the pull/merge request template? See
-  the relevant Markdown files within the `.github` (GitHub) or
-  `.gitlab/merge_request_templates` (GitLab) folder
+- make sure the `README.md` reflects what you want to do with your project
+- have a look inside the `docs/aqa` folder, as you may want to modify some of this
+  analytical quality assurance documentation (AQA), for example the AQA plan
+- (if present) confirm that the pull or merge request template checklists meet your
+  requirements
+  - These can be found at `.github/pull_request_template.md` (GitHub), or in
+    `.gitlab/merge_request_templates` folder (GitLab)
 
 ## Licence
 
@@ -145,9 +127,8 @@ project][drivendata], especially around the template data and src folder structu
 and the `make help` commands in the Makefiles.
 
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
-[aqua-book-resources]: https://www.gov.uk/government/collections/aqua-book-resources
-[docs-pre-commit-hooks-secrets-definition]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [contributing]: ./CONTRIBUTING.md
+[docs-pre-commit]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
 [drivendata]: http://drivendata.github.io/cookiecutter-data-science/
 [homebrew]: https://brew.sh/
 [issue-windows-os]: https://github.com/ukgovdatascience/govcookiecutter/issues/20
