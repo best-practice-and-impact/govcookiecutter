@@ -18,7 +18,7 @@ ORGANISATION_HANDLE_COUNT = {
     '"{{ cookiecutter.organisation_handle }}",': 0,
 }
 CONTACT_EMAIL_COUNT = {
-    "mailto:{{ cookiecutter.contact_email }}": 3,
+    "mailto:{{ cookiecutter.contact_email }}": 2,
     "[{{ cookiecutter.contact_email }}][email-address].": 1,
     '"{{ cookiecutter.contact_email }}")': 0,
 }
@@ -30,7 +30,7 @@ PROJECT_NAME_COUNT = {
 }
 REPO_NAME_COUNT = {
     '"{{ cookiecutter.repo_name }}",': 2,
-    "`{{ cookiecutter.repo_name }}`": 8,
+    "`{{ cookiecutter.repo_name }}`": 7,
     "`{{ cookiecutter.repo_name }}`,": 2,
     '"{{ cookiecutter.repo_name }}.tex",': 1,
     '"{{ cookiecutter.repo_name }}doc"': 1,

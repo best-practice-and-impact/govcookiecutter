@@ -1,9 +1,11 @@
-# `{{ cookiecutter.repo_name }}` documentation
-
-Here is the documentation for the `{{ cookiecutter.repo_name }}` project.
+```{include} ../README.md
+:relative-docs: ./docs
+```
 
 ```{toctree}
+:hidden:
 :maxdepth: 2
+self
 ./user_guide/README.md
 ./contributor_guide/README.md
 ./aqa/README.md

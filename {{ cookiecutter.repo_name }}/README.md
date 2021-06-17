@@ -56,7 +56,7 @@ contributing guidelines][contributing].
 [This project structure is based on the `govcookiecutter` template
 project][govcookiecutter].
 
-[contributing]: ./CONTRIBUTING.md
+[contributing]: ./docs/contributor_guide/CONTRIBUTING.md
 [govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter
 [docs-loading-environment-variables]: ./docs/user_guide/loading_environment_variables.md
 [docs-loading-environment-variables-secrets]: ./docs/user_guide/loading_environment_variables.md#storing-secrets-and-credentials
