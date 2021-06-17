@@ -73,10 +73,9 @@ that looks like a secret according to the patterns. By definition, there are onl
 limited number of patterns, so the `detect-secrets` package cannot detect every
 conceivable type of secret.
 
-To understand what types of secrets will be detected, [read the `detect-secrets`
-documentation on caveats][detect-secrets-caveats], and the [list of supported plugins
-that the `detect-secrets` uses][detect-secrets-plugins]. Also, you should use secret
-variable names with words that will trip the KeywordDetector plugin; see the
+To understand what types of secrets will be detected, read the `detect-secrets`
+documentation on caveats, and the list of supported plugins. Also, you should use
+secret variable names with words that will trip the KeywordDetector plugin; see the
 [`DENYLIST` variable for the full list of words][detect-secrets-keyword-detector].
 
 ### If `pre-commit` detects secrets during commit
@@ -160,8 +159,6 @@ allowing the output(s) to be committed.
 > want to keep some outputs.
 
 [detect-secrets]: https://github.com/Yelp/detect-secrets
-[detect-secrets-caveats]: https://github.com/Yelp/detect-secrets#caveats
-[detect-secrets-keyword-detector]: https://github.com/Yelp/detect-secrets/blob/master/detect_secrets/plugins/keyword.py
 [detect-secrets-plugins]: https://github.com/Yelp/detect-secrets#currently-supported-plugins
 [nbstripout]: https://github.com/kynan/nbstripout
 [pre-commit]: https://pre-commit.com/

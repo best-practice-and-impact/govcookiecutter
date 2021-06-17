@@ -87,12 +87,12 @@ project's leadership.
 
 This Code of Conduct is adapted from the [Contributor Covenant][contributor-covenant],
 version 1.4, available at
-[https://www.contributor-covenant.org/version/1/4/code-of-conduct.html][contributor-covenant-code-of-conduct],
+[https://www.contributor-covenant.org/version/1/4/code-of-conduct/][contributor-covenant-code-of-conduct],
 and the `alphagov` Code of Conduct available at
 [https://github.com/alphagov/.github/blob/main/CODE_OF_CONDUCT.md][alphagov-code-of-conduct].
 
 [alphagov-code-of-conduct]: https://github.com/alphagov/.github/blob/main/CODE_OF_CONDUCT.md
 [civil-service-code]: https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code
 [contributor-covenant]: https://www.contributor-covenant.org
-[contributor-covenant-code-of-conduct]: https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
+[contributor-covenant-code-of-conduct]: https://www.contributor-covenant.org/version/1/4/code-of-conduct/
 [email-address]: mailto:gdsdatascience@digital.cabinet-office.gov.uk

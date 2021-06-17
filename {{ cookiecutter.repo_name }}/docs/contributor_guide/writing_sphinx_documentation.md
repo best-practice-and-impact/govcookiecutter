@@ -21,7 +21,8 @@ It's widely used, such as for the documentation of the [`pandas`][pandas], and
 highly customisable with different extensions, and themes. Included with this project
 is:
 
-- support for both [reStructuredText (ReST)][rest], and [ReST-enabled Markdown][myst];
+- support for both [reStructuredText (ReST)][sphinx-rest], and [ReST-enabled
+  Markdown][myst];
 - automatic building of documentation from Python docstrings; and
 - support for [ReStructuredText][docstring-rst], [NumPy][docstring-numpy], or
   [Google][docstring-google] docstring formats.
@@ -40,7 +41,7 @@ This should create an HTML version of your documentation accessible from
 
 ## Writing in reStructuredText
 
-[Sphinx provides good documentation on writing in ReST][sphinx-rst] — we would highly
+[Sphinx provides good documentation on writing in ReST][sphinx-rest] — we would highly
 recommend reading that for guidance. We will cover automatically creating docstrings in
 the next subsection.
 
@@ -131,18 +132,17 @@ the `docs` folder with the following lines:
 ````
 
 [agilemodeling]: http://agilemodeling.com/essays/documentLate.htm
-[docstring-google]: http://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings
+[docstring-google]: https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings
 [docstring-numpy]: https://numpydoc.readthedocs.io/en/latest/format.html
 [docstring-rst]: https://www.python.org/dev/peps/pep-0287/
 [myst]: https://myst-parser.readthedocs.io/
-[myst-include]: https://myst-parser.readthedocs.io/en/latest/using/howto.html#include-a-file-from-outside-the-docs-folder-like-readme-md
-[myst-rst-directives]: https://myst-parser.readthedocs.io/en/latest/using/syntax.html#directives-a-block-level-extension-point
+[myst-include]: https://myst-parser.readthedocs.io/en/latest/sphinx/use.html#include-a-file-from-outside-the-docs-folder-like-readme-md
+[myst-rst-directives]: https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html
 [pandas]: https://pandas.pydata.org/docs/
 [pandas-api-reference]: https://pandas.pydata.org/docs/reference/index.html
 [pytorch]: https://pytorch.org/docs/stable/index.html
-[rest]: https://docutils.readthedocs.io/en/sphinx-docs/user/rst/quickstart.html
 [sphinx]: https://www.sphinx-doc.org/
 [sphinx-autosummary]: https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html
 [sphinx-examples]: https://www.sphinx-doc.org/en/master/examples.html
-[sphinx-rst]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
+[sphinx-rest]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 [writethedocs]: https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/
