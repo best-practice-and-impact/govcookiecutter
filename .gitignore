@@ -862,3 +862,6 @@ docs/reference/api/*
 # Ignore `example` folder, but not its `README.md`
 example/*
 !example/README.md
+
+# Ignore Sphinx documentation link checking folder
+docs/_linkcheck/

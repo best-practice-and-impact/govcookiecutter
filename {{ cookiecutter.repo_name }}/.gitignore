@@ -878,6 +878,9 @@ docs/reference/api/*
 # Ignore the `.secrets` file
 .secrets
 
-# Ignore r artifacts
+# Ignore R artifacts
 *.Renviron
 *.Rhistory
+
+# Ignore Sphinx documentation link checking folder
+docs/_linkcheck/
