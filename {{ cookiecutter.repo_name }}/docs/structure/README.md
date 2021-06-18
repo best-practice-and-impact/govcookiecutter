@@ -183,7 +183,7 @@ make requirements
 ### `startup.R`
 
 R-specific file that installs necessary packages specified in the `DESCRIPTION` file
-upon starting R via `.Rprofile`.
+upon starting R using `.Rprofile`.
 
 {% endif -%}
 

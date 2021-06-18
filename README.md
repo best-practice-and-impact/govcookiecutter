@@ -80,10 +80,10 @@ project creation.
 #### Installing the `cookiecutter` package
 
 There are many ways to install the `cookiecutter` package. Our recommendation is to
-install it at the system or user level, rather than as a Python package via `pip` or
+install it at the system or user level, rather than as a Python package with `pip` or
 `conda`. This ensures it is isolated from the rest of your system, and always available.
 
-For macOS, open your terminal, and [install `cookiecutter` via Homebrew][homebrew]:
+For macOS, open your terminal, and [install `cookiecutter` with Homebrew][homebrew]:
 
 ```shell
 brew install cookiecutter
@@ -95,7 +95,7 @@ For Debian/Ubuntu, use the following commands:
 sudo apt-get install cookiecutter
 ```
 
-Otherwise, you can install `cookiecutter` via `pip` — you may wish to create a virtual
+Otherwise, you can install `cookiecutter` with `pip` — you may wish to create a virtual
 environment first:
 
 ```shell
