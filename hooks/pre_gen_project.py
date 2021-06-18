@@ -13,8 +13,8 @@ REGEX_EMAIL_ADDRESS = (
 def check_valid_email_address_format(email: str) -> None:
     """Check that an email address is of a valid format using regular expressions.
 
-    Uses the HTML5 standard for email address format. The regular expression pattern is
-    available `here`_.
+    `Uses a regular expression pattern based on the HTML5 standard for email address
+    format <https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address>`_.
 
     Args:
         email: An email address to validate.
@@ -22,9 +22,6 @@ def check_valid_email_address_format(email: str) -> None:
     Returns:
         None - raises an `AssertionError` if `email` is not a valid email address
         format.
-
-    .. _here:
-        https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address
 
     """
     assert bool(
