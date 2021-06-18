@@ -195,8 +195,15 @@ well as Python 3.6+, and for example projects with or without R 4.0.4+.
 [To understand why only certain operating systems are supported for GitHub Actions,
 see GitHub issues 29 and 30][github-issues].
 
+## Releases
+
+Pull requests are raised on GitHub, and approved features are merged into `main`. [We
+then use semantic versioning to number our releases][semver]. This helps our users
+select a different version of `govcookiecutter` to use based on their individual needs.
+
 [cookiecutter]: https://cookiecutter.readthedocs.io
 [docs-organisational-frameworks]: ../%7B%7B%20cookiecutter.repo_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.md
 [github-issues]: https://github.com/ukgovdatascience/govcookiecutter/issues
 [html5-email-format]: https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address
 [jinja]: https://jinja.palletsprojects.com
+[semver]: https://semver.org/
