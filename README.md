@@ -21,7 +21,7 @@ presentation on version 0.5.3 from March 2021][youtube].
 
 [First, make sure your system meets the
 requirements](#requirements-to-create-a-cookiecutter-template). Next, open your
-terminal, navigate to the directory where you want your new repository to exist, and
+terminal, navigate to the directory where you want your new repository to exist. Then
 run the following command for the latest stable release:
 
 ```shell
@@ -34,9 +34,9 @@ or for a specific branch, tag, or commit SHA `SPECIFIC`, run:
 cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git --checkout SPECIFIC
 ```
 
-Then follow the prompts; if you are asked to re-download `govcookiecutter`, input
-`yes`. Default responses are shown in the squared brackets; to use them, leave your
-response blank, and press enter.
+Follow the prompts; if you are asked to re-download `govcookiecutter`, input `yes`.
+Default responses are shown in the squared brackets; to use them, leave your response
+blank, and press enter.
 
 Once you've answered all the prompts, your project will be created. Then:
 
@@ -134,7 +134,7 @@ guidelines][contributing].
 ## Acknowledgements
 
 [This template is based off the DrivenData Cookiecutter Data Science
-project][drivendata], especially around the template data and src folder structures,
+project][drivendata], especially around the template `data` and `src` folder structures,
 and the `make help` commands in the Makefiles.
 
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government

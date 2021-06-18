@@ -21,9 +21,8 @@ each commit, we ensure that `pre-commit` will be able to detect all contraventio
 keep our repository in a healthy state.
 
 > ⚠️ No pre-commit hooks will be run on Google Colab notebooks pushed directly to
-> GitHub. For security reasons, it is highly recommended that you manually download
-> your notebook, and commit up locally to ensure pre-commit hooks are run on your
-> changes
+> GitHub. For security reasons, it is recommended that you manually download your
+> notebook, and commit up locally to ensure pre-commit hooks are run on your changes.
 
 ## Installation
 
@@ -140,9 +139,11 @@ documentation for the `nbstripout` package][nbstripout], either:
 
 You can access cell tags or metadata in Jupyter by enabling the "Tags" or
 "Edit Metadata" toolbar (View > Cell Toolbar > Tags; View > Cell Toolbar >
-Edit Metadata). For the tags approach, enter `keep_output` in the text field for each
-desired cell, and press the "Add tag" button. For the metadata approach, press the
-"Edit Metadata" button on each desired cell, and edit the metadata to look like this:
+Edit Metadata).
+
+For the tags approach, enter `keep_output` in the text field for each desired cell, and
+press the "Add tag" button. For the metadata approach, press the "Edit Metadata" button
+on each desired cell, and edit the metadata to look like this:
 
 ```json
 {
