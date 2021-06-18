@@ -28,10 +28,10 @@ run the following command for the latest stable release:
 cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git
 ```
 
-or for a specific branch `BRANCH`, run:
+or for a specific branch, tag, or commit SHA `SPECIFIC`, run:
 
 ```shell
-cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git --checkout BRANCH
+cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git --checkout SPECIFIC
 ```
 
 Then follow the prompts; if you are asked to re-download `govcookiecutter`, input
@@ -55,9 +55,14 @@ Once you've answered all the prompts, your project will be created. Then:
    ```shell
    make requirements
    ```
+4. Stage all your project files, and make your first commit
+   ```shell
+   git add .
+   git commit -m "Initial commit"
+   ```
 
-Once you've completed these steps, [consider making some optional changes before making
-your first commit](#optional-changes-to-consider-post-project-creation).
+Once you've completed these steps, [consider making some optional changes before
+kicking off your project development](#optional-changes-to-consider-post-project-creation).
 
 ### Requirements to create a cookiecutter template
 
@@ -101,6 +106,12 @@ python -m pip install --user cookiecutter
 
 Here are some suggested changes to make before your first commit:
 
+- consider [using the `cruft` package to integrate future `govcookiecutter`
+  releases][cruft]
+  ```shell
+  pip install cruft
+  cruft link https://github.com/ukgovdatascience/govcookiecutter
+  ```
 - make sure the `README.md` reflects what you want to do with your project
 - have a look inside the `docs/aqa` folder, as you may want to modify some of this
   analytical quality assurance documentation (AQA), for example the AQA plan
@@ -128,6 +139,7 @@ and the `make help` commands in the Makefiles.
 
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
 [contributing]: ./CONTRIBUTING.md
+[cruft]: https://github.com/cruft/cruft
 [docs-pre-commit]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
 [drivendata]: http://drivendata.github.io/cookiecutter-data-science/
 [homebrew]: https://brew.sh/
