@@ -3,5 +3,6 @@ detect-secrets==1.0.3
 myst-parser
 pre-commit
 pytest
+python-dotenv
 Sphinx
 toml

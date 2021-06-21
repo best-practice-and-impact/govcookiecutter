@@ -8,5 +8,6 @@ pytest
 pytest-cookies
 pytest-mock
 pytest-xdist
+python-dotenv
 Sphinx
 toml
