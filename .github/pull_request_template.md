@@ -18,12 +18,12 @@ the reviewers' discretion.
 
 This pull/merge request meets the following requirements:
 
-- [ ] Code runs
-- [ ] [Developments are ethical][data-ethics-framework] and secure
-- [ ] You have made proportionate checks that the code works correctly
-- [ ] You have tested the build of the template
-- [ ] Test suite passes
-- [ ] [Minimum usable documentation][agilemodeling] written in the `docs` folder
+- [ ] code runs
+- [ ] [developments are ethical][data-ethics-framework] and secure
+- [ ] you have made proportionate checks that the code works correctly
+- [ ] you have tested the build of the template
+- [ ] test suite passes
+- [ ] [minimum usable documentation][agilemodeling] written in the `docs` folder
 
 Comments have been added below around the incomplete checks.
 

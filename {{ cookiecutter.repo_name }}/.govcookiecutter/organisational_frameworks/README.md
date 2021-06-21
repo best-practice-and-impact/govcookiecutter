@@ -10,9 +10,9 @@ example framework structure.
 Within each organisation folder, there must be a `aqa` folder that contains templates
 for the:
 
-- Analytical quality assurance (AQA) plan;
-- Data log; and
-- Assumptions and caveats log.
+- analytical quality assurance (AQA) plan;
+- data log; and
+- assumptions and caveats log.
 
 It must also include a `README.md` to link the AQA templates together using in
 [MyST syntax][myst-parser].

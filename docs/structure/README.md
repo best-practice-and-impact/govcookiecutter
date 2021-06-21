@@ -86,7 +86,7 @@ A file containing Python project settings. This includes configuration settings 
 
 - [`isort`](#isort)
 - [`pytest`](#pytest)
-- [Code coverage](#code-coverage)
+- [code coverage](#code-coverage)
 
 #### `isort`
 

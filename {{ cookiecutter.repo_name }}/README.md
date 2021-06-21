@@ -20,9 +20,9 @@ make requirements
 {% if cookiecutter.using_R == "Yes" -%}
 - R 4.0.4+ installed
 {% endif -%}
-- A `.secrets` file with the [required secrets and
+- a `.secrets` file with the [required secrets and
   credentials](#required-secrets-and-credentials)
-- [Load environment variables][docs-loading-environment-variables] from `.envrc`
+- [load environment variables][docs-loading-environment-variables] from `.envrc`
 
 To be added.
 
