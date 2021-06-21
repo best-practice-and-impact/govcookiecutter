@@ -126,7 +126,7 @@ the `README.md` file in that folder.
 [docs-pre-commit-hooks-secrets-definition]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [docs-updating-gitignore]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
 [docs-write-sphinx-documentation]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
-[email]: mailto:gdsdatascience@digital.cabinet-office.gov.uk
+[email]: mailto:gds-data-science@digital.cabinet-office.gov.uk
 [gds-way]: https://gds-way.cloudapps.digital/
 [gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide
