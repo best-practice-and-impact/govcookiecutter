@@ -16,7 +16,7 @@ presentation on version 0.5.3 from March 2021][youtube].
 
 ## Getting started
 
-> ℹ️ Windows users should [read this GitHub issue around govcookiecutter
+> ℹ️ Windows users should [read this GitHub issue around `govcookiecutter`
 > functionality][issue-windows-os]
 
 [First, make sure your system meets the
