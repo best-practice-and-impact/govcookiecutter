@@ -1,7 +1,8 @@
 # Modifying `govcookiecutter`
 
-> ℹ️ It's strongly recommended you build an example project to test that your changes
-> work!
+```{warning}
+It's strongly recommended you build an example project to test that your changes work!
+```
 
 [`govcookiecutter` uses the `cookiecutter` Python package][cookiecutter] to build
 template project structures. In turn, [`cookiecutter` uses Jinja templating to inject
@@ -61,9 +62,13 @@ Conditional folders and/or files are items than only exist if actively selected 
 user. For example, if users select `No` for the `using_R` prompt, any R files and
 content is removed from their outputted project.
 
-> ⚠️ Whilst you can have folder and file names with Jinja templating, do not use this
-> for conditional folders and/or files, as certain characters may not be supported on
-> all operating systems.
+```{note} Folder and file names with Jinja templating
+
+Whilst you can have folder and file names with Jinja templating, do not use this for
+conditional folders and/or files, as certain characters may not be supported on all
+operating systems.
+
+```
 
 This functionality is provided by post-generation hooks in `govcookiecutter`, which are
 defined in `hooks/post_gen_project.py`. These hooks only run after a project has been

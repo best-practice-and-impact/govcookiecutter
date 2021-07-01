@@ -16,8 +16,10 @@ presentation on version 0.5.3 from March 2021][youtube].
 
 ## Getting started
 
-> ℹ️ Windows users should [read this GitHub issue around `govcookiecutter`
-> functionality][issue-windows-os]
+```{note} Functionality on Windows machines
+Windows users should [read this GitHub issue around `govcookiecutter`
+functionality][issue-windows-os].
+```
 
 [First, make sure your system meets the
 requirements](#requirements-to-create-a-cookiecutter-template). Next, open your
@@ -66,7 +68,9 @@ kicking off your project development](#optional-changes-to-consider-post-project
 
 ### Requirements to create a cookiecutter template
 
-> ℹ️ [Contributors have some additional requirements][contributing]!
+```{warning}
+[Contributors have some additional requirements][contributing]!
+```
 
 To get started your system should meet the following requirements:
 

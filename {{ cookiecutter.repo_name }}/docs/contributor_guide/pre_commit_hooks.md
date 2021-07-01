@@ -20,9 +20,11 @@ We have configured `pre-commit` to run automatically on every commit. By running
 each commit, we ensure that `pre-commit` will be able to detect all contraventions and
 keep our repository in a healthy state.
 
-> ⚠️ No pre-commit hooks will be run on Google Colab notebooks pushed directly to
-> GitHub. For security reasons, it is recommended that you manually download your
-> notebook, and commit up locally to ensure pre-commit hooks are run on your changes.
+```{note} Pre-commit hooks and Google Colab
+No pre-commit hooks will be run on Google Colab notebooks pushed directly to GitHub.
+For security reasons, it is recommended that you manually download your notebook, and
+commit up locally to ensure pre-commit hooks are run on your changes.
+```
 
 ## Installation
 
@@ -35,10 +37,12 @@ In order for `pre-commit` to run, action is needed to configure it on your syste
 
 ## Using the `detect-secrets` pre-commit hook
 
-> ⚠️ The `detect-secrets` package does its best to prevent accidental committing of
-> secrets, but it may miss things. Instead, focus on good software development
-> practices! See the [definition of a secret for further
-> information](#definition-of-a-secret-according-to-detect-secrets).
+```{note} Secret detection limitations
+The `detect-secrets` package does its best to prevent accidental committing of secrets,
+but it may miss things. Instead, focus on good software development practices! See the
+[definition of a secret for further
+information](#definition-of-a-secret-according-to-detect-secrets).
+```
 
 [We use `detect-secrets` to check that no secrets are accidentally
 committed][detect-secrets]. This hook requires you to generate a baseline file if one
@@ -154,10 +158,12 @@ on each desired cell, and edit the metadata to look like this:
 This will tell the hook not to strip the resulting output of the desired cell(s),
 allowing the output(s) to be committed.
 
-> ℹ️ Currently (March 2020) there is no way to add tags and/or metadata to Google
-> Colab notebooks. It's strongly suggested that you download the Colab as a .ipynb
-> file, and edit tags and/or metadata using Jupyter before committing the code if you
-> want to keep some outputs.
+```{note} Tags and metadata on Google Colab
+Currently (March 2020) there is no way to add tags and/or metadata to Google Colab
+notebooks. It's strongly suggested that you download the Colab as a .ipynb file, and
+edit tags and/or metadata using Jupyter before committing the code if you want to keep
+some outputs.
+```
 
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [detect-secrets-plugins]: https://github.com/Yelp/detect-secrets#currently-supported-plugins

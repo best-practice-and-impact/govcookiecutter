@@ -2,8 +2,10 @@
 
 {{ cookiecutter.overview }}
 
-> ℹ️ Where this documentation refers to the root folder we mean where this README.md is
-> located.
+```{warning}
+Where this documentation refers to the root folder we mean where this README.md is
+located.
+```
 
 ## Getting started
 
