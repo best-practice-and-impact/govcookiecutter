@@ -1,4 +1,7 @@
 {
+  "_copy_without_render": [
+    "docs/_templates/*"
+  ],
   "_extensions": ["jinja2_time.TimeExtension"],
 
   "organisation_name": "Your public sector organisation name, for example Government Digital Service",
@@ -12,5 +15,8 @@
   "overview": "Brief overview of your project.",
   "project_version": "0.0.1",
 
-  "using_R": ["No", "Yes"]
+  "using_R": ["No", "Yes"],
+  "use_govuk_tech_docs_sphinx_theme": ["Yes", "No"],
+  "documentation_website_domain": "{{ 'Your documentation website domain, e.g. ukgovdatascience.github.io/govcookiecutter' if cookiecutter.use_govuk_tech_docs_sphinx_theme == 'Yes' else 'Not required - press the return key to continue.'}}"
+
 }

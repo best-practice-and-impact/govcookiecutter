@@ -6,7 +6,11 @@ import pytest
 
 # Define the expected counts for each cookiecutter variable - any counts that deviate
 # because of other variables are listed at the end of each dictionary
-ORGANISATION_NAME_COUNT = {
+ORGANISATION_NAME_USE_GOVUK_TECH_DOCS_SPHINX_THEME_YES_COUNT = {
+    "{{ cookiecutter.organisation_name }}.": 3,
+    "({{ cookiecutter.organisation_name }})": 1,
+}
+ORGANISATION_NAME_USE_GOVUK_TECH_DOCS_SPHINX_THEME_NO_COUNT = {
     "{{ cookiecutter.organisation_name }}.": 1,
     "({{ cookiecutter.organisation_name }})": 1,
 }
@@ -17,7 +21,12 @@ ORGANISATION_HANDLE_COUNT = {
     '[u"{{ cookiecutter.organisation_handle }}"],': 0,
     '"{{ cookiecutter.organisation_handle }}",': 0,
 }
-CONTACT_EMAIL_COUNT = {
+CONTACT_EMAIL_USE_GOVUK_TECH_DOCS_SPHINX_THEME_YES_COUNT = {
+    "mailto:{{ cookiecutter.contact_email }}": 3,
+    "[{{ cookiecutter.contact_email }}][email-address].": 1,
+    '"{{ cookiecutter.contact_email }}")': 0,
+}
+CONTACT_EMAIL_USE_GOVUK_TECH_DOCS_SPHINX_THEME_NO_COUNT = {
     "mailto:{{ cookiecutter.contact_email }}": 2,
     "[{{ cookiecutter.contact_email }}][email-address].": 1,
     '"{{ cookiecutter.contact_email }}")': 0,
@@ -37,7 +46,11 @@ REPO_NAME_COUNT = {
     "{{ cookiecutter.repo_name }}": 0,
 }
 OVERVIEW_COUNT = {'"{{ cookiecutter.overview }}",': 0, "{{ cookiecutter.overview }}": 1}
-PROJECT_VERSION_COUNT = {
+PROJECT_VERSION_USE_GOVUK_TECH_DOCS_SPHINX_THEME_YES_COUNT = {
+    '"{{ cookiecutter.project_version }}"': 0,
+    "{{ cookiecutter.project_version }}": 0,
+}
+PROJECT_VERSION_USE_GOVUK_TECH_DOCS_SPHINX_THEME_NO_COUNT = {
     '"{{ cookiecutter.project_version }}"': 2,
     "{{ cookiecutter.project_version }}": 0,
 }
@@ -54,6 +67,14 @@ USING_R_YES_COUNT = {
     "`.Rprofile`": 1,
     "`DESCRIPTION`": 2,
     "`startup.R`": 1,
+}
+DOCUMENTATION_WEBSITE_USE_GOVUK_TECH_DOCS_SPHINX_THEME_YES_COUNT = {
+    "[{{ cookiecutter.documentation_website_domain }}][website]": 1,
+    "https://{{ cookiecutter.documentation_website_domain }}": 1,
+}
+DOCUMENTATION_WEBSITE_USE_GOVUK_TECH_DOCS_SPHINX_THEME_NO_COUNT = {
+    "[{{ cookiecutter.documentation_website_domain }}][website]": 0,
+    "https://{{ cookiecutter.documentation_website_domain }}": 0,
 }
 
 
@@ -135,8 +156,30 @@ def recursive_open_and_count_search_terms(
 
 # Define the test cases for the `test_injected_counts_correct` test
 args_injected_counts_correct = [
-    ("organisation_name", "org_1", ORGANISATION_NAME_COUNT, {"using_R": "No"}),
-    ("organisation_name", "org_2", ORGANISATION_NAME_COUNT, {"using_R": "Yes"}),
+    (
+        "organisation_name",
+        "org_1",
+        ORGANISATION_NAME_USE_GOVUK_TECH_DOCS_SPHINX_THEME_NO_COUNT,
+        {"using_R": "No", "use_govuk_tech_docs_sphinx_theme": "No"},
+    ),
+    (
+        "organisation_name",
+        "org_2",
+        ORGANISATION_NAME_USE_GOVUK_TECH_DOCS_SPHINX_THEME_NO_COUNT,
+        {"using_R": "Yes", "use_govuk_tech_docs_sphinx_theme": "No"},
+    ),
+    (
+        "organisation_name",
+        "org_1",
+        ORGANISATION_NAME_USE_GOVUK_TECH_DOCS_SPHINX_THEME_YES_COUNT,
+        {"using_R": "No", "use_govuk_tech_docs_sphinx_theme": "Yes"},
+    ),
+    (
+        "organisation_name",
+        "org_2",
+        ORGANISATION_NAME_USE_GOVUK_TECH_DOCS_SPHINX_THEME_YES_COUNT,
+        {"using_R": "Yes", "use_govuk_tech_docs_sphinx_theme": "Yes"},
+    ),
     ("organisation_handle", "handle_1", ORGANISATION_HANDLE_COUNT, {"using_R": "No"}),
     (
         "organisation_handle",
@@ -144,12 +187,35 @@ args_injected_counts_correct = [
         {**ORGANISATION_HANDLE_COUNT, '"{{ cookiecutter.organisation_handle }}",': 1},
         {"using_R": "Yes"},
     ),
-    ("contact_email", "email@1", CONTACT_EMAIL_COUNT, {"using_R": "No"}),
+    (
+        "contact_email",
+        "email@1",
+        CONTACT_EMAIL_USE_GOVUK_TECH_DOCS_SPHINX_THEME_NO_COUNT,
+        {"using_R": "No", "use_govuk_tech_docs_sphinx_theme": "No"},
+    ),
     (
         "contact_email",
         "email@2",
-        {**CONTACT_EMAIL_COUNT, '"{{ cookiecutter.contact_email }}")': 1},
-        {"using_R": "Yes"},
+        {
+            **CONTACT_EMAIL_USE_GOVUK_TECH_DOCS_SPHINX_THEME_NO_COUNT,
+            '"{{ cookiecutter.contact_email }}")': 1,
+        },
+        {"using_R": "Yes", "use_govuk_tech_docs_sphinx_theme": "No"},
+    ),
+    (
+        "contact_email",
+        "email@1",
+        CONTACT_EMAIL_USE_GOVUK_TECH_DOCS_SPHINX_THEME_YES_COUNT,
+        {"using_R": "No", "use_govuk_tech_docs_sphinx_theme": "Yes"},
+    ),
+    (
+        "contact_email",
+        "email@2",
+        {
+            **CONTACT_EMAIL_USE_GOVUK_TECH_DOCS_SPHINX_THEME_YES_COUNT,
+            '"{{ cookiecutter.contact_email }}")': 1,
+        },
+        {"using_R": "Yes", "use_govuk_tech_docs_sphinx_theme": "Yes"},
     ),
     ("project_name", "Project_1", PROJECT_NAME_COUNT, {"using_R": "No"}),
     (
@@ -172,15 +238,62 @@ args_injected_counts_correct = [
         {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 2},
         {"using_R": "Yes"},
     ),
-    ("project_version", "project_version_1", PROJECT_VERSION_COUNT, {"using_R": "No"}),
+    (
+        "project_version",
+        "project_version_1",
+        PROJECT_VERSION_USE_GOVUK_TECH_DOCS_SPHINX_THEME_NO_COUNT,
+        {"using_R": "No", "use_govuk_tech_docs_sphinx_theme": "No"},
+    ),
     (
         "project_version",
         "project_version_2",
-        {**PROJECT_VERSION_COUNT, "{{ cookiecutter.project_version }}": 1},
-        {"using_R": "Yes"},
+        {
+            **PROJECT_VERSION_USE_GOVUK_TECH_DOCS_SPHINX_THEME_NO_COUNT,
+            "{{ cookiecutter.project_version }}": 1,
+        },
+        {"using_R": "Yes", "use_govuk_tech_docs_sphinx_theme": "No"},
+    ),
+    (
+        "project_version",
+        "project_version_1",
+        PROJECT_VERSION_USE_GOVUK_TECH_DOCS_SPHINX_THEME_YES_COUNT,
+        {"using_R": "No", "use_govuk_tech_docs_sphinx_theme": "Yes"},
+    ),
+    (
+        "project_version",
+        "project_version_2",
+        {
+            **PROJECT_VERSION_USE_GOVUK_TECH_DOCS_SPHINX_THEME_YES_COUNT,
+            "{{ cookiecutter.project_version }}": 1,
+        },
+        {"using_R": "Yes", "use_govuk_tech_docs_sphinx_theme": "Yes"},
     ),
     ("using_R", "No", USING_R_NO_COUNT, {}),
     ("using_R", "Yes", USING_R_YES_COUNT, {}),
+    (
+        "documentation_website_domain",
+        "domain_1",
+        DOCUMENTATION_WEBSITE_USE_GOVUK_TECH_DOCS_SPHINX_THEME_NO_COUNT,
+        {"using_R": "No", "use_govuk_tech_docs_sphinx_theme": "No"},
+    ),
+    (
+        "documentation_website_domain",
+        "domain_2",
+        DOCUMENTATION_WEBSITE_USE_GOVUK_TECH_DOCS_SPHINX_THEME_NO_COUNT,
+        {"using_R": "Yes", "use_govuk_tech_docs_sphinx_theme": "No"},
+    ),
+    (
+        "documentation_website_domain",
+        "domain_1",
+        DOCUMENTATION_WEBSITE_USE_GOVUK_TECH_DOCS_SPHINX_THEME_YES_COUNT,
+        {"using_R": "No", "use_govuk_tech_docs_sphinx_theme": "Yes"},
+    ),
+    (
+        "documentation_website_domain",
+        "domain_2",
+        DOCUMENTATION_WEBSITE_USE_GOVUK_TECH_DOCS_SPHINX_THEME_YES_COUNT,
+        {"using_R": "Yes", "use_govuk_tech_docs_sphinx_theme": "Yes"},
+    ),
 ]
 
 

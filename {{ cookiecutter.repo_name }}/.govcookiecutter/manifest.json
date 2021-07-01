@@ -5,6 +5,12 @@
       "description": "R files that are removed if not enabled.",
       "remove": {% if cookiecutter.using_R == "No" %}true{% else %}false{% endif %},
       "resources": [".Rprofile", ".lintr", "DESCRIPTION", "startup.R"]
+    },
+    {
+      "name": "govuk-tech-docs-sphinx-theme usage",
+      "description": "Folders and files removed if not using the theme.",
+      "remove": {% if cookiecutter.use_govuk_tech_docs_sphinx_theme == "No" %}true{% else %}false{% endif %},
+      "resources": ["docs/_templates", "docs/accessibility.md"]
     }
   ]
 }

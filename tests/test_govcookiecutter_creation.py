@@ -85,6 +85,7 @@ args_builds_correctly = [
         "repo_name": "repo_1",
         "overview": "overview_1",
         "project_version": "version_1",
+        "documentation_website_domain": "domain_2",
     },
     {
         "organisation_name": "org_2",
@@ -94,6 +95,7 @@ args_builds_correctly = [
         "repo_name": "repo_2",
         "overview": "overview_2",
         "project_version": "version_2",
+        "documentation_website_domain": "domain_2",
     },
 ]
 
@@ -102,12 +104,14 @@ args_builds_correctly = [
 @pytest.mark.parametrize("test_input_repository_hosting_platform", ["GitHub", "GitLab"])
 @pytest.mark.parametrize("test_input_organisational_framework", ["GDS", "N/A"])
 @pytest.mark.parametrize("test_input_using_r", ["No", "Yes"])
+@pytest.mark.parametrize("test_input_use_govuk_tech_docs_sphinx_theme", ["No", "Yes"])
 def test_builds_correctly(
     cookies,
     test_input_context: Dict[str, str],
     test_input_repository_hosting_platform: str,
     test_input_organisational_framework: str,
     test_input_using_r: str,
+    test_input_use_govuk_tech_docs_sphinx_theme: str,
 ) -> None:
     """Test that the projects are built correctly with no errors."""
 
@@ -118,6 +122,7 @@ def test_builds_correctly(
             "repository_hosting_platform": test_input_repository_hosting_platform,
             "organisational_framework": test_input_organisational_framework,
             "using_R": test_input_using_r,
+            "use_govuk_tech_docs_sphinx_theme": test_input_use_govuk_tech_docs_sphinx_theme,  # noqa: E501
         }
     )
 
@@ -133,6 +138,17 @@ def test_builds_correctly(
                 assert re.search(r"{+ ?cookiecutter\.\w+ ?}+", f.read()) is None
         except UnicodeDecodeError:
             continue
+
+    # Define links to ignore during link checking - these links are compiled by
+    # cookiecutter based on user inputs. During testing, these links may not exist in
+    # reality, so it's best to ignore them rather than fail the test
+    ignore_links = [
+        f"https://github.com/{test_input_context['organisation_handle']}/"
+        f"{test_input_context['repo_name']}/issues/new",
+        f"https://gitlab.com/{test_input_context['organisation_handle']}/"
+        f"{test_input_context['repo_name']}/~/issues/new",
+        f"https://{test_input_context['documentation_website_domain']}",
+    ]
 
     # Test that the documentation builds as expected, and then for broken links
     test_output_project_docs_folder = test_output_project.project_path.joinpath("docs")
@@ -150,6 +166,8 @@ def test_builds_correctly(
     assert (
         main(
             [
+                "-D",
+                f"linkcheck_ignore={','.join(ignore_links)}",
                 "-b",
                 "linkcheck",
                 str(test_output_project_docs_folder),

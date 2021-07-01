@@ -19,16 +19,22 @@ repos:
         types: [ cython, pyi, python ]
         args: [ "--profile", "black", "--filter-files" ]
   - repo: https://github.com/psf/black
-    rev: 21.5b2 # Replace by any tag/version: https://github.com/psf/black/tags
+    rev: 21.5b2
     hooks:
       - id: black
         name: black - consistent Python code formatting (auto-fixes)
-        language_version: python # Should be a command that runs python3.6+
+        language_version: python  # should be a command that runs python3.6+
+        # TODO: Remove exclusion if https://github.com/psf/black/issues/1524 is resolved
+        # The formatting of this file will be checked by the tests in any case
+        exclude: ^\{\{ cookiecutter\.repo_name \}\}/docs/conf\.py$
   - repo: https://gitlab.com/pycqa/flake8
     rev: 3.9.2
     hooks:
       - id: flake8
         name: flake8 - Python linting
+        # Jinja templating in this file raises errors incorrectly; flake8 is checked in
+        # the tests in any case
+        exclude: ^\{\{ cookiecutter\.repo_name \}\}/docs/conf\.py$
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.0.3
     hooks:

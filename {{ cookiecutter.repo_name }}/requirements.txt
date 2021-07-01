@@ -1,5 +1,8 @@
 coverage
 detect-secrets==1.0.3
+{% if cookiecutter.use_govuk_tech_docs_sphinx_theme == "Yes" -%}
+govuk-tech-docs-sphinx-theme
+{% endif -%}
 myst-parser
 pre-commit
 pytest
