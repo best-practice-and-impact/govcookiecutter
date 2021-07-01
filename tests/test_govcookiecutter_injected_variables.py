@@ -13,8 +13,8 @@ ORGANISATION_NAME_COUNT = {
 ORGANISATION_HANDLE_COUNT = {
     '"{{ cookiecutter.organisation_handle }}"': 1,
     "`{{ cookiecutter.organisation_handle }}`": 4,
-    'u"{{ cookiecutter.organisation_handle }}",': 2,
-    '[u"{{ cookiecutter.organisation_handle }}"],': 1,
+    'u"{{ cookiecutter.organisation_handle }}",': 0,
+    '[u"{{ cookiecutter.organisation_handle }}"],': 0,
     '"{{ cookiecutter.organisation_handle }}",': 0,
 }
 CONTACT_EMAIL_COUNT = {
@@ -24,19 +24,19 @@ CONTACT_EMAIL_COUNT = {
 }
 PROJECT_NAME_COUNT = {
     '"{{ cookiecutter.project_name }}"': 1,
-    '"{{ cookiecutter.project_name }}",': 1,
-    'u"{{ cookiecutter.project_name }}': 3,
+    '"{{ cookiecutter.project_name }}",': 0,
+    'u"{{ cookiecutter.project_name }}': 0,
     "{{ cookiecutter.project_name }}": 2,
 }
 REPO_NAME_COUNT = {
-    '"{{ cookiecutter.repo_name }}",': 2,
+    '"{{ cookiecutter.repo_name }}",': 0,
     "`{{ cookiecutter.repo_name }}`": 7,
     "`{{ cookiecutter.repo_name }}`,": 2,
-    '"{{ cookiecutter.repo_name }}.tex",': 1,
+    '"{{ cookiecutter.repo_name }}.tex",': 0,
     '"{{ cookiecutter.repo_name }}doc"': 1,
     "{{ cookiecutter.repo_name }}": 0,
 }
-OVERVIEW_COUNT = {'"{{ cookiecutter.overview }}",': 1, "{{ cookiecutter.overview }}": 1}
+OVERVIEW_COUNT = {'"{{ cookiecutter.overview }}",': 0, "{{ cookiecutter.overview }}": 1}
 PROJECT_VERSION_COUNT = {
     '"{{ cookiecutter.project_version }}"': 2,
     "{{ cookiecutter.project_version }}": 0,
