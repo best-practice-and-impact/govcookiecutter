@@ -10,8 +10,8 @@ we'd be happy to help!
 
 ## Getting started
 
-To start contributing, install the required Python packages, and [pre-commit
-hooks][pre-commit] using:
+To start contributing, open your terminal, and install the required Python packages,
+and [pre-commit hooks][pre-commit] using:
 
 ```shell
 pip install -r requirements.txt

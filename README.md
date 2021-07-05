@@ -68,7 +68,7 @@ kicking off your project development](#optional-changes-to-consider-post-project
 
 ### Requirements to create a cookiecutter template
 
-```{warning}
+```{note} Requirements for contributors
 [Contributors have some additional requirements][contributing]!
 ```
 

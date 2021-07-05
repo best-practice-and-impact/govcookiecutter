@@ -9,14 +9,16 @@ located.
 
 ## Getting started
 
-To start contributing to `{{ cookiecutter.repo_name }}`, run the following commands in
-your shell:
+To start using this project, [first make sure your system meets its
+requirements](#requirements).
 
-```shell
-make requirements
-```
+To be added.
 
 ### Requirements
+
+```{note} Requirements for contributors
+[Contributors have some additional requirements][contributing]!
+```
 
 - Python 3.6.1+ installed
 {% if cookiecutter.using_R == "Yes" -%}
@@ -26,7 +28,11 @@ make requirements
   credentials](#required-secrets-and-credentials)
 - [load environment variables][docs-loading-environment-variables] from `.envrc`
 
-To be added.
+To install the Python requirements, open your terminal and enter:
+
+```shell
+pip install -r requirements.txt
+```
 
 ## Required secrets and credentials
 
