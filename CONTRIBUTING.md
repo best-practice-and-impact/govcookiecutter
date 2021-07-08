@@ -109,8 +109,10 @@ The HTML report can be accessed at `htmlcov/index.html`.
 stored in the `docs` folder, unless it's more appropriate to store it elsewhere, like
 this file.
 
-[Please read our guidance on how to write Sphinx
-documentation][docs-write-sphinx-documentation], and build it into a searchable website.
+[Please read our guidance on how to write accessible
+documentation][docs-write-accessible-documentation], as well as our [guidance on
+writing Sphinx documentation][docs-write-sphinx-documentation]. This allows you to
+build the documentation into an accessible, searchable website.
 
 ## Organisational frameworks
 
@@ -125,6 +127,7 @@ the `README.md` file in that folder.
 [docs-pre-commit-hooks]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
 [docs-pre-commit-hooks-secrets-definition]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [docs-updating-gitignore]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
+[docs-write-accessible-documentation]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_accessible_documentation.md
 [docs-write-sphinx-documentation]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
 [email]: mailto:gds-data-science@digital.cabinet-office.gov.uk
 [gds-way]: https://gds-way.cloudapps.digital/

@@ -107,14 +107,17 @@ The HTML report can be accessed at `htmlcov/index.html`.
 stored in the `docs` folder, unless it's more appropriate to store it elsewhere, like
 this file.
 
-[Please read our guidance on how to write Sphinx
-documentation][docs-write-sphinx-documentation], and build it into a searchable website.
+[Please read our guidance on how to write accessible
+documentation][docs-write-accessible-documentation], as well as our [guidance on
+writing Sphinx documentation][docs-write-sphinx-documentation]. This allows you to
+build the documentation into an accessible, searchable website.
 
 [code-of-conduct]: ./CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/
 [docs-pre-commit-hooks]: ./pre_commit_hooks.md
 [docs-pre-commit-hooks-secrets-definition]: ./pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [docs-updating-gitignore]: ./updating_gitignore.md
+[docs-write-accessible-documentation]: ./writing_accessible_documentation.md
 [docs-write-sphinx-documentation]: ./writing_sphinx_documentation.md
 [email]: mailto:{{ cookiecutter.contact_email }}
 [gds-way]: https://gds-way.cloudapps.digital/
