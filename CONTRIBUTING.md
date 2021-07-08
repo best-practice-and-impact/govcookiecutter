@@ -66,8 +66,8 @@ for [GOV.UK][gov-uk].
 [gov-uk]: https://www.gov.uk/
 ```
 
-We also try to wrap Markdown to a line length of 88 characters, but this is not
-strictly enforced in all cases, for example with long hyperlinks.
+We also try to wrap Markdown to a line length of 88 characters. This is not strictly
+enforced in all cases, for example with long hyperlinks.
 
 ## Testing
 

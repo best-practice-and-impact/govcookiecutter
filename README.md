@@ -138,8 +138,8 @@ guidelines][contributing].
 ## Acknowledgements
 
 [This template is based off the DrivenData Cookiecutter Data Science
-project][drivendata], especially around the template `data` and `src` folder structures,
-and the `make help` commands in the Makefiles.
+project][drivendata]. Specifically, it uses similar `data` and `src` folder structures,
+and a modified version of the `help` commands in the `Makefile`s.
 
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
 [contributing]: ./CONTRIBUTING.md

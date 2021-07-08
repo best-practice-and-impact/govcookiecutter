@@ -94,8 +94,8 @@ def replace_cookiecutter_jinja2_counts(
         key_replacement = k.replace(jinja2_string, replacement_string)
         out_dict[key_replacement] = v
 
-    # Get the 2nd element of `jinja2_string`, i.e. the "cookiecutter.variable_name"
-    # element, and set it to zero. Then return `out_dict`
+    # Get the 2nd element of `jinja2_string`, in other words the
+    # "cookiecutter.variable_name" element, and set it to zero. Then return `out_dict`
     out_dict[jinja2_string.split()[1]] = 0
     return out_dict
 

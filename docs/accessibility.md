@@ -15,7 +15,7 @@ possible to be able to use this website. For example, that means you should be a
 - navigate most of the website using speech recognition software
 - listen to most of the website using a screen reader (including the most recent
   versions of JAWS, NVDA and VoiceOver)
-- We've also made the website text as simple as possible to understand.
+- we've also made the website text as simple as possible to understand.
 
 [AbilityNet][abilitynet] has advice on making your device easier to use if you have a
 disability.
@@ -41,8 +41,7 @@ large print, easy read, audio recording or braille:
 
 We're always looking to improve the accessibility of this website. If you find any
 problems not listed on this page or think we're not meeting accessibility requirements,
-[contact us by email][email], or [raise an issue on our GitHub
-repository][github-issues].
+[email us][email], or [raise a GitHub issue][github-issues].
 
 ## Enforcement procedure
 

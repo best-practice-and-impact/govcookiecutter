@@ -19,7 +19,7 @@ requirements:
 	python -m pip install -r requirements.txt
 	pre-commit install
 
-## Create a `docs/_build` folder, if it doesn't exist. Otherwise delete any sub-folders and their contents within it
+## Create a `docs/_build` folder, if it does not exist. Otherwise delete any sub-folders and their contents within it
 prepare_docs_folder:
 	if [ ! -d "./docs/_build" ]; then mkdir ./docs/_build; fi
 	find ./docs/_build -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
@@ -32,7 +32,7 @@ docs: prepare_docs_folder requirements
 docs_check_external_links: prepare_docs_folder requirements
 	sphinx-build -b linkcheck ./docs ./docs/_build
 
-## Create an `example` folder, if it doesn't exist. Otherwise delete any subfolders and their contents within it
+## Create an `example` folder, if it does not exist. Otherwise delete any subfolders and their contents within it
 prepare_example_folder:
 	if [ ! -d "./example" ]; then mkdir ./example; fi
 	find ./example -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;

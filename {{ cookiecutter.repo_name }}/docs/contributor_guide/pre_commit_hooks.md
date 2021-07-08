@@ -95,7 +95,7 @@ prevent your commit from being blocked:
   positives](#updating-secretsbaseline).
 
 In either case, if an actual secret is detected (or a combination of actual secrets and
-false positives), first remove the actual secret before following either of these
+false positives), first remove the actual secret. Then following either of these
 processes.
 
 #### Inline allowlisting (recommended)
@@ -160,9 +160,11 @@ allowing the output(s) to be committed.
 
 ```{note} Tags and metadata on Google Colab
 Currently (March 2020) there is no way to add tags and/or metadata to Google Colab
-notebooks. It's strongly suggested that you download the Colab as a .ipynb file, and
-edit tags and/or metadata using Jupyter before committing the code if you want to keep
-some outputs.
+notebooks.
+
+It's strongly suggested that you download the Colab as a .ipynb file, and edit tags
+and/or metadata using Jupyter before committing the code if you want to keep some
+outputs.
 ```
 
 [detect-secrets]: https://github.com/Yelp/detect-secrets

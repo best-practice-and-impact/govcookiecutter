@@ -12,8 +12,8 @@ The sub-folders should be used as follows:
 - `processed`: any raw or interim data that has been fully processed into its final
   state.
 
-The folder paths for these directories are loaded as environment variables by the
-`.envrc` file; to load them in Python, use any or all of the following code:
+The paths for these directories are loaded as environment variables by the
+`.envrc` file. To load them in Python, use any or all of the following code:
 
 ```python
 import os

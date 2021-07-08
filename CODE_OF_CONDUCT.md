@@ -1,8 +1,8 @@
 # Code of conduct for `govcookiecutter`
 
 Contributors to this repository hosted by `ukgovdatascience` are expected to follow the
-Contributor Covenant Code of Conduct, and those working within Her Majesty's Government
-are also expected to follow the Civil Service Code.
+Contributor Covenant Code of Conduct. Contributors working within Her Majesty's
+Government are also expected to follow the Civil Service Code.
 
 ## Civil Service Code
 
@@ -65,9 +65,9 @@ for other behaviours that they deem inappropriate, threatening, offensive, or ha
 This Code of Conduct applies within all project spaces, and it also applies when an
 individual is representing the project or its community in public spaces. Examples of
 representing a project or community include using an official project e-mail address,
-posting via an official social media account, or acting as an appointed representative
-at an online or offline event. Representation of a project may be further defined and
-clarified by project maintainers.
+posting using an official social media account, or acting as an appointed
+representative at an online or offline event. Representation of a project may be
+further defined and clarified by project maintainers.
 
 ### Enforcement
 

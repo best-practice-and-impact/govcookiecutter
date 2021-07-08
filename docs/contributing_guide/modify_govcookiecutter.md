@@ -64,9 +64,8 @@ content is removed from their outputted project.
 
 ```{note} Folder and file names with Jinja templating
 
-Whilst you can have folder and file names with Jinja templating, do not use this for
-conditional folders and/or files, as certain characters may not be supported on all
-operating systems.
+Do not use Jinja templating for conditional folders and/or files, as certain characters
+may not be supported on all operating systems.
 
 ```
 
