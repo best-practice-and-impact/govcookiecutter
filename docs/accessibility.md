@@ -102,7 +102,7 @@ We plan to fix the accessibility issues in the content by the end of December 20
 
 ## Preparation of this accessibility statement
 
-This statement was prepared on 30 June 2021. It was last reviewed on 30 June 2021.
+This statement was prepared on 30 June 2021. It was last reviewed on 8 July 2021.
 
 [abilitynet]: https://mcmw.abilitynet.org.uk/
 [accessibility-legislation]: https://www.legislation.gov.uk/uksi/2018/952/regulation/4/made
