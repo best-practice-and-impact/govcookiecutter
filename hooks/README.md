@@ -1,8 +1,7 @@
-# `hooks` folder
+# `hooks` folder overview
 
-This folder contains all pre- and post-generation hooks used by the
-[`cookiecutter`][cookiecutter] Python package. [Full documentation on these hooks is
-available in the `cookiecutter` documentation][cookiecutter-hooks].
+This folder contains all pre- and post-generation hooks used by the `cookiecutter`
+Python package. [Full documentation on pre- and post-generation hooks is available in
+the `cookiecutter` documentation][cookiecutter-hooks].
 
-[cookiecutter]: https://cookiecutter.readthedocs.io/
 [cookiecutter-hooks]: https://cookiecutter.readthedocs.io/en/latest/advanced/hooks.html

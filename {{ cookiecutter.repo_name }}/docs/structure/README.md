@@ -21,89 +21,84 @@ this Git repository.
 ### `.envrc`
 
 A file containing environment variables for the Git repository that can be selectively
-loaded. This uses the [`direnv`][direnv] shell extension; see their documentation for
-further information.
+loaded. [`.envrc` uses the `direnv` shell extension to load these environment
+variables][direnv].
 
 This file contains a `sed` command to output a `.env` file with all the environment
 variables. This may be useful for sourcing environment variables, for example in
 conjunction with PyCharm's EnvFile plugin.
 
 To ensure this `sed` command works correctly, make sure any file paths listed in this
-file, and the [`.secrets`](#secrets) are absolute file paths (recommended), or relative
-file paths using other environment variables (works for Python users only). Environment
-variable names can only contain letters, numbers or underscores as well. For example:
+file are absolute file paths (recommended). Relative file paths using other
+environment variables only work for Python users. Environment variable names can
+only contain letters, numbers or underscores as well. For example:
 
 ```shell
-export DIR_DATA=$(pwd)/data  # fine for Python and R users
+export DIR_DATA=$(pwd)/data                    # fine for Python and R users
 export DIR_DATA_EXTERNAL=$(pwd)/data/external  # fine for Python and R users
-export DIR_DATA_EXTERNAL=./data/external  # fine for Python and R users
-export DIR_DATA_EXTERNAL=$DIR_DATA/external  # fine for Python users only
-export DIR-DATA-EXTERNAL=$DIR_DATA/external  # will break the `sed` command!
+export DIR_DATA_EXTERNAL=./data/external       # fine for Python and R users
+export DIR_DATA_EXTERNAL=$DIR_DATA/external    # fine for Python users only
+export DIR-DATA-EXTERNAL=$DIR_DATA/external    # will break the `sed` command!
 ```
 
 ### `.flake8`
 
-A configuration file for the [`flake8`][flake8] Python package that provides linting.
-This file is based on the [common configuration][gds-way-flake8] described on
-[The GDS Way][gds-way].
+A configuration file for the `flake8` Python package that provides linting. This file
+is based on the [common configuration described in the GDS Way][gds-way-flake8].
 
 ### `.gitignore`
 
-A `.gitignore` file to ignore certain files and folders from this Git repository. See
-the [contributor guide][docs-updating-gitignore] for further information about
-modifying this file.
+A `.gitignore` file to ignore certain files and folders from this Git repository. [See
+the contributor guide to modift the `.gitignore` file][docs-updating-gitignore].
 
 {% if cookiecutter.using_R == "Yes" -%}
 ### `.lintr`
 
-R-specific. Configuration file for styling R code that's used by pre-commit hooks to
-check R code.
+R-specific configuration file for styling R code.
 
 {% endif -%}
 
 ### `.pre-commit-config.yaml`
 
-A pre-commit hook configuration file. See the
-[contributor guide][docs-pre-commit-hooks] for further details.
+[A pre-commit hook configuration file][docs-pre-commit-hooks].
 
 {% if cookiecutter.using_R == "Yes" -%}
 ### `.Rprofile`
 
-R-specific. Initialisation file that runs automatically when starting R.
+R-specific initialisation file that runs automatically when starting R.
 
 {% endif -%}
 
 ### `.secrets`
 
-A file to store all secrets and credentials as environment variables. This is read-in
-by [`.envrc`](#envrc) using the [`direnv`][direnv] shell extension, but is **not**
-tracked by Git.
+A file to store all secrets and credentials as environment variables. [This file is
+read-in by `.envrc`](#envrc), when [loading environment variables with the `direnv`
+shell extension][direnv], but is not tracked by Git.
 
 ### `.secrets.baseline`
 
-Baseline file for the [`detect-secrets`][detect-secrets] package; this package detects
-secrets, and, in conjunction with `pre-commit`, prevents them from being committed to
-the repository. The baseline file flags secret-like data that the user deliberately
+[Baseline file for the `detect-secrets` to detect secrets][detect-secrets]. In
+conjunction with `pre-commit`, `detect-secrets` prevents secrets from being committed
+to the repository. The baseline file flags secret-like data that the user deliberately
 wishes to commit the to repository.
 
 ### `CODE_OF_CONDUCT.md`
 
-The [Code of Conduct][code-of-conduct] for contributors to this project, including
+[The Code of Conduct for contributors to this project][code-of-conduct], including
 maintainers and `{{ cookiecutter.organisation_handle }}` organisation owners.
 
 ### `conftest.py`
 
-File to contain shared fixture functions for the [pytest][pytest] tests in the `tests`
-folder.
+File to contain shared fixture functions for the `pytest` tests in the `tests` folder.
 
 ### `CONTRIBUTING.md`
 
-The [contributing guidelines][contributing] for this project.
+The contributing guidelines for this project.
 
 {% if cookiecutter.using_R == "Yes" -%}
 ### `DESCRIPTION`
 
-R-specific. Information related to the project including the name, authors and packages
+R-specific information related to the project including the name, authors and packages
 necessary for the project.
 
 {% endif -%}
@@ -130,16 +125,16 @@ A file containing Python project settings. This includes configuration settings 
 
 - [`isort`](#isort)
 - [`pytest`](#pytest)
-- [Code coverage](#code-coverage)
+- [code coverage](#code-coverage)
 
 #### `isort`
 
-Python imports are arranged according to the specification defined by [`black`][black].
+Python imports are arranged according to the [specification defined by `black`][black].
 
 #### `pytest`
 
-To run the tests within the [`tests`][docs-tests] folder using the [`pytest`][pytest]
-Python package, execute the following command:
+To run the tests within the `tests` folder using the `pytest` Python package, enter
+the following command:
 
 ```shell
 pytest
@@ -147,12 +142,18 @@ pytest
 
 #### Code coverage
 
-To run code coverage using the [`coverage`][coverage] Python package with
-[`pytest`][pytest], execute the following command:
+To run code coverage using the `coverage` Python package with `pytest`, enter the
+following command:
 
 ```shell
 coverage run -m pytest
 coverage html
+```
+
+or using the `make` command:
+
+```shell
+make coverage_html
 ```
 
 A code coverage report in HTML will be produced on the code in the `src` folder. This
@@ -160,8 +161,7 @@ HTML report can be accessed at `htmlcov/index.html`.
 
 ### `README.md`
 
-An overview of the Git repository, including all necessary instructions to execute the
-code.
+An overview of the Git repository, including all necessary instructions to run the code.
 
 ### `requirements.txt`
 
@@ -182,21 +182,15 @@ make requirements
 {% if cookiecutter.using_R == "Yes" -%}
 ### `startup.R`
 
-R-specific. Installs necessary packages specified in the `DESCRIPTION` file upon
-starting R via `.Rprofile`.
+R-specific file that installs necessary packages specified in the `DESCRIPTION` file
+upon starting R using `.Rprofile`.
 
 {% endif -%}
 
 [black]: https://black.readthedocs.io/en/stable/
 [code-of-conduct]:../contributor_guide/CODE_OF_CONDUCT.md
-[contributing]: ../contributor_guide/CONTRIBUTING.md
-[coverage]: https://coverage.readthedocs.io/
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [direnv]: https://direnv.net/
 [docs-pre-commit-hooks]: ../contributor_guide/pre_commit_hooks.md
-[docs-tests]: ./tests.md
 [docs-updating-gitignore]: ../contributor_guide/updating_gitignore.md
-[flake8]: https://gitlab.com/pycqa/flake8
-[gds-way]: https://gds-way.cloudapps.digital
 [gds-way-flake8]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#common-configuration
-[pytest]: https://docs.pytest.org/

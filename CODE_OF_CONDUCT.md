@@ -1,14 +1,13 @@
 # Code of conduct for `govcookiecutter`
 
 Contributors to this repository hosted by `ukgovdatascience` are expected to follow the
-Contributor Covenant Code of Conduct, and those working within Her Majesty's Government
-are also expected to follow the Civil Service Code.
+Contributor Covenant Code of Conduct. Contributors working within Her Majesty's
+Government are also expected to follow the Civil Service Code.
 
 ## Civil Service Code
 
-Contributors working within Her Majesty's Government must review the
-[Civil Service Code][civil-service-code], and are expected to follow it in their
-contributions.
+Contributors working within Her Majesty's Government must review the [Civil Service
+Code][civil-service-code], and are expected to follow it in their contributions.
 
 ## Contributor Covenant Code of Conduct
 
@@ -66,15 +65,15 @@ for other behaviours that they deem inappropriate, threatening, offensive, or ha
 This Code of Conduct applies within all project spaces, and it also applies when an
 individual is representing the project or its community in public spaces. Examples of
 representing a project or community include using an official project e-mail address,
-posting via an official social media account, or acting as an appointed representative
-at an online or offline event. Representation of a project may be further defined and
-clarified by project maintainers.
+posting using an official social media account, or acting as an appointed
+representative at an online or offline event. Representation of a project may be
+further defined and clarified by project maintainers.
 
 ### Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported by
 contacting the project team at
-[gdsdatascience@digital.cabinet-office.gov.uk][email-address]. All complaints will be
+[gds-data-science@digital.cabinet-office.gov.uk][email-address]. All complaints will be
 reviewed and investigated and will result in a response that is deemed necessary and
 appropriate to the circumstances. The project team is obligated to maintain
 confidentiality with regard to the reporter of an incident. Further details of
@@ -88,12 +87,12 @@ project's leadership.
 
 This Code of Conduct is adapted from the [Contributor Covenant][contributor-covenant],
 version 1.4, available at
-[https://www.contributor-covenant.org/version/1/4/code-of-conduct.html][contributor-covenant-code-of-conduct],
+[https://www.contributor-covenant.org/version/1/4/code-of-conduct/][contributor-covenant-code-of-conduct],
 and the `alphagov` Code of Conduct available at
-[https://github.com/alphagov/.github/blob/master/CODE_OF_CONDUCT.md][alphagov-code-of-conduct].
+[https://github.com/alphagov/.github/blob/main/CODE_OF_CONDUCT.md][alphagov-code-of-conduct].
 
-[alphagov-code-of-conduct]: https://github.com/alphagov/.github/blob/master/CODE_OF_CONDUCT.md
+[alphagov-code-of-conduct]: https://github.com/alphagov/.github/blob/main/CODE_OF_CONDUCT.md
 [civil-service-code]: https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code
 [contributor-covenant]: https://www.contributor-covenant.org
-[contributor-covenant-code-of-conduct]: https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
-[email-address]: mailto:gdsdatascience@digital.cabinet-office.gov.uk
+[contributor-covenant-code-of-conduct]: https://www.contributor-covenant.org/version/1/4/code-of-conduct/
+[email-address]: mailto:gds-data-science@digital.cabinet-office.gov.uk

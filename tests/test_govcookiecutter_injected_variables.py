@@ -13,30 +13,30 @@ ORGANISATION_NAME_COUNT = {
 ORGANISATION_HANDLE_COUNT = {
     '"{{ cookiecutter.organisation_handle }}"': 1,
     "`{{ cookiecutter.organisation_handle }}`": 4,
-    'u"{{ cookiecutter.organisation_handle }}",': 2,
-    '[u"{{ cookiecutter.organisation_handle }}"],': 1,
+    'u"{{ cookiecutter.organisation_handle }}",': 0,
+    '[u"{{ cookiecutter.organisation_handle }}"],': 0,
     '"{{ cookiecutter.organisation_handle }}",': 0,
 }
 CONTACT_EMAIL_COUNT = {
-    "mailto:{{ cookiecutter.contact_email }}": 3,
+    "mailto:{{ cookiecutter.contact_email }}": 2,
     "[{{ cookiecutter.contact_email }}][email-address].": 1,
     '"{{ cookiecutter.contact_email }}")': 0,
 }
 PROJECT_NAME_COUNT = {
     '"{{ cookiecutter.project_name }}"': 1,
-    '"{{ cookiecutter.project_name }}",': 1,
-    'u"{{ cookiecutter.project_name }}': 3,
+    '"{{ cookiecutter.project_name }}",': 0,
+    'u"{{ cookiecutter.project_name }}': 0,
     "{{ cookiecutter.project_name }}": 2,
 }
 REPO_NAME_COUNT = {
-    '"{{ cookiecutter.repo_name }}",': 2,
-    "`{{ cookiecutter.repo_name }}`": 8,
-    "`{{ cookiecutter.repo_name }}`,": 2,
-    '"{{ cookiecutter.repo_name }}.tex",': 1,
+    '"{{ cookiecutter.repo_name }}",': 0,
+    "`{{ cookiecutter.repo_name }}`": 7,
+    "`{{ cookiecutter.repo_name }}`,": 1,
+    '"{{ cookiecutter.repo_name }}.tex",': 0,
     '"{{ cookiecutter.repo_name }}doc"': 1,
     "{{ cookiecutter.repo_name }}": 0,
 }
-OVERVIEW_COUNT = {'"{{ cookiecutter.overview }}",': 1, "{{ cookiecutter.overview }}": 1}
+OVERVIEW_COUNT = {'"{{ cookiecutter.overview }}",': 0, "{{ cookiecutter.overview }}": 1}
 PROJECT_VERSION_COUNT = {
     '"{{ cookiecutter.project_version }}"': 2,
     "{{ cookiecutter.project_version }}": 0,
@@ -94,8 +94,8 @@ def replace_cookiecutter_jinja2_counts(
         key_replacement = k.replace(jinja2_string, replacement_string)
         out_dict[key_replacement] = v
 
-    # Get the 2nd element of `jinja2_string`, i.e. the "cookiecutter.variable_name"
-    # element, and set it to zero. Then return `out_dict`
+    # Get the 2nd element of `jinja2_string`, in other words the
+    # "cookiecutter.variable_name" element, and set it to zero. Then return `out_dict`
     out_dict[jinja2_string.split()[1]] = 0
     return out_dict
 

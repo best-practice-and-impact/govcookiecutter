@@ -1,8 +1,8 @@
 # Summary
 
-Add your summary here - keep it brief, to the point, and in plain English. For further
-information about pull requests, check out the
-[GDS Way](https://gds-way.cloudapps.digital/standards/pull-requests.html).
+Add your summary here - keep it brief, to the point, and in plain English. [For further
+information about pull requests, check out the GDS
+Way](https://gds-way.cloudapps.digital/standards/pull-requests.html).
 
 # Checklists
 
@@ -18,15 +18,15 @@ the reviewers' discretion.
 
 This pull/merge request meets the following requirements:
 
-- [ ] Code runs
-- [ ] Developments are **secure** and [**ethical**][data-ethics-framework]
-- [ ] You have made proportionate checks that the code works correctly
-- [ ] Test suite passes
-- [ ] Developments adhere to AQA plan (see `docs/aqa/aqa_plan.md`)
-- [ ] Data log updated (see `docs/aqa/data_log.md`), if necessary
-- [ ] Assumptions, and caveats log updated (see `docs/aqa/assumptions_caveats.md`), if
+- [ ] code runs
+- [ ] [developments are ethical][data-ethics-framework] and secure
+- [ ] you have made proportionate checks that the code works correctly
+- [ ] test suite passes
+- [ ] developments adhere to AQA plan (see `docs/aqa/aqa_plan.md`)
+- [ ] data log updated (see `docs/aqa/data_log.md`), if necessary
+- [ ] assumptions, and caveats log updated (see `docs/aqa/assumptions_caveats.md`), if
   necessary
-- [ ] [Minimum usable documentation][agilemodeling] written in the `docs` folder
+- [ ] [minimum usable documentation][agilemodeling] written in the `docs` folder
 
 Comments have been added below around the incomplete checks.
 
