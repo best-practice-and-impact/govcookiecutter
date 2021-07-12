@@ -1,0 +1,6 @@
+﻿``hooks.set_request_template``
+==============================
+
+.. currentmodule:: hooks
+
+.. autofunction:: set_request_template

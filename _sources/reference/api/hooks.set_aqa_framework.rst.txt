@@ -1,0 +1,6 @@
+﻿``hooks.set_aqa_framework``
+===========================
+
+.. currentmodule:: hooks
+
+.. autofunction:: set_aqa_framework

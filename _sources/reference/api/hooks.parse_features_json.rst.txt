@@ -1,0 +1,6 @@
+﻿``hooks.parse_features_json``
+=============================
+
+.. currentmodule:: hooks
+
+.. autofunction:: parse_features_json

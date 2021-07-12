@@ -1,0 +1,6 @@
+﻿``hooks.delete_files_and_folders``
+==================================
+
+.. currentmodule:: hooks
+
+.. autofunction:: delete_files_and_folders

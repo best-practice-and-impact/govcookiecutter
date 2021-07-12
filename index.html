@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>govcookiecutter - GDS govcookiecutter</title>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/javascripts/_analytics.js"></script>
+    <script src="_static/javascripts/_govuk/govuk-frontend-3.10.2.min.js"></script>
+    <script src="_static/javascripts/_govuk/modules.js"></script>
+    <script src="_static/javascripts/_modules/anchored-headings.js"></script>
+    <script src="_static/javascripts/_modules/collapsible-navigation.js"></script>
+    <script src="_static/javascripts/_modules/in-page-navigation.js"></script>
+    <script src="_static/javascripts/_modules/navigation.js"></script>
+    <script src="_static/javascripts/_modules/page-expiry.js"></script>
+    <script src="_static/javascripts/_modules/table-of-contents.js"></script>
+    <script src="_static/javascripts/_start_modules.js"></script>
+    <script src="_static/javascripts/_vendor/fixedsticky.js"></script>
+    <script src="_static/javascripts/_vendor/lodash.js"></script>
+    <script src="_static/javascripts/_vendor/modernizer.js"></script>
+    <script src="_static/javascripts/govuk_tech_docs.js"></script>
+    <script src="_static/javascripts/theme.js"></script>
+    <link href="_static/stylesheets/manifest.css" rel="stylesheet" />
+    <link href="_static/stylesheets/theme.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="_static//favicon.ico"/>
+  </head>
+  <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link">Skip to main content</a>
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+          <div class="govuk-header__container govuk-header__container--full-width">
+
+            <div class="govuk-header__logo">
+  <a href="#" class="govuk-header__link govuk-header__link--homepage">
+    <span class="govuk-header__logotype">
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-header__logotype-crown"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 132 97"
+        height="30"
+        width="36"
+        >
+        <path
+          fill="currentColor" fill-rule="evenodd"
+          d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"
+          ></path>
+        <image src="_static/assets/govuk/assets/images/govuk-logotype-crown.png" xlink:href="" class="govuk-header__logotype-crown-fallback-image" width="36" height="32"></image>
+      </svg>
+      
+      <span class="govuk-header__logotype-text">GDS</span>
+    </span>
+    <span class="govuk-header__product-name">govcookiecutter</span>
+  </a><strong class="govuk-tag">Alpha</strong></div>
+            <div class="govuk-header__content" role="navigation">
+  <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+  <nav>
+    <ul id="navigation" class="govuk-header__navigation govuk-header__navigation--end" aria-label="Top Level Navigation">
+      <li class="govuk-header__navigation-item">
+        <a class="govuk-header__link" href="https://www.github.com/ukgovdatascience/govcookiecutter">GitHub</a>
+        </li>
+    </ul>
+  </nav>
+</div>
+
+          </div>
+        </header>
+      </div>
+      <div id="toc-heading" class="toc-show fixedsticky">
+        <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+        Table of contents <span class="toc-show__icon"></span>
+        </a>
+      </div>
+      <div class="app-pane__body" data-module="in-page-navigation">
+
+        <div class="app-pane__toc" role="navigation">
+  <div class="toc" data-module="table-of-contents">
+    <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+
+    <div class="search" data-module="search">
+  <form action="search.html" method="get" role="search">
+    <label class="govuk-label search__label" for="search">Search</label>
+    <input class="govuk-input govuk-!-margin-bottom-4" id="search" name="q" type="text" aria-controls="search-results" placeholder="Search">
+  </form>
+</div>
+
+    <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+
+      
+      <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">govcookiecutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing_guide/README.html">Contributing guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structure/README.html"><code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code> structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/README.html"><code class="docutils literal notranslate"><span class="pre">hooks</span></code> API reference</a></li>
+</ul>
+
+      <hr size="1">
+
+      
+      <h1>On this page</h1>
+      <ul>
+<li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code></a><ul>
+<li><a class="reference internal" href="#getting-started">Getting started</a><ul>
+<li><a class="reference internal" href="#requirements-to-create-a-cookiecutter-template">Requirements to create a cookiecutter template</a><ul>
+<li><a class="reference internal" href="#installing-the-cookiecutter-package">Installing the <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#optional-changes-to-consider-post-project-creation">Optional changes to consider post-project creation</a></li>
+<li><a class="reference internal" href="#licence">Licence</a></li>
+<li><a class="reference internal" href="#contributing">Contributing</a></li>
+<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+</ul>
+
+
+    </nav>
+  </div>
+</div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings" role="main">
+
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="govcookiecutter">
+<h1><code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code><a class="headerlink" href="#govcookiecutter" title="Permalink to this headline">¶</a></h1>
+<p>A cookiecutter template for analytical, Python-, or Python and R-based projects within
+Her Majesty’s Government, and wider public sector.</p>
+<p>This template helps to set up standardised project structures, and <a class="reference internal" href="%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.html"><span class="doc std std-doc">includes security
+features using pre-commit hooks</span></a>.</p>
+<p>It also provides an Agile, centralised, and lightweight analytical quality assurance
+(AQA) process. Pull or merge request templates are used to nudge users to complete this
+process. <a class="reference external" href="https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government">This helps meet HM Government best practice on producing quality analysis, as
+defined in the Aqua Book</a>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=N7_d3k3uQ_M">For reasons why we developed <code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code>, and a live demonstration, see this
+presentation on version 0.5.3 from March 2021</a>.</p>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="govuk-notification-banner docutils container">
+<div class="govuk-notification-banner__header"><h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Functionality on Windows machines</h2></div><div class="govuk-notification-banner__content docutils container">
+<p><p>Windows users should <a class="reference external" href="https://github.com/ukgovdatascience/govcookiecutter/issues/20">read this GitHub issue around <code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code>
+functionality</a>.</p>
+</p>
+</div>
+</div>
+<p><a class="reference internal" href="#requirements-to-create-a-cookiecutter-template"><span class="std std-doc">First, make sure your system meets the
+requirements</span></a>. Next, open your
+terminal, navigate to the directory where you want your new repository to exist. Then
+run the following command for the latest stable release:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git
+</pre></div>
+</div>
+<p>or for a specific branch, tag, or commit SHA <code class="docutils literal notranslate"><span class="pre">SPECIFIC</span></code>, run:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git --checkout SPECIFIC
+</pre></div>
+</div>
+<p>Follow the prompts; if you are asked to re-download <code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code>, input <code class="docutils literal notranslate"><span class="pre">yes</span></code>.
+Default responses are shown in the squared brackets; to use them, leave your response
+blank, and press enter.</p>
+<p>Once you’ve answered all the prompts, your project will be created. Then:</p>
+<ol>
+<li><p>Set up a Python virtual environment — <a class="reference external" href="https://www.pluralsight.com/tech-blog/managing-python-environments/">there are many ways to set up a virtual
+environment</a>, so we’ll let you decide what’s best for you!</p></li>
+<li><p>In your terminal, navigate to your new project, and initialise Git</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git init
+</pre></div>
+</div>
+</li>
+<li><p>Install the necessary packages using <code class="docutils literal notranslate"><span class="pre">pip</span></code> and the pre-commit hooks:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
+pre-commit install
+</pre></div>
+</div>
+<p>or use the <code class="docutils literal notranslate"><span class="pre">make</span></code> command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make requirements
+</pre></div>
+</div>
+</li>
+<li><p>Stage all your project files, and make your first commit</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git add .
+git commit -m <span class="s2">&quot;Initial commit&quot;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Once you’ve completed these steps, <a class="reference internal" href="#optional-changes-to-consider-post-project-creation"><span class="std std-doc">consider making some optional changes before
+kicking off your project development</span></a>.</p>
+<section id="requirements-to-create-a-cookiecutter-template">
+<h3>Requirements to create a cookiecutter template<a class="headerlink" href="#requirements-to-create-a-cookiecutter-template" title="Permalink to this headline">¶</a></h3>
+<div class="govuk-notification-banner docutils container">
+<div class="govuk-notification-banner__header"><h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Requirements for contributors</h2></div><div class="govuk-notification-banner__content docutils container">
+<p><p><a class="reference internal" href="CONTRIBUTING.html"><span class="doc std std-doc">Contributors have some additional requirements</span></a>!</p>
+</p>
+</div>
+</div>
+<p>To get started your system should meet the following requirements:</p>
+<ol class="simple">
+<li><p>Python 3.6.1+ installed</p></li>
+<li><p>R 4.0.4+ installed (optional)<a class="footnote-reference brackets" href="#id2" id="id1">1</a></p></li>
+<li><p>The <a class="reference internal" href="#installing-the-cookiecutter-package"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> package installed</span></a></p></li>
+</ol>
+<section id="installing-the-cookiecutter-package">
+<h4>Installing the <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> package<a class="headerlink" href="#installing-the-cookiecutter-package" title="Permalink to this headline">¶</a></h4>
+<p>There are many ways to install the <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> package. Our recommendation is to
+install it at the system or user level, rather than as a Python package with <code class="docutils literal notranslate"><span class="pre">pip</span></code> or
+<code class="docutils literal notranslate"><span class="pre">conda</span></code>. This ensures it is isolated from the rest of your system, and always available.</p>
+<p>For macOS, open your terminal, and <a class="reference external" href="https://brew.sh/">install <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> with Homebrew</a>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew install cookiecutter
+</pre></div>
+</div>
+<p>For Debian/Ubuntu, use the following commands:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt-get install cookiecutter
+</pre></div>
+</div>
+<p>Otherwise, you can install <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> with <code class="docutils literal notranslate"><span class="pre">pip</span></code> — you may wish to create a virtual
+environment first:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python -m pip install --user cookiecutter
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="optional-changes-to-consider-post-project-creation">
+<h2>Optional changes to consider post-project creation<a class="headerlink" href="#optional-changes-to-consider-post-project-creation" title="Permalink to this headline">¶</a></h2>
+<p>Here are some suggested changes to make before your first commit:</p>
+<ul>
+<li><p>consider <a class="reference external" href="https://github.com/cruft/cruft">using the <code class="docutils literal notranslate"><span class="pre">cruft</span></code> package to integrate future <code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code>
+releases</a></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install cruft
+cruft link https://github.com/ukgovdatascience/govcookiecutter
+</pre></div>
+</div>
+</li>
+<li><p>make sure the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> reflects what you want to do with your project</p></li>
+<li><p>have a look inside the <code class="docutils literal notranslate"><span class="pre">docs/aqa</span></code> folder, as you may want to modify some of this
+analytical quality assurance documentation (AQA), for example the AQA plan</p></li>
+<li><p>(if present) confirm that the pull or merge request template checklists meet your
+requirements</p>
+<ul class="simple">
+<li><p>These can be found at <code class="docutils literal notranslate"><span class="pre">.github/pull_request_template.md</span></code> (GitHub), or in
+<code class="docutils literal notranslate"><span class="pre">.gitlab/merge_request_templates</span></code> folder (GitLab)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="licence">
+<h2>Licence<a class="headerlink" href="#licence" title="Permalink to this headline">¶</a></h2>
+<p>Unless stated otherwise, the codebase is released under the MIT License. This covers
+both the codebase and any sample code in the documentation. The documentation is ©
+Crown copyright and available under the terms of the Open Government 3.0 licence.</p>
+</section>
+<section id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="CONTRIBUTING.html"><span class="doc std std-doc">If you want to help us build, and improve <code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code>, view our contributing
+guidelines</span></a>.</p>
+</section>
+<section id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://drivendata.github.io/cookiecutter-data-science/">This template is based off the DrivenData Cookiecutter Data Science
+project</a>. Specifically, it uses similar <code class="docutils literal notranslate"><span class="pre">data</span></code> and <code class="docutils literal notranslate"><span class="pre">src</span></code> folder structures,
+and a modified version of the <code class="docutils literal notranslate"><span class="pre">help</span></code> commands in the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>s.</p>
+<div class="toctree-wrapper compound">
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Only for combined Python and R projects, if selected in the prompts during
+project creation.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+
+          </main>
+
+          <aside>
+  <ul class="contribution-banner">
+    
+    <li><a href="https://www.github.com/ukgovdatascience/govcookiecutter/blob/main/docs/index.md">View source</a></li>
+    <li><a href="https://www.github.com/ukgovdatascience/govcookiecutter/issues/new?labels=bug&amp;title=Re:%20'index.md'&amp;body=Problem%20with%20'index.md'%20(docs/)">Report problem</a></li>
+    <li><a href="https://www.github.com/ukgovdatascience/govcookiecutter">GitHub Repo</a></li>
+    
+  </ul>
+</aside>
+          <footer class="govuk-footer app-footer" role="contentinfo">
+<div class="govuk-footer__meta">
+  <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+    <ul class="govuk-footer__inline-list">
+      <li class="govuk-footer__inline-list-item">
+        <a class="govuk-footer__link" href="accessibility.html">Accessibility</a>
+      </li>
+      <li class="govuk-footer__inline-list-item">
+        Built with <a class="govuk-footer__link" href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.0 using the <a class="govuk-footer__link" href="https://www.github.com/ukgovdatascience/govuk-tech-docs-sphinx-theme">GOV.UK Tech Docs Sphinx Theme</a>.
+      </li>
+    </ul>
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      class="govuk-footer__licence-logo"
+      xmlns="http://www.w3.org/2000/svg"
+      viewbox="0 0 483.2 195.7"
+      height="17"
+      width="41"
+      >
+      <path
+        fill="currentColor"
+        d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+    </svg>
+    <span class="govuk-footer__licence-description">
+    All content is available under the
+    <a
+      class="govuk-footer__link"
+      href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+      rel="license"
+      >Open Government Licence v3.0</a>, except where otherwise stated
+    </span>
+  </div>
+  <div class="govuk-footer__meta-item">
+    <a
+      class="govuk-footer__link govuk-footer__copyright-logo"
+      href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+  </div>
+</div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
