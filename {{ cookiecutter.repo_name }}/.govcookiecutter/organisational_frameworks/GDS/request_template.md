@@ -7,12 +7,12 @@ Way](https://gds-way.cloudapps.digital/standards/pull-requests.html).
 # Checklists
 
 <!--
-These are DO-CONFIRM checklists; it CONFIRMs that you have DOne each item.
+These are do-confirm checklists; it confirms that you have DOne each item.
 
 Outstanding actions should be completed before reviewers are assigned; if actions are
 irrelevant, please try and add a comment stating why.
 
-Incomplete pull/merge requests MAY be blocked until actions are resolved, or closed at
+Incomplete pull/merge requests may be blocked until actions are resolved, or closed at
 the reviewers' discretion.
 -->
 
