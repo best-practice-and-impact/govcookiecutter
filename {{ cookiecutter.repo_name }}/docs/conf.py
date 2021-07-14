@@ -94,7 +94,7 @@ html_theme = "alabaster"
 # For a list of options available for each theme, see the documentation.
 {% if cookiecutter.use_govuk_tech_docs_sphinx_theme == "Yes" -%}
 html_theme_options = {
-    "organisation": "{{ cookiecutter.organisation_name }}",
+    "organisation": "{{ cookiecutter.organisation_name }}",  # noqa: E501
     "phase": "Discovery",
 }
 {% else -%}
