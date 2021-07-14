@@ -176,7 +176,8 @@ keys starting with <code class="docutils literal notranslate"><span class="pre">
 <p>One such extension is <code class="docutils literal notranslate"><span class="pre">jinja2_time.TimeExtension</span></code>, which is used to add the correct
 year in the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}/LICENSE</span></code> file.</p>
 <p>All other keys are used to inject the user responses throughout the template. This
-happens wherever you see <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.KEY</span> <span class="pre">}}</span></code>, where <code class="docutils literal notranslate"><span class="pre">KEY</span></code> is the key in question.</p>
+happens wherever you see <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.{KEY}</span> <span class="pre">}}</span></code>, where <code class="docutils literal notranslate"><span class="pre">{KEY}</span></code> is the key in
+question.</p>
 <p>The values in <code class="docutils literal notranslate"><span class="pre">cookiecutter.json</span></code> are the default responses, shown in squared brackets
 to the user. If the user does not enter a response, these default values are used.
 Values that are lists are shown as numerical options to the user, with the first list
@@ -216,14 +217,14 @@ generated and, if they fail, will rollback the entire project.</p>
     <span class="p">{</span>
       <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;A name&quot;</span><span class="p">,</span>
       <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;A description.&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;remove&quot;</span><span class="p">:</span> <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">cookiecutter</span><span class="o">.</span><span class="n">KEY</span> <span class="o">==</span> <span class="n">VALUE</span> <span class="o">%</span><span class="p">}</span><span class="n">true</span><span class="p">{</span><span class="o">%</span> <span class="k">else</span> <span class="o">%</span><span class="p">}</span><span class="n">false</span><span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">},</span>
+      <span class="s2">&quot;remove&quot;</span><span class="p">:</span> <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">cookiecutter</span><span class="o">.</span><span class="p">{</span><span class="n">KEY</span><span class="p">}</span> <span class="o">==</span> <span class="p">{</span><span class="n">VALUE</span><span class="p">}</span> <span class="o">%</span><span class="p">}</span><span class="n">true</span><span class="p">{</span><span class="o">%</span> <span class="k">else</span> <span class="o">%</span><span class="p">}</span><span class="n">false</span><span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">},</span>
       <span class="s2">&quot;resources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;list&quot;</span><span class="p">,</span> <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="s2">&quot;files&quot;</span><span class="p">,</span> <span class="s2">&quot;and/or&quot;</span><span class="p">,</span> <span class="s2">&quot;folders&quot;</span><span class="p">]</span>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">KEY</span></code> and <code class="docutils literal notranslate"><span class="pre">VALUE</span></code> are <code class="docutils literal notranslate"><span class="pre">cookiecutter.json</span></code> keys and values.</p>
+<p>where <code class="docutils literal notranslate"><span class="pre">{KEY}</span></code> and <code class="docutils literal notranslate"><span class="pre">{VALUE}</span></code> are <code class="docutils literal notranslate"><span class="pre">cookiecutter.json</span></code> keys and values.</p>
 <p>This works by using Jinja conditional templating to either set the <code class="docutils literal notranslate"><span class="pre">remove</span></code> value to
 true or false. The post-generation hook then scans through this JSON file deleting all
 files and folders listed in the <code class="docutils literal notranslate"><span class="pre">resources</span></code> value where <code class="docutils literal notranslate"><span class="pre">remove</span> <span class="pre">==</span> <span class="pre">true</span></code>.</p>
