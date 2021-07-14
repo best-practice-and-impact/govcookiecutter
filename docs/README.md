@@ -18,7 +18,7 @@ make docs
 or, alternatively, run:
 
 ```shell
-sphinx-build -b linkcheck ./docs ./docs/_build
+sphinx-build -b html ./docs ./docs/_build
 ```
 
 The HTML-version of this documentation can then be viewed at `docs/_build/index.html`,

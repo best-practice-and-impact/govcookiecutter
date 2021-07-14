@@ -36,7 +36,8 @@ One such extension is `jinja2_time.TimeExtension`, which is used to add the corr
 year in the `{{ cookiecutter.repo_name }}/LICENSE` file.
 
 All other keys are used to inject the user responses throughout the template. This
-happens wherever you see `{{ cookiecutter.KEY }}`, where `KEY` is the key in question.
+happens wherever you see `{{ cookiecutter.{KEY} }}`, where `{KEY}` is the key in
+question.
 
 The values in `cookiecutter.json` are the default responses, shown in squared brackets
 to the user. If the user does not enter a response, these default values are used.
@@ -82,14 +83,14 @@ Conditional files and folders are defined as `features` in the
     {
       "name": "A name",
       "description": "A description.",
-      "remove": {% if cookiecutter.KEY == VALUE %}true{% else %}false{% endif %},
+      "remove": {% if cookiecutter.{KEY} == {VALUE} %}true{% else %}false{% endif %},
       "resources": ["A", "list", "of", "files", "and/or", "folders"]
     }
   ]
 }
 ```
 
-where `KEY` and `VALUE` are `cookiecutter.json` keys and values.
+where `{KEY}` and `{VALUE}` are `cookiecutter.json` keys and values.
 
 This works by using Jinja conditional templating to either set the `remove` value to
 true or false. The post-generation hook then scans through this JSON file deleting all

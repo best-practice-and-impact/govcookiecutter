@@ -30,10 +30,10 @@ run the following command for the latest stable release:
 cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git
 ```
 
-or for a specific branch, tag, or commit SHA `SPECIFIC`, run:
+or for a specific branch, tag, or commit SHA `{SPECIFIC}`, run:
 
 ```shell
-cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git --checkout SPECIFIC
+cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git --checkout {SPECIFIC}
 ```
 
 Follow the prompts; if you are asked to re-download `govcookiecutter`, input `yes`.
