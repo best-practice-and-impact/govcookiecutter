@@ -1,6 +1,6 @@
 name: govcookiecutter build
 
-on: [ push ]
+on: [ push, pull_request ]
 
 jobs:
   build:
@@ -12,7 +12,8 @@ jobs:
         python: [ 3.6, 3.7, 3.8, 3.9 ]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout the revision
+        uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python }}
         uses: actions/setup-python@v2
         with:
