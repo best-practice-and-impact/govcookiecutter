@@ -27,13 +27,13 @@ terminal, navigate to the directory where you want your new repository to exist.
 run the following command for the latest stable release:
 
 ```shell
-cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git
+cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git
 ```
 
 or for a specific branch, tag, or commit SHA `{SPECIFIC}`, run:
 
 ```shell
-cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git --checkout {SPECIFIC}
+cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git --checkout {SPECIFIC}
 ```
 
 Follow the prompts; if you are asked to re-download `govcookiecutter`, input `yes`.
@@ -114,7 +114,7 @@ Here are some suggested changes to make before your first commit:
   releases][cruft]
   ```shell
   pip install cruft
-  cruft link https://github.com/ukgovdatascience/govcookiecutter
+  cruft link https://github.com/best-practice-and-impact/govcookiecutter
   ```
 - make sure the `README.md` reflects what you want to do with your project
 - have a look inside the `docs/aqa` folder, as you may want to modify some of this
@@ -148,6 +148,6 @@ and a modified version of the `help` commands in the `Makefile`s.
 [docs-pre-commit]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
 [drivendata]: http://drivendata.github.io/cookiecutter-data-science/
 [homebrew]: https://brew.sh/
-[issue-windows-os]: https://github.com/ukgovdatascience/govcookiecutter/issues/20
+[issue-windows-os]: https://github.com/best-practice-and-impact/govcookiecutter/issues/20
 [pluralsight]: https://www.pluralsight.com/tech-blog/managing-python-environments/
 [youtube]: https://www.youtube.com/watch?v=N7_d3k3uQ_M

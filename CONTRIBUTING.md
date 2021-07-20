@@ -46,8 +46,8 @@ Git best practice][gds-way-git]. This includes how to write good commit messages
 documentation][docs-updating-gitignore] for further details.
 
 Our source code is stored on GitHub at
-[https://github.com/ukgovdatascience/govcookiecutter][govcookiecutter]. Pull requests
-into `main` require at least one approved review.
+[https://github.com/best-practice-and-impact/govcookiecutter][govcookiecutter]. Pull
+requests into `main` require at least one approved review.
 
 ### Python
 
@@ -129,11 +129,11 @@ the `README.md` file in that folder.
 [docs-updating-gitignore]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
 [docs-write-accessible-documentation]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_accessible_documentation.md
 [docs-write-sphinx-documentation]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
-[email]: mailto:gds-data-science@digital.cabinet-office.gov.uk
+[email]: mailto:gsshelp@statistics.gov.uk
 [gds-way]: https://gds-way.cloudapps.digital/
 [gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide
-[govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter
+[govcookiecutter]: https://github.com/best-practice-and-impact/govcookiecutter
 [myst]: https://myst-parser.readthedocs.io/
 [pre-commit]: https://pre-commit.com/
 [pytest]: https://docs.pytest.org/
