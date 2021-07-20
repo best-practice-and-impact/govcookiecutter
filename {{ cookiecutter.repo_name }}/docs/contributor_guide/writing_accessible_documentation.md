@@ -36,9 +36,10 @@ rendered as a website using Sphinx.
   - [use accessible SVGs][govuk-design-system-images]
   - [check for inaccessible formats][govuk-accessible-formats]
 
-This checklist was created by the GDS technical writing team with help from the GDS
-accessibility team. We then [draft a suitable accessibility statement for the project;
-an example is available on GOV.UK][govuk-sample-accessibility].
+This checklist was created by the Government Digital Service (GDS) technical writing
+team with help from the GDS accessibility team. We then [draft a suitable accessibility
+statement for the project; an example is available on
+GOV.UK][govuk-sample-accessibility].
 
 [alex-js]: https://alexjs.com/
 [docs-write-sphinx-documentation]: ./writing_sphinx_documentation.md
