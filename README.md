@@ -11,8 +11,8 @@ It also provides an Agile, centralised, and lightweight analytical quality assur
 process. [This helps meet HM Government best practice on producing quality analysis, as
 defined in the Aqua Book][aqua-book].
 
-[For reasons why we developed `govcookiecutter`, and a live demonstration, see this
-presentation on version 0.5.3 from March 2021][youtube].
+[For reasons why we developed `govcookiecutter`, read the blog post][blog-post], and
+[watch the live demonstration from March 2021 on version 0.5.3][youtube].
 
 ## Getting started
 
@@ -142,6 +142,7 @@ project][drivendata]. Specifically, it uses similar `data` and `src` folder stru
 and a modified version of the `help` commands in the `Makefile`s.
 
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
+[blog-post]: https://dataingovernment.blog.gov.uk/2021/07/20/govcookiecutter-a-template-for-data-science-projects/
 [contributing]: ./CONTRIBUTING.md
 [cruft]: https://github.com/cruft/cruft
 [docs-pre-commit]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
