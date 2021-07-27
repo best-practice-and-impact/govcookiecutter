@@ -4,9 +4,9 @@ orphan: true
 # Accessibility statement
 
 This accessibility statement applies to content published on the
-[ukgovdatascience.github.io/govcookiecutter][github-pages] domain.
+[best-practice-and-impact.github.io/govcookiecutter][github-pages] domain.
 
-This website is run by the Government Digital Service. We want as many people as
+This website is run by the Office for National Statistics. We want as many people as
 possible to be able to use this website. For example, that means you should be able to:
 
 - change colours, contrast levels and fonts
@@ -34,7 +34,7 @@ We know some parts of this website are not fully accessible:
 If you need information on this website in a different format like accessible PDF,
 large print, easy read, audio recording or braille:
 
-- email [gds-data-science@digital.cabinet-office.gov.uk][email]
+- email [gsshelp@statistics.gov.uk][email]
 - raise an issue on the [`govcookiecutter` GitHub repository][github-issues]
 
 ## Reporting accessibility problems with this website
@@ -52,7 +52,7 @@ complaint, [contact the Equality Advisory and Support Service (EASS)][eass].
 
 ## Technical information about this website's accessibility
 
-The Government Digital Service is committed to making its website accessible, in
+The Office for National Statistics is committed to making its website accessible, in
 accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2)
 Accessibility Regulations 2018.
 
@@ -87,14 +87,14 @@ codebase develops.
 The [Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility
 Regulations 2018 legislation][accessibility-legislation] does not require us to fix
 external, third-party websites that are neither funded nor developed by, nor under the
-control of the Government Digital Service (GDS).
+control of the Office for National Statistics (ONS).
 
 ## How we tested this website
 
-The test was carried out by the data science team at GDS. We used the [WAVE Web
-Accessibility Evaluation Tool][wave] and a checklist created by the GDS technical
-writing team with help from the GDS accessibility team. We tested all pages on this
-site.
+The test was carried out by the data science team at the Government Digital Service
+(GDS). They used the [WAVE Web Accessibility Evaluation Tool][wave] and a checklist
+created by the GDS technical writing team with help from the GDS accessibility team.
+They tested all pages on this site.
 
 ## What we're doing to improve accessibility
 
@@ -102,14 +102,14 @@ We plan to fix the accessibility issues in the content by the end of December 20
 
 ## Preparation of this accessibility statement
 
-This statement was prepared on 30 June 2021. It was last reviewed on 8 July 2021.
+This statement was prepared on 30 June 2021. It was last reviewed on 20 July 2021.
 
 [abilitynet]: https://mcmw.abilitynet.org.uk/
 [accessibility-legislation]: https://www.legislation.gov.uk/uksi/2018/952/regulation/4/made
 [eass]: https://www.equalityadvisoryservice.com/
-[email]: mailto:gds-data-science@digital.cabinet-office.gov.uk
-[github-issues]: https://github.com/ukgovdatascience/govcookiecutter/issues/new
-[github-pages]: https://ukgovdatascience.github.io/govcookiecutter
+[email]: mailto:gsshelp@statistics.gov.uk
+[github-issues]: https://github.com/best-practice-and-impact/govcookiecutter/issues/new
+[github-pages]: https://best-practice-and-impact.github.io/govcookiecutter
 [sphinx-autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
 [sphinx-autosummary]: https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html
 [wave]: https://wave.webaim.org/

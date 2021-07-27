@@ -14,7 +14,7 @@ variables are based on answers to prompts when you run the `cookiecutter` comman
 When you open your terminal and run:
 
 ```shell
-cookiecutter https://github.com/ukgovdatascience/govcookiecutter.git
+cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git
 ```
 
 you'll see a list of prompts to answer; one of them is `repo_name`.
@@ -208,7 +208,7 @@ select a different version of `govcookiecutter` to use based on their individual
 
 [cookiecutter]: https://cookiecutter.readthedocs.io
 [docs-organisational-frameworks]: ../%7B%7B%20cookiecutter.repo_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.md
-[github-issues]: https://github.com/ukgovdatascience/govcookiecutter/issues
+[github-issues]: https://github.com/best-practice-and-impact/govcookiecutter/issues
 [html5-email-format]: https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address
 [jinja]: https://jinja.palletsprojects.com
 [semver]: https://semver.org/
