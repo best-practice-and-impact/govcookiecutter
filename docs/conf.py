@@ -50,7 +50,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "govcookiecutter"
-author = "Government Digital Service"
+author = "Office for National Statistics"
 
 # List of patterns, relative to source directory, that match files and directories to
 # ignore when looking for source files. These patterns also affect html_static_path and
@@ -65,7 +65,7 @@ html_theme = "govuk_tech_docs_sphinx_theme"
 
 # Variables to pass to each HTML page to help populate page-specific options
 html_context = {
-    "github_url": "https://www.github.com/ukgovdatascience/govcookiecutter",
+    "github_url": "https://www.github.com/best-practice-and-impact/govcookiecutter",
     "gitlab_url": None,
     "conf_py_path": "docs/",
     "version": "main",
@@ -74,7 +74,7 @@ html_context = {
 
 # Theme options are theme-specific and customize the look and feel of a theme further.
 # For a list of options available for each theme, see the documentation.
-html_theme_options = {"organisation": "GDS", "phase": "Alpha"}
+html_theme_options = {"organisation": "ONS", "phase": "Alpha"}
 
 # Add any paths that contain custom static files (such as style sheets) here, relative
 # to this directory. They are copied after the builtin static files, so a file named

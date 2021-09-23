@@ -1,8 +1,8 @@
 # Code of conduct for `govcookiecutter`
 
-Contributors to this repository hosted by `ukgovdatascience` are expected to follow the
-Contributor Covenant Code of Conduct. Contributors working within Her Majesty's
-Government are also expected to follow the Civil Service Code.
+Contributors to this repository hosted by `best-practice-and-impact` are expected to
+follow the Contributor Covenant Code of Conduct. Contributors working within Her
+Majesty's Government are also expected to follow the Civil Service Code.
 
 ## Civil Service Code
 
@@ -16,9 +16,9 @@ Code][civil-service-code], and are expected to follow it in their contributions.
 Where this Code of Conduct says:
 
 - "Project", we mean this `govcookiecutter` GitHub repository;
-- "Maintainer", we mean the `ukgovdatascience` organisation owners; and
-- "Leadership", we mean both `ukgovdatascience` organisation owners, line managers, and
-  other leadership within the Government Digital Service.
+- "Maintainer", we mean the `best-practice-and-impact` organisation owners; and
+- "Leadership", we mean both `best-practice-and-impact` organisation owners, line
+  managers, and other leadership within the Office for National Statistics.
 
 ### Our Pledge
 
@@ -73,7 +73,7 @@ further defined and clarified by project maintainers.
 
 Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported by
 contacting the project team at
-[gds-data-science@digital.cabinet-office.gov.uk][email-address]. All complaints will be
+[gsshelp@statistics.gov.uk][email-address]. All complaints will be
 reviewed and investigated and will result in a response that is deemed necessary and
 appropriate to the circumstances. The project team is obligated to maintain
 confidentiality with regard to the reporter of an incident. Further details of
@@ -95,4 +95,4 @@ and the `alphagov` Code of Conduct available at
 [civil-service-code]: https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code
 [contributor-covenant]: https://www.contributor-covenant.org
 [contributor-covenant-code-of-conduct]: https://www.contributor-covenant.org/version/1/4/code-of-conduct/
-[email-address]: mailto:gds-data-science@digital.cabinet-office.gov.uk
+[email-address]: mailto:gsshelp@statistics.gov.uk

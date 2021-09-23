@@ -65,6 +65,6 @@ contributing guidelines][contributing].
 project][govcookiecutter].
 
 [contributing]: ./docs/contributor_guide/CONTRIBUTING.md
-[govcookiecutter]: https://github.com/ukgovdatascience/govcookiecutter
+[govcookiecutter]: https://github.com/best-practice-and-impact/govcookiecutter
 [docs-loading-environment-variables]: ./docs/user_guide/loading_environment_variables.md
 [docs-loading-environment-variables-secrets]: ./docs/user_guide/loading_environment_variables.md#storing-secrets-and-credentials
