@@ -3,7 +3,7 @@
 [We use `python-dotenv` to load environment variables][python-dotenv], as these are only loaded when
 inside the project folder. This can prevent accidental conflicts with identically named
 variables. Alternativley you can use [`direnv` to load environment variables][direnv] if
-you meet [certain conditions](#Installing-`direnv`).
+you meet [certain conditions](#installing-direnv).
 
 ## Using `python-dotenv`
 
