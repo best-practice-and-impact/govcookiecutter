@@ -26,7 +26,7 @@ To be added.
 {% endif -%}
 - a `.secrets` file with the [required secrets and
   credentials](#required-secrets-and-credentials)
-- [load environment variables][docs-loading-environment-variables] from `.envrc`
+- [load environment variables][docs-loading-environment-variables] from `.env`
 
 To install the Python requirements, open your terminal and enter:
 
@@ -46,7 +46,7 @@ secrets/credentials should have the following environment variable name(s):
 | Credential 1      | `CREDENTIAL_VARIABLE_1`   | Plain English description of Credential 1. |
 
 Once you've added, [load these environment variables using
-`.envrc`][docs-loading-environment-variables].
+`.env`][docs-loading-environment-variables].
 
 ## Licence
 

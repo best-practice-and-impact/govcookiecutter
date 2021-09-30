@@ -18,28 +18,35 @@ structure is explained here:
 Each subsection here contains a brief description about the files at the top-level of
 this Git repository.
 
+### `.env`
+
+Environment variables go here, and can be read in by Python using the `python-dotenv` package, and `os.getenv`:
+
+```in script
+from dotenv import load_dotenv
+import os
+
+#Load the environment variables from the `.env` file, overriding any system
+#environment variables
+load_dotenv(override=True)
+
+# Example variable
+EXAMPLE_VARIABLE = os.getenv("EXAMPLE_VARIABLE")
+```
+
 ### `.envrc`
 
-A file containing environment variables for the Git repository that can be selectively
-loaded. [`.envrc` uses the `direnv` shell extension to load these environment
-variables][direnv].
+Orchestration file to load environment variables from the `.env` and `.secrets` files.
+Only used by systems with `direnv` (https://direnv.net/) installed. Environment
+variables can be read in by Python using `os.getenv` _without_ using `python-dotenv`:
 
-This file contains a `sed` command to output a `.env` file with all the environment
-variables. This may be useful for sourcing environment variables, for example in
-conjunction with PyCharm's EnvFile plugin.
+```in script
+import os
 
-To ensure this `sed` command works correctly, make sure any file paths listed in this
-file are absolute file paths (recommended). Relative file paths using other
-environment variables only work for Python users. Environment variable names can
-only contain letters, numbers or underscores as well. For example:
-
-```shell
-export DIR_DATA=$(pwd)/data                    # fine for Python and R users
-export DIR_DATA_EXTERNAL=$(pwd)/data/external  # fine for Python and R users
-export DIR_DATA_EXTERNAL=./data/external       # fine for Python and R users
-export DIR_DATA_EXTERNAL=$DIR_DATA/external    # fine for Python users only
-export DIR-DATA-EXTERNAL=$DIR_DATA/external    # will break the `sed` command!
+# Example variable
+EXAMPLE_VARIABLE = os.getenv("EXAMPLE_VARIABLE")
 ```
+
 
 ### `.flake8`
 
