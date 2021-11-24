@@ -18,7 +18,7 @@ def get_actual_env_variables(path_env: Path) -> Dict[str, Path]:
     """Get the environment variables and values for directories in the `.env` file of
      the `govcookiecutter` template.
 
-    Args:v
+    Args:
         path_env: A file path to the `.env` file of the `govcookiecutter` template.
 
     Returns:
