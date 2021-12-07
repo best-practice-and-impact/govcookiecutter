@@ -1,5 +1,6 @@
 cookiecutter
 coverage
+coverage[toml]
 detect-secrets==1.0.3
 govuk-tech-docs-sphinx-theme
 myst-parser
