@@ -69,7 +69,7 @@ kicking off your project development](#optional-changes-to-consider-post-project
 ### Requirements to create a cookiecutter template
 
 
-[Contributors have some additional requirements](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CONTRIBUTING.md/)!
+[```Contributors have some additional requirements```](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CONTRIBUTING.md/)!
 
 
 To get started your system should meet the following requirements:
