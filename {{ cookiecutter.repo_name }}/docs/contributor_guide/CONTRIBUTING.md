@@ -119,10 +119,10 @@ build the documentation into an accessible, searchable website.
 [docs-updating-gitignore]: ./updating_gitignore.md
 [docs-write-accessible-documentation]: ./writing_accessible_documentation.md
 [docs-write-sphinx-documentation]: ./writing_sphinx_documentation.md
-[email]: mailto:{{ cookiecutter.contact_email }}
 [gds-way]: https://gds-way.cloudapps.digital/
 [gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide
 [myst]: https://myst-parser.readthedocs.io/
-[pre-commit]: https://pre-commit.com/
+[pre-commit]: https://pre-commit.com
 [pytest]: https://docs.pytest.org/
+[email]: mailto:{{ cookiecutter.contact_email }}
