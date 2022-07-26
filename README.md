@@ -18,7 +18,7 @@ defined in the Aqua Book][aqua-book].
 
 ```{note} Functionality on Windows machines
 Windows users should [read this GitHub issue around `govcookiecutter`
-functionality][issue-windows-os].
+functionality](https://github.com/best-practice-and-impact/govcookiecutter/issues/20).
 ```
 
 [First, make sure your system meets the
@@ -69,7 +69,7 @@ kicking off your project development](#optional-changes-to-consider-post-project
 ### Requirements to create a cookiecutter template
 
 ```{note} Requirements for contributors
-[Contributors have some additional requirements][contributing]!
+[Contributors have some additional requirements](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CONTRIBUTING.md)!
 ```
 
 To get started your system should meet the following requirements:
