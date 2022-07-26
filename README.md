@@ -16,10 +16,9 @@ defined in the Aqua Book][aqua-book].
 
 ## Getting started
 
-```{note} Functionality on Windows machines
-[```Windows users should [read this GitHub issue around `govcookiecutter`
-functionality```](https://github.com/best-practice-and-impact/govcookiecutter/issues/20).
-```
+
+[```Windows users should [read this GitHub issue around `govcookiecutter` functionality```](https://github.com/best-practice-and-impact/govcookiecutter/issues/20).
+
 
 [First, make sure your system meets the
 requirements](#requirements-to-create-a-cookiecutter-template). Next, open your
