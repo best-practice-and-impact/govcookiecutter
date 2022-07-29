@@ -16,7 +16,7 @@ To be added.
 
 ### Requirements
 
-``` Requirements for contributors``` [```Contributors have some additional requirements!```][contributing]
+[```Contributors have some additional requirements!```][contributing]
 
 - Python 3.6.1+ installed
 {% if cookiecutter.using_R == "Yes" -%}

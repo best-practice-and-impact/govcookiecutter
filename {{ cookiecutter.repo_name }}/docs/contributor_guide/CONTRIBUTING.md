@@ -59,12 +59,8 @@ length of 88; the flake8 pre-commit hook should help with this!
 Local links can be written as normal, but external links should be referenced at the
 bottom of the Markdown file for clarity. For example:
 
-```md
 Use a [local link to reference the `README.md`](../../README.md) file, but [an external
-link for GOV.UK][gov-uk].
-
-[gov-uk]: https://www.gov.uk/
-```
+link for GOV.UK][https://www.gov.uk/].
 
 We also try to wrap Markdown to a line length of 88 characters, but this is not
 strictly enforced in all cases, for example with long hyperlinks.
@@ -125,4 +121,4 @@ build the documentation into an accessible, searchable website.
 [myst]: https://myst-parser.readthedocs.io/
 [pre-commit]: https://pre-commit.com
 [pytest]: https://docs.pytest.org/
-[email]: mailto:{{ cookiecutter.contact_email }}
+[email]: mailto:{{cookiecutter.contact_email}}
