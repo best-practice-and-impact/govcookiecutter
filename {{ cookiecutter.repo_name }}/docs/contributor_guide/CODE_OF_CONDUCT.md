@@ -95,4 +95,4 @@ and the `alphagov` Code of Conduct available at
 [civil-service-code]: https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code
 [contributor-covenant]: https://www.contributor-covenant.org
 [contributor-covenant-code-of-conduct]: https://www.contributor-covenant.org/version/1/4/code-of-conduct/
-[email-address]: mailto:{{ cookiecutter.contact_email }}
+[email-address]: mailto:{{cookiecutter.contact_email}}
