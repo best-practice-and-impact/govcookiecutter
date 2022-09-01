@@ -5,7 +5,8 @@ govuk-tech-docs-sphinx-theme
 myst-parser
 pre-commit
 pytest
-pytest-cookies
+#pytest-cookies
+git+https://github.com/Jacobb164/pytest-cookies
 pytest-mock
 pytest-xdist
 Sphinx
