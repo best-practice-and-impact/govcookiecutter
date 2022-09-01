@@ -147,4 +147,3 @@ def test_builds_correctly(
         )
         == 0
     )
-
