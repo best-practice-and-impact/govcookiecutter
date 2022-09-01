@@ -147,14 +147,4 @@ def test_builds_correctly(
         )
         == 0
     )
-#assert (
-#    main(
-#        [
-#            "-b",
-#            "linkcheck",
-#            str(test_output_project_docs_folder),
-#str(test_output_project_docs_folder.joinpath("_linkcheck")),
-#         ]
-#    )
-#    == 0
-#)
+
