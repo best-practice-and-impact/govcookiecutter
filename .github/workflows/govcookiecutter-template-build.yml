@@ -67,7 +67,6 @@ jobs:
             echo "$RUNNER_OS not supported"
             exit 1
           fi;
-          sphinx-build -b linkcheck ./docs ./docs/_linkcheck
         shell: bash
       - name: Run pre-commit hooks
         run: |
