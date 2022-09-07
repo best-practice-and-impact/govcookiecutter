@@ -76,7 +76,7 @@ jobs:
             echo "$RUNNER_OS not supported"
             exit 1
           fi;
-        shell: bas
+        shell: bash
       - name: Run pre-commit hooks
         run: |
           cd example
