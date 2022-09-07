@@ -12,11 +12,7 @@ Imports:
     git2r,
     lintr,
     styler,
-    usethis,
-    pkgdown,
-    devtools,
-    ragg, 
-    textshaping
+    usethis
 Encoding: UTF-8
 Language: en-GB
 LazyData: true

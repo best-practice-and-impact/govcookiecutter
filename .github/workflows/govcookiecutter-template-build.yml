@@ -33,7 +33,9 @@ jobs:
           r-version: ${{ matrix.R.version }}
         if: ${{ matrix.R.using_r == 'Yes' }}
       - name: Install other ${{ matrix.os }} R dependencies
-        run: sudo apt-get install libcurl4-openssl-dev
+        run: |
+          sudo apt-get install libcurl4-openssl-dev
+          sudo apt install libfontconfig1-dev
         if: ${{ matrix.os == 'ubuntu-latest' && matrix.R.using_R == 'Yes' }}
       - name: Install cookiecutter
         run: |
