@@ -35,7 +35,8 @@ jobs:
       - name: Install other ${{ matrix.os }} R dependencies
         run: |
           sudo apt-get install libcurl4-openssl-dev
-          sudo apt install libfontconfig1-dev
+          sudo apt install libharfbuzz-dev
+          sudo apt install libfribidi-dev
         if: ${{ matrix.os == 'ubuntu-latest' && matrix.R.using_R == 'Yes' }}
       - name: Install cookiecutter
         run: |
