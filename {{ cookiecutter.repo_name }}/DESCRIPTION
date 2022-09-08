@@ -1,17 +1,9 @@
-Package: usethis
-Title: Automate Package and Project Setup
-Version: 2.1.6.9000
+Package: {{ cookiecutter.repo_name }}
+Title: {{ cookiecutter.project_name }}
+Version: {{ cookiecutter.project_version }}
 Authors@R:
-    person(
-        given = "Hadley",
-        family = "Wickham",
-        role = "aut",
-        email = "hadley@rstudio.com",
-        comment = c(ORCID = "0000-0003-4757-117X"))
-Description: Automate package and project setup tasks that are
-    otherwise performed manually. This includes setting up unit testing,
-    test coverage, continuous integration, Git, 'GitHub', licenses,
-    'Rcpp', 'RStudio' projects, and more.
+    person("{{ cookiecutter.organisation_handle }}", , , "{{ cookiecutter.contact_email }}", role = c("aut", "cre"))
+Description: {{ cookiecutter.overview }}
 License: MIT + file LICENSE
 Imports:
     docopt,
