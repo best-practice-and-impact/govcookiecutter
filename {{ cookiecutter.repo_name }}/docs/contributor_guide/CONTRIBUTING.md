@@ -121,4 +121,4 @@ build the documentation into an accessible, searchable website.
 [myst]: https://myst-parser.readthedocs.io/
 [pre-commit]: https://pre-commit.com
 [pytest]: https://docs.pytest.org/
-[email]: mailto:{{cookiecutter.contact_email}}
+[email]: mailto:{{ cookiecutter.contact_email }}
