@@ -2,11 +2,12 @@ cookiecutter
 coverage
 coverage[toml]
 detect-secrets==1.0.3
+#pytest-cookies
+git+https://github.com/Jacobb164/pytest-cookies
 govuk-tech-docs-sphinx-theme
 myst-parser
 pre-commit
 pytest
-pytest-cookies
 pytest-mock
 pytest-xdist
 python-dotenv
