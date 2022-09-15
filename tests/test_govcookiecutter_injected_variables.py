@@ -141,14 +141,14 @@ args_injected_counts_correct = [
     (
         "organisation_handle",
         "handle_2",
-        {**ORGANISATION_HANDLE_COUNT, '"{{ cookiecutter.organisation_handle }}",': 0},
+        {**ORGANISATION_HANDLE_COUNT, '"{{ cookiecutter.organisation_handle }}",': 1},
         {"using_R": "Yes"},
     ),
     ("contact_email", "email@1", CONTACT_EMAIL_COUNT, {"using_R": "No"}),
     (
         "contact_email",
         "email@2",
-        {**CONTACT_EMAIL_COUNT, '"{{ cookiecutter.contact_email }}")': 0},
+        {**CONTACT_EMAIL_COUNT, '"{{ cookiecutter.contact_email }}")': 1},
         {"using_R": "Yes"},
     ),
     ("project_name", "Project_1", PROJECT_NAME_COUNT, {"using_R": "No"}),
