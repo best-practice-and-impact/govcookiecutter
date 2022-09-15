@@ -2,7 +2,9 @@ Package: {{ cookiecutter.repo_name }}
 Title: {{ cookiecutter.project_name }}
 Version: {{ cookiecutter.project_version }}
 Authors@R:
-    person("{{ cookiecutter.organisation_handle }}", , , "{{ cookiecutter.contact_email }}", role = c("aut", "cre"))
+    person(given = "{{ cookiecutter.organisation_handle }}",
+           role = c("aut", "cre"),
+           email = "{{ cookiecutter.contact_email }}")
 Description: {{ cookiecutter.overview }}
 License: MIT + file LICENSE
 Imports:
