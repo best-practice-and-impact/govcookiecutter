@@ -7,7 +7,6 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
       matrix:
         # TODO: Fix R pre-commit hook issues with Windows
         os: [ ubuntu-latest, macos-latest ]
