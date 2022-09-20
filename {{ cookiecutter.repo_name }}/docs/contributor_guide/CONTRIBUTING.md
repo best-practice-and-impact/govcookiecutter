@@ -60,7 +60,7 @@ Local links can be written as normal, but external links should be referenced at
 bottom of the Markdown file for clarity. For example:
 
 Use a [local link to reference the `README.md`](../../README.md) file, but [an external
-link for GOV.UK](https://www.gov.uk/).
+link for GOV.UK][gov-uk].
 
 We also try to wrap Markdown to a line length of 88 characters, but this is not
 strictly enforced in all cases, for example with long hyperlinks.
@@ -121,4 +121,5 @@ build the documentation into an accessible, searchable website.
 [myst]: https://myst-parser.readthedocs.io/
 [pre-commit]: https://pre-commit.com
 [pytest]: https://docs.pytest.org/
+[gov-uk]: https://www.gov.uk/
 [email]: mailto:{{ cookiecutter.contact_email }}
