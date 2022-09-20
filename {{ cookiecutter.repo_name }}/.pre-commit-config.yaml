@@ -28,7 +28,7 @@ repos:
         types: [ cython, pyi, python ]
         args: [ "--profile", "black", "--filter-files" ]
   - repo: https://github.com/psf/black
-    rev: 21.5b2 # Replace by any tag/version: https://github.com/psf/black/tags
+    rev: 22.8.0 # Replace by any tag/version: https://github.com/psf/black/tags
     hooks:
       - id: black
         name: black - consistent Python code formatting (auto-fixes)

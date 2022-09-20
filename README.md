@@ -16,10 +16,8 @@ defined in the Aqua Book][aqua-book].
 
 ## Getting started
 
-```{note} Functionality on Windows machines
-Windows users should [read this GitHub issue around `govcookiecutter`
-functionality][issue-windows-os].
-```
+[```Windows users should read this GitHub issue around govcookiecutter functionality```][issue20].
+
 
 [First, make sure your system meets the
 requirements](#requirements-to-create-a-cookiecutter-template). Next, open your
@@ -68,9 +66,9 @@ kicking off your project development](#optional-changes-to-consider-post-project
 
 ### Requirements to create a cookiecutter template
 
-```{note} Requirements for contributors
-[Contributors have some additional requirements][contributing]!
-```
+
+[```Contributors have some additional requirements!```](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CONTRIBUTING.md/)
+
 
 To get started your system should meet the following requirements:
 
@@ -133,7 +131,7 @@ Crown copyright and available under the terms of the Open Government 3.0 licence
 ## Contributing
 
 [If you want to help us build, and improve `govcookiecutter`, view our contributing
-guidelines][contributing].
+guidelines](./CONTRIBUTING).
 
 ## Acknowledgements
 
@@ -143,7 +141,6 @@ and a modified version of the `help` commands in the `Makefile`s.
 
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
 [blog-post]: https://dataingovernment.blog.gov.uk/2021/07/20/govcookiecutter-a-template-for-data-science-projects/
-[contributing]: ./CONTRIBUTING.md
 [cruft]: https://github.com/cruft/cruft
 [docs-pre-commit]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
 [drivendata]: http://drivendata.github.io/cookiecutter-data-science/
@@ -151,3 +148,4 @@ and a modified version of the `help` commands in the `Makefile`s.
 [issue-windows-os]: https://github.com/best-practice-and-impact/govcookiecutter/issues/20
 [pluralsight]: https://www.pluralsight.com/tech-blog/managing-python-environments/
 [youtube]: https://www.youtube.com/watch?v=N7_d3k3uQ_M
+[issue20]: https://github.com/best-practice-and-impact/govcookiecutter/issues/20
