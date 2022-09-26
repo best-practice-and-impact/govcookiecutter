@@ -2,7 +2,7 @@
 
 [We use `python-dotenv` to load environment variables][python-dotenv], as these are only loaded when
 inside the project folder. This can prevent accidental conflicts with identically named
-variables. Alternativley you can use [`direnv` to load environment variables][direnv] if
+variables. Alternatively you can use [`direnv` to load environment variables][direnv] if
 you meet [certain conditions](#installing-direnv).
 
 ## Using `python-dotenv`
@@ -69,17 +69,20 @@ environmental variables. For example, to add a JSON credentials file for Google
 BigQuery, save the following changes to `.secrets`.
 
 ```shell
-export GOOGLE_APPLICATION_CREDENTIALS="path/to/credentials.json"
+GOOGLE_APPLICATION_CREDENTIALS="path/to/credentials.json"
 ```
 
-Once complete, make sure the `.secrets` file has the following line uncommented out:
+Once complete, load the `.secrets` file using:
 
 ```shell
-source_env ".secrets"
-```
+from dotenv import load_dotenv
+import os
 
-This ensures [`direnv`][direnv] loads the `.secrets` file using `.envrc` without
-version-controlling `.secrets`.
+#Load secrets from the `.secrets` file, overriding any system environment variables
+load_dotenv(".secrets", override=True)
+#Example variable
+EXAMPLE_VARIABLE = os.getenv("EXAMPLE_VARIABLE")
+```
 
 [python-dotenv]: https://saurabh-kumar.com/python-dotenv/
 [direnv]: https://direnv.net/
