@@ -1,6 +1,5 @@
 cookiecutter
 coverage
-coverage[toml]
 detect-secrets==1.0.3
 #pytest-cookies
 git+https://github.com/Jacobb164/pytest-cookies
