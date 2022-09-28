@@ -1,7 +1,7 @@
 @echo off
 
 
-IF /I "%1"==".DEFAULT_GOAL " GOTO .DEFAULT_GOAL 
+IF /I "%1"==".DEFAULT_GOAL " GOTO .DEFAULT_GOAL
 IF /I "%1"=="requirements" GOTO requirements
 IF /I "%1"=="prepare_docs_folder" GOTO prepare_docs_folder
 IF /I "%1"=="docs" GOTO docs
@@ -12,7 +12,7 @@ IF /I "%1"=="coverage_xml" GOTO coverage_xml
 IF /I "%1"=="help" GOTO help
 GOTO error
 
-:.DEFAULT_GOAL 
+:.DEFAULT_GOAL
 	CALL make.bat =
 	CALL make.bat help
 	GOTO :EOF
