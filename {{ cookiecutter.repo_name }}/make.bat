@@ -6,9 +6,6 @@ IF /I "%1"=="requirements" GOTO requirements
 IF /I "%1"=="prepare_docs_folder" GOTO prepare_docs_folder
 IF /I "%1"=="docs" GOTO docs
 IF /I "%1"=="docs_check_external_links" GOTO docs_check_external_links
-IF /I "%1"=="prepare_example_folder" GOTO prepare_example_folder
-IF /I "%1"=="example" GOTO example
-IF /I "%1"=="example_with_options" GOTO example_with_options
 IF /I "%1"=="coverage" GOTO coverage
 IF /I "%1"=="coverage_html" GOTO coverage_html
 IF /I "%1"=="coverage_xml" GOTO coverage_xml
@@ -41,23 +38,6 @@ GOTO error
 	CALL make.bat prepare_docs_folder
 	CALL make.bat requirements
 	sphinx-build -b linkcheck ./docs ./docs/_build
-	GOTO :EOF
-
-:prepare_example_folder
-	if [ ! -d "./example" ]; then mkdir ./example; fi
-	find ./example -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
-	GOTO :EOF
-
-:example
-	CALL make.bat prepare_example_folder
-	CALL make.bat requirements
-	python -m cookiecutter . -o ./example --no-input
-	GOTO :EOF
-
-:example_with_options
-	CALL make.bat prepare_example_folder
-	CALL make.bat requirements
-	python -m cookiecutter . -o ./example
 	GOTO :EOF
 
 :coverage
