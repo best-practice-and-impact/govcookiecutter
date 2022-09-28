@@ -24,8 +24,8 @@ GOTO error
 	GOTO :EOF
 
 :prepare_docs_folder
-	if [ ! -d "./docs/_build" ]; then mkdir ./docs/_build; fi
-	find ./docs/_build -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
+	IF exist "./docs/_build" ( GOTO :EOF) else ( mkdir "./docs/_build") ;
+	find "./docs/_build" -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
 	GOTO :EOF
 
 :docs
