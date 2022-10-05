@@ -24,7 +24,7 @@ GOTO error
 	GOTO :EOF
 
 :prepare_docs_folder
-	IF exist "./docs/_build" ( rmdir /s /q "./docs/_build/" ) 
+	IF exist "./docs/_build" ( rmdir /s /q "./docs/_build/" )
 	:END
 	mkdir ".\docs\_build"
 	GOTO :EOF
