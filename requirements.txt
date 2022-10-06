@@ -4,7 +4,6 @@ detect-secrets==1.0.3
 #pytest-cookies
 git+https://github.com/Jacobb164/pytest-cookies
 govuk-tech-docs-sphinx-theme
-importlib-metadata<=4.12.0
 myst-parser
 pre-commit
 pytest
