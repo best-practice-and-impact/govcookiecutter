@@ -33,7 +33,7 @@ repos:
       - id: black
         name: black - consistent Python code formatting (auto-fixes)
         language_version: python # Should be a command that runs python3.6+
-  - repo: https://gitlab.com/pycqa/flake8
+  - repo: https://github.com/PyCQA/flake8
     rev: 3.9.2
     hooks:
       - id: flake8
