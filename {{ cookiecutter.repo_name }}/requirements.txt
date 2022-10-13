@@ -1,6 +1,5 @@
 coverage
 detect-secrets==1.0.3
-importlib-metadata<4.3;python_version=='3.7'
 myst-parser
 pre-commit
 pytest
