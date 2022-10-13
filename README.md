@@ -16,9 +16,6 @@ defined in the Aqua Book][aqua-book].
 
 ## Getting started
 
-[```Windows users should read this GitHub issue around govcookiecutter functionality```][issue20].
-
-
 [First, make sure your system meets the
 requirements](#requirements-to-create-a-cookiecutter-template). Next, open your
 terminal, navigate to the directory where you want your new repository to exist. Then
