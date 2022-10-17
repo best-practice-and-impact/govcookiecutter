@@ -1,8 +1,16 @@
 # Loading environment variables
 
-[We use `direnv` to load environment variables][direnv], as these are only loaded when
+[We use `python-dotenv` to load environment variables][python-dotenv], as these are only loaded when
 inside the project folder. This can prevent accidental conflicts with identically named
-variables.
+variables. Alternatively you can use [`direnv` to load environment variables][direnv] if
+you meet [certain conditions](#installing-direnv).
+
+## Using `python-dotenv`
+
+To load the environment variables, first make sure you have
+python-dotenv install, and [make sure you have a `.secrets` file to store
+secrets and credentials](#storing-secrets-and-credentials). Then to load in the
+environment variables into a python script see instructions in `.env` file.
 
 ## Using `direnv`
 
@@ -61,17 +69,22 @@ environmental variables. For example, to add a JSON credentials file for Google
 BigQuery, save the following changes to `.secrets`.
 
 ```shell
-export GOOGLE_APPLICATION_CREDENTIALS="path/to/credentials.json"
+GOOGLE_APPLICATION_CREDENTIALS="path/to/credentials.json"
 ```
 
-Once complete, make sure the `.secrets` file has the following line uncommented out:
+Once complete, load the `.secrets` file using:
 
 ```shell
-source_env ".secrets"
+from dotenv import load_dotenv
+import os
+
+#Load secrets from the `.secrets` file, overriding any system environment variables
+load_dotenv(".secrets", override=True)
+#Example variable
+EXAMPLE_VARIABLE = os.getenv("EXAMPLE_VARIABLE")
 ```
 
-This ensures [`direnv`][direnv] loads the `.secrets` file using `.envrc` without
-version-controlling `.secrets`.
-
+[python-dotenv]: https://saurabh-kumar.com/python-dotenv/
 [direnv]: https://direnv.net/
 [homebrew]: https://brew.sh/
+[env]: https://github.com/best-practice-and-impact/govcookiecutter/%7B%7B%20cookiecutter.repo_name%20%7D%7D/.env
