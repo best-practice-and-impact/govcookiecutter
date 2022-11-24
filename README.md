@@ -1,7 +1,7 @@
 # `govcookiecutter`
 
 A cookiecutter template for analytical, Python-, or Python and R-based projects within
-Her Majesty's Government, and wider public sector.
+His Majesty's Government, and wider public sector.
 
 This template helps to set up standardised project structures, and [includes security
 features using pre-commit hooks][docs-pre-commit].
