@@ -19,11 +19,11 @@ jobs:
 
     steps:
       - name: Checkout the revision
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: ga-govcookiecutter
       - name: Set up Python ${{ matrix.python }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python }}
       - name: Install R ${{ matrix.R.version }}
