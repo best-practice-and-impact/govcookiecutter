@@ -15,7 +15,7 @@ jobs:
       - name: Checkout the revision
         uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python }}
       - name: Install dependencies
