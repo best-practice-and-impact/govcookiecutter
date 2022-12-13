@@ -195,9 +195,9 @@ upon starting R using `.Rprofile`.
 {% endif -%}
 
 [black]: https://black.readthedocs.io/en/stable/
-[code-of-conduct]:../contributor_guide/CODE_OF_CONDUCT.md
+[code-of-conduct]:https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/CODE_OF_CONDUCT.md
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [direnv]: https://direnv.net/
-[docs-pre-commit-hooks]: ../contributor_guide/pre_commit_hooks.md
-[docs-updating-gitignore]: ../contributor_guide/updating_gitignore.md
+[docs-pre-commit-hooks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
+[docs-updating-gitignore]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
 [gds-way-flake8]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#common-configuration

@@ -25,5 +25,3 @@ DIR_DATA_RAW = os.getenv("DIR_DATA_RAW")
 DIR_DATA_INTERIM = os.getenv("DIR_DATA_INTERIM")
 DIR_DATA_PROCESSED = os.getenv("DIR_DATA_PROCESSED")
 ```
-
-[docs-envrc]: ../docs/structure/README.md#envrc

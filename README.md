@@ -71,7 +71,7 @@ To get started your system should meet the following requirements:
 
 1. Python 3.6.1+ installed
 2. R 4.0.4+ installed (optional)[^1]
-3. The [`cookiecutter` package installed](#installing-the-cookiecutter-package)
+3. The [`cookiecutter` package installed](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/README.md#installing-the-cookiecutter-package)
 
 [^1]: Only for combined Python and R projects, if selected in the prompts during
 project creation.
@@ -128,7 +128,7 @@ Crown copyright and available under the terms of the Open Government 3.0 licence
 ## Contributing
 
 [If you want to help us build, and improve `govcookiecutter`, view our contributing
-guidelines](./CONTRIBUTING).
+guidelines](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CONTRIBUTING.md).
 
 ## Acknowledgements
 
@@ -139,7 +139,7 @@ and a modified version of the `help` commands in the `Makefile`s.
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
 [blog-post]: https://dataingovernment.blog.gov.uk/2021/07/20/govcookiecutter-a-template-for-data-science-projects/
 [cruft]: https://github.com/cruft/cruft
-[docs-pre-commit]: ./%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
+[docs-pre-commit]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
 [drivendata]: http://drivendata.github.io/cookiecutter-data-science/
 [homebrew]: https://brew.sh/
 [issue-windows-os]: https://github.com/best-practice-and-impact/govcookiecutter/issues/20
