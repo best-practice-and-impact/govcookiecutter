@@ -29,14 +29,17 @@ PROJECT_NAME_COUNT = {
     "{{ cookiecutter.project_name }}": 2,
 }
 REPO_NAME_COUNT = {
-    '"{{ cookiecutter.repo_name }}",': 10,
-    "`{{ cookiecutter.repo_name }}`": 10,
-    "`{{ cookiecutter.repo_name }}`,": 10,
-    '"{{ cookiecutter.repo_name }}.tex",': 10,
-    '"{{ cookiecutter.repo_name }}doc"': 10,
-    "{{ cookiecutter.repo_name }}": 10,
+    '"{{ cookiecutter.repo_name }}",': 0,
+    "`{{ cookiecutter.repo_name }}`": 7,
+    "`{{ cookiecutter.repo_name }}`,": 1,
+    '"{{ cookiecutter.repo_name }}.tex",': 0,
+    '"{{ cookiecutter.repo_name }}doc"': 1,
+    "{{ cookiecutter.repo_name }}": 2,
 }
-OVERVIEW_COUNT = {'"{{ cookiecutter.overview }}",': 0, "{{ cookiecutter.overview }}": 1}
+OVERVIEW_COUNT = {
+    '"{{ cookiecutter.overview }}",': 0,
+    "{{ cookiecutter.overview }}": 10,
+}
 PROJECT_VERSION_COUNT = {
     '"{{ cookiecutter.project_version }}"': 2,
     "{{ cookiecutter.project_version }}": 0,
