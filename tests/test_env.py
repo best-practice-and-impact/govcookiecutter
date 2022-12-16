@@ -11,11 +11,7 @@ PATH_TEMPLATE_ENV = DIR_TEMPLATE.joinpath(".env")
 # directory, and a list of dictionary names to ignore in certain root-level directories
 EXCLUDE_DIR_NAMES = ["__pycache__"]
 EXCLUDE_ROOT_DIR_NAMES = [*EXCLUDE_DIR_NAMES, ".govcookiecutter"]
-EXCLUDE_SUB_DIR_IN_PARENTS_NAMES = [
-    *EXCLUDE_ROOT_DIR_NAMES,
-    "docs",
-    "{{ cookiecutter.repo_name }}",
-]
+EXCLUDE_SUB_DIR_IN_PARENTS_NAMES = [*EXCLUDE_ROOT_DIR_NAMES, "docs"]
 
 
 def get_actual_env_variables(path_env: Path) -> Dict[str, Path]:
