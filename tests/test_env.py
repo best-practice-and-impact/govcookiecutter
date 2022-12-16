@@ -84,9 +84,12 @@ def define_expected_env_variables(
                             f"DIR_SRC_{child.name.upper()}"
                         ] = child
 
-            env_expected_dir_variable[
-                f"DIR_{d.parent.name.upper()}_{d.name.upper()}"
-            ] = d
+            if d.parent.name == "{{ COOKIECUTTER.REPO_NAME }}":
+                env_expected_dir_variable[f"DIR_{d.name.upper()}"] = d
+            else:
+                env_expected_dir_variable[
+                    f"DIR_{d.parent.name.upper()}_{d.name.upper()}"
+                ] = d
     return env_expected_dir_variable
 
 
