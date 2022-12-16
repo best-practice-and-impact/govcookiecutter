@@ -77,12 +77,13 @@ def define_expected_env_variables(
             and d.name not in exclude_folders
             and d.parent.name not in exclude_sub_folders_in_parent_folders
         ):
-            if d.parent.name.upper() == "{{ COOKIECUTTER.REPO_NAME }}":
-                env_expected_dir_variable[f"DIR_{d.name.upper()}"] = d
-            else:
-                env_expected_dir_variable[
-                    f"DIR_{d.parent.name.upper()}_{d.name.upper()}"
-                ] = d
+            if d.name.upper() == "SRC":
+                for child in d.iterdir():
+                    env_expected_dir_variable[f"DIR_SRC_{child.name.upper()}"] = child
+
+            env_expected_dir_variable[
+                f"DIR_{d.parent.name.upper()}_{d.name.upper()}"
+            ] = d
     return env_expected_dir_variable
 
 
