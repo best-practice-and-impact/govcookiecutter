@@ -79,7 +79,10 @@ def define_expected_env_variables(
         ):
             if d.name.upper() == "SRC":
                 for child in d.iterdir():
-                    env_expected_dir_variable[f"DIR_SRC_{child.name.upper()}"] = child
+                    if child.is_dir():
+                        env_expected_dir_variable[
+                            f"DIR_SRC_{child.name.upper()}"
+                        ] = child
 
             env_expected_dir_variable[
                 f"DIR_{d.parent.name.upper()}_{d.name.upper()}"
