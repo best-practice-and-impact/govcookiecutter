@@ -15,13 +15,13 @@ EXCLUDE_SUB_DIR_IN_PARENTS_NAMES = [*EXCLUDE_ROOT_DIR_NAMES, "docs"]
 
 
 def remove_brackets_and_spaces(path_name: str) -> str:
-    """Removes spaces and brackets from a string
+    """Removes spaces and brackets from a string.
 
     Args:
-        path_name : A path name as a string
+        path_name : A path name as a string.
 
     Returns:
-        The path name with spaces and brackets removed
+        The path name with spaces and brackets removed.
     """
     if "{" in path_name or "}" in path_name or " " in path_name:
         path_name = path_name.replace("{", "")
@@ -29,6 +29,28 @@ def remove_brackets_and_spaces(path_name: str) -> str:
         path_name = path_name.replace(" ", "")
 
     return path_name
+
+
+def loop_directories_children(
+    dir: Path, env_expected_dir_variable: Dict[str, Path]
+) -> Dict[str, Path]:
+    """Loop through a directories children and add their paths to a dictionary.
+
+    Args:
+        dir: directory containing Children locations
+        env_expected_dir_variable : Dictionary where the keys are directory
+            variables and values are their paths.
+
+    Returns:
+        Dictionary of directory keys and their paths with the children of the
+        given directory added.
+    """
+    for child in dir.iterdir():
+        if child.is_dir():
+            dir_name = remove_brackets_and_spaces(dir.name.upper())
+            child_name = remove_brackets_and_spaces(child.name.upper())
+            env_expected_dir_variable[f"DIR_{dir_name}_{child_name}"] = child
+    return env_expected_dir_variable
 
 
 def get_actual_env_variables(path_env: Path) -> Dict[str, Path]:
@@ -95,11 +117,9 @@ def define_expected_env_variables(
             and d.parent.name not in exclude_sub_folders_in_parent_folders
         ):
             if d.name.upper() == "SRC":
-                for child in d.iterdir():
-                    if child.is_dir():
-                        env_expected_dir_variable[
-                            f"DIR_SRC_{remove_brackets_and_spaces(child.name.upper())}"
-                        ] = child
+                env_expected_dir_variable = loop_directories_children(
+                    d, env_expected_dir_variable
+                )
 
             parent = remove_brackets_and_spaces(d.parent.name.upper())
             name = remove_brackets_and_spaces(d.name.upper())
