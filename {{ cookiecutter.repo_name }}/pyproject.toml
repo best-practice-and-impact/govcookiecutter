@@ -1,7 +1,7 @@
 # `coverage` configurations
 [tool.coverage.run]
 source = [
-    "./src"
+    "./"
 ]
 
 [tool.coverage.report]
@@ -21,5 +21,5 @@ addopts = [
 ]
 doctest_optionflags = "NORMALIZE_WHITESPACE"
 testpaths = [
-    "./tests"
+    "./{{ cookiecutter.repo_name }}/tests"
 ]
