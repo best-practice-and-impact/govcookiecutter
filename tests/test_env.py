@@ -84,9 +84,18 @@ def define_expected_env_variables(
                             f"DIR_SRC_{child.name.upper()}"
                         ] = child
 
-            if "{" in d.parent.name.upper() or "{" in d.name.upper():
+            if (
+                "{" in d.parent.name.upper()
+                or "{" in d.name.upper()
+                or "}" in d.parent.name.upper()
+                or "}" in d.name.upper()
+            ):
                 parent = d.parent.name.upper().replace("{", "")
+                parent = parent.replace("}", "")
+                parent = parent.replace(" ", "")
                 name = d.name.upper().replace("{", "")
+                name = name.replace("}", "")
+                name = name.replace(" ", "")
                 env_expected_dir_variable[f"DIR_{parent}_{name}"] = d
             else:
                 env_expected_dir_variable[
