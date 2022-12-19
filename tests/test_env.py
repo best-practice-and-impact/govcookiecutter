@@ -14,6 +14,23 @@ EXCLUDE_ROOT_DIR_NAMES = [*EXCLUDE_DIR_NAMES, ".govcookiecutter"]
 EXCLUDE_SUB_DIR_IN_PARENTS_NAMES = [*EXCLUDE_ROOT_DIR_NAMES, "docs"]
 
 
+def remove_brackets_and_spaces(path_name: str) -> str:
+    """Removes spaces and brackets from a string
+
+    Args:
+        path_name : A path name as a string
+
+    Returns:
+        The path name with spaces and brackets removed
+    """
+    if "{" in path_name or "}" in path_name or " " in path_name:
+        path_name = path_name.replace("{", "")
+        path_name = path_name.replace("}", "")
+        path_name = path_name.replace(" ", "")
+
+        return path_name
+
+
 def get_actual_env_variables(path_env: Path) -> Dict[str, Path]:
     """Get the environment variables and values for directories in the `.env` file of
      the `govcookiecutter` template.
@@ -61,7 +78,7 @@ def define_expected_env_variables(
     # upper case in the format "DIR_<<<DIRECTORY_NAME>>>". Ignore any directories
     # with a name in `exclude_root_folders`
     env_expected_dir_variable = {
-        f"DIR_{d.name.upper()}": d
+        f"DIR_{remove_brackets_and_spaces(d.name.upper())}": d
         for d in folder.glob("*")
         if d.is_dir() and d.name not in exclude_root_folders
     }
@@ -81,26 +98,12 @@ def define_expected_env_variables(
                 for child in d.iterdir():
                     if child.is_dir():
                         env_expected_dir_variable[
-                            f"DIR_SRC_{child.name.upper()}"
+                            f"DIR_SRC_{remove_brackets_and_spaces(child.name.upper())}"
                         ] = child
 
-            if (
-                "{" in d.parent.name.upper()
-                or "{" in d.name.upper()
-                or "}" in d.parent.name.upper()
-                or "}" in d.name.upper()
-            ):
-                parent = d.parent.name.upper().replace("{", "")
-                parent = parent.replace("}", "")
-                parent = parent.replace(" ", "")
-                name = d.name.upper().replace("{", "")
-                name = name.replace("}", "")
-                name = name.replace(" ", "")
-                env_expected_dir_variable[f"DIR_{parent}_{name}"] = d
-            else:
-                env_expected_dir_variable[
-                    f"DIR_{d.parent.name.upper()}_{d.name.upper()}"
-                ] = d
+            parent = remove_brackets_and_spaces(d.parent.name.upper())
+            name = remove_brackets_and_spaces(d.name.upper())
+            env_expected_dir_variable[f"DIR_{parent}_{name}"] = d
     return env_expected_dir_variable
 
 
