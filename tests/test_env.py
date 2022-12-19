@@ -28,7 +28,7 @@ def remove_brackets_and_spaces(path_name: str) -> str:
         path_name = path_name.replace("}", "")
         path_name = path_name.replace(" ", "")
 
-        return path_name
+    return path_name
 
 
 def get_actual_env_variables(path_env: Path) -> Dict[str, Path]:
