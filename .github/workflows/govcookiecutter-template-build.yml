@@ -14,8 +14,6 @@ jobs:
         R:
           - {using_R: No, version: N/A}
           - {using_R: Yes, version: 4.0.4}
-          - {using_R: Yes, version: 4.0.5}
-          - {using_R: Yes, version: 4.1.0}
 
     steps:
       - name: Checkout the revision
@@ -69,8 +67,6 @@ jobs:
           elif [ "$RUNNER_OS" == "Windows" ]; then
             pip install -U pip setuptools
             pip install -r requirements.txt
-            install.packages("devtools")
-            install.packages("usethis")
             pre-commit install
             sphinx-build -b html ./docs ./docs/_build
           else
