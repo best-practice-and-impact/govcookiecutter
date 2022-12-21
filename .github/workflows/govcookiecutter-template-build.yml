@@ -69,6 +69,8 @@ jobs:
           elif [ "$RUNNER_OS" == "Windows" ]; then
             pip install -U pip setuptools
             pip install -r requirements.txt
+            install.packages("devtools")
+            install.packages("usethis")
             pre-commit install
             sphinx-build -b html ./docs ./docs/_build
           else
