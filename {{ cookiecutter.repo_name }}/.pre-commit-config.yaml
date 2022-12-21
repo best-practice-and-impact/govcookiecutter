@@ -67,8 +67,8 @@ repos:
     hooks:
       - id: roxygenize
         name: Run roxygen2::roxygenize()
-      - id: style-files
-        name: Style files using styler
+      # - id: style-files
+      #   name: Style files using styler
       # codemeta must be above use-tidy-description when both are used
       # -   id: codemeta-description-updated
       - id: use-tidy-description
