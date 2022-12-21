@@ -65,11 +65,11 @@ repos:
   - repo: https://github.com/lorenzwalthert/precommit
     rev: v0.1.3
     hooks:
+      - id: roxygenize
+        name: Run roxygen2::roxygenize()
       - id: style-files
         name: Style files using styler
         args: [ --style_pkg=styler, --style_fun=tidyverse_style ]
-      - id: roxygenize
-        name: Run roxygen2::roxygenize()
       # codemeta must be above use-tidy-description when both are used
       # -   id: codemeta-description-updated
       - id: use-tidy-description
