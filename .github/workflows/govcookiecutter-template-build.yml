@@ -62,7 +62,7 @@ jobs:
           cd example
           git init
           git add .
-          if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
+          if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" || "$RUNNER_OS" == "Windows" ]]; then
             make docs
           elif [ "$RUNNER_OS" == "Windows" ]; then
             pip install -U pip setuptools
