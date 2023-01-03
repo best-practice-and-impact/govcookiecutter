@@ -1,4 +1,4 @@
-# Model generation
+<!-- # Model generation
 
 These `src` package functions create models.
 
@@ -12,4 +12,4 @@ These `src` package functions create models.
 .. autosummary::
     :toctree: api/
 
-```
+``` -->
