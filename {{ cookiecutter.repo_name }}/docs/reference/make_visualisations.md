@@ -1,4 +1,4 @@
-<!-- # Create visualisations
+# Create visualisations
 
 These `src` package functions create visualisations.
 
@@ -12,4 +12,4 @@ These `src` package functions create visualisations.
 .. autosummary::
     :toctree: api/
 
-``` -->
+```

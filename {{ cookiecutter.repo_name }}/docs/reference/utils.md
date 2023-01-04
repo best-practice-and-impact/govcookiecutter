@@ -1,4 +1,4 @@
-<!-- # Create utility functions
+# Create utility functions
 
 These `src` package functions create utility functions.
 
@@ -12,4 +12,4 @@ These `src` package functions create utility functions.
 .. autosummary::
     :toctree: api/
 
-``` -->
+```

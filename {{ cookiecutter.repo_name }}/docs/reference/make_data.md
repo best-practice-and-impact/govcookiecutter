@@ -1,4 +1,4 @@
-<!-- # Data generation
+# Data generation
 
 These `src` package functions generate data.
 
@@ -12,4 +12,4 @@ These `src` package functions generate data.
 .. autosummary::
     :toctree: api/
 
-``` -->
+```

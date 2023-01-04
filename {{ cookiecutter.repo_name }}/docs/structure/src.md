@@ -1,2 +1,2 @@
-```{include} ../../../src/README.md
+```{include} ../../src/README.md
 ```

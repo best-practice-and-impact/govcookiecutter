@@ -1,4 +1,4 @@
-<!-- # Feature generation
+# Feature generation
 
 These `src` package functions create features.
 
@@ -12,4 +12,4 @@ These `src` package functions create features.
 .. autosummary::
     :toctree: api/
 
-``` -->
+```
