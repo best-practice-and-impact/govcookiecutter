@@ -45,7 +45,7 @@ This should create an HTML version of your documentation accessible from
 recommend reading that for guidance. We will cover automatically creating docstrings in
 the next subsection.
 
-<!-- ### Automatically creating docstring documentation (ReST)
+### Automatically creating docstring documentation (ReST)
 
 Let us say that `src/__init__.py` has functions called `hello` and `world` imported
 into it, and both have docstrings. To automatically generate docstring documentation,
@@ -104,7 +104,7 @@ docstrings as ReST stub files][sphinx-autosummary].
     world
 
 ```
-```` -->
+````
 
 ### Including Markdown files outside the `docs` folder
 
