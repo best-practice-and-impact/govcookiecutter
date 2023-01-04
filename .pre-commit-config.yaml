@@ -41,3 +41,4 @@ repos:
     hooks:
       - id: mypy
         name: mypy - Check type-setting
+        args: [--config-file pyproject.toml]
