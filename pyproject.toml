@@ -16,9 +16,7 @@ profile = "black"
 
 # `mypy` configurations
 [tool.mypy]
-exclude = [
-    '^conftest\.py$',
-]
+exclude = "(conftest.py)"
 
 # `pytest` configurations
 [tool.pytest.ini_options]
