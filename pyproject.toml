@@ -15,10 +15,10 @@ exclude_lines = [
 profile = "black"
 
 # `mypy` configurations
-[mypy]
-exclude = (?x)(
-    ^conftest\.py$
-  )
+[tool.mypy]
+exclude = [
+    "^conftest\\.py$",
+]
 
 # `pytest` configurations
 [tool.pytest.ini_options]
