@@ -10,4 +10,5 @@ classes and functions exposed in `src.*` namespace are public.
 ./make_models.md
 ./make_visualisations.md
 ./utils.md
+./src.md
 ```

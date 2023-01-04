@@ -9,7 +9,7 @@ structure is explained here:
 ./docs.md
 ./notebooks.md
 ./outputs.md
-./{{ cookiecutter.repo_name }}.md
+./src.md
 ./tests.md
 ```
 
