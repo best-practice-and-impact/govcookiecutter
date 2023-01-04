@@ -17,7 +17,7 @@ profile = "black"
 # `mypy` configurations
 [tool.mypy]
 exclude = [
-    "^conftest\\.py$",
+    '^conftest\.py$',
 ]
 
 # `pytest` configurations
