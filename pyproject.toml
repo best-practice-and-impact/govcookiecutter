@@ -18,8 +18,7 @@ profile = "black"
 [tool.mypy]
 warn_unused_configs = true
 exclude = [
-    '^conftest\.py$',
-    '^tests\test_post_gen_project\conftest\.py$',
+    '.*(conf)\.py',
 ]
 
 # `pytest` configurations

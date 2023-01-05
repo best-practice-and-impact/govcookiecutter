@@ -42,4 +42,3 @@ repos:
       - id: mypy
         name: mypy - Check type-setting
         exclude: '.*(conftest)\.py'
-        exclude: '.*(conf.py)\.py'
