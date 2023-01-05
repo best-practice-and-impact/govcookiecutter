@@ -101,21 +101,6 @@ environment first:
 python -m pip install --user cookiecutter
 ```
 
-## Installing your package
-
-Whilst in the root folder, in the command prompt, you can install your package using:
-
-```shell
-pip install -e .
-```
-
-This installs an editable version of your package. Meaning, when you update your
-package code, you do not have to reinstall it for the changes to take effect.
-(This saves a lot of time when you test your code)
-
-Remember to update the setup and requirement files inline with any changes to your
-package. The inital files contain the bare minimum to get you started.
-
 ## Optional changes to consider post-project creation
 
 Here are some suggested changes to make before your first commit:
