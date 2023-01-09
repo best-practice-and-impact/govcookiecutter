@@ -30,11 +30,11 @@ PROJECT_NAME_COUNT = {
 }
 REPO_NAME_COUNT = {
     '"{{ cookiecutter.repo_name }}",': 0,
-    "`{{ cookiecutter.repo_name }}`": 7,
+    "`{{ cookiecutter.repo_name }}`": 15,
     "`{{ cookiecutter.repo_name }}`,": 1,
     '"{{ cookiecutter.repo_name }}.tex",': 0,
     '"{{ cookiecutter.repo_name }}doc"': 1,
-    "{{ cookiecutter.repo_name }}": 2,
+    "{{ cookiecutter.repo_name }}": 10,
 }
 OVERVIEW_COUNT = {
     '"{{ cookiecutter.overview }}",': 0,
@@ -165,7 +165,7 @@ args_injected_counts_correct = [
     (
         "repo_name",
         "repo_2",
-        {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 3},
+        {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 11},
         {"using_R": "Yes"},
     ),
     ("overview", "overview_1", OVERVIEW_COUNT, {"using_R": "No"}),

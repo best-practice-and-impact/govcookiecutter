@@ -1,9 +1,9 @@
 # Feature generation
 
-These `src` package functions create features.
+These `{{ cookiecutter.repo_name }}` package functions create features.
 
 ```{eval-rst}
-.. currentmodule:: src
+.. currentmodule:: {{ cookiecutter.repo_name }}
 ```
 
 ## Function heading

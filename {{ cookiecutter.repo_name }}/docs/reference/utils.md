@@ -1,9 +1,9 @@
 # Create utility functions
 
-These `src` package functions create utility functions.
+These `{{ cookiecutter.repo_name }}` package functions create utility functions.
 
 ```{eval-rst}
-.. currentmodule:: src
+.. currentmodule:: {{ cookiecutter.repo_name }}
 ```
 
 ## Function heading
