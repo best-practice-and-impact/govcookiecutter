@@ -21,7 +21,7 @@ repos:
       - id: trailing-whitespace
         name: Check for trailing whitespaces (auto-fixes)
   - repo: https://github.com/pycqa/isort
-    rev: 5.8.0
+    rev: 5.12.0
     hooks:
       - id: isort
         name: isort - Sort Python imports (auto-fixes)
