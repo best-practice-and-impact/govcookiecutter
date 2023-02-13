@@ -14,7 +14,6 @@ jobs:
         R:
           - {using_R: No, version: N/A}
           - {using_R: Yes, version: 4.0.4}
-          - {using_R: Yes, version: 4.0.5}
           - {using_R: Yes, version: 4.1.0}
 
     steps:
