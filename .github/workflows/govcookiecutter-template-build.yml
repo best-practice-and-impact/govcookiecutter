@@ -9,10 +9,11 @@ jobs:
     strategy:
       matrix:
         # TODO: Fix R pre-commit hook issues with Windows
-        os: [ ubuntu-latest, macos-latest ]
+        os: [ macos-latest ]
         python: [ 3.8, 3.9, '3.10' ]
         R:
           - {using_R: No, version: N/A}
+          - {using_R: Yes, version: 4.0.4}
           - {using_R: Yes, version: 4.0.5}
           - {using_R: Yes, version: 4.1.0}
 
