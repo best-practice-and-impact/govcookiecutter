@@ -30,7 +30,9 @@ jobs:
         if: ${{ matrix.R.using_r == 'Yes' }}
       - name: Install other ${{ matrix.os }} R dependencies
         run: |
+          sudo apt-get update
           sudo apt-get install libcurl4-openssl-dev
+          sudo apt-get install libssl-dev
           sudo apt-get install libharfbuzz-dev
           sudo apt-get install libfribidi-dev
         if: ${{ matrix.os == 'ubuntu-latest' && matrix.R.using_R == 'Yes' }}
