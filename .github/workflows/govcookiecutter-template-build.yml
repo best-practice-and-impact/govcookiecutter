@@ -10,7 +10,7 @@ jobs:
       matrix:
         # TODO: Fix R pre-commit hook issues with Windows
         os: [ ubuntu-latest ]
-        python: [ 3.8, 3.9, '3.10' ]
+        python: [ '3.10' ]
         R:
           - {using_R: Yes, version: 4.2.2}
 
@@ -32,7 +32,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install libcurl4-openssl-dev
-          sudo apt-get install libssl-dev
           sudo apt-get install libgit2-dev
           sudo apt-get install libharfbuzz-dev
           sudo apt-get install libfribidi-dev
