@@ -76,6 +76,7 @@ repos:
         name: Run sethis::use_tidy_description()
       - id: lintr
         name: Run lintr::lint()
+        exclude: renv/activate.R
       - id: readme-rmd-rendered
         name: Check README.Rmd has been rendered to README.md
       - id: parsable-R
