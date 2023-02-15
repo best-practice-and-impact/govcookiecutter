@@ -1,9 +1,9 @@
 # Package functions
 
-These are miscellaneous functions in the `src` package.
+These are miscellaneous functions in the `{{ cookiecutter.repo_name }}` package.
 
 ```{eval-rst}
-.. currentmodule:: src
+.. currentmodule:: {{ cookiecutter.repo_name }}
 ```
 
 ## Function heading

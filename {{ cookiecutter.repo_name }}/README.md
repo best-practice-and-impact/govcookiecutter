@@ -32,6 +32,21 @@ To install the Python requirements, open your terminal and enter:
 pip install -r requirements.txt
 ```
 
+## Installing your package (Python Only)
+
+Whilst in the root folder, in the command prompt, you can install your package using:
+
+```shell
+pip install -e .
+```
+
+This installs an editable version of your package. Meaning, when you update your
+package code, you do not have to reinstall it for the changes to take effect.
+(This saves a lot of time when you test your code)
+
+Remember to update the setup and requirement files inline with any changes to your
+package. The inital files contain the bare minimum to get you started.
+
 ## Required secrets and credentials
 
 To run this project, [you need a `.secrets` file with secrets/credentials as

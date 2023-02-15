@@ -1,9 +1,9 @@
 # Create visualisations
 
-These `src` package functions create visualisations.
+These `{{ cookiecutter.repo_name }}` package functions create visualisations.
 
 ```{eval-rst}
-.. currentmodule:: src
+.. currentmodule:: {{ cookiecutter.repo_name }}
 ```
 
 ## Function heading

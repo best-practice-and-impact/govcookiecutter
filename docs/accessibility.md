@@ -104,7 +104,7 @@ We plan to fix the accessibility issues in the content by the end of December 20
 
 This statement was prepared on 30 June 2021. It was last reviewed on 20 July 2021.
 
-[abilitynet]: https://mcmw.abilitynet.org.uk/
+[abilitynet]: https://abilitynet.org.uk/
 [accessibility-legislation]: https://www.legislation.gov.uk/uksi/2018/952/regulation/4/made
 [eass]: https://www.equalityadvisoryservice.com/
 [email]: mailto:gsshelp@statistics.gov.uk
