@@ -4,7 +4,8 @@ A cookiecutter template for analytical, Python-, or Python and R-based projects 
 His Majesty's Government, and wider public sector.
 
 This template helps to set up standardised project structures, and [includes security
-features using pre-commit hooks][docs-pre-commit].
+features using pre-commit hooks][docs-pre-commit]. This cookiecutter template also acts
+as an installable template (python projects only).
 
 It also provides an Agile, centralised, and lightweight analytical quality assurance
 (AQA) process. Pull or merge request templates are used to nudge users to complete this

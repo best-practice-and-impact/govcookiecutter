@@ -32,7 +32,7 @@ To install the Python requirements, open your terminal and enter:
 pip install -r requirements.txt
 ```
 
-## Installing your package
+## Installing your package (Python Only)
 
 Whilst in the root folder, in the command prompt, you can install your package using:
 
