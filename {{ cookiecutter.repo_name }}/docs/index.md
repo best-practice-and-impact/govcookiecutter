@@ -9,6 +9,4 @@ self
 ./user_guide/README.md
 ./contributor_guide/README.md
 ./aqa/README.md
-./structure/README.md
-./reference/README.md
 ```
