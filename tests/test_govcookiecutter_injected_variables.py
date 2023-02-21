@@ -30,11 +30,11 @@ PROJECT_NAME_COUNT = {
 }
 REPO_NAME_COUNT = {
     '"{{ cookiecutter.repo_name }}",': 0,
-    "`{{ cookiecutter.repo_name }}`": 14,
+    "`{{ cookiecutter.repo_name }}`": 8,
     "`{{ cookiecutter.repo_name }}`,": 1,
     '"{{ cookiecutter.repo_name }}.tex",': 0,
     '"{{ cookiecutter.repo_name }}doc"': 1,
-    "{{ cookiecutter.repo_name }}": 10,
+    "{{ cookiecutter.repo_name }}": 4,
 }
 OVERVIEW_COUNT = {
     '"{{ cookiecutter.overview }}",': 0,
