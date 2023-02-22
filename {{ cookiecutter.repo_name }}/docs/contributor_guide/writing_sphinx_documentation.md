@@ -58,8 +58,7 @@ create a ReST file, and add the following line to reference the `{{ cookiecutter
 Then, elsewhere in the body, [call the `autosummary` directive to generate the
 docstrings as ReST stub files][sphinx-autosummary].
 
-````shell
-```rest
+```shell
 .. autosummary::
     :toctree: api/
 
@@ -67,7 +66,6 @@ docstrings as ReST stub files][sphinx-autosummary].
     world
 
 ```
-````
 
 [This will create something similar to the `pandas` API
 reference][pandas-api-reference].
@@ -97,8 +95,7 @@ create a Markdown file, and add the following line to reference the `{{ cookiecu
 Then, elsewhere in the body, [call the `autosummary` directive to generate the
 docstrings as ReST stub files][sphinx-autosummary].
 
-`````shell
-````md
+````shell
 ```{eval-rst}
 .. autosummary::
     :toctree: api/
@@ -108,7 +105,6 @@ docstrings as ReST stub files][sphinx-autosummary].
 
 ```
 ````
-`````
 
 ### Including Markdown files outside the `docs` folder
 
