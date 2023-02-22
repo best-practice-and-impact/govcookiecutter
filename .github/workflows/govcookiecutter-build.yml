@@ -46,7 +46,7 @@ jobs:
           if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
             make coverage_xml
           elif [ "$RUNNER_OS" == "Windows" ]; then
-            coverage run -m pytest --ignore='./{{ cookiecutter.repo_name }}/tests/test_example_module/'
+            coverage run -m pytest --ignore='./{{ cookiecutter.repo_name }}/tests/test_example_module'
             coverage xml
           else
             echo "$RUNNER_OS not supported"
