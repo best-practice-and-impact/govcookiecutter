@@ -51,7 +51,9 @@ Let us say that `{{ cookiecutter.repo_name }}/__init__.py` has functions called 
 into it, and both have docstrings. To automatically generate docstring documentation,
 create a ReST file, and add the following line to reference the `{{ cookiecutter.repo_name }}` module:
 
-
+```rest
+.. currentmodule:: {{ cookiecutter.repo_name }}
+```
 
 Then, elsewhere in the body, [call the `autosummary` directive to generate the
 docstrings as ReST stub files][sphinx-autosummary].
@@ -86,16 +88,7 @@ create a Markdown file, and add the following line to reference the `{{ cookiecu
 Then, elsewhere in the body, [call the `autosummary` directive to generate the
 docstrings as ReST stub files][sphinx-autosummary].
 
-````md
-```{eval-rst}
-.. autosummary::
-    :toctree: api/
 
-    hello
-    world
-
-```
-````
 
 ### Including Markdown files outside the `docs` folder
 
