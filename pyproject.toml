@@ -5,7 +5,7 @@ source = [
     "./{{ cookiecutter.repo_name }}/src"
 ]
 omit = [
-    "./{{ cookiecutter.repo_name }}/tests/test_example_module/*"
+    "{{ cookiecutter.repo_name }}/tests/test_example_module/*"
     ]
 
 [tool.coverage.report]
