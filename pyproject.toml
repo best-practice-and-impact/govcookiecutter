@@ -4,9 +4,6 @@ source = [
     "./hooks",
     "./{{ cookiecutter.repo_name }}/src"
 ]
-omit = [
-    "{{ cookiecutter.repo_name }}/tests/test_example_module/"
-    ]
 
 [tool.coverage.report]
 exclude_lines = [
@@ -24,8 +21,7 @@ addopts = [
     "--doctest-modules",
     "--ignore='./docs/'",
     "--ignore='./example/'",
-    "--ignore='./{{ cookiecutter.repo_name }}/docs/'",
-    "--ignore='./{{ cookiecutter.repo_name }}/tests/'"
+    "--ignore='./{{ cookiecutter.repo_name }}/docs/'"
 ]
 doctest_optionflags = "NORMALIZE_WHITESPACE"
 testpaths = [
