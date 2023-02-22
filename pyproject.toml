@@ -21,7 +21,8 @@ addopts = [
     "--doctest-modules",
     "--ignore='./docs/'",
     "--ignore='./example/'",
-    "--ignore='./{{ cookiecutter.repo_name }}/docs/'"
+    "--ignore='./{{ cookiecutter.repo_name }}/docs/'",
+    "--ignore='./{{ cookiecutter.repo_name }}/tests/test_example_module/'"
 ]
 doctest_optionflags = "NORMALIZE_WHITESPACE"
 testpaths = [
