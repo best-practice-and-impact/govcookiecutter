@@ -26,5 +26,6 @@ addopts = [
 ]
 doctest_optionflags = "NORMALIZE_WHITESPACE"
 testpaths = [
-    "./tests"
+    "./tests",
+    "./{{ cookiecutter.repo_name }}/tests"
 ]
