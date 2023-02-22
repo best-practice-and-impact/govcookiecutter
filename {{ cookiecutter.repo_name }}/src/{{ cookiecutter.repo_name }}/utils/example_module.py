@@ -1,5 +1,5 @@
 def hello_world(name):
-    if isinstance(string, str):
+    if isinstance(name, str):
         string = "hello world and hello " + name
         return string
     else:
