@@ -58,6 +58,7 @@ create a ReST file, and add the following line to reference the `{{ cookiecutter
 Then, elsewhere in the body, [call the `autosummary` directive to generate the
 docstrings as ReST stub files][sphinx-autosummary].
 
+````shell
 ```rest
 .. autosummary::
     :toctree: api/
@@ -66,6 +67,7 @@ docstrings as ReST stub files][sphinx-autosummary].
     world
 
 ```
+````
 
 [This will create something similar to the `pandas` API
 reference][pandas-api-reference].
@@ -95,6 +97,7 @@ create a Markdown file, and add the following line to reference the `{{ cookiecu
 Then, elsewhere in the body, [call the `autosummary` directive to generate the
 docstrings as ReST stub files][sphinx-autosummary].
 
+`````shell
 ````md
 ```{eval-rst}
 .. autosummary::
@@ -105,6 +108,7 @@ docstrings as ReST stub files][sphinx-autosummary].
 
 ```
 ````
+`````
 
 ### Including Markdown files outside the `docs` folder
 
@@ -124,6 +128,12 @@ However, if it includes relative links referencing other files in this project
 if the relative link is `../hello/world.md`, we need to create a Markdown file within
 the `docs` folder with the following lines:
 
+````md
+```{include} ../example.md
+:relative-docs: ../hello
+:relative-images:
+```
+````
 
 [agilemodeling]: http://agilemodeling.com/essays/documentLate.htm
 [docstring-google]: https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings
