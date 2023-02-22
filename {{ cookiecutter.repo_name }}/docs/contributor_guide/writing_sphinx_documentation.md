@@ -86,25 +86,12 @@ Let us say that `{{ cookiecutter.repo_name }}/__init__.py` has functions called 
 into it, and both have docstrings. To automatically generate docstring documentation,
 create a Markdown file, and add the following line to reference the `{{ cookiecutter.repo_name }}` module:
 
-````md
-```{eval-rst}
-.. currentmodule:: {{ cookiecutter.repo_name }}
-```
-````
+
 
 Then, elsewhere in the body, [call the `autosummary` directive to generate the
 docstrings as ReST stub files][sphinx-autosummary].
 
-````md
-```{eval-rst}
-.. autosummary::
-    :toctree: api/
 
-    hello
-    world
-
-```
-````
 
 ### Including Markdown files outside the `docs` folder
 
@@ -114,22 +101,14 @@ If a Markdown file (`../example.md`) only contains links that do not reference a
 else in this project (including images), create a Markdown file within the `docs`
 folder with the following lines:
 
-````md
-```{include} ../example.md
-```
-````
+
 
 However, if it includes relative links referencing other files in this project
 (including images), we need to tell MyST what those links actually refer. For example,
 if the relative link is `../hello/world.md`, we need to create a Markdown file within
 the `docs` folder with the following lines:
 
-````md
-```{include} ../example.md
-:relative-docs: ../hello
-:relative-images:
-```
-````
+
 
 [agilemodeling]: http://agilemodeling.com/essays/documentLate.htm
 [docstring-google]: https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings
