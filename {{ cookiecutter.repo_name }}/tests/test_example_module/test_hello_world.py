@@ -1,9 +1,10 @@
 from {{ cookiecutter.repo_name }}.utils.example_module import hello_world
 import pytest
 
+
 class TestHelloWorld:
     def test_string_concat(self):
-        assert hello_world('ONS') == "hello world and hello ONS"
+        assert hello_world("ONS") == "hello world and hello ONS"
 
     def test_type_error(self):
         with pytest.raises(TypeError):
