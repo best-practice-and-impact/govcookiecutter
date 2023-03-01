@@ -18,7 +18,7 @@ There is an example pytest folder structure and file in your package that demons
 
 For pytest to find your tests, all test files and tests must either start with `test_` or finish with `_test.py`
 
-The `test_hello_world.py` example test file provides an example of these restrictions.
+The `test_example_module.py` example test file provides an example of these restrictions.
 
 ## Running pytest
 ### In the terminal
@@ -31,7 +31,7 @@ in your root directory. This will find any existing pytests within your director
 
 If you only want to run pytests in a specific pytest file you can run
 ```shell
-pytest tests/{{ cookiecutter.repo_name }}/test_hello_world.py
+pytest tests/test_example_module.py
 ```
 
 You can try both of these in the root directory of your new repository.
