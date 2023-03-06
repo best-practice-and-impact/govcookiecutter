@@ -152,23 +152,23 @@ contributing guidelines. <a class="reference external" href="mailto:gsshelp&#37;
 we’d be happy to help!</p>
 <section id="code-of-conduct">
 <h2>Code of Conduct<a class="headerlink" href="#code-of-conduct" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="CODE_OF_CONDUCT.html"><span class="doc std std-doc">Please read <code class="docutils literal notranslate"><span class="pre">CODE_OF_CONDUCT.md</span></code> before contributing</span></a>.</p>
+<p><a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CODE_OF_CONDUCT.md">Please read <code class="docutils literal notranslate"><span class="pre">CODE_OF_CONDUCT.md</span></code> before contributing</a>.</p>
 </section>
 <section id="getting-started">
 <h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <p>To start contributing, install the required Python packages, and <a class="reference external" href="https://pre-commit.com/">pre-commit
 hooks</a> using:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
-pre-commit install
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+pre-commit<span class="w"> </span>install
 </pre></div>
 </div>
 <p>or the <code class="docutils literal notranslate"><span class="pre">make</span></code> command:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make requirements
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>requirements
 </pre></div>
 </div>
 <p>The pre-commit hooks are a security feature to ensure, for example, no secrets<a class="footnote-reference brackets" href="#id2" id="id1">1</a>, and
-large data files are accidentally committed into the repository. <a class="reference internal" href="%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.html"><span class="doc std std-doc">For more information
-on pre-commit hooks see our documentation</span></a>.</p>
+large data files are accidentally committed into the repository. <a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md">For more information
+on pre-commit hooks see our documentation</a>.</p>
 </section>
 <section id="code-conventions">
 <h2>Code conventions<a class="headerlink" href="#code-conventions" title="Permalink to this headline">¶</a></h2>
@@ -179,8 +179,8 @@ on pre-commit hooks see our documentation</span></a>.</p>
 Git best practice</a>. This includes how to write good commit messages, use
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rebase</span></code> for local branches and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">--no-ff</span></code> for merges, as well as using
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--force-with-lease</span></code> instead of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-f</span></code>.</p>
-<p><a class="reference internal" href="%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.html"><span class="doc std std-doc">If you want to modify the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> files, see the template
-documentation</span></a> for further details.</p>
+<p><a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md">If you want to modify the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> files, see the template
+documentation</a> for further details.</p>
 <p>Our source code is stored on GitHub at
 <a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter">https://github.com/best-practice-and-impact/govcookiecutter</a>. Pull
 requests into <code class="docutils literal notranslate"><span class="pre">main</span></code> require at least one approved review.</p>
@@ -192,10 +192,8 @@ length of 88; the flake8 pre-commit hook should help with this!</p>
 </section>
 <section id="markdown">
 <h3>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h3>
-<p>Local links can be written as normal, but external links should be referenced at the
-bottom of the Markdown file for clarity. For example:</p>
-<p>Use a local link to reference the <a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter#readme"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a> file, but an external link
-for <a class="reference external" href="https://www.gov.uk/">GOV.UK</a>.</p>
+<p>To keep the file uniform, all links should be referenced at the bottom of the markdown
+file. This also helps to keep the markdown file organised.</p>
 <p>We also try to wrap Markdown to a line length of 88 characters. This is not strictly
 enforced in all cases, for example with long hyperlinks.</p>
 </section>
@@ -217,12 +215,12 @@ only extends to Python scripts in the <code class="docutils literal notranslate"
 <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}/src</span></code> folders.</p>
 <p>To run code coverage, and view it as an HTML report, enter the following command in
 your terminal:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>coverage run -m pytest
-coverage html
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>coverage<span class="w"> </span>run<span class="w"> </span>-m<span class="w"> </span>pytest
+coverage<span class="w"> </span>html
 </pre></div>
 </div>
 <p>or use the <code class="docutils literal notranslate"><span class="pre">make</span></code> command:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make coverage_html
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>coverage_html
 </pre></div>
 </div>
 <p>The HTML report can be accessed at <code class="docutils literal notranslate"><span class="pre">htmlcov/index.html</span></code>.</p>
@@ -233,22 +231,22 @@ coverage html
 <p><a class="reference external" href="https://myst-parser.readthedocs.io/">We write our documentation in MyST Markdown for use in Sphinx</a>. This is mainly
 stored in the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder, unless it’s more appropriate to store it elsewhere, like
 this file.</p>
-<p><a class="reference internal" href="%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_accessible_documentation.html"><span class="doc std std-doc">Please read our guidance on how to write accessible
-documentation</span></a>, as well as our <a class="reference internal" href="%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.html"><span class="doc std std-doc">guidance on
-writing Sphinx documentation</span></a>. This allows you to
+<p><a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_accessible_documentation.md">Please read our guidance on how to write accessible
+documentation</a>, as well as our <a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md">guidance on
+writing Sphinx documentation</a>. This allows you to
 build the documentation into an accessible, searchable website.</p>
 </section>
 <section id="organisational-frameworks">
 <h2>Organisational frameworks<a class="headerlink" href="#organisational-frameworks" title="Permalink to this headline">¶</a></h2>
 <p>Organisational frameworks are stored in the
-<code class="docutils literal notranslate"><span class="pre">.govcookiecutter/organisational_frameworks</span></code> folder. <a class="reference internal" href="%7B%7B%20cookiecutter.repo_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.html"><span class="doc std std-doc">If you would like to add your own
-organisation’s framework, follow the instructions</span></a> in
+<code class="docutils literal notranslate"><span class="pre">.govcookiecutter/organisational_frameworks</span></code> folder. <a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.md">If you would like to add your own
+organisation’s framework, follow the instructions</a> in
 the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file in that folder.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p><a class="reference internal" href="%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.html#definition-of-a-secret-according-to-detect-secrets"><span class="std std-doc">Only secrets of specific patterns are detected by the pre-commit
-hooks</span></a>.</p>
+<dd><p><a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets">Only secrets of specific patterns are detected by the pre-commit
+hooks</a>.</p>
 </dd>
 </dl>
 </section>

@@ -135,9 +135,10 @@
   <section class="tex2jax_ignore mathjax_ignore" id="govcookiecutter">
 <h1><code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code><a class="headerlink" href="#govcookiecutter" title="Permalink to this headline">¶</a></h1>
 <p>A cookiecutter template for analytical, Python-, or Python and R-based projects within
-Her Majesty’s Government, and wider public sector.</p>
-<p>This template helps to set up standardised project structures, and <a class="reference internal" href="%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.html"><span class="doc std std-doc">includes security
-features using pre-commit hooks</span></a>.</p>
+His Majesty’s Government, and wider public sector.</p>
+<p>This template helps to set up standardised project structures, and <a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md">includes security
+features using pre-commit hooks</a>. This cookiecutter template also acts
+as an installable template (python projects only).</p>
 <p>It also provides an Agile, centralised, and lightweight analytical quality assurance
 (AQA) process. Pull or merge request templates are used to nudge users to complete this
 process. <a class="reference external" href="https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government">This helps meet HM Government best practice on producing quality analysis, as
@@ -150,11 +151,11 @@ defined in the Aqua Book</a>.</p>
 requirements</span></a>. Next, open your
 terminal, navigate to the directory where you want your new repository to exist. Then
 run the following command for the latest stable release:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cookiecutter<span class="w"> </span>https://github.com/best-practice-and-impact/govcookiecutter.git
 </pre></div>
 </div>
 <p>or for a specific branch, tag, or commit SHA <code class="docutils literal notranslate"><span class="pre">{SPECIFIC}</span></code>, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git --checkout <span class="o">{</span>SPECIFIC<span class="o">}</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cookiecutter<span class="w"> </span>https://github.com/best-practice-and-impact/govcookiecutter.git<span class="w"> </span>--checkout<span class="w"> </span><span class="o">{</span>SPECIFIC<span class="o">}</span>
 </pre></div>
 </div>
 <p>Follow the prompts; if you are asked to re-download <code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code>, input <code class="docutils literal notranslate"><span class="pre">yes</span></code>.
@@ -165,23 +166,23 @@ blank, and press enter.</p>
 <li><p>Set up a Python virtual environment — <a class="reference external" href="https://www.pluralsight.com/tech-blog/managing-python-environments/">there are many ways to set up a virtual
 environment</a>, so we’ll let you decide what’s best for you!</p></li>
 <li><p>In your terminal, navigate to your new project, and initialise Git</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git init
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>init
 </pre></div>
 </div>
 </li>
 <li><p>Install the necessary packages using <code class="docutils literal notranslate"><span class="pre">pip</span></code> and the pre-commit hooks:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
-pre-commit install
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+pre-commit<span class="w"> </span>install
 </pre></div>
 </div>
 <p>or use the <code class="docutils literal notranslate"><span class="pre">make</span></code> command:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make requirements
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>requirements
 </pre></div>
 </div>
 </li>
 <li><p>Stage all your project files, and make your first commit</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git add .
-git commit -m <span class="s2">&quot;Initial commit&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
 </pre></div>
 </div>
 </li>
@@ -195,7 +196,7 @@ kicking off your project development</span></a>.</p>
 <ol class="arabic simple">
 <li><p>Python 3.6.1+ installed</p></li>
 <li><p>R 4.0.4+ installed (optional)<a class="footnote-reference brackets" href="#id2" id="id1">1</a></p></li>
-<li><p>The <a class="reference internal" href="#installing-the-cookiecutter-package"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> package installed</span></a></p></li>
+<li><p>The <a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/README.md#installing-the-cookiecutter-package"><code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> package installed</a></p></li>
 </ol>
 <section id="installing-the-cookiecutter-package">
 <h4>Installing the <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> package<a class="headerlink" href="#installing-the-cookiecutter-package" title="Permalink to this headline">¶</a></h4>
@@ -203,16 +204,16 @@ kicking off your project development</span></a>.</p>
 install it at the system or user level, rather than as a Python package with <code class="docutils literal notranslate"><span class="pre">pip</span></code> or
 <code class="docutils literal notranslate"><span class="pre">conda</span></code>. This ensures it is isolated from the rest of your system, and always available.</p>
 <p>For macOS, open your terminal, and <a class="reference external" href="https://brew.sh/">install <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> with Homebrew</a>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew install cookiecutter
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>cookiecutter
 </pre></div>
 </div>
 <p>For Debian/Ubuntu, use the following commands:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt-get install cookiecutter
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>cookiecutter
 </pre></div>
 </div>
 <p>Otherwise, you can install <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> with <code class="docutils literal notranslate"><span class="pre">pip</span></code> — you may wish to create a virtual
 environment first:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python -m pip install --user cookiecutter
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>cookiecutter
 </pre></div>
 </div>
 </section>
@@ -224,8 +225,8 @@ environment first:</p>
 <ul>
 <li><p>consider <a class="reference external" href="https://github.com/cruft/cruft">using the <code class="docutils literal notranslate"><span class="pre">cruft</span></code> package to integrate future <code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code>
 releases</a></p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install cruft
-cruft link https://github.com/best-practice-and-impact/govcookiecutter
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>cruft
+cruft<span class="w"> </span>link<span class="w"> </span>https://github.com/best-practice-and-impact/govcookiecutter
 </pre></div>
 </div>
 </li>
@@ -249,8 +250,8 @@ Crown copyright and available under the terms of the Open Government 3.0 licence
 </section>
 <section id="contributing">
 <h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="CONTRIBUTING.html"><span class="doc std std-doc">If you want to help us build, and improve <code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code>, view our contributing
-guidelines</span></a>.</p>
+<p><a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CONTRIBUTING.md">If you want to help us build, and improve <code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code>, view our contributing
+guidelines</a>.</p>
 </section>
 <section id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>

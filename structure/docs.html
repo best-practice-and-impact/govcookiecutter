@@ -130,18 +130,18 @@
   <section class="tex2jax_ignore mathjax_ignore" id="docs-folder-overview">
 <h1><code class="docutils literal notranslate"><span class="pre">docs</span></code> folder overview<a class="headerlink" href="#docs-folder-overview" title="Permalink to this headline">¶</a></h1>
 <p>All documentation for the project should be included in this folder in MyST Markdown
-files, with acceptable formatting for Sphinx. <a class="reference internal" href="../%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.html"><span class="doc std std-doc">Guidance on how to write Sphinx
-documentation is supplied in the contributor guide</span></a>.</p>
+files, with acceptable formatting for Sphinx. <a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md">Guidance on how to write Sphinx
+documentation is supplied in the contributor guide</a>.</p>
 <p>If you want to include any documentation written in the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}</span></code>
 folder without duplicating it, include it in the <code class="docutils literal notranslate"><span class="pre">docs/{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}</span></code>
 folder.</p>
-<p>To build the documentation, run the <code class="docutils literal notranslate"><span class="pre">docs</span></code> command <a class="reference internal" href="README.html#makefile"><span class="std std-doc">from <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> using the <code class="docutils literal notranslate"><span class="pre">make</span></code>
-utility at the top-level of this repository</span></a>.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make docs
+<p>To build the documentation, run the <code class="docutils literal notranslate"><span class="pre">docs</span></code> command <a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/structure/README.md#makefile">from <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> using the <code class="docutils literal notranslate"><span class="pre">make</span></code>
+utility at the top-level of this repository</a>.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>docs
 </pre></div>
 </div>
 <p>or, alternatively, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sphinx-build -b html ./docs ./docs/_build
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sphinx-build<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span>./docs<span class="w"> </span>./docs/_build
 </pre></div>
 </div>
 <p>The HTML-version of this documentation can then be viewed at <code class="docutils literal notranslate"><span class="pre">docs/_build/index.html</span></code>,

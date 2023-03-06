@@ -159,7 +159,7 @@ variables are based on answers to prompts when you run the <code class="docutils
 <section id="cookiecutter-template-generation">
 <h2><code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> template generation<a class="headerlink" href="#cookiecutter-template-generation" title="Permalink to this headline">¶</a></h2>
 <p>When you open your terminal and run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cookiecutter<span class="w"> </span>https://github.com/best-practice-and-impact/govcookiecutter.git
 </pre></div>
 </div>
 <p>you’ll see a list of prompts to answer; one of them is <code class="docutils literal notranslate"><span class="pre">repo_name</span></code>.</p>
@@ -267,8 +267,8 @@ controls blank space before the element.</p>
 </section>
 <section id="replacing-folders-and-files">
 <h2>Replacing folders and files<a class="headerlink" href="#replacing-folders-and-files" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="../%7B%7B%20cookiecutter.repo_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.html"><span class="doc std std-doc">Replacing folders and files a more involved change, and is currently supported for
-AQA frameworks and pull/merge request templates only</span></a>.
+<p><a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/%7B%7B%20cookiecutter.repo_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.md">Replacing folders and files a more involved change, and is currently supported for
+AQA frameworks and pull/merge request templates only</a>.
 These are performed in the <code class="docutils literal notranslate"><span class="pre">hooks/post_gen_project.py</span></code>file.</p>
 </section>
 <section id="tests-coverage-and-continuous-integration">

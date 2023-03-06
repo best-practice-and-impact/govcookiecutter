@@ -175,7 +175,7 @@ Markdown</a>;</p></li>
 <h3>Creating a searchable website<a class="headerlink" href="#creating-a-searchable-website" title="Permalink to this headline">¶</a></h3>
 <p>To create a website with your documentation, run the following command in your terminal
 at the top-level of this project:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make docs
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>docs
 </pre></div>
 </div>
 <p>This should create an HTML version of your documentation accessible from
@@ -189,22 +189,14 @@ recommend reading that for guidance. We will cover automatically creating docstr
 the next subsection.</p>
 <section id="automatically-creating-docstring-documentation-rest">
 <h3>Automatically creating docstring documentation (ReST)<a class="headerlink" href="#automatically-creating-docstring-documentation-rest" title="Permalink to this headline">¶</a></h3>
-<p>Let us say that <code class="docutils literal notranslate"><span class="pre">src/__init__.py</span></code> has functions called <code class="docutils literal notranslate"><span class="pre">hello</span></code> and <code class="docutils literal notranslate"><span class="pre">world</span></code> imported
+<p>Let us say that <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}/__init__.py</span></code> has functions called <code class="docutils literal notranslate"><span class="pre">hello</span></code> and <code class="docutils literal notranslate"><span class="pre">world</span></code> imported
 into it, and both have docstrings. To automatically generate docstring documentation,
-create a ReST file, and add the following line to reference the <code class="docutils literal notranslate"><span class="pre">src</span></code> module:</p>
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">currentmodule</span><span class="p">::</span> src
+create a ReST file, and add the following line to reference the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}</span></code> module:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">currentmodule</span><span class="p">::</span> {{ cookiecutter.repo_name }}
 </pre></div>
 </div>
 <p>Then, elsewhere in the body, <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html">call the <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> directive to generate the
 docstrings as ReST stub files</a>.</p>
-<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autosummary</span><span class="p">::</span>
-    <span class="nc">:toctree:</span> api/
-
-    hello
-    world
-
-</pre></div>
-</div>
 <p><a class="reference external" href="https://pandas.pydata.org/docs/reference/index.html">This will create something similar to the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> API
 reference</a>.</p>
 </section>
@@ -220,26 +212,16 @@ it. We will cover some of the more widely used elements in the following subsect
 </section>
 <section id="automatically-creating-docstring-documentation-myst-markdown">
 <h3>Automatically creating docstring documentation (MyST Markdown)<a class="headerlink" href="#automatically-creating-docstring-documentation-myst-markdown" title="Permalink to this headline">¶</a></h3>
-<p>Let us say that <code class="docutils literal notranslate"><span class="pre">src/__init__.py</span></code> has functions called <code class="docutils literal notranslate"><span class="pre">hello</span></code> and <code class="docutils literal notranslate"><span class="pre">world</span></code> imported
+<p>Let us say that <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}/__init__.py</span></code> has functions called <code class="docutils literal notranslate"><span class="pre">hello</span></code> and <code class="docutils literal notranslate"><span class="pre">world</span></code> imported
 into it, and both have docstrings. To automatically generate docstring documentation,
-create a Markdown file, and add the following line to reference the <code class="docutils literal notranslate"><span class="pre">src</span></code> module:</p>
+create a Markdown file, and add the following line to reference the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}</span></code> module:</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{eval-rst}
-.. currentmodule:: src
+.. currentmodule:: {{ cookiecutter.repo_name }}
 ```
 </pre></div>
 </div>
 <p>Then, elsewhere in the body, <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html">call the <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> directive to generate the
 docstrings as ReST stub files</a>.</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{eval-rst}
-.. autosummary::
-    :toctree: api/
-
-    hello
-    world
-
-```
-</pre></div>
-</div>
 </section>
 <section id="including-markdown-files-outside-the-docs-folder">
 <h3>Including Markdown files outside the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder<a class="headerlink" href="#including-markdown-files-outside-the-docs-folder" title="Permalink to this headline">¶</a></h3>
