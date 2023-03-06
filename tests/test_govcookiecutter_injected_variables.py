@@ -12,7 +12,7 @@ ORGANISATION_NAME_COUNT = {
 }
 ORGANISATION_HANDLE_COUNT = {
     '"{{ cookiecutter.organisation_handle }}"': 1,
-    "`{{ cookiecutter.organisation_handle }}`": 4,
+    "`{{ cookiecutter.organisation_handle }}`": 3,
     'u"{{ cookiecutter.organisation_handle }}",': 0,
     '[u"{{ cookiecutter.organisation_handle }}"],': 0,
     '"{{ cookiecutter.organisation_handle }}",': 0,
@@ -30,11 +30,11 @@ PROJECT_NAME_COUNT = {
 }
 REPO_NAME_COUNT = {
     '"{{ cookiecutter.repo_name }}",': 0,
-    "`{{ cookiecutter.repo_name }}`": 15,
+    "`{{ cookiecutter.repo_name }}`": 8,
     "`{{ cookiecutter.repo_name }}`,": 1,
     '"{{ cookiecutter.repo_name }}.tex",': 0,
     '"{{ cookiecutter.repo_name }}doc"': 1,
-    "{{ cookiecutter.repo_name }}": 10,
+    "{{ cookiecutter.repo_name }}": 4,
 }
 OVERVIEW_COUNT = {
     '"{{ cookiecutter.overview }}",': 0,
@@ -53,10 +53,10 @@ USING_R_NO_COUNT = {
 }
 USING_R_YES_COUNT = {
     "https://github.com/lorenzwalthert/precommit": 2,
-    "`.lintr`": 1,
-    "`.Rprofile`": 1,
-    "`DESCRIPTION`": 2,
-    "`startup.R`": 1,
+    "`.lintr`": 0,
+    "`.Rprofile`": 0,
+    "`DESCRIPTION`": 0,
+    "`startup.R`": 0,
 }
 
 
@@ -165,7 +165,7 @@ args_injected_counts_correct = [
     (
         "repo_name",
         "repo_2",
-        {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 11},
+        {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 5},
         {"using_R": "Yes"},
     ),
     ("overview", "overview_1", OVERVIEW_COUNT, {"using_R": "No"}),
