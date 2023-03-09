@@ -30,7 +30,7 @@ repos:
     hooks:
       - id: flake8
         name: flake8 - Python linting
-        exclude: ^(test_example_module.py|run_pipeline.py)
+        exclude: test_example_module.py|run_pipeline.py
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.0.3
     hooks:
