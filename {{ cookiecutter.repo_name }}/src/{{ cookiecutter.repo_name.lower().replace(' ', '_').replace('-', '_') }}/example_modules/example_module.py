@@ -1,6 +1,6 @@
 def hello_world(name, company):
     if isinstance(name, str) and isinstance(company, str):
-        string = "hello " + name + " and hello everyone at " + company
+        string = "Hello " + name + " and hello everyone at " + company
         return string
 
     elif not isinstance(name, str):

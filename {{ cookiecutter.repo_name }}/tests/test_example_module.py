@@ -1,4 +1,4 @@
-from {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}.example_modules.example_module import(
+from {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}.example_modules.example_module import (
     hello_world,
     print_string,
     print_favourite_number,
@@ -8,7 +8,7 @@ import pytest
 
 class TestHelloWorld:
     def test_string_concat(self):
-        assert hello_world("Bob", "ONS") == "hello Bob and hello everyone at ONS"
+        assert hello_world("Bob", "ONS") == "Hello Bob and hello everyone at ONS"
 
     def test_name_type_error(self):
         with pytest.raises(TypeError):
@@ -25,9 +25,9 @@ class TestHelloWorld:
 
 class TestPrintString:
     def test_print_statements(self, capsys):
-        print_string("hello world and hello ONS")
+        print_string("Hello world and hello ONS")
         captured = capsys.readouterr()
-        assert captured.out == "hello world and hello ONS"
+        assert captured.out == "Hello world and hello ONS\n"
 
     def test_type_error(self):
         with pytest.raises(TypeError):
@@ -35,10 +35,10 @@ class TestPrintString:
 
 
 class TestPrintFavouriteNumber:
-    def test_string_concat(self):
+    def test_string_concat(self, capsys):
         print_favourite_number(7, "Bob")
         captured = capsys.readouterr()
-        assert captured.out == "Bob's favourite number is 7!"
+        assert captured.out == "Bob's favourite number is 7!\n"
 
     def test_name_type_error(self):
         with pytest.raises(TypeError):
