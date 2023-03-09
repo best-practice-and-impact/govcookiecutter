@@ -24,13 +24,17 @@ repos:
       - id: black
         name: black - consistent Python code formatting (auto-fixes)
         language_version: python # Should be a command that runs python3.6+
-        exclude: ^(test_example_module.py|run_pipline.py)
+        exclude: |
+          (?x)^(
+            {{ cookiecutter.repo_name }}/tests/test_example_module.py|
+            {{ cookiecutter.repo_name }}/src/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipline.py
+            )$
   - repo: https://github.com/PyCQA/flake8
     rev: 5.0.4
     hooks:
       - id: flake8
         name: flake8 - Python linting
-        exclude: ^(test_example_module.py|run_pipline.py)
+        exclude: ^(test_example_module.py|run_pipline.py)$
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.0.3
     hooks:
