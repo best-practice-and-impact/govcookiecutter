@@ -5,14 +5,7 @@ on: [ push, pull_request ]
 jobs:
   build:
 
-    runs-on:
-    {% raw %}
-        <ul>
-        {% for item in seq %}
-            <li>{{ ${{ matrix.os }} }}</li>
-        {% endfor %}
-        </ul>
-    {% endraw %}
+    runs-on: {{ '${{ matrix.os }}' }}
     strategy:
       matrix:
         os: [ ubuntu-latest, macos-latest, windows-latest ]
@@ -21,10 +14,10 @@ jobs:
     steps:
       - name: Checkout the revision
         uses: actions/checkout@v3
-      - name: Set up Python ${{ matrix.python }}
+      - name: Set up Python {{ '${{ matrix.python }}' }}
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python }}
+          python-version: {{ '${{ matrix.python }}' }}
       - name: Install dependencies
         run: |
           if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" || "$RUNNER_OS" == "Windows" ]]; then
