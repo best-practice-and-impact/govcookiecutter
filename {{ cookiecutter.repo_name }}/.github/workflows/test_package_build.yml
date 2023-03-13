@@ -1,0 +1,35 @@
+name: package build
+
+on: [ push, pull_request ]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
+        python: [ 3.8, 3.9, '3.10', 3.11 ]
+
+    steps:
+      - name: Checkout the revision
+        uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install dependencies
+        run: |
+          if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" || "$RUNNER_OS" == "Windows" ]]; then
+            python -m pip install --upgrade pip
+            pip install -e .
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi;
+        shell: bash
+      - name: Run pre-commit hooks
+        run: pre-commit run --all-files
+      - name: Run pytests
+        run: |
+          pytest
