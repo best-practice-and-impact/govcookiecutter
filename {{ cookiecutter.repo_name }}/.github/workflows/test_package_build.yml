@@ -3,7 +3,7 @@ name: package build
 on: [ push, pull_request ]
 
 jobs:
-  build: ${{ matrix.os }}
+  build:
 
     runs-on:
     {% raw %}
