@@ -3,9 +3,16 @@ name: package build
 on: [ push, pull_request ]
 
 jobs:
-  build:
+  build: ${{ matrix.os }}
 
-    runs-on: {{ '${{ matrix.os }}' }}
+    runs-on:
+    {% raw %}
+        <ul>
+        {% for item in seq %}
+            <li>{{ ${{ matrix.os }} }}</li>
+        {% endfor %}
+        </ul>
+    {% endraw %}
     strategy:
       matrix:
         os: [ ubuntu-latest, macos-latest, windows-latest ]
