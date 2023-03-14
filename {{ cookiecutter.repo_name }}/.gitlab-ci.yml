@@ -1,0 +1,10 @@
+stages:
+    - test
+
+run_tests:
+    stage: test
+    image: python:3.9
+    before_script:
+        - pip install -e .
+    script:
+        - pytest -v
