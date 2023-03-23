@@ -7,8 +7,7 @@ import yaml
 
 
 def run_pipeline():
-    """ This is the main function that runs the pipeline
-    """
+    """ This is the main function that runs the pipeline"""
     with open("src/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/example_config.yml", "r") as file:
         example_config = yaml.safe_load(file)
 
