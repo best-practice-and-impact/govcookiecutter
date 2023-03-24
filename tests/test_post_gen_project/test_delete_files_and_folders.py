@@ -1,8 +1,10 @@
-from hooks.post_gen_project import delete_files_and_folders
 from pathlib import Path
 from typing import List
 from unittest.mock import MagicMock, call
+
 import pytest
+
+from hooks.post_gen_project import delete_files_and_folders
 
 
 @pytest.fixture

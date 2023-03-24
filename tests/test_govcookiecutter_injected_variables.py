@@ -1,8 +1,8 @@
 from collections import Counter
 from pathlib import Path
 from typing import Dict, List, Union
-import pytest
 
+import pytest
 
 # Define the expected counts for each cookiecutter variable - any counts that deviate
 # because of other variables are listed at the end of each dictionary

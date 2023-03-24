@@ -1,7 +1,9 @@
-from hooks.post_gen_project import delete_files_and_folders, set_aqa_framework
 from pathlib import Path
 from unittest.mock import MagicMock
+
 import pytest
+
+from hooks.post_gen_project import delete_files_and_folders, set_aqa_framework
 
 
 @pytest.fixture
