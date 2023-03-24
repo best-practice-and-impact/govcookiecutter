@@ -3,6 +3,7 @@
 
   "organisation_name": "Your public sector organisation name, for example Government Digital Service",
   "repository_hosting_platform": ["GitHub", "GitLab"],
+  "ONS_git": ["Yes", "No"],
   "organisation_handle": "Your GitHub/GitLab organisation name, for example ukgovdatascience",
   "contact_email": "organisation@email.address",
   "organisational_framework": ["GDS", "N/A"],
