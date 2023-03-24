@@ -3,10 +3,10 @@ stages:
 
 run_tests:
     stage: test
-    {% if cookiecutter.ONS_git == "Yes" %}
+    {% if cookiecutter.ONS_specific_git == "Yes" %}
     image: artifactory-01-01:8081/ent-admin-test-2/python:3.9
     {% endif -%}
-    {% if cookiecutter.ONS_git == "No" %}
+    {% if cookiecutter.ONS_specific_git == "No" %}
     image: python:3.9
     {% endif -%}
     before_script:
