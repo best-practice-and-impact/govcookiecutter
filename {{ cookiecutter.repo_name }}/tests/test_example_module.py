@@ -1,5 +1,6 @@
-from {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}.utils.example_module import hello_world
 import pytest
+
+from {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}.utils.example_module import hello_world
 
 
 class TestHelloWorld:
