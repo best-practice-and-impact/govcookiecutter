@@ -12,40 +12,35 @@ located.
 To start using this project, [first make sure your system meets its
 requirements](#requirements).
 
-To be added.
+It's suggested that you install this pack and it's requirements within a virtual environment.
 
-### Requirements
+## Installing the package (Python Only)
 
-[```Contributors have some additional requirements!```][contributing]
-
-- Python 3.6.1+ installed
-{% if cookiecutter.using_R == "Yes" -%}
-- R 4.0.4+ installed
-{% endif -%}
-- a `.secrets` file with the [required secrets and
-  credentials](#required-secrets-and-credentials)
-- [load environment variables][docs-loading-environment-variables] from `.env`
-
-To install the Python requirements, open your terminal and enter:
-
-```shell
-pip install -r requirements.txt
-```
-
-## Installing your package (Python Only)
-
-Whilst in the root folder, in the command prompt, you can install your package using:
+Whilst in the root folder, in the command prompt, you can install the package and it's dependencies
+using:
 
 ```shell
 pip install -e .
 ```
 
-This installs an editable version of your package. Meaning, when you update your
+This installs an editable version of the package. Meaning, when you update the
 package code, you do not have to reinstall it for the changes to take effect.
 (This saves a lot of time when you test your code)
 
 Remember to update the setup and requirement files inline with any changes to your
 package. The inital files contain the bare minimum to get you started.
+
+## Running the pipeline (Python only)
+
+The entry point for the pipeline is stored within the package and called `run_pipeline.py`.
+To run the pipeline, run the following code in the terminal (whilst in the root directory of the
+project).
+
+```shell
+python src/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipeline.py
+```
+
+Alternatively, most Python IDE's allow you to run the code directly from the IDE using a `run` button.
 
 ## Required secrets and credentials
 
@@ -71,6 +66,24 @@ Crown copyright and available under the terms of the Open Government 3.0 licence
 
 [If you want to help us build, and improve `{{ cookiecutter.repo_name }}`, view our
 contributing guidelines][contributing].
+
+### Requirements
+
+[```Contributors have some additional requirements!```][contributing]
+
+- Python 3.6.1+ installed
+{% if cookiecutter.using_R == "Yes" -%}
+- R 4.0.4+ installed
+{% endif -%}
+- a `.secrets` file with the [required secrets and
+  credentials](#required-secrets-and-credentials)
+- [load environment variables][docs-loading-environment-variables] from `.env`
+
+To install the Python requirements, open your terminal and enter:
+
+```shell
+pip install -r requirements.txt
+```
 
 ## Acknowledgements
 
