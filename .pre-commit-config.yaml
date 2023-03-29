@@ -17,7 +17,7 @@ repos:
       - id: isort
         name: isort - Sort Python imports (auto-fixes)
         args: [ "--profile", "black", "--filter-files" ]
-        exclude: test_example_module.py
+        exclude: test_example_module.py|run_pipeline.py
   - repo: https://github.com/psf/black
     rev: 22.8.0 # Replace by any tag/version: https://github.com/psf/black/tags
     hooks:
