@@ -1,5 +1,6 @@
-from hooks.pre_gen_project import check_valid_email_address_format
 import pytest
+
+from hooks.pre_gen_project import check_valid_email_address_format
 
 # Define test cases for the `TestCheckValidEmailAddressFormat` test class
 args_invalid_email_addresses = ["hello.world", "foo_bar"]
