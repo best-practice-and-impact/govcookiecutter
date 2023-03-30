@@ -100,7 +100,7 @@ args_builds_correctly = [
 
 @pytest.mark.parametrize("test_input_context", args_builds_correctly)
 @pytest.mark.parametrize("test_input_repository_hosting_platform", ["GitHub", "GitLab"])
-@pytest.mark.parametrize("test_input_organisational_framework", ["GDS", "N/A"])
+@pytest.mark.parametrize("test_input_organisational_framework", ["ONS", "N/A"])
 @pytest.mark.parametrize("test_input_using_r", ["No", "Yes"])
 def test_builds_correctly(
     cookies,

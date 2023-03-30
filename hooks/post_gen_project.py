@@ -24,32 +24,6 @@ def delete_files_and_folders(paths: Union[Path, str, List[Path], List[str]]) -> 
     _ = [f.unlink() for f in paths if f.is_file() and f.exists()]
 
 
-def set_aqa_framework(
-    dir_organisational_framework_aqa: Union[Path, str],
-    dir_cookiecutter_docs_aqa: Union[Path, str],
-) -> None:
-    """Set a specific organisational analytical quality assurance (AQA) framework.
-
-    Args:
-        dir_organisational_framework_aqa: A folder path that contains a specific
-            organisational AQA framework.
-        dir_cookiecutter_docs_aqa: A folder path within the outputted project
-            structure, where the contents of `dir_organisational_framework_aqa` will
-            reside.
-
-    Returns:
-        The organisation-specific AQA framework in the outputted project structure's
-        `dir_cookiecutter_docs_aqa` folder.
-
-    """
-
-    # Remove the default `docs/aqa` folder, and its contents
-    delete_files_and_folders(dir_cookiecutter_docs_aqa)
-
-    # Copy the relevant organisational AQA framework to the `docs/aqa` folder
-    _ = Path(dir_organisational_framework_aqa).rename(dir_cookiecutter_docs_aqa)
-
-
 def set_request_template(
     path_organisational_framework_request_template: Union[Path, str],
     dir_govcookiecutter: Union[Path, str],
@@ -150,9 +124,6 @@ if __name__ == "__main__":
 
         # Transfer the `aqa` folder, and the pull/merge request templates to the
         # correct folder paths
-        set_aqa_framework(
-            DIR_ORGANISATIONAL_FRAMEWORKS.joinpath("aqa"), Path("docs").joinpath("aqa")
-        )
         set_request_template(
             DIR_ORGANISATIONAL_FRAMEWORKS.joinpath("request_template.md"),
             Path.cwd(),
