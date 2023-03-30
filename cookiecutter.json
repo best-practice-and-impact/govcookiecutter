@@ -3,10 +3,9 @@
 
   "organisation_name": "Your public sector organisation name, for example Government Digital Service",
   "repository_hosting_platform": ["GitHub", "GitLab"],
-  "ONS_specific_git": ["Yes", "No"],
   "organisation_handle": "Your GitHub/GitLab organisation name, for example ukgovdatascience",
   "contact_email": "organisation@email.address",
-  "organisational_framework": ["GDS", "N/A"],
+  "organisational_framework": ["ONS", "N/A"],
 
   "project_name": "Your new project name",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
