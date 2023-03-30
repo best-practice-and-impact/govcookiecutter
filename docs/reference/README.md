@@ -28,15 +28,6 @@ package. These include moving the selected organisational frameworks to the corr
 location, as well as deleting unnecessary files and folders. If any post-generation
 hooks fail, the generated project will be rolled-back, and deleted.
 
-### Public sector organisational framework functions
-
-```{eval-rst}
-.. autosummary::
-    :toctree: api/
-
-    set_request_template
-
-```
 
 ### Post-generation clean up
 
