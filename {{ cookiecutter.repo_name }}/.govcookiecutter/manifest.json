@@ -16,7 +16,7 @@
       "name": "GitLab files",
       "description": "GitLab files that are removed if not enabled.",
       "remove": {% if cookiecutter.repository_hosting_platform == "GitHub" %}true{% else %}false{% endif %},
-      "resources": [".gitlab-ci.yml"]
+      "resources": [".gitlab-ci.yml", ".gitlab"]
     },
     {
       "name": "GitHub files",
