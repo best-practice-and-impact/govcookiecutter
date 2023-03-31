@@ -137,12 +137,6 @@ Notice the hyphen before the trailing `%` in each Jinja statement; this hyphen c
 blank space after the statement. A hyphen after the leading `%` in a Jinja statement
 controls blank space before the element.
 
-## Replacing folders and files
-
-[Replacing folders and files a more involved change, and is currently supported for
-AQA frameworks and pull/merge request templates only][docs-organisational-frameworks].
-These are performed in the `hooks/post_gen_project.py`file.
-
 ## Tests, coverage, and continuous integration
 
 All pre- and post-generation hooks should be fully tested, alongside any generic
@@ -207,7 +201,6 @@ then use semantic versioning to number our releases][semver]. This helps our use
 select a different version of `govcookiecutter` to use based on their individual needs.
 
 [cookiecutter]: https://cookiecutter.readthedocs.io
-[docs-organisational-frameworks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/%7B%7B%20cookiecutter.repo_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.md
 [github-issues]: https://github.com/best-practice-and-impact/govcookiecutter/issues
 [html5-email-format]: https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address
 [jinja]: https://jinja.palletsprojects.com

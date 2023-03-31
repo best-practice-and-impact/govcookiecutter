@@ -107,16 +107,8 @@ documentation][docs-write-accessible-documentation], as well as our [guidance on
 writing Sphinx documentation][docs-write-sphinx-documentation]. This allows you to
 build the documentation into an accessible, searchable website.
 
-## Organisational frameworks
-
-Organisational frameworks are stored in the
-`.govcookiecutter/organisational_frameworks` folder. [If you would like to add your own
-organisation's framework, follow the instructions][docs-govcookiecutter-frameworks] in
-the `README.md` file in that folder.
-
 [code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/
-[docs-govcookiecutter-frameworks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.md
 [docs-pre-commit-hooks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
 [docs-pre-commit-hooks-secrets-definition]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
 [docs-updating-gitignore]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
