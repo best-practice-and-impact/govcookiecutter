@@ -1,6 +1,7 @@
-from dotenv import dotenv_values
 from pathlib import Path
 from typing import Dict, List
+
+from dotenv import dotenv_values
 
 # Define a path to the `govcookiecutter` template directory, and its `.env` file
 DIR_TEMPLATE = Path("{{ cookiecutter.repo_name }}")

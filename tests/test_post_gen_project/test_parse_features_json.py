@@ -1,9 +1,11 @@
+import json
 from collections import Counter
-from hooks.post_gen_project import parse_features_json
 from pathlib import Path
 from typing import Dict, List
-import json
+
 import pytest
+
+from hooks.post_gen_project import parse_features_json
 
 # Keys for the JSON file
 JSON_BASE_KEYS = ["name", "remove", "resources"]

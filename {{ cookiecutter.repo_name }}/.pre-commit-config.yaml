@@ -24,8 +24,15 @@ repos:
     rev: 5.12.0
     hooks:
       - id: isort
-        name: isort - Sort Python imports (auto-fixes)
-        types: [ cython, pyi, python ]
+        name: isort - Sort python imports (auto-fixes)
+        args: [ "--profile", "black", "--filter-files" ]
+      - id: isort
+        name: isort - Sort cython imports (auto-fixes)
+        types: [cython]
+        args: [ "--profile", "black", "--filter-files" ]
+      - id: isort
+        name: isort - Sort pyi imports (auto-fixes)
+        types: [pyi]
         args: [ "--profile", "black", "--filter-files" ]
   - repo: https://github.com/psf/black
     rev: 22.8.0 # Replace by any tag/version: https://github.com/psf/black/tags

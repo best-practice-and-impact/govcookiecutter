@@ -65,12 +65,11 @@ enforced in all cases, for example with long hyperlinks.
 ## Testing
 
 [Tests are written using the `pytest` framework][pytest], with its configuration in the
-`pyproject.toml` file. Note, only tests in the `tests`, and
-`{{ cookiecutter.repo_name }}/tests` folders folder are run. To run the tests, enter
+`pyproject.toml` file. Note, only the `tests` folder in the root direcrtory of this project are to run. To run the tests, enter
 the following command in your terminal:
 
 ```shell
-pytest
+pytest tests
 ```
 
 ### Code coverage
