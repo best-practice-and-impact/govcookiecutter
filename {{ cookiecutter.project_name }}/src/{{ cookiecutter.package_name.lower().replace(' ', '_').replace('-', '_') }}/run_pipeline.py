@@ -1,6 +1,6 @@
 import yaml
 
-from {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}.example_modules.example_module import (
+from {{ cookiecutter.package_name.lower().replace(' ', '_').replace('-', '_') }}.example_modules.example_module import (
     hello_world,
     print_favourite_number,
     print_string,
@@ -9,7 +9,7 @@ from {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}.ex
 
 def run_pipeline():
     """This is the main function that runs the pipeline"""
-    with open("src/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/example_config.yml", "r") as file:
+    with open("src/{{ cookiecutter.package_name.lower().replace(' ', '_').replace('-', '_') }}/example_config.yml", "r") as file:
         example_config = yaml.safe_load(file)
 
     name = example_config["user_name"]

@@ -1,6 +1,6 @@
 # User guide
 
-This is the user guide for the `{{ cookiecutter.repo_name }}` project.
+This is the user guide for the `{{ cookiecutter.project_name }}` project.
 
 ```{toctree}
 :maxdepth: 2

@@ -28,13 +28,13 @@ PROJECT_NAME_COUNT = {
     'u"{{ cookiecutter.project_name }}': 0,
     "{{ cookiecutter.project_name }}": 2,
 }
-REPO_NAME_COUNT = {
-    '"{{ cookiecutter.repo_name }}",': 0,
-    "`{{ cookiecutter.repo_name }}`": 8,
-    "`{{ cookiecutter.repo_name }}`,": 1,
-    '"{{ cookiecutter.repo_name }}.tex",': 0,
-    '"{{ cookiecutter.repo_name }}doc"': 1,
-    "{{ cookiecutter.repo_name }}": 4,
+package_name_COUNT = {
+    '"{{ cookiecutter.package_name }}",': 0,
+    "`{{ cookiecutter.package_name }}`": 2,
+    "`{{ cookiecutter.package_name }}`,": 0,
+    '"{{ cookiecutter.package_name }}.tex",': 0,
+    '"{{ cookiecutter.package_name }}doc"': 0,
+    "{{ cookiecutter.package_name }}": 4,
 }
 OVERVIEW_COUNT = {
     '"{{ cookiecutter.overview }}",': 0,
@@ -161,11 +161,11 @@ args_injected_counts_correct = [
         {**PROJECT_NAME_COUNT, "{{ cookiecutter.project_name }}": 3},
         {"using_R": "Yes"},
     ),
-    ("repo_name", "repo_1", REPO_NAME_COUNT, {"using_R": "No"}),
+    ("package_name", "package_1", package_name_COUNT, {"using_R": "No"}),
     (
-        "repo_name",
-        "repo_2",
-        {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 5},
+        "package_name",
+        "package_2",
+        {**package_name_COUNT, "{{ cookiecutter.package_name }}": 5},
         {"using_R": "Yes"},
     ),
     ("overview", "overview_1", OVERVIEW_COUNT, {"using_R": "No"}),

@@ -47,12 +47,12 @@ the next subsection.
 
 ### Automatically creating docstring documentation (ReST)
 
-Let us say that `{{ cookiecutter.repo_name }}/__init__.py` has functions called `hello` and `world` imported
+Let us say that `{{ cookiecutter.package_name }}/__init__.py` has functions called `hello` and `world` imported
 into it, and both have docstrings. To automatically generate docstring documentation,
-create a ReST file, and add the following line to reference the `{{ cookiecutter.repo_name }}` module:
+create a ReST file, and add the following line to reference the `{{ cookiecutter.package_name }}` module:
 
 ```rest
-.. currentmodule:: {{ cookiecutter.repo_name }}
+.. currentmodule:: {{ cookiecutter.package_name }}
 ```
 
 Then, elsewhere in the body, [call the `autosummary` directive to generate the
@@ -73,13 +73,13 @@ it. We will cover some of the more widely used elements in the following subsect
 
 ### Automatically creating docstring documentation (MyST Markdown)
 
-Let us say that `{{ cookiecutter.repo_name }}/__init__.py` has functions called `hello` and `world` imported
+Let us say that `{{ cookiecutter.package_name }}/__init__.py` has functions called `hello` and `world` imported
 into it, and both have docstrings. To automatically generate docstring documentation,
-create a Markdown file, and add the following line to reference the `{{ cookiecutter.repo_name }}` module:
+create a Markdown file, and add the following line to reference the `{{ cookiecutter.package_name }}` module:
 
 ````md
 ```{eval-rst}
-.. currentmodule:: {{ cookiecutter.repo_name }}
+.. currentmodule:: {{ cookiecutter.package_name }}
 ```
 ````
 

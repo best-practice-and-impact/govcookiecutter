@@ -9,7 +9,7 @@ structure is explained here:
 ./example.md
 ./hooks.md
 ./tests.md
-./{{ cookiecutter.repo_name }}.md
+./{{ cookiecutter.project_name }}.md
 ```
 
 ## Top-level files
@@ -94,7 +94,7 @@ Python imports are arranged according to the [specification defined by `black`][
 
 #### `pytest`
 
-To run the tests within the `tests`, and `{{ cookiecutter.repo_name }}/tests` folders
+To run the tests within the `tests`, and `{{ cookiecutter.project_name }}/tests` folders
 using the `pytest` Python package, enter the following command:
 
 ```shell
@@ -118,7 +118,7 @@ make coverage_html
 ```
 
 A code coverage report in HTML will be produced on the code in the `hooks`, and the
-`{{ cookiecutter.repo_name }}/src` folders. This HTML report can be accessed at
+`{{ cookiecutter.project_name }}/src` folders. This HTML report can be accessed at
 `htmlcov/index.html`.
 
 ### `README.md`
@@ -145,6 +145,6 @@ make requirements
 [code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/CODE_OF_CONDUCT.md
 [cookiecutter]: https://cookiecutter.readthedocs.io/
 [detect-secrets]: https://github.com/Yelp/detect-secrets
-[docs-pre-commit-hooks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
-[docs-updating-gitignore]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
+[docs-pre-commit-hooks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/%7B%7B%20cookiecutter.project_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
+[docs-updating-gitignore]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/%7B%7B%20cookiecutter.project_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
 [gds-way-flake8]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#common-configuration

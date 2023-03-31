@@ -1,4 +1,4 @@
-Package: {{ cookiecutter.repo_name }}
+Package: {{ cookiecutter.package_name }}
 Title: {{ cookiecutter.project_name }}
 Version: {{ cookiecutter.project_version }}
 Authors@R:

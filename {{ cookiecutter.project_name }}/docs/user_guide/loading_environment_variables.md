@@ -87,4 +87,4 @@ EXAMPLE_VARIABLE = os.getenv("EXAMPLE_VARIABLE")
 [python-dotenv]: https://saurabh-kumar.com/python-dotenv/
 [direnv]: https://direnv.net/
 [homebrew]: https://brew.sh/
-[env]: https://github.com/best-practice-and-impact/govcookiecutter/%7B%7B%20cookiecutter.repo_name%20%7D%7D/.env
+[env]: https://github.com/best-practice-and-impact/govcookiecutter/%7B%7B%20cookiecutter.project_name%20%7D%7D/.env

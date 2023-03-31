@@ -1,4 +1,4 @@
-# `{{ cookiecutter.repo_name }}`
+# `{{ cookiecutter.project_name }}`
 
 {{ cookiecutter.overview }}
 
@@ -37,7 +37,7 @@ To run the pipeline, run the following code in the terminal (whilst in the root 
 project).
 
 ```shell
-python src/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipeline.py
+python src/{{ cookiecutter.package_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipeline.py
 ```
 
 Alternatively, most Python IDE's allow you to run the code directly from the IDE using a `run` button.
@@ -64,7 +64,7 @@ Crown copyright and available under the terms of the Open Government 3.0 licence
 
 ## Contributing
 
-[If you want to help us build, and improve `{{ cookiecutter.repo_name }}`, view our
+[If you want to help us build, and improve `{{ cookiecutter.project_name }}`, view our
 contributing guidelines][contributing].
 
 ### Requirements
@@ -90,7 +90,7 @@ pip install -r requirements.txt
 [This project structure is based on the `govcookiecutter` template
 project][govcookiecutter].
 
-[contributing]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/CONTRIBUTING.md
+[contributing]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/docs/contributor_guide/CONTRIBUTING.md
 [govcookiecutter]: https://github.com/best-practice-and-impact/govcookiecutter
-[docs-loading-environment-variables]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/user_guide/loading_environment_variables.md
-[docs-loading-environment-variables-secrets]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/user_guide/loading_environment_variables.md#storing-secrets-and-credentials
+[docs-loading-environment-variables]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/docs/user_guide/loading_environment_variables.md
+[docs-loading-environment-variables-secrets]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/docs/user_guide/loading_environment_variables.md#storing-secrets-and-credentials

@@ -42,7 +42,7 @@ statement for the project; an example is available on
 GOV.UK][govuk-sample-accessibility].
 
 [alex-js]: https://alexjs.com/
-[docs-write-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
+[docs-write-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
 [govuk-accessible-formats]: https://www.gov.uk/guidance/how-to-publish-on-gov-uk/accessible-pdfs
 [govuk-accessibility]: https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps
 [govuk-design-system-images]: https://design-system.service.gov.uk/styles/images/

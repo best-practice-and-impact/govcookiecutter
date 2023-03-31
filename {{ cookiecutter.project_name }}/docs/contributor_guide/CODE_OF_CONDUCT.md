@@ -1,4 +1,4 @@
-# Code of conduct for `{{ cookiecutter.repo_name }}`
+# Code of conduct for `{{ cookiecutter.project_name }}`
 
 Contributors to this repository hosted by `{{ cookiecutter.organisation_handle }}` are expected to follow the
 Contributor Covenant Code of Conduct, and those working within Her Majesty's Government
@@ -15,7 +15,7 @@ Code][civil-service-code], and are expected to follow it in their contributions.
 
 Where this Code of Conduct says:
 
-- "Project", we mean this `{{ cookiecutter.repo_name }}` {{ cookiecutter.repository_hosting_platform }} repository;
+- "Project", we mean this `{{ cookiecutter.project_name }}` {{ cookiecutter.repository_hosting_platform }} repository;
 - "Maintainer", we mean the `{{ cookiecutter.organisation_handle }}` organisation owners; and
 - "Leadership", we mean both `{{ cookiecutter.organisation_handle }}` organisation owners, line managers, and other
   leadership within the {{ cookiecutter.organisation_name }}.

@@ -165,7 +165,7 @@ html_static_path = ["_static"]
 # html_search_scorer = "scorer.js"
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "{{ cookiecutter.repo_name }}doc"
+htmlhelp_basename = "{{ cookiecutter.project_name }}doc"
 
 # -- Options for autosection output ----------------
 

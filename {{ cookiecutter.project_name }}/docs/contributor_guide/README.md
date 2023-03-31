@@ -1,6 +1,6 @@
 # Contributing guide
 
-This is the contributor guide for the `{{ cookiecutter.repo_name }}` project.
+This is the contributor guide for the `{{ cookiecutter.project_name }}` project.
 
 ```{toctree}
 :maxdepth: 2

@@ -77,7 +77,7 @@ pytest tests
 [Code coverage of Python scripts is measured using the `coverage` Python
 package][coverage]; its configuration can be found in `pyproject.toml`. Note coverage
 only extends to Python scripts in the `hooks`, and
-`{{ cookiecutter.repo_name }}/src` folders.
+`{{ cookiecutter.project_name }}/src` folders.
 
 To run code coverage, and view it as an HTML report, enter the following command in
 your terminal:
@@ -115,12 +115,12 @@ the `README.md` file in that folder.
 
 [code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/
-[docs-govcookiecutter-frameworks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.md
-[docs-pre-commit-hooks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
-[docs-pre-commit-hooks-secrets-definition]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
-[docs-updating-gitignore]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
-[docs-write-accessible-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_accessible_documentation.md
-[docs-write-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
+[docs-govcookiecutter-frameworks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.md
+[docs-pre-commit-hooks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
+[docs-pre-commit-hooks-secrets-definition]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
+[docs-updating-gitignore]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
+[docs-write-accessible-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/docs/contributor_guide/writing_accessible_documentation.md
+[docs-write-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
 [email]: mailto:gsshelp@statistics.gov.uk
 [gds-way]: https://gds-way.cloudapps.digital/
 [gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html

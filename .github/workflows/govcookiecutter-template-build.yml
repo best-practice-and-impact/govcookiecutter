@@ -58,7 +58,7 @@ jobs:
           fi;
         shell: bash
       - name: Create project from govcookiecutter for this commit
-        run: cookiecutter ga-govcookiecutter --no-input repo_name=example using_R=${{ matrix.R.using_R }}
+        run: cookiecutter ga-govcookiecutter --no-input project_name=example using_R=${{ matrix.R.using_R }}
         shell: bash
       - name: Install requirements, and pre-commit hooks, and check Sphinx build
         run: |

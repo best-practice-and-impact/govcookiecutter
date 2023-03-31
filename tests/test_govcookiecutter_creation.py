@@ -54,7 +54,7 @@ def test_organisational_framework_correct() -> None:
 
 @pytest.mark.parametrize("test_input_repository_name", ["a", "b"])
 @pytest.mark.parametrize("test_input_using_r", ["Yes", "No"])
-def test_repo_name_directory_correct(
+def test_project_name_directory_correct(
     cookies, test_input_repository_name: str, test_input_using_r: str
 ) -> None:
     """Check the project repository is generated with the correct name."""
@@ -62,7 +62,7 @@ def test_repo_name_directory_correct(
     # Create a new project adding extra context
     test_output_project = cookies.bake(
         extra_context={
-            "repo_name": test_input_repository_name,
+            "project_name": test_input_repository_name,
             "using_R": test_input_using_r,
         }
     )
@@ -83,7 +83,7 @@ args_builds_correctly = [
         "organisation_handle": "handle_1",
         "contact_email": "email@1",
         "project_name": "Project_1",
-        "repo_name": "repo_1",
+        "package_name": "package_1",
         "overview": "overview_1",
         "project_version": "version_1",
     },
@@ -92,7 +92,7 @@ args_builds_correctly = [
         "organisation_handle": "handle_2",
         "contact_email": "email@2",
         "project_name": "Project_2",
-        "repo_name": "repo_2",
+        "package_name": "package_2",
         "overview": "overview_2",
         "project_version": "version_2",
     },
