@@ -69,7 +69,7 @@ jobs:
             make docs
           elif [ "$RUNNER_OS" == "Windows" ]; then
             pip install -U pip setuptools
-            pip install -r requirements.txt
+            pip install -e .[dev]
             pre-commit install
             sphinx-build -b html ./docs ./docs/_build
           else
