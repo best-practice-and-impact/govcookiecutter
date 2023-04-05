@@ -23,6 +23,14 @@ using:
 pip install -e .
 ```
 
+or
+
+```shell
+pip install -e .[dev]
+```
+
+if you are a contributing developer.
+
 This installs an editable version of the package. Meaning, when you update the
 package code, you do not have to reinstall it for the changes to take effect.
 (This saves a lot of time when you test your code)

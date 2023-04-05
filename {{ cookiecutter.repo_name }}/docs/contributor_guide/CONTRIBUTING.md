@@ -10,18 +10,17 @@ we'd be happy to help!
 
 ## Getting started
 
-To start contributing, open your terminal, and install the required Python packages,
-and [pre-commit hooks][pre-commit] using:
+To start contributing, open your terminal, and install the package and it's required
+Python dependencies using:
 
 ```shell
-pip install -r requirements.txt
-pre-commit install
+pip install -e .[dev]
 ```
 
-or the `make` command:
+Next install the [pre-commit hooks][pre-commit] by entering the following in the terminal:
 
 ```shell
-make requirements
+pre-commit install
 ```
 
 The pre-commit hooks are a security feature to ensure, for example, no secrets[^1],
