@@ -13,7 +13,7 @@
 ## Install the Python requirements for contributors, and install pre-commit hooks
 requirements:
 	python -m pip install -U pip setuptools
-	python -m pip install -r requirements.txt
+	python -m pip install -e .[dev]
 	pre-commit install
 
 ## Create a `docs/_build` folder, if it does not exist. Otherwise delete any sub-folders and their contents within it
