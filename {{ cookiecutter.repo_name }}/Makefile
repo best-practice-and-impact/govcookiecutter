@@ -10,11 +10,16 @@
 
 .DEFAULT_GOAL := help
 
-## Install the Python requirements for contributors, and install pre-commit hooks
-requirements:
+## Install the Python package for contributors, and install pre-commit hooks
+install_dev:
 	python -m pip install -U pip setuptools
 	python -m pip install -e .[dev]
 	pre-commit install
+
+## Install the Python package for users
+install:
+	python -m pip install -U pip setuptools
+	python -m pip install -e .
 
 ## Create a `docs/_build` folder, if it does not exist. Otherwise delete any sub-folders and their contents within it
 prepare_docs_folder:
