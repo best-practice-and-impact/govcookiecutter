@@ -5,8 +5,9 @@
 	docs
 	docs_check_external_links
 	help
+	install
+	install_dev
 	prepare_docs_folder
-	requirements
 
 .DEFAULT_GOAL := help
 
@@ -27,15 +28,15 @@ prepare_docs_folder:
 	find ./docs/_build -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
 
 ## Compile the Sphinx documentation in HTML format in the docs/_build folder from a clean build
-docs: prepare_docs_folder requirements
+docs: prepare_docs_folder install_dev
 	sphinx-build -b html ./docs ./docs/_build
 
 ## Check external links in the Sphinx documentation using linkcheck in the docs/_build folder from a clean build
-docs_check_external_links: prepare_docs_folder requirements
+docs_check_external_links: prepare_docs_folder install_dev
 	sphinx-build -b linkcheck ./docs ./docs/_build
 
 ## Run code coverage
-coverage: requirements
+coverage: install_dev
 	coverage run -m pytest
 
 ## Run code coverage, and produce a HTML output
