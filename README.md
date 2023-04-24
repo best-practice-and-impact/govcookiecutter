@@ -47,8 +47,8 @@ Once you've answered all the prompts, your project will be created. Then:
 3. Install the necessary packages using `pip` and the pre-commit hooks:
    ```shell
    python -m pip install -U pip setuptools
-	 python -m pip install -e .[dev]
-	 pre-commit install
+python -m pip install -e .[dev]
+pre-commit install
    ```
    or use the `make` command:
    ```shell
