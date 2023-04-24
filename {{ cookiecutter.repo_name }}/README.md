@@ -20,16 +20,13 @@ Whilst in the root folder, in the command prompt, you can install the package an
 using:
 
 ```shell
+python -m pip install -U pip setuptools
 pip install -e .
 ```
-
-or
-
+or use the `make` command:
 ```shell
-pip install -e .[dev]
+make install
 ```
-
-if you are a contributing developer.
 
 This installs an editable version of the package. Meaning, when you update the
 package code, you do not have to reinstall it for the changes to take effect.
@@ -87,10 +84,15 @@ contributing guidelines][contributing].
   credentials](#required-secrets-and-credentials)
 - [load environment variables][docs-loading-environment-variables] from `.env`
 
-To install the Python requirements, open your terminal and enter:
-
+To install the contributing requirements, open your terminal and enter:
 ```shell
-pip install -r requirements.txt
+python -m pip install -U pip setuptools
+pip install -e .[dev]
+pre-commit install
+```
+or use the `make` command:
+```shell
+make install_dev
 ```
 
 ## Acknowledgements

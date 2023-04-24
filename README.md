@@ -46,12 +46,13 @@ Once you've answered all the prompts, your project will be created. Then:
    ```
 3. Install the necessary packages using `pip` and the pre-commit hooks:
    ```shell
-   pip install -r requirements.txt
-   pre-commit install
+   python -m pip install -U pip setuptools
+	 python -m pip install -e .[dev]
+	 pre-commit install
    ```
    or use the `make` command:
    ```shell
-   make requirements
+   make install_dev
    ```
 4. Stage all your project files, and make your first commit
    ```shell
