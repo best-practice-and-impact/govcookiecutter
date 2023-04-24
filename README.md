@@ -40,20 +40,24 @@ Once you've answered all the prompts, your project will be created. Then:
 
 1. Set up a Python virtual environment — [there are many ways to set up a virtual
   environment][pluralsight], so we'll let you decide what's best for you!
+
 2. In your terminal, navigate to your new project, and initialise Git
    ```shell
    git init
    ```
+
 3. Install the necessary packages using `pip` and the pre-commit hooks:
    ```shell
    python -m pip install -U pip setuptools
-python -m pip install -e .[dev]
-pre-commit install
+   python -m pip install -e .[dev]
+   pre-commit install
    ```
+
    or use the `make` command:
    ```shell
    make install_dev
    ```
+
 4. Stage all your project files, and make your first commit
    ```shell
    git add .
