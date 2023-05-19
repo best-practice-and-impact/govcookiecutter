@@ -4,8 +4,8 @@ All documentation for the project should be included in this folder in MyST Mark
 files, with acceptable formatting for Sphinx. [Guidance on how to write Sphinx
 documentation is supplied in the contributor guide][writing-sphinx-documentation].
 
-If you want to include any documentation written in the `{{ cookiecutter.repo_name }}`
-folder without duplicating it, include it in the `docs/{{ cookiecutter.repo_name }}`
+If you want to include any documentation written in the `{{ cookiecutter.project_name }}`
+folder without duplicating it, include it in the `docs/{{ cookiecutter.project_name }}`
 folder.
 
 To build the documentation, run the `docs` command [from `Makefile` using the `make`
@@ -25,4 +25,4 @@ The HTML-version of this documentation can then be viewed at `docs/_build/index.
 relative to the top-level of this repository.
 
 [docs-makefile]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/structure/README.md#makefile
-[writing-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
+[writing-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md

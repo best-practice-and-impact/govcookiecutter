@@ -2,10 +2,10 @@
 [tool.coverage.run]
 source = [
     "./hooks",
-    "./{{ cookiecutter.repo_name }}/src"
+    "./{{ cookiecutter.project_name }}/src"
 ]
 omit = [
-    "./{{ cookiecutter.repo_name }}/src/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipeline.py"
+    "./{{ cookiecutter.project_name }}/src/{{ cookiecutter.package_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipeline.py"
 ]
 
 [tool.coverage.omit]
@@ -26,7 +26,7 @@ addopts = [
     "--doctest-modules",
     "--ignore='./docs/'",
     "--ignore='./example/'",
-    "--ignore='./{{ cookiecutter.repo_name }}/docs/'"
+    "--ignore='./{{ cookiecutter.project_name }}/docs/'"
 ]
 doctest_optionflags = "NORMALIZE_WHITESPACE"
 testpaths = [

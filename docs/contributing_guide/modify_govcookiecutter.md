@@ -17,13 +17,13 @@ When you open your terminal and run:
 cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git
 ```
 
-you'll see a list of prompts to answer; one of them is `repo_name`.
+you'll see a list of prompts to answer; one of them is `project_name`.
 
-Your answer for `repo_name` is used to overwrite every instance of
-`{{ cookiecutter.repo_name }}`. The first instance is the `govcookiecutter` folder
-`{{ cookiecutter.repo_name }}`, which becomes your outputted project!
+Your answer for `project_name` is used to overwrite every instance of
+`{{ cookiecutter.project_name }}`. The first instance is the `govcookiecutter` folder
+`{{ cookiecutter.project_name }}`, which becomes your outputted project!
 
-This means every folder and file contained within the `{{ cookiecutter.repo_name }}`
+This means every folder and file contained within the `{{ cookiecutter.project_name }}`
 folder becomes part of your output project, including their content. Anything else
 outside of this folder in `govcookiecutter` will not exist in the outputted project.
 
@@ -33,7 +33,7 @@ The prompts, and their default responses are defined in `cookiecutter.json`. Her
 keys starting with `_` are not shown to the user, but provide template extensions.
 
 One such extension is `jinja2_time.TimeExtension`, which is used to add the correct
-year in the `{{ cookiecutter.repo_name }}/LICENSE` file.
+year in the `{{ cookiecutter.project_name }}/LICENSE` file.
 
 All other keys are used to inject the user responses throughout the template. This
 happens wherever you see `{{ cookiecutter.{KEY} }}`, where `{KEY}` is the key in
@@ -45,7 +45,7 @@ Values that are lists are shown as numerical options to the user, with the first
 element as the default value.
 
 Note that these default values can also contain Jinja templating! For example, the
-default response for `repo_name` is actually based on `project_name`, but with all
+default response for `package_name` is actually based on `project_name`, but with all
 characters in lowercase, and any spaces replaced with hyphens.
 
 ## Validating user entries
@@ -75,7 +75,7 @@ defined in `hooks/post_gen_project.py`. These hooks only run after a project has
 generated and, if they fail, will rollback the entire project.
 
 Conditional files and folders are defined as `features` in the
-`{{ cookiecutter.repo_name }}/manifest.json` file, which looks like:
+`{{ cookiecutter.project_name }}/manifest.json` file, which looks like:
 
 ```
 {
@@ -146,11 +146,11 @@ These are performed in the `hooks/post_gen_project.py`file.
 ## Tests, coverage, and continuous integration
 
 All pre- and post-generation hooks should be fully tested, alongside any generic
-functions that we want to supply to users within the `{{ cookiecutter.repo_name }}/src`
+functions that we want to supply to users within the `{{ cookiecutter.project_name }}/src{{ cookiecutter.package_name }}`
 package. These tests should be written in `tests` or
-`{{ cookiecutter.repo_name }}/tests` as appropriate.
+`{{ cookiecutter.project_name }}/tests` as appropriate.
 
-Coverage also only covers the `hooks` and `{{ cookiecutter.repo_name }}/src` folders.
+Coverage also only covers the `hooks` and `{{ cookiecutter.project_name }}/src` folders.
 
 ### Testing Jinja templating
 
@@ -158,7 +158,7 @@ Most of the tests are straightforward, and comprehensive. However, to test the J
 injection of user responses, the `test_govcookiecutter_injected_variables.py` script
 adopts a test-driven development approach to completeness.
 
-This test parses all the content of the `{{ cookiecutter.repo_name }}` folder, and
+This test parses all the content of the `{{ cookiecutter.project_name }}` folder, and
 counts the number of times the replacement variable and its variations appear.
 
 The constant dictionary variables at the top of the test script define the different
@@ -207,7 +207,7 @@ then use semantic versioning to number our releases][semver]. This helps our use
 select a different version of `govcookiecutter` to use based on their individual needs.
 
 [cookiecutter]: https://cookiecutter.readthedocs.io
-[docs-organisational-frameworks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/%7B%7B%20cookiecutter.repo_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.md
+[docs-organisational-frameworks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/%7B%7B%20cookiecutter.project_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.md
 [github-issues]: https://github.com/best-practice-and-impact/govcookiecutter/issues
 [html5-email-format]: https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address
 [jinja]: https://jinja.palletsprojects.com
