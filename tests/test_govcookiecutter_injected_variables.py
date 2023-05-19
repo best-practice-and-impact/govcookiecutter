@@ -42,7 +42,7 @@ OVERVIEW_COUNT = {
 }
 PROJECT_VERSION_COUNT = {
     '"{{ cookiecutter.project_version }}"': 2,
-    "{{ cookiecutter.project_version }}": 0,
+    "{{ cookiecutter.project_version }}": 1,
 }
 USING_R_NO_COUNT = {
     "https://github.com/lorenzwalthert/precommit": 0,
@@ -179,7 +179,7 @@ args_injected_counts_correct = [
     (
         "project_version",
         "project_version_2",
-        {**PROJECT_VERSION_COUNT, "{{ cookiecutter.project_version }}": 1},
+        {**PROJECT_VERSION_COUNT, "{{ cookiecutter.project_version }}": 2},
         {"using_R": "Yes"},
     ),
     ("using_R", "No", USING_R_NO_COUNT, {}),
