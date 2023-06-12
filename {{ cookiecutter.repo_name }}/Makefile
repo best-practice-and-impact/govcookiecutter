@@ -5,16 +5,22 @@
 	docs
 	docs_check_external_links
 	help
+	install
+	install_dev
 	prepare_docs_folder
-	requirements
 
 .DEFAULT_GOAL := help
 
-## Install the Python requirements for contributors, and install pre-commit hooks
-requirements:
+## Install the Python package for contributors, and install pre-commit hooks
+install_dev:
 	python -m pip install -U pip setuptools
-	python -m pip install -r requirements.txt
+	python -m pip install -e .[dev]
 	pre-commit install
+
+## Install the Python package for users
+install:
+	python -m pip install -U pip setuptools
+	python -m pip install -e .
 
 ## Create a `docs/_build` folder, if it does not exist. Otherwise delete any sub-folders and their contents within it
 prepare_docs_folder:
@@ -22,15 +28,15 @@ prepare_docs_folder:
 	find ./docs/_build -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} \;
 
 ## Compile the Sphinx documentation in HTML format in the docs/_build folder from a clean build
-docs: prepare_docs_folder requirements
+docs: prepare_docs_folder install_dev
 	sphinx-build -b html ./docs ./docs/_build
 
 ## Check external links in the Sphinx documentation using linkcheck in the docs/_build folder from a clean build
-docs_check_external_links: prepare_docs_folder requirements
+docs_check_external_links: prepare_docs_folder install_dev
 	sphinx-build -b linkcheck ./docs ./docs/_build
 
 ## Run code coverage
-coverage: requirements
+coverage: install_dev
 	coverage run -m pytest
 
 ## Run code coverage, and produce a HTML output
