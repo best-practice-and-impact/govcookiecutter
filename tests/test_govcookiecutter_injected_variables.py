@@ -38,7 +38,7 @@ REPO_NAME_COUNT = {
 }
 OVERVIEW_COUNT = {
     '"{{ cookiecutter.overview }}",': 0,
-    "{{ cookiecutter.overview }}": 1,
+    "{{ cookiecutter.overview }}": 2,
 }
 PROJECT_VERSION_COUNT = {
     '"{{ cookiecutter.project_version }}"': 2,
@@ -172,7 +172,7 @@ args_injected_counts_correct = [
     (
         "overview",
         "overview_1",
-        {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 2},
+        {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 3},
         {"using_R": "Yes"},
     ),
     ("project_version", "project_version_1", PROJECT_VERSION_COUNT, {"using_R": "No"}),

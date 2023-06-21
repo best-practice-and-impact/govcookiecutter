@@ -37,10 +37,7 @@ documentation][docs-pre-commit-hooks].
 
 ### Git and GitHub
 
-We use Git to version control the source code. [Please read the GDS Way for details on
-Git best practice][gds-way-git]. This includes how to write good commit messages, use
-`git rebase` for local branches and `git merge --no-ff` for merges, as well as using
-`git push --force-with-lease` instead of `git push -f`.
+We use Git to version control the source code. [Please read the Quality assurance of code for analysis and research for details on Git best practice][duck-book-version-control]. This includes how to write good commit messages, how to branch correctly and solving merge conflicts.
 
 [If you want to modify the `.gitignore` files, see the template
 documentation][docs-updating-gitignore] for further details.
@@ -115,7 +112,7 @@ build the documentation into an accessible, searchable website.
 [docs-write-accessible-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_accessible_documentation.md
 [docs-write-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
 [gds-way]: https://gds-way.cloudapps.digital/
-[gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html
+[duck-book-version-control]: https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide
 [myst]: https://myst-parser.readthedocs.io/
 [pre-commit]: https://pre-commit.com

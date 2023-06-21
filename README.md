@@ -23,13 +23,13 @@ terminal, navigate to the directory where you want your new repository to exist.
 run the following command for the latest stable release:
 
 ```shell
-cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git
+python -m cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git
 ```
 
 or for a specific branch, tag, or commit SHA `{SPECIFIC}`, run:
 
 ```shell
-cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git --checkout {SPECIFIC}
+python -m cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git --checkout {SPECIFIC}
 ```
 
 Follow the prompts; if you are asked to re-download `govcookiecutter`, input `yes`.
