@@ -1,4 +1,3 @@
-bandit
 cookiecutter
 coverage
 detect-secrets==1.0.3
