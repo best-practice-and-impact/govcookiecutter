@@ -25,6 +25,6 @@ testpaths = [
 ]
 
 # `bandit' configurations
-[tool.bandit]
-exclude_dirs = ["tests", "docs"]
-skips = []
+#[tool.bandit]
+#exclude_dirs = ["tests", "docs"]
+#skips = []

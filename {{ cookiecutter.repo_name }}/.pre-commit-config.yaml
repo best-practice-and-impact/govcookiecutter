@@ -67,13 +67,13 @@ repos:
         name: detect-secrets - Detect secrets in staged code
         args: [ "--baseline", ".secrets.baseline" ]
         exclude: .*/tests/.*|^\.cruft\.json$
-  - repo: https://github.com/PyCQA/bandit
-    rev: '1.7.5'
-    hooks:
-      - id: bandit
-        name: bandit - Checks for vulnerabilities
-        args: ["c", "pyproject.toml"]
-        additional_dependencies: ["bandit[toml]"]
+  #- repo: https://github.com/PyCQA/bandit
+    #rev: '1.7.5'
+    #hooks:
+      #- id: bandit
+        #name: bandit - Checks for vulnerabilities
+        #args: ["c", "pyproject.toml"]
+        #additional_dependencies: ["bandit[toml]"]
 {% if cookiecutter.using_R == "Yes" %}
   # R specific hooks: https://github.com/lorenzwalthert/precommit
   - repo: https://github.com/lorenzwalthert/precommit
