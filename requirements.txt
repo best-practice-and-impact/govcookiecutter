@@ -5,6 +5,7 @@ detect-secrets==1.0.3
 #pytest-cookies
 git+https://github.com/Jacobb164/pytest-cookies
 govuk-tech-docs-sphinx-theme
+jinja2_time
 jinja2-time
 myst-parser
 pre-commit
