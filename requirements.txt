@@ -2,7 +2,7 @@ bandit
 cookiecutter
 coverage
 detect-secrets
-govuk-tech-docs-sphinx-theme
+git+https://github.com/danmilne1/govuk-tech-docs-sphinx-theme.git@updateSphinx
 jinja2-time
 myst-parser
 pre-commit
