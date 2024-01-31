@@ -7,12 +7,10 @@ from sphinx.cmd.build import main
 
 @pytest.mark.parametrize("test_input_repository_hosting_platform", ["GitHub", "GitLab"])
 @pytest.mark.parametrize("test_input_project_name", ["A project", "Another project"])
-@pytest.mark.parametrize("test_input_using_r", ["Yes", "No"])
 def test_request_template_generated_correctly(
     cookies,
     test_input_repository_hosting_platform: str,
     test_input_project_name: str,
-    test_input_using_r: str,
 ) -> None:
     """Test the pull or merge request templates are created correctly."""
 
@@ -21,7 +19,6 @@ def test_request_template_generated_correctly(
         extra_context={
             "repository_hosting_platform": test_input_repository_hosting_platform,
             "project_name": test_input_project_name,
-            "using_R": test_input_using_r,
         }
     )
 
@@ -53,17 +50,13 @@ def test_organisational_framework_correct() -> None:
 
 
 @pytest.mark.parametrize("test_input_repository_name", ["a", "b"])
-@pytest.mark.parametrize("test_input_using_r", ["Yes", "No"])
-def test_repo_name_directory_correct(
-    cookies, test_input_repository_name: str, test_input_using_r: str
-) -> None:
+def test_repo_name_directory_correct(cookies, test_input_repository_name: str) -> None:
     """Check the project repository is generated with the correct name."""
 
     # Create a new project adding extra context
     test_output_project = cookies.bake(
         extra_context={
             "repo_name": test_input_repository_name,
-            "using_R": test_input_using_r,
         }
     )
 
@@ -102,13 +95,11 @@ args_builds_correctly = [
 @pytest.mark.parametrize("test_input_context", args_builds_correctly)
 @pytest.mark.parametrize("test_input_repository_hosting_platform", ["GitHub", "GitLab"])
 @pytest.mark.parametrize("test_input_organisational_framework", ["GDS", "N/A"])
-@pytest.mark.parametrize("test_input_using_r", ["No", "Yes"])
 def test_builds_correctly(
     cookies,
     test_input_context: Dict[str, str],
     test_input_repository_hosting_platform: str,
     test_input_organisational_framework: str,
-    test_input_using_r: str,
 ) -> None:
     """Test that the projects are built correctly with no errors."""
 
@@ -118,7 +109,6 @@ def test_builds_correctly(
             **test_input_context,
             "repository_hosting_platform": test_input_repository_hosting_platform,
             "organisational_framework": test_input_organisational_framework,
-            "using_R": test_input_using_r,
         }
     )
 
