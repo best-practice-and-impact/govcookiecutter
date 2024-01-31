@@ -159,10 +159,5 @@ if __name__ == "__main__":
             "{{ cookiecutter.repository_hosting_platform }}",
         )
 
-    # Delete files defined in the `manifest.json` file
-    delete_files_and_folders(
-        parse_features_json(Path(".govcookiecutter", "manifest.json"))
-    )
-
     # Remove `DIR_GOVCOOKIECUTTER`
     delete_files_and_folders(DIR_GOVCOOKIECUTTER)
