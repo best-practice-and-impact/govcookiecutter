@@ -166,8 +166,7 @@ args_injected_counts_correct = [
 
 
 @pytest.mark.parametrize(
-    "test_input_variable, test_input_value, "
-    "test_input_variable_counts, test_input_other_context",
+    "test_input_variable, test_input_value, test_input_variable_counts",
     args_injected_counts_correct,
 )
 def test_injected_counts_correct(
