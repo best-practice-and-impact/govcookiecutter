@@ -1,6 +1,6 @@
 cookiecutter
 coverage
-detect-secrets==1.0.3
+detect-secrets
 jinja2-time
 myst-parser
 pre-commit
