@@ -174,7 +174,6 @@ def test_injected_counts_correct(
     test_input_variable: str,
     test_input_value: str,
     test_input_variable_counts: Dict[str, int],
-    test_input_other_context: Dict[str, str],
 ) -> None:
 
     # Generate the expected counts
@@ -188,7 +187,6 @@ def test_injected_counts_correct(
     test_output_project = cookies.bake(
         extra_context={
             test_input_variable: test_input_value,
-            **test_input_other_context,
         }
     )
 
