@@ -44,20 +44,6 @@ PROJECT_VERSION_COUNT = {
     '"{{ cookiecutter.project_version }}"': 2,
     "{{ cookiecutter.project_version }}": 1,
 }
-USING_R_NO_COUNT = {
-    "https://github.com/lorenzwalthert/precommit": 0,
-    "`.lintr`": 0,
-    "`.Rprofile`": 0,
-    "`DESCRIPTION`": 0,
-    "`startup.R`": 0,
-}
-USING_R_YES_COUNT = {
-    "https://github.com/lorenzwalthert/precommit": 2,
-    "`.lintr`": 0,
-    "`.Rprofile`": 0,
-    "`DESCRIPTION`": 0,
-    "`startup.R`": 0,
-}
 
 
 def replace_cookiecutter_jinja2_counts(
@@ -145,45 +131,37 @@ args_injected_counts_correct = [
         "organisation_handle",
         "handle_2",
         {**ORGANISATION_HANDLE_COUNT, '"{{ cookiecutter.organisation_handle }}",': 0},
-        {"using_R": "Yes"},
     ),
     ("contact_email", "email@1", CONTACT_EMAIL_COUNT, {"using_R": "No"}),
     (
         "contact_email",
         "email@2",
         {**CONTACT_EMAIL_COUNT, '"{{ cookiecutter.contact_email }}")': 0},
-        {"using_R": "Yes"},
     ),
     ("project_name", "Project_1", PROJECT_NAME_COUNT, {"using_R": "No"}),
     (
         "project_name",
         "Project_2",
         {**PROJECT_NAME_COUNT, "{{ cookiecutter.project_name }}": 3},
-        {"using_R": "Yes"},
     ),
     ("repo_name", "repo_1", REPO_NAME_COUNT, {"using_R": "No"}),
     (
         "repo_name",
         "repo_2",
         {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 5},
-        {"using_R": "Yes"},
     ),
     ("overview", "overview_1", OVERVIEW_COUNT, {"using_R": "No"}),
     (
         "overview",
         "overview_1",
         {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 3},
-        {"using_R": "Yes"},
     ),
     ("project_version", "project_version_1", PROJECT_VERSION_COUNT, {"using_R": "No"}),
     (
         "project_version",
         "project_version_2",
         {**PROJECT_VERSION_COUNT, "{{ cookiecutter.project_version }}": 2},
-        {"using_R": "Yes"},
     ),
-    ("using_R", "No", USING_R_NO_COUNT, {}),
-    ("using_R", "Yes", USING_R_YES_COUNT, {}),
 ]
 
 
