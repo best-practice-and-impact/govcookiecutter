@@ -77,9 +77,6 @@ contributing guidelines][contributing].
 [```Contributors have some additional requirements!```][contributing]
 
 - Python 3.6.1+ installed
-{% if cookiecutter.using_R == "Yes" -%}
-- R 4.0.4+ installed
-{% endif -%}
 - a `.secrets` file with the [required secrets and
   credentials](#required-secrets-and-credentials)
 - [load environment variables][docs-loading-environment-variables] from `.env`
