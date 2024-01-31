@@ -124,39 +124,39 @@ def recursive_open_and_count_search_terms(
 
 # Define the test cases for the `test_injected_counts_correct` test
 args_injected_counts_correct = [
-    ("organisation_name", "org_1", ORGANISATION_NAME_COUNT, {"using_R": "No"}),
-    ("organisation_name", "org_2", ORGANISATION_NAME_COUNT, {"using_R": "Yes"}),
-    ("organisation_handle", "handle_1", ORGANISATION_HANDLE_COUNT, {"using_R": "No"}),
+    ("organisation_name", "org_1", ORGANISATION_NAME_COUNT),
+    ("organisation_name", "org_2", ORGANISATION_NAME_COUNT),
+    ("organisation_handle", "handle_1", ORGANISATION_HANDLE_COUNT),
     (
         "organisation_handle",
         "handle_2",
         {**ORGANISATION_HANDLE_COUNT, '"{{ cookiecutter.organisation_handle }}",': 0},
     ),
-    ("contact_email", "email@1", CONTACT_EMAIL_COUNT, {"using_R": "No"}),
+    ("contact_email", "email@1", CONTACT_EMAIL_COUNT),
     (
         "contact_email",
         "email@2",
         {**CONTACT_EMAIL_COUNT, '"{{ cookiecutter.contact_email }}")': 0},
     ),
-    ("project_name", "Project_1", PROJECT_NAME_COUNT, {"using_R": "No"}),
+    ("project_name", "Project_1", PROJECT_NAME_COUNT),
     (
         "project_name",
         "Project_2",
         {**PROJECT_NAME_COUNT, "{{ cookiecutter.project_name }}": 3},
     ),
-    ("repo_name", "repo_1", REPO_NAME_COUNT, {"using_R": "No"}),
+    ("repo_name", "repo_1", REPO_NAME_COUNT),
     (
         "repo_name",
         "repo_2",
         {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 5},
     ),
-    ("overview", "overview_1", OVERVIEW_COUNT, {"using_R": "No"}),
+    ("overview", "overview_1", OVERVIEW_COUNT),
     (
         "overview",
         "overview_1",
         {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 3},
     ),
-    ("project_version", "project_version_1", PROJECT_VERSION_COUNT, {"using_R": "No"}),
+    ("project_version", "project_version_1", PROJECT_VERSION_COUNT),
     (
         "project_version",
         "project_version_2",
