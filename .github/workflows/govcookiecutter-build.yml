@@ -22,6 +22,7 @@ jobs:
         run: |
           if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" || "$RUNNER_OS" == "Windows" ]]; then
             make requirements
+            pip install sphinx --upgrade
           else
             echo "$RUNNER_OS not supported"
             exit 1
