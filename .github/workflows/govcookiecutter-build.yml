@@ -1,4 +1,4 @@
-name: govcookiecutter build
+name: GovCookiecutter Build and Test
 
 on: [ push, pull_request ]
 
