@@ -864,3 +864,9 @@ example/*
 
 # Ignore Sphinx documentation link checking folder
 docs/_linkcheck/
+
+# Commonly used data file extensions
+
+*.csv
+*.xls
+*.xlsx
