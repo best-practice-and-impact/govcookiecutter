@@ -12,5 +12,5 @@ pytest
 pytest-mock
 pytest-xdist
 python-dotenv
-Sphinx
+Sphinx==5.0.0
 toml
