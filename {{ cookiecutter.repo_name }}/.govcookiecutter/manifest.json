@@ -5,6 +5,24 @@
       "description": "R files that are removed if not enabled.",
       "remove": {% if cookiecutter.using_R == "No" %}true{% else %}false{% endif %},
       "resources": [".Rprofile", ".lintr", "DESCRIPTION", "startup.R"]
+    },
+    {
+      "name": "Python files",
+      "description": "Python files that are removed if not enabled.",
+      "remove": {% if cookiecutter.using_R == "Yes" %}true{% else %}false{% endif %},
+      "resources": ["setup.py", "setup.cfg"]
+    },
+    {
+      "name": "GitLab files",
+      "description": "GitLab files that are removed if not enabled.",
+      "remove": {% if cookiecutter.repository_hosting_platform == "GitHub" %}true{% else %}false{% endif %},
+      "resources": [".gitlab-ci.yml", ".gitlab"]
+    },
+    {
+      "name": "GitHub files",
+      "description": "GitHub files that are removed if not enabled.",
+      "remove": {% if cookiecutter.repository_hosting_platform == "GitLab" %}true{% else %}false{% endif %},
+      "resources": [".github"]
     }
   ]
 }
