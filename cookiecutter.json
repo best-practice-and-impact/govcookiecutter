@@ -1,6 +1,4 @@
 {
-  "_extensions": ["jinja2_time.TimeExtension"],
-
   "organisation_name": "Your public sector organisation name, for example Government Digital Service",
   "repository_hosting_platform": ["GitHub", "GitLab"],
   "organisation_handle": "Your GitHub/GitLab organisation name, for example ukgovdatascience",
@@ -8,7 +6,7 @@
   "organisational_framework": ["GDS", "N/A"],
 
   "project_name": "Your new project name",
-  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "overview": "Brief overview of your project.",
   "project_version": "0.0.1",
 

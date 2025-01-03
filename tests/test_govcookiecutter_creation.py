@@ -1,7 +1,8 @@
-from sphinx.cmd.build import main
-from typing import Dict
-import pytest
 import re
+from typing import Dict
+
+import pytest
+from sphinx.cmd.build import main
 
 
 @pytest.mark.parametrize("test_input_repository_hosting_platform", ["GitHub", "GitLab"])

@@ -4,6 +4,11 @@ source = [
     "./hooks",
     "./{{ cookiecutter.repo_name }}/src"
 ]
+omit = [
+    "./{{ cookiecutter.repo_name }}/src/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipeline.py"
+]
+
+[tool.coverage.omit]
 
 [tool.coverage.report]
 exclude_lines = [
@@ -25,6 +30,5 @@ addopts = [
 ]
 doctest_optionflags = "NORMALIZE_WHITESPACE"
 testpaths = [
-    "./tests",
-    "./{{ cookiecutter.repo_name }}/tests"
+    "./tests"
 ]

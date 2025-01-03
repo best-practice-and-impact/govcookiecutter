@@ -37,10 +37,7 @@ on pre-commit hooks see our documentation][docs-pre-commit-hooks].
 
 ### Git and GitHub
 
-We use Git to version control the source code. [Please read the GDS Way for details on
-Git best practice][gds-way-git]. This includes how to write good commit messages, use
-`git rebase` for local branches and `git merge --no-ff` for merges, as well as using
-`git push --force-with-lease` instead of `git push -f`.
+We use Git to version control the source code. [Please read the Quality assurance of code for analysis and research for details on Git best practice][duck-book-version-control]. This includes how to write good commit messages, how to branch correctly and solving merge conflicts.
 
 [If you want to modify the `.gitignore` files, see the template
 documentation][docs-updating-gitignore] for further details.
@@ -65,12 +62,11 @@ enforced in all cases, for example with long hyperlinks.
 ## Testing
 
 [Tests are written using the `pytest` framework][pytest], with its configuration in the
-`pyproject.toml` file. Note, only tests in the `tests`, and
-`{{ cookiecutter.repo_name }}/tests` folders folder are run. To run the tests, enter
+`pyproject.toml` file. Note, only the `tests` folder in the root direcrtory of this project are to run. To run the tests, enter
 the following command in your terminal:
 
 ```shell
-pytest
+pytest tests
 ```
 
 ### Code coverage
@@ -124,7 +120,7 @@ the `README.md` file in that folder.
 [docs-write-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
 [email]: mailto:gsshelp@statistics.gov.uk
 [gds-way]: https://gds-way.cloudapps.digital/
-[gds-way-git]: https://gds-way.cloudapps.digital/standards/source-code.html
+[gds-way-git]: https://www.gov.uk/service-manual/technology/maintaining-version-control-in-coding
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide
 [govcookiecutter]: https://github.com/best-practice-and-impact/govcookiecutter
 [myst]: https://myst-parser.readthedocs.io/

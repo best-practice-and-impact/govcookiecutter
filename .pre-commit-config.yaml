@@ -12,23 +12,25 @@ repos:
       - id: trailing-whitespace
         name: Check for trailing whitespaces (auto-fixes)
   - repo: https://github.com/pycqa/isort
-    rev: 5.8.0
+    rev: 5.12.0
     hooks:
       - id: isort
         name: isort - Sort Python imports (auto-fixes)
-        types: [ cython, pyi, python ]
         args: [ "--profile", "black", "--filter-files" ]
+        exclude: test_example_module.py|run_pipeline.py
   - repo: https://github.com/psf/black
     rev: 22.8.0 # Replace by any tag/version: https://github.com/psf/black/tags
     hooks:
       - id: black
         name: black - consistent Python code formatting (auto-fixes)
         language_version: python # Should be a command that runs python3.6+
+        exclude: test_example_module.py|run_pipeline.py
   - repo: https://github.com/PyCQA/flake8
     rev: 5.0.4
     hooks:
       - id: flake8
         name: flake8 - Python linting
+        exclude: test_example_module.py|run_pipeline.py
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.0.3
     hooks:

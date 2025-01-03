@@ -21,11 +21,18 @@ repos:
       - id: trailing-whitespace
         name: Check for trailing whitespaces (auto-fixes)
   - repo: https://github.com/pycqa/isort
-    rev: 5.8.0
+    rev: 5.12.0
     hooks:
       - id: isort
-        name: isort - Sort Python imports (auto-fixes)
-        types: [ cython, pyi, python ]
+        name: isort - Sort python imports (auto-fixes)
+        args: [ "--profile", "black", "--filter-files" ]
+      - id: isort
+        name: isort - Sort cython imports (auto-fixes)
+        types: [cython]
+        args: [ "--profile", "black", "--filter-files" ]
+      - id: isort
+        name: isort - Sort pyi imports (auto-fixes)
+        types: [pyi]
         args: [ "--profile", "black", "--filter-files" ]
   - repo: https://github.com/psf/black
     rev: 22.8.0 # Replace by any tag/version: https://github.com/psf/black/tags
@@ -60,6 +67,13 @@ repos:
         name: detect-secrets - Detect secrets in staged code
         args: [ "--baseline", ".secrets.baseline" ]
         exclude: .*/tests/.*|^\.cruft\.json$
+  - repo: https://github.com/PyCQA/bandit
+    rev: '1.7.5'
+    hooks:
+      - id: bandit
+        name: bandit - Checks for vulnerabilities
+        args: ["-c", "pyproject.toml"]
+        additional_dependencies: ["bandit[toml]"]
 {% if cookiecutter.using_R == "Yes" %}
   # R specific hooks: https://github.com/lorenzwalthert/precommit
   - repo: https://github.com/lorenzwalthert/precommit

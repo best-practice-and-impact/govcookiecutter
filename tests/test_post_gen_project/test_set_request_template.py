@@ -1,7 +1,8 @@
-from hooks.post_gen_project import set_request_template
 from pathlib import Path
+
 import pytest
 
+from hooks.post_gen_project import set_request_template
 
 # Define test cases for the `TestSetRequestTemplate` test class
 args_test_set_request_template_valueerror_for_bad_repository_hosting_platform = [

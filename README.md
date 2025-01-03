@@ -4,7 +4,8 @@ A cookiecutter template for analytical, Python-, or Python and R-based projects 
 His Majesty's Government, and wider public sector.
 
 This template helps to set up standardised project structures, and [includes security
-features using pre-commit hooks][docs-pre-commit].
+features using pre-commit hooks][docs-pre-commit]. This cookiecutter template also acts
+as an installable template (python projects only).
 
 It also provides an Agile, centralised, and lightweight analytical quality assurance
 (AQA) process. Pull or merge request templates are used to nudge users to complete this
@@ -22,13 +23,13 @@ terminal, navigate to the directory where you want your new repository to exist.
 run the following command for the latest stable release:
 
 ```shell
-cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git
+python -m cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git
 ```
 
 or for a specific branch, tag, or commit SHA `{SPECIFIC}`, run:
 
 ```shell
-cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git --checkout {SPECIFIC}
+python -m cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git --checkout {SPECIFIC}
 ```
 
 Follow the prompts; if you are asked to re-download `govcookiecutter`, input `yes`.
@@ -39,19 +40,24 @@ Once you've answered all the prompts, your project will be created. Then:
 
 1. Set up a Python virtual environment — [there are many ways to set up a virtual
   environment][pluralsight], so we'll let you decide what's best for you!
+
 2. In your terminal, navigate to your new project, and initialise Git
    ```shell
    git init
    ```
+
 3. Install the necessary packages using `pip` and the pre-commit hooks:
    ```shell
-   pip install -r requirements.txt
+   python -m pip install -U pip setuptools
+   python -m pip install -e .[dev]
    pre-commit install
    ```
+
    or use the `make` command:
    ```shell
-   make requirements
+   make install_dev
    ```
+
 4. Stage all your project files, and make your first commit
    ```shell
    git add .
@@ -133,7 +139,7 @@ guidelines](https://github.com/best-practice-and-impact/govcookiecutter/blob/mai
 ## Acknowledgements
 
 [This template is based off the DrivenData Cookiecutter Data Science
-project][drivendata]. Specifically, it uses similar `data` and `src` folder structures,
+project][drivendata]. Specifically, it uses a similar `src` folder structure,
 and a modified version of the `help` commands in the `Makefile`s.
 
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
