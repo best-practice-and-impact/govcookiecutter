@@ -32,7 +32,7 @@ extensions = [
     "sphinx.ext.githubpages",
     "sphinx.ext.napoleon",
     "myst_parser",
-    "govuk_tech_docs_sphinx_theme",
+    "sphinx_rtd_theme",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -61,7 +61,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "README.md"]
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for a list of
 # builtin themes.
-html_theme = "govuk_tech_docs_sphinx_theme"
+html_theme = "sphinx_rtd_theme"
 
 # Variables to pass to each HTML page to help populate page-specific options
 html_context = {
