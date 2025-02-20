@@ -74,7 +74,7 @@ pytest tests
 [Code coverage of Python scripts is measured using the `coverage` Python
 package][coverage]; its configuration can be found in `pyproject.toml`. Note coverage
 only extends to Python scripts in the `hooks`, and
-`{{ cookiecutter.repo_name }}/src` folders.
+`{{ cookiecutter.repo_name }}/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}` folders.
 
 To run code coverage, and view it as an HTML report, enter the following command in
 your terminal:

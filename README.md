@@ -139,8 +139,7 @@ guidelines](https://github.com/best-practice-and-impact/govcookiecutter/blob/mai
 ## Acknowledgements
 
 [This template is based off the DrivenData Cookiecutter Data Science
-project][drivendata]. Specifically, it uses a similar `src` folder structure,
-and a modified version of the `help` commands in the `Makefile`s.
+project][drivendata]. Specifically, it uses a modified version of the `help` commands in the `Makefile`s.
 
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
 [blog-post]: https://dataingovernment.blog.gov.uk/2021/07/20/govcookiecutter-a-template-for-data-science-projects/
