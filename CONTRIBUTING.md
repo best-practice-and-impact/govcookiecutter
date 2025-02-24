@@ -46,6 +46,15 @@ Our source code is stored on GitHub at
 [https://github.com/best-practice-and-impact/govcookiecutter][govcookiecutter]. Pull
 requests into `main` require at least one approved review.
 
+### Spotted a bug?
+
+Raise an issue using the bug report template - please check the [https://github.com/best-practice-and-impact/govcookiecutter/issues][Issues] first in case we're already on it!
+
+### Want to see a new feature?
+
+We'd be delighted to consider it! Please raise an issue using the feature request template after checking the [https://github.com/best-practice-and-impact/govcookiecutter/issues][Issues] in case you can add to an ongoing discussion.
+
+
 ### Python
 
 For Python code, [we follow the GDS Way Python style guide][gds-way-python] with a line
