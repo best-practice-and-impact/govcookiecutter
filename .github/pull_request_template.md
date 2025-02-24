@@ -24,6 +24,7 @@ This pull/merge request meets the following requirements:
 - [ ] you have tested the build of the template
 - [ ] test suite passes
 - [ ] [minimum usable documentation][agilemodeling] written in the `docs` folder
+- [ ] changelog has been updated
 
 Comments have been added below around the incomplete checks.
 
