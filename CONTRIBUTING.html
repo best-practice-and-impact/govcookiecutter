@@ -175,10 +175,7 @@ on pre-commit hooks see our documentation</a>.</p>
 <p><a class="reference external" href="https://gds-way.cloudapps.digital/">We mainly follow the GDS Way in our code conventions</a>.</p>
 <section id="git-and-github">
 <h3>Git and GitHub<a class="headerlink" href="#git-and-github" title="Permalink to this headline">¶</a></h3>
-<p>We use Git to version control the source code. <a class="reference external" href="https://gds-way.cloudapps.digital/standards/source-code.html">Please read the GDS Way for details on
-Git best practice</a>. This includes how to write good commit messages, use
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rebase</span></code> for local branches and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">--no-ff</span></code> for merges, as well as using
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--force-with-lease</span></code> instead of <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-f</span></code>.</p>
+<p>We use Git to version control the source code. [Please read the Quality assurance of code for analysis and research for details on Git best practice][duck-book-version-control]. This includes how to write good commit messages, how to branch correctly and solving merge conflicts.</p>
 <p><a class="reference external" href="https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md">If you want to modify the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> files, see the template
 documentation</a> for further details.</p>
 <p>Our source code is stored on GitHub at
@@ -201,10 +198,9 @@ enforced in all cases, for example with long hyperlinks.</p>
 <section id="testing">
 <h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://docs.pytest.org/">Tests are written using the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> framework</a>, with its configuration in the
-<code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file. Note, only tests in the <code class="docutils literal notranslate"><span class="pre">tests</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}/tests</span></code> folders folder are run. To run the tests, enter
+<code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file. Note, only the <code class="docutils literal notranslate"><span class="pre">tests</span></code> folder in the root direcrtory of this project are to run. To run the tests, enter
 the following command in your terminal:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pytest
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pytest<span class="w"> </span>tests
 </pre></div>
 </div>
 <section id="code-coverage">

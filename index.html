@@ -151,11 +151,11 @@ defined in the Aqua Book</a>.</p>
 requirements</span></a>. Next, open your
 terminal, navigate to the directory where you want your new repository to exist. Then
 run the following command for the latest stable release:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cookiecutter<span class="w"> </span>https://github.com/best-practice-and-impact/govcookiecutter.git
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>cookiecutter<span class="w"> </span>https://github.com/best-practice-and-impact/govcookiecutter.git
 </pre></div>
 </div>
 <p>or for a specific branch, tag, or commit SHA <code class="docutils literal notranslate"><span class="pre">{SPECIFIC}</span></code>, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cookiecutter<span class="w"> </span>https://github.com/best-practice-and-impact/govcookiecutter.git<span class="w"> </span>--checkout<span class="w"> </span><span class="o">{</span>SPECIFIC<span class="o">}</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>cookiecutter<span class="w"> </span>https://github.com/best-practice-and-impact/govcookiecutter.git<span class="w"> </span>--checkout<span class="w"> </span><span class="o">{</span>SPECIFIC<span class="o">}</span>
 </pre></div>
 </div>
 <p>Follow the prompts; if you are asked to re-download <code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code>, input <code class="docutils literal notranslate"><span class="pre">yes</span></code>.
@@ -171,12 +171,13 @@ environment</a>, so we’ll let you decide what’s best for you!</p></li>
 </div>
 </li>
 <li><p>Install the necessary packages using <code class="docutils literal notranslate"><span class="pre">pip</span></code> and the pre-commit hooks:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pip<span class="w"> </span>setuptools
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="o">[</span>dev<span class="o">]</span>
 pre-commit<span class="w"> </span>install
 </pre></div>
 </div>
 <p>or use the <code class="docutils literal notranslate"><span class="pre">make</span></code> command:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>requirements
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>install_dev
 </pre></div>
 </div>
 </li>
@@ -256,7 +257,7 @@ guidelines</a>.</p>
 <section id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://drivendata.github.io/cookiecutter-data-science/">This template is based off the DrivenData Cookiecutter Data Science
-project</a>. Specifically, it uses similar <code class="docutils literal notranslate"><span class="pre">data</span></code> and <code class="docutils literal notranslate"><span class="pre">src</span></code> folder structures,
+project</a>. Specifically, it uses a similar <code class="docutils literal notranslate"><span class="pre">src</span></code> folder structure,
 and a modified version of the <code class="docutils literal notranslate"><span class="pre">help</span></code> commands in the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>s.</p>
 <div class="toctree-wrapper compound">
 </div>
