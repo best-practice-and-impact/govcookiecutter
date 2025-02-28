@@ -12,4 +12,9 @@ pytest-mock
 pytest-xdist
 python-dotenv
 Sphinx
+sphinxcontrib-applehelp==1.0.4 #downgraded from 2.0.0
+sphinxcontrib-devhelp==1.0.2 #downgraded from 2.0.0
+sphinxcontrib-htmlhelp==2.0.1 #downgraded from 2.1.0
+sphinxcontrib-serializinghtml==1.1.5 #downgraded from 2.0.0
+sphinxcontrib-qthelp==1.0.3 #downgraded from 2.0.0
 toml
