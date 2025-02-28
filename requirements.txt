@@ -2,8 +2,7 @@ bandit
 cookiecutter
 coverage
 detect-secrets==1.0.3
-#pytest-cookies
-git+https://github.com/Jacobb164/pytest-cookies
+pytest-cookies
 govuk-tech-docs-sphinx-theme
 jinja2-time
 myst-parser
