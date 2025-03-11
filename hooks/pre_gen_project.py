@@ -24,9 +24,8 @@ def check_valid_email_address_format(email: str) -> None:
         format.
 
     """
-    assert bool(
-        re.fullmatch(REGEX_EMAIL_ADDRESS, email)
-    ), f"Invalid email address supplied: {email}"
+    if not re.fullmatch(REGEX_EMAIL_ADDRESS, email):
+        raise ValueError(f"Invalid email address supplied: {email}")
 
 
 if __name__ == "__main__":
