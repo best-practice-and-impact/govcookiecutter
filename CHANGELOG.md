@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Exclude certain files from pre-commit hooks
 - Updated README to use `python -m`
 - Minor contributing guidance changes
+- Updated Python versions to 3.9-3.12
 
 ### Removed
 
