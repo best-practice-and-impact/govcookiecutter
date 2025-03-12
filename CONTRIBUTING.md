@@ -48,11 +48,11 @@ requests into `main` require at least one approved review.
 
 ### Spotted a bug?
 
-Raise an issue using the bug report template - please check the [https://github.com/best-practice-and-impact/govcookiecutter/issues][Issues] first in case we're already on it!
+Raise an issue using the bug report template - please check the [issues][issues] first in case we're already on it!
 
 ### Want to see a new feature?
 
-We'd be delighted to consider it! Please raise an issue using the feature request template after checking the [https://github.com/best-practice-and-impact/govcookiecutter/issues][Issues] in case you can add to an ongoing discussion.
+We'd be delighted to consider it! Please raise an issue using the feature request template after checking the [issues][issues] in case you can add to an ongoing discussion.
 
 
 ### Python
@@ -135,3 +135,4 @@ the `README.md` file in that folder.
 [myst]: https://myst-parser.readthedocs.io/
 [pre-commit]: https://pre-commit.com/
 [pytest]: https://docs.pytest.org/
+[issues]: https://github.com/best-practice-and-impact/govcookiecutter/issues
