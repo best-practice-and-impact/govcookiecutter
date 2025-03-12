@@ -46,7 +46,7 @@ class TestSetAqaFramework:
         )
         dir_docs_aqa.mkdir()
         dir_docs_aqa.joinpath("example.txt").write_text(
-            f"New file in: `{test_input_dir_cookiecutter_docs_aqa}`"
+            f"New file in: {repr(test_input_dir_cookiecutter_docs_aqa)}"
         )
 
         # Execute the `set_aqa_framework` function
@@ -74,7 +74,7 @@ class TestSetAqaFramework:
         )
         dir_docs_aqa.mkdir()
         dir_docs_aqa.joinpath("example.txt").write_text(
-            f"New file in: `{test_input_dir_cookiecutter_docs_aqa}`"
+            f"New file in: {repr(test_input_dir_cookiecutter_docs_aqa)}"
         )
 
         # Execute the `set_aqa_framework` function

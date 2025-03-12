@@ -132,7 +132,7 @@ class TestEnvExportDirectories:
     def test_values_are_directories(self) -> None:
         """Test that the values are real directories."""
         for n, d in get_actual_env_variables(PATH_TEMPLATE_ENV).items():
-            assert d.is_dir(), f"`{n}` variable directory does not exist: {d}"
+            assert d.is_dir(), f"{repr(n)} variable directory does not exist: {d}"
 
     def test_variables_as_expected(self) -> None:
         """Test directory variable and value names in `.env` are as expected."""
