@@ -117,7 +117,7 @@ def define_expected_env_variables(
             and d.name not in exclude_folders
             and d.parent.name not in exclude_sub_folders_in_parent_folders
         ):
-            if d.name.upper() == "SRC":
+            if d.name.upper() == "{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}".upper():
                 env_expected_dir_variable = loop_directories_children(
                     d, env_expected_dir_variable
                 )

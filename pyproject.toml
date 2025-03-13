@@ -2,10 +2,10 @@
 [tool.coverage.run]
 source = [
     "./hooks",
-    "./{{ cookiecutter.repo_name }}/src"
+    "./{{ cookiecutter.repo_name }}/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}"
 ]
 omit = [
-    "./{{ cookiecutter.repo_name }}/src/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipeline.py"
+    "./{{ cookiecutter.repo_name }}/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipeline.py"
 ]
 
 [tool.coverage.omit]
