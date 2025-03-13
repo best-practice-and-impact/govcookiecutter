@@ -1,6 +1,6 @@
 import pytest
 
-from {{ cookiecutter.repo_name }}.{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}.example_modules.example_module import (
+from some_folder.example_modules.example_module import (
     hello_world,
     print_favourite_number,
     print_string,
