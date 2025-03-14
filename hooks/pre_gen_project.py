@@ -27,9 +27,3 @@ def check_valid_email_address_format(email: str) -> None:
     assert bool(
         re.fullmatch(REGEX_EMAIL_ADDRESS, email)
     ), f"Invalid email address supplied: {email}"
-
-
-if __name__ == "__main__":
-
-    # Check the format of the contact email address supplied is a valid one
-    check_valid_email_address_format("{{ cookiecutter.contact_email }}")

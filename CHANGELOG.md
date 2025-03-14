@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Example data folder
+- Removed the Email Address prompts from the installation.
 
 ## [2.0.0] - 6th March 2023
 
