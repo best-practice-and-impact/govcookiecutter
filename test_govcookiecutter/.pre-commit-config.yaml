@@ -1,0 +1,76 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.4.0
+    hooks:
+      - id: nbstripout
+        name: nbstripout - Strip outputs from notebooks (auto-fixes)
+        args:
+          - --extra-keys
+          - "metadata.colab metadata.kernelspec cell.metadata.colab cell.metadata.executionInfo cell.metadata.id cell.metadata.outputId"
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: check-added-large-files
+        name: Check for files larger than 5 MB
+        args: [ "--maxkb=5120" ]
+      - id: end-of-file-fixer
+        name: Check for a blank line at the end of scripts (auto-fixes)
+        exclude: '\.Rd'
+      - id: trailing-whitespace
+        name: Check for trailing whitespaces (auto-fixes)
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        name: isort - Sort python imports (auto-fixes)
+        args: [ "--profile", "black", "--filter-files" ]
+      - id: isort
+        name: isort - Sort cython imports (auto-fixes)
+        types: [cython]
+        args: [ "--profile", "black", "--filter-files" ]
+      - id: isort
+        name: isort - Sort pyi imports (auto-fixes)
+        types: [pyi]
+        args: [ "--profile", "black", "--filter-files" ]
+  - repo: https://github.com/psf/black
+    rev: 22.8.0 # Replace by any tag/version: https://github.com/psf/black/tags
+    hooks:
+      - id: black
+        name: black - consistent Python code formatting (auto-fixes)
+        language_version: python # Should be a command that runs python3.6+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 5.0.4
+    hooks:
+      - id: flake8
+        name: flake8 - Python linting
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 0.12.0
+    hooks:
+      - id: nbqa-isort
+        name: nbqa-isort - Sort Python imports (notebooks; auto-fixes)
+        args: [ --nbqa-mutate ]
+        additional_dependencies: [ isort==5.8.0 ]
+      - id: nbqa-black
+        name: nbqa-black - consistent Python code formatting (notebooks; auto-fixes)
+        args: [ --nbqa-mutate ]
+        additional_dependencies: [ black==21.5b2 ]
+      # TODO: Disabled for now until it's clear how to add noqa to specific cells of a Jupyter notebook
+      #- id: nbqa-flake8
+      #  name: nbqa-flake8 - Python linting (notebooks)
+      #  additional_dependencies: [ flake8==3.9.2 ]
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.0.3
+    hooks:
+      - id: detect-secrets
+        name: detect-secrets - Detect secrets in staged code
+        args: [ "--baseline", ".secrets.baseline" ]
+        exclude: .*/tests/.*|^\.cruft\.json$
+  - repo: https://github.com/PyCQA/bandit
+    rev: '1.7.5'
+    hooks:
+      - id: bandit
+        name: bandit - Checks for vulnerabilities
+        args: ["-c", "pyproject.toml"]
+        additional_dependencies: ["bandit[toml]"]
