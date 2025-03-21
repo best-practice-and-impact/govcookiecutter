@@ -146,11 +146,11 @@ These are performed in the `hooks/post_gen_project.py`file.
 ## Tests, coverage, and continuous integration
 
 All pre- and post-generation hooks should be fully tested, alongside any generic
-functions that we want to supply to users within the `{{ cookiecutter.repo_name }}/src`
+functions that we want to supply to users within the `{{ cookiecutter.repo_name }}`
 package. These tests should be written in `tests` or
 `{{ cookiecutter.repo_name }}/tests` as appropriate.
 
-Coverage also only covers the `hooks` and `{{ cookiecutter.repo_name }}/src` folders.
+Coverage also only covers the `hooks` and `{{ cookiecutter.repo_name }}/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}` folders.
 
 ### Testing Jinja templating
 
