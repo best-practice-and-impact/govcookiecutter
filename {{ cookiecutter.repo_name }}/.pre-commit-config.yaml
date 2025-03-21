@@ -171,11 +171,8 @@ repos:
 
       - id: detect-secrets
         name: detect-secrets - Detect secrets in staged code
-        entry: detect-secrets
+        entry: detect-secrets-hook
         language: system
-        args:
-          - "--baseline"
-          - ".secrets.baseline"
         exclude: .*/tests/.*|^\.cruft\.json$
 
       - id: bandit
