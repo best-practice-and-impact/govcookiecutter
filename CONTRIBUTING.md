@@ -57,7 +57,7 @@ We'd be delighted to consider it! Please raise an issue using the feature reques
 Local links can be written as normal, but external links should be referenced at the
 bottom of the Markdown file for clarity. For example:
 
-Use a local link to reference the [`README.md`](../../README.md) file, but an external
+Use a local link to reference a `README.md` file for example, but an external
 link for [GOV.UK][gov-uk].
 
 We also try to wrap Markdown to a line length of 88 characters, but this is not
