@@ -11,7 +11,7 @@ Code][civil-service-code].
 Where this Code of Conduct says:
 
 - "Project", we mean this GitHub repository, `govcookiecutter` ;
-- "Maintainer", we mean active developers of the primary project team(s) behind `govcookiecutter`; and
+- "Maintainer", we mean active developers of `govcookiecutter`; and
 - "Leadership", we mean `best-practice-and-impact` organisation owners, line managers, and other
   leadership within the Office for National Statistics.
 
