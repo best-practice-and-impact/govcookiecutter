@@ -120,7 +120,7 @@ Organisational frameworks are stored in the
 organisation's framework, follow the instructions][docs-govcookiecutter-frameworks] in
 the `README.md` file in that folder.
 
-[code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/CODE_OF_CONDUCT.md
+[code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/
 [detect-secrets-repo]: https://github.com/Yelp/detect-secrets/tree/master
 [duck-book-version-control]: https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html
@@ -129,6 +129,7 @@ the `README.md` file in that folder.
 [gitignore-io]: https://www.toptal.com/developers/gitignore
 [gov-uk-accessibility]: https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps
 [gov-uk]: https://www.gov.uk/
+[issues]: https://github.com/best-practice-and-impact/govcookiecutter/issues/new
 [myst]: https://myst-parser.readthedocs.io/
 [nbstripout-repo]: https://github.com/kynan/nbstripout
 [pre-commit]: https://pre-commit.com
