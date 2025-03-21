@@ -48,5 +48,5 @@ GOV.UK][govuk-sample-accessibility].
 [govuk-design-system-images]: https://design-system.service.gov.uk/styles/images/
 [govuk-language]: https://www.gov.uk/government/publications/inclusive-communication/inclusive-language-words-to-use-and-avoid-when-writing-about-disability
 [govuk-sample-accessibility]: https://www.gov.uk/government/publications/sample-accessibility-statement
-[negative-contractions]: https://www.englishclub.com/vocabulary/contractions-negative.htm
+[negative-contractions]: https://www.thoughtco.com/what-is-a-negative-contraction-1691339
 [wave]: https://wave.webaim.org/

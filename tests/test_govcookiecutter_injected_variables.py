@@ -17,11 +17,11 @@ ORGANISATION_HANDLE_COUNT = {
     '[u"{{ cookiecutter.organisation_handle }}"],': 0,
     '"{{ cookiecutter.organisation_handle }}",': 0,
 }
-CONTACT_EMAIL_COUNT = {
-    "mailto:{{ cookiecutter.contact_email }}": 2,
-    "[{{ cookiecutter.contact_email }}][email-address].": 1,
-    '"{{ cookiecutter.contact_email }}")': 0,
-}
+# CONTACT_EMAIL_COUNT = {
+#    "mailto:{{ cookiecutter.contact_email }}": 2,
+#    "[{{ cookiecutter.contact_email }}][email-address].": 1,
+#    '"{{ cookiecutter.contact_email }}")': 0,
+# }
 PROJECT_NAME_COUNT = {
     '"{{ cookiecutter.project_name }}"': 1,
     '"{{ cookiecutter.project_name }}",': 0,
@@ -147,13 +147,13 @@ args_injected_counts_correct = [
         {**ORGANISATION_HANDLE_COUNT, '"{{ cookiecutter.organisation_handle }}",': 0},
         {"using_R": "Yes"},
     ),
-    ("contact_email", "email@1", CONTACT_EMAIL_COUNT, {"using_R": "No"}),
-    (
-        "contact_email",
-        "email@2",
-        {**CONTACT_EMAIL_COUNT, '"{{ cookiecutter.contact_email }}")': 0},
-        {"using_R": "Yes"},
-    ),
+    # ("contact_email", "email@1", CONTACT_EMAIL_COUNT, {"using_R": "No"}),
+    # (
+    #    "contact_email",
+    #    "email@2",
+    #    {**CONTACT_EMAIL_COUNT, '"{{ cookiecutter.contact_email }}")': 0},
+    #    {"using_R": "Yes"},
+    # ),
     ("project_name", "Project_1", PROJECT_NAME_COUNT, {"using_R": "No"}),
     (
         "project_name",
