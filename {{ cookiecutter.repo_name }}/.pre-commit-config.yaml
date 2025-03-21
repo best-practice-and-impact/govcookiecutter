@@ -101,65 +101,91 @@ repos:
         name: Check for accidential browser() statements
 {% endif -%}
 {% if cookiecutter.locked_down == "Yes" %}
-  - repo: local
+- repo: local
     hooks:
       - id: nbstripout
-      name: nbstripout - Strip outputs from notebooks (auto-fixes)
-      entry: nbstripout
-      language: system
-      args:
-        - --extra-keys
-        - "metadata.colab metadata.kernelspec cell.metadata.colab cell.metadata.executionInfo cell.metadata.id cell.metadata.outputId"
+        name: nbstripout - Strip outputs from notebooks (auto-fixes)
+        entry: nbstripout
+        language: system
+        args:
+          - --extra-keys
+          - "metadata.colab metadata.kernelspec cell.metadata.colab cell.metadata.executionInfo cell.metadata.id cell.metadata.outputId"
+
       - id: check-added-large-files
-      name: Check for files larger than 5 MB
-      entry: check-added-large-files
-      language: system
-      args: [ "--maxkb=5120" ]
+        name: Check for files larger than 5 MB
+        entry: check-added-large-files
+        language: system
+        args:
+          - "--maxkb=5120"
+
       - id: end-of-file-fixer
-      name: Check for a blank line at the end of scripts (auto-fixes)
-      entry: end-of-file-fixer
-      language: system
-      exclude: '\.Rd'
+        name: Check for a blank line at the end of scripts (auto-fixes)
+        entry: end-of-file-fixer
+        language: system
+        exclude: '\.Rd'
+
       - id: trailing-whitespace
-      name: Check for trailing whitespaces (auto-fixes)
-      entry: trailing-whitespace
-      language: system
+        name: Check for trailing whitespaces (auto-fixes)
+        entry: trailing-whitespace
+        language: system
+
       - id: isort
-      name: isort - Sort python imports (auto-fixes)
-      entry: isort
-      language: system
-      args: [ "--profile", "black", "--filter-files" ]
+        name: isort - Sort python imports (auto-fixes)
+        entry: isort
+        language: system
+        args:
+          - "--profile"
+          - "black"
+          - "--filter-files"
+
       - id: black
-      name: black - consistent Python code formatting (auto-fixes)
-      entry: black
-      language: system
-      language_version: python
+        name: black - consistent Python code formatting (auto-fixes)
+        entry: black
+        language: system
+        language_version: python
+
       - id: flake8
-      name: flake8 - Python linting
-      entry: flake8
-      language: system
+        name: flake8 - Python linting
+        entry: flake8
+        language: system
+
       - id: nbqa-isort
-      name: nbqa-isort - Sort Python imports (notebooks; auto-fixes)
-      entry: nbqa
-      language: system
-      args: [ isort, --nbqa-mutate ]
-      additional_dependencies: [ isort==5.8.0 ]
+        name: nbqa-isort - Sort Python imports (notebooks; auto-fixes)
+        entry: nbqa
+        language: system
+        args:
+          - isort
+          - --nbqa-mutate
+        additional_dependencies:
+          - isort==5.8.0
+
       - id: nbqa-black
-      name: nbqa-black - consistent Python code formatting (notebooks; auto-fixes)
-      entry: nbqa
-      language: system
-      args: [ black, --nbqa-mutate ]
-      additional_dependencies: [ black==21.5b2 ]
+        name: nbqa-black - consistent Python code formatting (notebooks; auto-fixes)
+        entry: nbqa
+        language: system
+        args:
+          - black
+          - --nbqa-mutate
+        additional_dependencies:
+          - black==21.5b2
+
       - id: detect-secrets
-      name: detect-secrets - Detect secrets in staged code
-      entry: detect-secrets
-      language: system
-      args: [ "--baseline", ".secrets.baseline" ]
-      exclude: .*/tests/.*|^\.cruft\.json$
+        name: detect-secrets - Detect secrets in staged code
+        entry: detect-secrets
+        language: system
+        args:
+          - "--baseline"
+          - ".secrets.baseline"
+        exclude: .*/tests/.*|^\.cruft\.json$
+
       - id: bandit
-      name: bandit - Checks for vulnerabilities
-      entry: bandit
-      language: system
-      args: ["-c", "pyproject.toml"]
-      additional_dependencies: ["bandit[toml]"]
+        name: bandit - Checks for vulnerabilities
+        entry: bandit
+        language: system
+        args:
+          - "-c"
+          - "pyproject.toml"
+        additional_dependencies:
+          - "bandit[toml]"
+
 {% endif -%}
