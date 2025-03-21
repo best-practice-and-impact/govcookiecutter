@@ -1,50 +1,48 @@
 # Contributing
 
 We love contributions! We've compiled this documentation to help you understand our
-contributing guidelines. [If you still have questions, please contact us][email] and
-we'd be happy to help!
+contributing guidelines. Please also read our [`CODE_OF_CONDUCT.md`][code-of-conduct].
 
-## Code of Conduct
+If you still have questions, please contact us at ASAP@ons.gov.uk and we'd be happy to help!
 
-[Please read `CODE_OF_CONDUCT.md` before contributing][code-of-conduct].
 
 ## Getting started
 
-To start contributing, install the required Python packages, and [pre-commit
-hooks][pre-commit] using:
+To start contributing, open your terminal and install the package and
+[pre-commit hooks][pre-commit] using:
 
 ```shell
-pip install -r requirements.txt
+pip install -e .[dev]
 pre-commit install
 ```
 
-or the `make` command:
-
+or use the `make` command:
 ```shell
-make requirements
+make install_dev
 ```
 
-The pre-commit hooks are a security feature to ensure, for example, no secrets[^1], and
-large data files are accidentally committed into the repository. [For more information
-on pre-commit hooks see our documentation][docs-pre-commit-hooks].
-
-[^1]: [Only secrets of specific patterns are detected by the pre-commit
-      hooks][docs-pre-commit-hooks-secrets-definition].
+The pre-commit hooks are a security feature to ensure, for example, no secrets,
+large data files, or Jupyter notebook outputs are accidentally committed into the
+repository. For more information and common use cases, please refer to a hook's
+documentation such as [detect-secrets][detect-secrets-repo] or [nbstripout][nbstripout-repo].
 
 ## Code conventions
 
-[We mainly follow the GDS Way in our code conventions][gds-way].
+We mainly follow the [GDS Way][gds-way] in our code conventions. For Python code, we
+follow the [GDS Way Python style guide][gds-way-python], and use the flake8
+pre-commit hook for linting.
 
 ### Git and GitHub
 
-We use Git to version control the source code. [Please read the Quality assurance of code for analysis and research for details on Git best practice][duck-book-version-control]. This includes how to write good commit messages, how to branch correctly and solving merge conflicts.
+We use Git to version control the source code. Please read
+the [Quality assurance of code for analysis and research][duck-book-version-control] for
+details on Git best practice. This includes how to write good commit messages, how to
+branch appropriately and solve merge conflicts.
 
-[If you want to modify the `.gitignore` files, see the template
-documentation][docs-updating-gitignore] for further details.
+The .gitignore used in this repository was created with generic exclusions
+from [gitignore.io][gitignore-io].
 
-Our source code is stored on GitHub at
-[https://github.com/best-practice-and-impact/govcookiecutter][govcookiecutter]. Pull
-requests into `main` require at least one approved review.
+Pull requests into `main` require at least one approved review.
 
 ### Spotted a bug?
 
@@ -54,36 +52,32 @@ Raise an issue using the bug report template - please check the [issues][issues]
 
 We'd be delighted to consider it! Please raise an issue using the feature request template after checking the [issues][issues] in case you can add to an ongoing discussion.
 
-
-### Python
-
-For Python code, [we follow the GDS Way Python style guide][gds-way-python] with a line
-length of 88; the flake8 pre-commit hook should help with this!
-
 ### Markdown
 
-To keep the file uniform, all links should be referenced at the bottom of the markdown
-file. This also helps to keep the markdown file organised.
+Local links can be written as normal, but external links should be referenced at the
+bottom of the Markdown file for clarity. For example:
 
-We also try to wrap Markdown to a line length of 88 characters. This is not strictly
-enforced in all cases, for example with long hyperlinks.
+Use a local link to reference the [`README.md`](../../README.md) file, but an external
+link for [GOV.UK][gov-uk].
+
+We also try to wrap Markdown to a line length of 88 characters, but this is not
+strictly enforced in all cases, for example with long hyperlinks.
 
 ## Testing
 
 [Tests are written using the `pytest` framework][pytest], with its configuration in the
-`pyproject.toml` file. Note, only the `tests` folder in the root direcrtory of this project are to run. To run the tests, enter
-the following command in your terminal:
+`pyproject.toml` file. Note, only tests in the `tests` folder are run. To run the
+tests, enter the following command in your terminal:
 
 ```shell
-pytest tests
+pytest
 ```
 
 ### Code coverage
 
-[Code coverage of Python scripts is measured using the `coverage` Python
+Code coverage of Python scripts is measured using the [`coverage` Python
 package][coverage]; its configuration can be found in `pyproject.toml`. Note coverage
-only extends to Python scripts in the `hooks`, and
-`{{ cookiecutter.repo_name }}/src` folders.
+only extends to Python scripts in the `src` folder.
 
 To run code coverage, and view it as an HTML report, enter the following command in
 your terminal:
@@ -103,14 +97,21 @@ The HTML report can be accessed at `htmlcov/index.html`.
 
 ## Documentation
 
-[We write our documentation in MyST Markdown for use in Sphinx][myst]. This is mainly
-stored in the `docs` folder, unless it's more appropriate to store it elsewhere, like
-this file.
+Documentation is stored in the `docs` folder unless it's more
+appropriate to store it elsewhere, like this contributing guidance. We
+write our documentation in [MyST Markdown][myst] for use in [Sphinx][sphinx], to make
+a searchable wesite. Public sector websites must be accessible by law, and GOV.UK has
+further information on these [requirements][gov-uk-accessibility].
 
-[Please read our guidance on how to write accessible
-documentation][docs-write-accessible-documentation], as well as our [guidance on
-writing Sphinx documentation][docs-write-sphinx-documentation]. This allows you to
-build the documentation into an accessible, searchable website.
+To create the website locally, run the following command in your terminal
+at the top-level of this project:
+
+```shell
+make docs
+```
+
+This should create an HTML version of your documentation accessible from
+`docs/_build/index.html`.
 
 ## Organisational frameworks
 
@@ -119,20 +120,17 @@ Organisational frameworks are stored in the
 organisation's framework, follow the instructions][docs-govcookiecutter-frameworks] in
 the `README.md` file in that folder.
 
-[code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CODE_OF_CONDUCT.md
+[code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/
-[docs-govcookiecutter-frameworks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/.govcookiecutter/organisational_frameworks/README.md
-[docs-pre-commit-hooks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
-[docs-pre-commit-hooks-secrets-definition]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md#definition-of-a-secret-according-to-detect-secrets
-[docs-updating-gitignore]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
-[docs-write-accessible-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_accessible_documentation.md
-[docs-write-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
-[email]: mailto:gsshelp@statistics.gov.uk
-[gds-way]: https://gds-way.cloudapps.digital/
-[gds-way-git]: https://www.gov.uk/service-manual/technology/maintaining-version-control-in-coding
+[detect-secrets-repo]: https://github.com/Yelp/detect-secrets/tree/master
+[duck-book-version-control]: https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html
 [gds-way-python]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#python-style-guide
-[govcookiecutter]: https://github.com/best-practice-and-impact/govcookiecutter
+[gds-way]: https://gds-way.digital.cabinet-office.gov.uk/
+[gitignore-io]: https://www.toptal.com/developers/gitignore
+[gov-uk-accessibility]: https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps
+[gov-uk]: https://www.gov.uk/
 [myst]: https://myst-parser.readthedocs.io/
-[pre-commit]: https://pre-commit.com/
+[nbstripout-repo]: https://github.com/kynan/nbstripout
+[pre-commit]: https://pre-commit.com
 [pytest]: https://docs.pytest.org/
-[issues]: https://github.com/best-practice-and-impact/govcookiecutter/issues
+[sphinx]: https://www.sphinx-doc.org/en/master/index.html
