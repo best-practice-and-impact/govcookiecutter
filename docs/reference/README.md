@@ -12,15 +12,6 @@ classes and functions exposed in `hooks.*` namespace are public.
 These are functions run after user input, but before project generation. If any
 pre-generation hooks fail, the project will not be generated.
 
-### Prompt input validation
-
-```{eval-rst}
-.. autosummary::
-    :toctree: api/
-
-    check_valid_email_address_format
-
-```
 ## Cookiecutter post-generation hooks
 
 These are functions run after initial project generation by the `cookiecutter`

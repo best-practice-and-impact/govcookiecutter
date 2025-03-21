@@ -1,7 +1,7 @@
 bandit
 cookiecutter
 coverage
-detect-secrets==1.0.3
+detect-secrets
 pytest-cookies
 govuk-tech-docs-sphinx-theme
 jinja2-time

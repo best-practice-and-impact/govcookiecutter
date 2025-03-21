@@ -32,3 +32,8 @@ doctest_optionflags = "NORMALIZE_WHITESPACE"
 testpaths = [
     "./tests"
 ]
+
+# `bandit' configurations
+[tool.bandit]
+exclude_dirs = ["tests", "docs"]
+skips = []
