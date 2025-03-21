@@ -1,6 +1,9 @@
 name: govcookiecutter template build
 
-on: [ pull_request ]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   template-build:
