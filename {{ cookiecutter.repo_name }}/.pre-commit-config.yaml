@@ -89,7 +89,7 @@ repos:
       - id: use-tidy-description
         name: Run sethis::use_tidy_description()
       - id: lintr
-        name: Run lintr::lint()
+        name: Run lintr::linters_with_defaults()
         exclude: renv/activate.R
       - id: readme-rmd-rendered
         name: Check README.Rmd has been rendered to README.md

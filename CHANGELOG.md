@@ -32,6 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated Python versions to 3.9-3.12
 - Updated Python versions in workflows to 3.9-3.12
 - Updated dev pre-commit hook versions via `pre-commit autoupdate`
+- Template code of conduct updated
+- Template contributing guidance updated
 
 ### Removed
 
