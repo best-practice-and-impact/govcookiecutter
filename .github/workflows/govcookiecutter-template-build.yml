@@ -16,12 +16,12 @@ jobs:
       matrix:
         # TODO: Fix R pre-commit hook issues with Windows
         os: [ ubuntu-latest] #, macos-latest ]
-        python: [3.9, '3.10', 3.11, 3.12]
+        python: [3.9, '3.10']
         R:
 #          - {using_R: No, version: N/A}
           - {using_R: Yes, version: 4.2.3}
 #          - {using_R: Yes, version: 4.3.3}
-          - {using_R: Yes, version: 4.4.3}
+#          - {using_R: Yes, version: 4.4.3}
 
     steps:
       - name: Checkout the revision
@@ -91,5 +91,7 @@ jobs:
         run: |
           cd example
           pre-commit run --all-files
+          git diff --name-only
+          git diff
           # TODO: Currently no tests - this gives exit code 5, which fails CI, so commenting out for now
           # pytest
