@@ -1,9 +1,7 @@
 # `docs` folder overview
 
 All documentation for the project should be included in this folder in either
-reStructuredText or Markdown files, with acceptable formatting for Sphinx. [Guidance on
-how to write Sphinx documentation is supplied in the contributor
-guide][writing-sphinx-documentation].
+reStructuredText or Markdown files, with acceptable formatting for Sphinx. Further details are supplied in the [contributing guidance][contributing-guidance].
 
 To build the documentation, run the `docs` command [from `Makefile` using the `make`
 utility at the top-level of this repository][docs-makefile].
@@ -29,4 +27,4 @@ quality analysis for HM Government projects][aqua-book].
 
 [aqua-book]: https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government
 [docs-makefile]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/Makefile
-[writing-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
+[contributing-guidance]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/CONTRIBUTING.md#documentation
