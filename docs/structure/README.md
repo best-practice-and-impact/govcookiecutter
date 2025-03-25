@@ -24,8 +24,7 @@ is based on the [common configuration described in the GDS Way][gds-way-flake8].
 
 ### `.gitignore`
 
-A `.gitignore` file to ignore certain files and folders from this Git repository. [See
-the contributor guide to modift the `.gitignore` file][docs-updating-gitignore].
+A `.gitignore` file to ignore certain files and folders from this Git repository.
 
 ### `.pre-commit-config.yaml`
 
@@ -145,6 +144,5 @@ make requirements
 [code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/CODE_OF_CONDUCT.md
 [cookiecutter]: https://cookiecutter.readthedocs.io/
 [detect-secrets]: https://github.com/Yelp/detect-secrets
-[docs-pre-commit-hooks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/pre_commit_hooks.md
-[docs-updating-gitignore]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/updating_gitignore.md
+[docs-pre-commit-hooks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/CONTRIBUTING.md#getting-started
 [gds-way-flake8]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#common-configuration

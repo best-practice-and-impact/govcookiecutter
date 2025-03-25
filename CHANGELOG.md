@@ -14,8 +14,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Version to config
 - Dev dependencies to config
 - New requirements: `bandit` and `jinja2-time`
-- `bandit` to pre-commit hooks
+- `bandit` to user pre-commit hooks
 - Including common Excel file times in the default .gitignore
+- `bandit` to dev pre-commit hooks
 
 ### Fixed
 
@@ -30,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Minor contributing guidance changes
 - Updated Python versions to 3.9-3.12
 - Updated Python versions in workflows to 3.9-3.12
+- Updated dev pre-commit hook versions via `pre-commit autoupdate`
 - Template code of conduct updated
 - Template contributing guidance updated
 
