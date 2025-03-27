@@ -2,7 +2,7 @@
 
 All documentation for the project should be included in this folder in MyST Markdown
 files, with acceptable formatting for Sphinx. Further details
-is supplied in the [contributing guidance][contributing-guidance].
+are supplied in the [contributing guidance][contributing-guidance].
 
 If you want to include any documentation written in the `{{ cookiecutter.repo_name }}`
 folder without duplicating it, include it in the `docs/{{ cookiecutter.repo_name }}`

@@ -1,8 +1,7 @@
 # `docs` folder overview
 
-All documentation for the project should be included in this folder in either
-reStructuredText or Markdown files, with acceptable formatting for Sphinx. Further details
-is supplied in the [contributing guidance][contributing-guidance].
+All documentation for the project should be included in this folder in either reStructuredText or Markdown files,
+with acceptable formatting for Sphinx. Further details are supplied in the [contributing guidance][contributing-guidance].
 
 To build the documentation, run the `docs` command [from `Makefile` using the `make`
 utility at the top-level of this repository][docs-makefile].

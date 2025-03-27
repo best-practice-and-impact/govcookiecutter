@@ -117,8 +117,8 @@ make coverage_html
 ```
 
 A code coverage report in HTML will be produced on the code in the `hooks`, and the
-`{{ cookiecutter.repo_name }}/src` folders. This HTML report can be accessed at
-`htmlcov/index.html`.
+`{{ cookiecutter.repo_name }}/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}` folders.
+This HTML report can be accessed at `htmlcov/index.html`.
 
 ### `README.md`
 
