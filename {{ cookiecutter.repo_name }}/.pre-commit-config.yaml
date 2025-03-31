@@ -147,6 +147,7 @@ repos:
     - id: flake8
       name: flake8 - Python linting
       entry: flake8
+      language: system
       types: [python]
 
     - id: nbqa-isort
