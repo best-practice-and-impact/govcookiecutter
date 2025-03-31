@@ -33,4 +33,3 @@ if __name__ == "__main__":
 
     # Check the format of the contact email address supplied is a valid one
     check_valid_email_address_format("{{ cookiecutter.contact_email }}")
-    print("{{ cookiecutter.locked_down }}")
