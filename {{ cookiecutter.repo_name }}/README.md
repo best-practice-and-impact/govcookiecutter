@@ -7,6 +7,48 @@ Where this documentation refers to the root folder we mean where this README.md 
 located.
 ```
 
+### What is govcookiecutter?
+
+A cookiecutter template generator for analytical, Python-, or Python and R-based projects within
+His Majesty's Government, and wider public sector.
+
+### How is the template used?
+
+This template helps to set up standardised project structures, and [includes security
+features using pre-commit hooks][docs-pre-commit]. This cookiecutter template also acts
+as an installable template (python projects only).
+
+It also provides an Agile, centralised, and lightweight analytical quality assurance
+(AQA) process. Pull or merge request templates are used to nudge users to complete this
+process. [This helps meet HM Government best practice on producing quality analysis, as
+defined in the Aqua Book][aqua-book].
+
+[For reasons why we developed `govcookiecutter`, read the blog post][blog-post], and
+[watch the live demonstration from March 2021 on version 0.5.3][youtube].
+
+### Requirements
+
+[```Contributors have some additional requirements!```][contributing]
+
+- Python 3.6.1+ installed
+{% if cookiecutter.using_R == "Yes" -%}
+- R 4.0.4+ installed
+{% endif -%}
+- a `.secrets` file with the [required secrets and
+  credentials](#required-secrets-and-credentials)
+- [load environment variables][docs-loading-environment-variables] from `.env`
+
+To install the contributing requirements, open your terminal and enter:
+```shell
+python -m pip install -U pip setuptools
+pip install -e .[dev]
+pre-commit install
+```
+or use the `make` command:
+```shell
+make install_dev
+```
+
 ## Getting started
 
 To start using this project, [first make sure your system meets its
@@ -42,7 +84,7 @@ To run the pipeline, run the following code in the terminal (whilst in the root 
 project).
 
 ```shell
-python src/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipeline.py
+python {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipeline.py
 ```
 
 Alternatively, most Python IDE's allow you to run the code directly from the IDE using a `run` button.
@@ -61,6 +103,24 @@ secrets/credentials should have the following environment variable name(s):
 Once you've added, [load these environment variables using
 `.env`][docs-loading-environment-variables].
 
+## Project structure layout
+
+The cookiecutter template generated for each project will follow this folder structure:
+
+```shell
+.
+└── govcookiecutter/
+    ├── {{ cookiecutter.repo_name }}/
+    │   └── {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/
+    │       ├── example_modules/
+    │       │   ├── __init__.py
+    │       │   └── example_module.py
+    │       ├── __init__.py
+    │       ├── example_config.yml
+    │       └── run_pipeline.py
+    └── ...
+```
+
 ## Licence
 
 Unless stated otherwise, the codebase is released under the MIT License. This covers
@@ -72,28 +132,6 @@ Crown copyright and available under the terms of the Open Government 3.0 licence
 [If you want to help us build, and improve `{{ cookiecutter.repo_name }}`, view our
 contributing guidelines][contributing].
 
-### Requirements
-
-[```Contributors have some additional requirements!```][contributing]
-
-- Python 3.6.1+ installed
-{% if cookiecutter.using_R == "Yes" -%}
-- R 4.0.4+ installed
-{% endif -%}
-- a `.secrets` file with the [required secrets and
-  credentials](#required-secrets-and-credentials)
-- [load environment variables][docs-loading-environment-variables] from `.env`
-
-To install the contributing requirements, open your terminal and enter:
-```shell
-python -m pip install -U pip setuptools
-pip install -e .[dev]
-pre-commit install
-```
-or use the `make` command:
-```shell
-make install_dev
-```
 
 ## Acknowledgements
 

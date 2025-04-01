@@ -1,7 +1,12 @@
 # `govcookiecutter`
 
-A cookiecutter template for analytical, Python-, or Python and R-based projects within
+
+### What is govcookiecutter?
+
+A cookiecutter template generator for analytical, Python-, or Python and R-based projects within
 His Majesty's Government, and wider public sector.
+
+### How is the template used?
 
 This template helps to set up standardised project structures, and [includes security
 features using pre-commit hooks][docs-pre-commit]. This cookiecutter template also acts
@@ -15,10 +20,50 @@ defined in the Aqua Book][aqua-book].
 [For reasons why we developed `govcookiecutter`, read the blog post][blog-post], and
 [watch the live demonstration from March 2021 on version 0.5.3][youtube].
 
+### Requirements to create a cookiecutter template
+
+
+[```Contributors have some additional requirements!```](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CONTRIBUTING.md/)
+
+
+To get started your system should meet the following requirements:
+
+1. Python 3.6.1+ installed
+2. R 4.0.4+ installed (optional)[^1]
+3. The [`cookiecutter` package installed](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/README.md#installing-the-cookiecutter-package)
+
+[^1]: Only for combined Python and R projects, if selected in the prompts during
+project creation.
+
+#### Installing the `cookiecutter` package
+
+There are many ways to install the `cookiecutter` package. Our recommendation is to
+install it at the system or user level, rather than as a Python package with `pip` or
+`conda`. This ensures it is isolated from the rest of your system, and always available.
+
+For macOS, open your terminal, and [install `cookiecutter` with Homebrew][homebrew]:
+
+```shell
+brew install cookiecutter
+```
+
+For Debian/Ubuntu, use the following commands:
+
+```shell
+sudo apt-get install cookiecutter
+```
+
+Otherwise, you can install `cookiecutter` with `pip` — you may wish to create a virtual
+environment first:
+
+```shell
+python -m pip install --user cookiecutter
+```
+
 ## Getting started
 
-[First, make sure your system meets the
-requirements](#requirements-to-create-a-cookiecutter-template). Next, open your
+[Once your system meets the
+requirements](#requirements-to-create-a-cookiecutter-template), open your
 terminal, navigate to the directory where you want your new repository to exist. Then
 run the following command for the latest stable release:
 
@@ -67,45 +112,6 @@ Once you've answered all the prompts, your project will be created. Then:
 Once you've completed these steps, [consider making some optional changes before
 kicking off your project development](#optional-changes-to-consider-post-project-creation).
 
-### Requirements to create a cookiecutter template
-
-
-[```Contributors have some additional requirements!```](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CONTRIBUTING.md/)
-
-
-To get started your system should meet the following requirements:
-
-1. Python 3.6.1+ installed
-2. R 4.0.4+ installed (optional)[^1]
-3. The [`cookiecutter` package installed](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/README.md#installing-the-cookiecutter-package)
-
-[^1]: Only for combined Python and R projects, if selected in the prompts during
-project creation.
-
-#### Installing the `cookiecutter` package
-
-There are many ways to install the `cookiecutter` package. Our recommendation is to
-install it at the system or user level, rather than as a Python package with `pip` or
-`conda`. This ensures it is isolated from the rest of your system, and always available.
-
-For macOS, open your terminal, and [install `cookiecutter` with Homebrew][homebrew]:
-
-```shell
-brew install cookiecutter
-```
-
-For Debian/Ubuntu, use the following commands:
-
-```shell
-sudo apt-get install cookiecutter
-```
-
-Otherwise, you can install `cookiecutter` with `pip` — you may wish to create a virtual
-environment first:
-
-```shell
-python -m pip install --user cookiecutter
-```
 
 ## Optional changes to consider post-project creation
 
@@ -124,6 +130,24 @@ Here are some suggested changes to make before your first commit:
   requirements
   - These can be found at `.github/pull_request_template.md` (GitHub), or in
     `.gitlab/merge_request_templates` folder (GitLab)
+
+## Project structure layout
+
+The cookiecutter template generated for each project will follow this folder structure:
+
+```shell
+.
+└── govcookiecutter/
+    ├── {{ cookiecutter.repo_name }}/
+    │   └── {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/
+    │       ├── example_modules/
+    │       │   ├── __init__.py
+    │       │   └── example_module.py
+    │       ├── __init__.py
+    │       ├── example_config.yml
+    │       └── run_pipeline.py
+    └── ...
+```
 
 ## Licence
 
