@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `bandit` to user pre-commit hooks
 - Including common Excel file times in the default .gitignore
 - `bandit` to dev pre-commit hooks
+- R install guidance to template README
 
 ### Fixed
 
@@ -34,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dev pre-commit hook versions via `pre-commit autoupdate`
 - Template code of conduct updated
 - Template contributing guidance updated
+- Updated README
 
 ### Removed
 
