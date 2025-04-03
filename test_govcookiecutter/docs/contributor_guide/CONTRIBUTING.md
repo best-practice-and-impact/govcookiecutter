@@ -3,7 +3,7 @@
 We love contributions! We've compiled this documentation to help you understand our
 contributing guidelines. Please also read our [`CODE_OF_CONDUCT.md`][code-of-conduct].
 
-If you still have questions, please contact us at ASAP@ons.gov.uk and we'd be happy to help!
+[If you still have questions, please contact us][email] and we'd be happy to help!
 
 
 ## Getting started
@@ -12,11 +12,11 @@ To start contributing, open your terminal and install the package and
 [pre-commit hooks][pre-commit] using:
 
 ```shell
-pip install -r requirements.txt
+pip install -e .[dev]
 pre-commit install
 ```
 
-or use the `make` command if it is available on your platform (Windows users may have difficulty):
+or use the `make` command:
 ```shell
 make install_dev
 ```
@@ -40,24 +40,16 @@ details on Git best practice. This includes how to write good commit messages, h
 branch appropriately and solve merge conflicts.
 
 The .gitignore used in this repository was created with generic exclusions
-from [gitignore.io][gitignore-io]. You will need to enter your programming language of choice (i.e. Python) and click "Create".
+from [gitignore.io][gitignore-io].
 
 Pull requests into `main` require at least one approved review.
-
-### Spotted a bug?
-
-Raise an issue using the bug report template - please check the [issues][issues] first in case we're already on it!
-
-### Want to see a new feature?
-
-We'd be delighted to consider it! Please raise an issue using the feature request template after checking the [issues][issues] in case you can add to an ongoing discussion.
 
 ### Markdown
 
 Local links can be written as normal, but external links should be referenced at the
 bottom of the Markdown file for clarity. For example:
 
-Use a local link to reference a `README.md` file for example, but an external
+Use a local link to reference the [`README.md`](../../README.md) file, but an external
 link for [GOV.UK][gov-uk].
 
 We also try to wrap Markdown to a line length of 88 characters, but this is not
@@ -113,14 +105,7 @@ make docs
 This should create an HTML version of your documentation accessible from
 `docs/_build/index.html`.
 
-## Organisational frameworks
-
-Organisational frameworks are stored in the
-`.govcookiecutter/organisational_frameworks` folder. [If you would like to add your own
-organisation's framework, follow the instructions][docs-govcookiecutter-frameworks] in
-the `README.md` file in that folder.
-
-[code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CODE_OF_CONDUCT.md
+[code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/
 [detect-secrets-repo]: https://github.com/Yelp/detect-secrets/tree/master
 [duck-book-version-control]: https://best-practice-and-impact.github.io/qa-of-code-guidance/version_control.html
@@ -129,7 +114,6 @@ the `README.md` file in that folder.
 [gitignore-io]: https://www.toptal.com/developers/gitignore
 [gov-uk-accessibility]: https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps
 [gov-uk]: https://www.gov.uk/
-[issues]: https://github.com/best-practice-and-impact/govcookiecutter/issues/new
 [myst]: https://myst-parser.readthedocs.io/
 [nbstripout-repo]: https://github.com/kynan/nbstripout
 [pre-commit]: https://pre-commit.com
