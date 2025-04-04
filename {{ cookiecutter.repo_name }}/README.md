@@ -6,11 +6,14 @@
 Where this documentation refers to the root folder we mean where this README.md is
 located.
 ```
+## What is `{{ cookiecutter.repo_name }}`?
+
+Add a summary of your project here.
 
 ## Getting started
 
 To start using this project, first make sure your system meets its
-[requirements](#requirements).
+requirements.
 
 It's suggested that you install this package and its requirements within
 a virtual environment.
@@ -94,6 +97,23 @@ secrets/credentials should have the following environment variable name(s):
 
 Once you've added them, [load these environment variables][docs-loading-environment-variables] using
 `.env`.
+
+## Project structure layout
+
+The cookiecutter template generated for each project will follow this folder structure:
+
+```shell
+.
+├── {{ cookiecutter.repo_name }}/
+│   └── {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/
+│       ├── example_modules/
+│       │   ├── __init__.py
+│       │   └── example_module.py
+│       ├── __init__.py
+│       ├── example_config.yml
+│       └── run_pipeline.py
+└── ...
+```
 
 ## Licence
 
