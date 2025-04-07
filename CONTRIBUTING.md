@@ -16,7 +16,7 @@ pip install -r requirements.txt
 pre-commit install
 ```
 
-or use the `make` command:
+or use the `make` command if it is available on your platform (Windows users may have difficulty):
 ```shell
 make install_dev
 ```
@@ -40,7 +40,7 @@ details on Git best practice. This includes how to write good commit messages, h
 branch appropriately and solve merge conflicts.
 
 The .gitignore used in this repository was created with generic exclusions
-from [gitignore.io][gitignore-io].
+from [gitignore.io][gitignore-io]. You will need to enter your programming language of choice (i.e. Python) and click "Create".
 
 Pull requests into `main` require at least one approved review.
 
