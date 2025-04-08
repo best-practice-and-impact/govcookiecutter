@@ -49,7 +49,7 @@ To get started your system should meet the following requirements:
 
 1. Python 3.9+ installed
 2. R 4.2.3+ installed (optional)[^1]
-3. The [`cookiecutter` package installed](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/README.md#installing-the-cookiecutter-package)
+3. The [`cookiecutter` package installed](#installing-the-cookiecutter-package)
 
 [^1]: Only for combined Python and R projects, if selected in the prompts during
 project creation.
