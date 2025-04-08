@@ -19,12 +19,30 @@ defined in the Aqua Book][aqua-book].
 [For reasons why we developed `govcookiecutter`, read the blog post][blog-post], and
 [watch the live demonstration from March 2021 on version 0.5.3][youtube].
 
+### Project structure layout
+
+The cookiecutter template generated for each project will follow this folder structure:
+
+```shell
+.
+└── govcookiecutter/
+    ├── {{ cookiecutter.repo_name }}/
+    │   └── {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/
+    │       ├── example_modules/
+    │       │   ├── __init__.py
+    │       │   └── example_module.py
+    │       ├── __init__.py
+    │       ├── example_config.yml
+    │       └── run_pipeline.py
+    └── ...
+```
+
 ## Getting started
 
 First, make sure your system meets the requirements.
 
 ### Requirements to create a cookiecutter template
-> **Note**  
+> **Note**
 ```> Contributors have some additional [requirements!](./CONTRIBUTING.md/)```
 
 To get started your system should meet the following requirements:
@@ -128,24 +146,6 @@ Here are some suggested changes to make before your first commit:
   requirements
   - These can be found at `.github/pull_request_template.md` (GitHub), or in
     `.gitlab/merge_request_templates` folder (GitLab)
-
-## Project structure layout
-
-The cookiecutter template generated for each project will follow this folder structure:
-
-```shell
-.
-└── govcookiecutter/
-    ├── {{ cookiecutter.repo_name }}/
-    │   └── {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/
-    │       ├── example_modules/
-    │       │   ├── __init__.py
-    │       │   └── example_module.py
-    │       ├── __init__.py
-    │       ├── example_config.yml
-    │       └── run_pipeline.py
-    └── ...
-```
 
 ## Licence
 
