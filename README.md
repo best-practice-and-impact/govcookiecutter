@@ -155,8 +155,8 @@ Crown copyright and available under the terms of the Open Government 3.0 licence
 
 ## Contributing
 
-[If you want to help us build, and improve `govcookiecutter`, view our contributing
-guidelines](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CONTRIBUTING.md).
+If you want to help us build, and improve `govcookiecutter`, view our [contributing
+guidelines](./CONTRIBUTING.md/).
 
 ## Acknowledgements
 
