@@ -24,7 +24,7 @@ defined in the Aqua Book][aqua-book].
 First, make sure your system meets the requirements.
 
 ### Requirements to create a cookiecutter template
-
+> **Note**  
 ```Contributors have some additional [requirements!](https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CONTRIBUTING.md/)```
 
 To get started your system should meet the following requirements:
