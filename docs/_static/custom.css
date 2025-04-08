@@ -4,7 +4,7 @@
 .wy-side-nav-search, .wy-nav-top {
     background: #003C57;
     }
-  
+
 /* Sidebar */
 
 .wy-nav-side, .wy-menu-vertical, .wy-menu{
@@ -14,9 +14,9 @@
     a:hover{background-color:#003C57 !important;
         border-bottom: 4px solid #F46A25 !important;
         cursor:pointer};
-        
+
   }
-  
+
   .wy-menu-vertical li.current a, .wy-menu-vertical li.current a:hover {
     background: #003C57 !important;
     color:#ffffff !important;
@@ -26,5 +26,3 @@
     background: #003C57 !important;
     color:#ffffff !important;
   }
-
-

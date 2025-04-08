@@ -73,7 +73,7 @@ html_context = {
 }
 
 # Adds logo to top of page
-html_logo = '_static/af-logo.png'
+html_logo = "_static/af-logo.png"
 
 # Add any paths that contain custom static files (such as style sheets) here, relative
 # to this directory. They are copied after the builtin static files, so a file named
