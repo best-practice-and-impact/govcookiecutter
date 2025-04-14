@@ -36,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Template code of conduct updated
 - Template contributing guidance updated
 - Updated README
+- Updated documentation website for `govcookiecutter` and created repo structures
 
 ### Removed
 
