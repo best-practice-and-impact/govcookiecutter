@@ -3,7 +3,7 @@
 This is information about the structure of the created repository contained
 in the `{{ cookiecutter.repo_name }}` folder within the `govcookiecutter` repository.
 Some of these files may not be present in the actual created repository, as this is
-customised based on the user's answers to the prompts on set-up.s
+customised based on the user's answers to the prompts on set-ups.
 
 ```{toctree}
 :maxdepth: 2
