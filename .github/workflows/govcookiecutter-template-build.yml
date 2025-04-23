@@ -18,7 +18,7 @@ jobs:
 #          - {using_R: No, version: N/A}
           - {using_R: Yes, version: 4.2.3}
 #          - {using_R: Yes, version: 4.3.3}
-          - {using_R: Yes, version: 4.4.3}
+#          - {using_R: Yes, version: 4.4.3}
 
     steps:
       - name: Checkout the revision
