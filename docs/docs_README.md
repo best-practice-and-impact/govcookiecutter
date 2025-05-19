@@ -25,5 +25,5 @@ make docs
 The HTML-version of this documentation can then be viewed at `docs/_build/index.html`,
 relative to the top-level of this repository.
 
-[docs-makefile]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/structure/README.md#makefile
+[docs-makefile]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/structure/docs_structure_README.md#makefile
 [contributing-guidance]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/CONTRIBUTING.md#documentation

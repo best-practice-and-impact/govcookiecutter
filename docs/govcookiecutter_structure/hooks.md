@@ -1,2 +1,2 @@
-```{include} ../../hooks/README.md
+```{include} ../../hooks/hooks_README.md
 ```
