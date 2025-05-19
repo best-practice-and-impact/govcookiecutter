@@ -6,8 +6,8 @@
 :hidden:
 :maxdepth: 2
 self
-./contributing_guide/README.md
-./govcookiecutter_structure/README.md
-./{{ cookiecutter.repo_name }}/README.md
-./reference/README.md
+./contributing_guide/docs_contributor_README.md
+./govcookiecutter_structure/docs_structure_README.md
+./{{ cookiecutter.repo_name }}/docs_repo_README.md
+./reference/docs_ref_README.md
 ```
