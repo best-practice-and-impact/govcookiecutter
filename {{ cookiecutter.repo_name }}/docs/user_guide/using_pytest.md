@@ -36,5 +36,7 @@ pytest tests/test_example_module.py
 
 You can try both of these in the root directory of your new repository.
 
+## Further reading
+For more information on pytest, please visit (https://pypi.org/project/pytest/)
 
 [pytest]: https://pypi.org/project/pytest/

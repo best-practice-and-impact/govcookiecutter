@@ -1,28 +1,29 @@
 # `docs` folder overview
 
-All documentation for the project should be included in this folder in MyST Markdown
-files, with acceptable formatting for Sphinx. [Guidance on how to write Sphinx
-documentation is supplied in the contributor guide][writing-sphinx-documentation].
+This folder contains documentation for `govcookiecutter`. These are written in MyST Markdown files with Sphinx compatibility.
 
-If you want to include any documentation written in the `{{ cookiecutter.repo_name }}`
-folder without duplicating it, include it in the `docs/{{ cookiecutter.repo_name }}`
-folder.
-
-To build the documentation, run the `docs` command [from `Makefile` using the `make`
-utility at the top-level of this repository][docs-makefile].
-
-```shell
-make docs
+```{warning}
+Further details to consider when modifying these files are supplied in the [contributing guidance][contributing-guidance].
 ```
 
-or, alternatively, run:
+To include documentation from the `{{ cookiecutter.repo_name }}`
+folder without duplicating it, refer to it in a file within the `docs/{{ cookiecutter.repo_name }}` folder.
+
+To build the documentation, run:
 
 ```shell
 sphinx-build -b html ./docs ./docs/_build
+```
+
+Unix and Linux users can alternatively run the `docs` command from [`Makefile`][docs-makefile] using
+the `make` utility at the top-level of this repository.
+
+```shell
+make docs
 ```
 
 The HTML-version of this documentation can then be viewed at `docs/_build/index.html`,
 relative to the top-level of this repository.
 
 [docs-makefile]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/structure/README.md#makefile
-[writing-sphinx-documentation]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/writing_sphinx_documentation.md
+[contributing-guidance]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/CONTRIBUTING.md#documentation

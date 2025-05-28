@@ -1,6 +1,6 @@
 # Loading environment variables
 
-[We use `python-dotenv` to load environment variables][python-dotenv], as these are only loaded when
+We use [`python-dotenv`][python-dotenv] to load environment variables, as these are only loaded when
 inside the project folder. This can prevent accidental conflicts with identically named
 variables. Alternatively you can use [`direnv` to load environment variables][direnv] if
 you meet [certain conditions](#installing-direnv).
@@ -83,6 +83,10 @@ load_dotenv(".secrets", override=True)
 #Example variable
 EXAMPLE_VARIABLE = os.getenv("EXAMPLE_VARIABLE")
 ```
+
+## Further Reading
+
+For more information on virtual environments, please visit: (https://saurabh-kumar.com/python-dotenv/)
 
 [python-dotenv]: https://saurabh-kumar.com/python-dotenv/
 [direnv]: https://direnv.net/

@@ -10,7 +10,7 @@ PATH_TEMPLATE_ENV = DIR_TEMPLATE.joinpath(".env")
 # Define a list of directory names to recursively ignore, as well as a list of
 # directory names to ignore at the root-level of the `govcookiecutter` template
 # directory, and a list of dictionary names to ignore in certain root-level directories
-EXCLUDE_DIR_NAMES = ["__pycache__"]
+EXCLUDE_DIR_NAMES = ["__pycache__", "example_modules"]
 EXCLUDE_ROOT_DIR_NAMES = [*EXCLUDE_DIR_NAMES, ".govcookiecutter"]
 EXCLUDE_SUB_DIR_IN_PARENTS_NAMES = [*EXCLUDE_ROOT_DIR_NAMES, "docs"]
 
@@ -117,7 +117,10 @@ def define_expected_env_variables(
             and d.name not in exclude_folders
             and d.parent.name not in exclude_sub_folders_in_parent_folders
         ):
-            if d.name.upper() == "SRC":
+            if (
+                d.name.upper()
+                == "{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}".upper()  # noqa: E501
+            ):
                 env_expected_dir_variable = loop_directories_children(
                     d, env_expected_dir_variable
                 )
@@ -132,7 +135,7 @@ class TestEnvExportDirectories:
     def test_values_are_directories(self) -> None:
         """Test that the values are real directories."""
         for n, d in get_actual_env_variables(PATH_TEMPLATE_ENV).items():
-            assert d.is_dir(), f"`{n}` variable directory does not exist: {d}"
+            assert d.is_dir(), f"{repr(n)} variable directory does not exist: {d}"
 
     def test_variables_as_expected(self) -> None:
         """Test directory variable and value names in `.env` are as expected."""
