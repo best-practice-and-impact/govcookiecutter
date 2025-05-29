@@ -1,5 +1,4 @@
 {
-  "locked_down": ["No", "Yes"],
   "organisation_name": "Your public sector organisation name, for example Government Digital Service",
   "repository_hosting_platform": ["GitHub", "GitLab"],
   "organisation_handle": "Your GitHub/GitLab organisation name, for example ukgovdatascience",
@@ -8,5 +7,6 @@
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "overview": "Brief overview of your project.",
   "project_version": "0.0.1",
+  "locked_down_environment": ["No", "Yes"],
   "using_R": ["No", "Yes"]
 }

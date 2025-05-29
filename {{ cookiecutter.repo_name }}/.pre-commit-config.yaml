@@ -1,7 +1,7 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
-{% if cookiecutter.locked_down == "No" %}
+{% if cookiecutter.locked_down_environment == "No" %}
   - repo: https://github.com/kynan/nbstripout
     rev: 0.8.1
     hooks:
@@ -100,7 +100,7 @@ repos:
       - id: no-browser-statement
         name: Check for accidential browser() statements
 {% endif -%}
-{% if cookiecutter.locked_down == "Yes" %}
+{% if cookiecutter.locked_down_environment == "Yes" %}
 - repo: local
   hooks:
     - id: nbstripout
