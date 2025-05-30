@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Including common Excel file times in the default .gitignore
 - `bandit` to dev pre-commit hooks
 - R install guidance to template README
+- Setup question for locked down environments, uses local installed packages for commit hooks
 
 ### Fixed
 
