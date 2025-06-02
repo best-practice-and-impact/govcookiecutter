@@ -37,3 +37,24 @@ testpaths = [
 [tool.bandit]
 exclude_dirs = ["tests", "docs"]
 skips = []
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    ]
+
+[tool.ruff]
+line-length = 100
+exclude = [
+    "[{][{] cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') [}][}]",
+    "[{][{] cookiecutter.repo_name [}][}]/tests/"
+]
