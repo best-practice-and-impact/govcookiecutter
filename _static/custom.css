@@ -1,0 +1,28 @@
+/* Custom CSS for Sphinx documentation */
+  /* Sidebar header (and topbar for mobile) */
+
+.wy-side-nav-search, .wy-nav-top {
+    background: #003C57;
+    }
+
+/* Sidebar */
+
+.wy-nav-side, .wy-menu-vertical, .wy-menu{
+    background: #003C57 !important;
+    font-size:20px !important;
+    color:#ffffff;
+    a:hover{background-color:#003C57 !important;
+        border-bottom: 4px solid #F46A25 !important;
+        cursor:pointer};
+
+  }
+
+  .wy-menu-vertical li.current a, .wy-menu-vertical li.current a:hover {
+    background: #003C57 !important;
+    color:#ffffff !important;
+  }
+
+ .wy-menu-vertical li button.toctree-expand, .wy-menu-vertical li.toctree {
+    background: #003C57 !important;
+    color:#ffffff !important;
+  }

@@ -1,6 +1,0 @@
-﻿``hooks.check_valid_email_address_format``
-==========================================
-
-.. currentmodule:: hooks
-
-.. autofunction:: check_valid_email_address_format

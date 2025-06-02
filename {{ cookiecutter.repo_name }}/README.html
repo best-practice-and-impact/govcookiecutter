@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ cookiecutter.repo_name }} folder structure &mdash; govcookiecutter  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title=".govcookiecutter folder overview" href="dot_govcookiecutter.html" />
+    <link rel="prev" title="tests folder overview" href="../govcookiecutter_structure/tests.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            govcookiecutter
+              <img src="../_static/af-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">govcookiecutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing_guide/README.html">Contributing guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../govcookiecutter_structure/README.html"><code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code> structure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}</span></code> folder structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dot_govcookiecutter.html"><code class="docutils literal notranslate"><span class="pre">.govcookiecutter</span></code> folder overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html"><code class="docutils literal notranslate"><span class="pre">docs</span></code> folder overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html"><code class="docutils literal notranslate"><span class="pre">tests</span></code> folder overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_code.html"><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name.lower().replace('</span> <span class="pre">',</span> <span class="pre">'_').replace('-',</span> <span class="pre">'_')</span> <span class="pre">}}</span></code> folder overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#top-level-files">Top-level files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rprofile">.Rprofile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#env">.env</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#envrc">.envrc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flake8">.flake8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gitignore">.gitignore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lintr">.lintr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pre-commit-config-yaml">pre-commit-config.yaml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secrets">.secrets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secrets-baseline">.secrets.baseline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-of-conduct-md">CODE_OF_CONDUCT.md</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conftest-py">conftest.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contributing-md">CONTRIBUTING.md</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#description">DESCRIPTION</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#license">LICENSE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#make-bat">make.bat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#makefile">Makefile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyproject-toml">pyproject.toml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#readme-md">README.md</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-cfg">setup.cfg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-py">setup.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#startup-r">startup.R</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/README.html"><code class="docutils literal notranslate"><span class="pre">hooks</span></code> API reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">govcookiecutter</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../govcookiecutter_structure/README.html"><code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code> structure</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}</span></code> folder structure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/{{ cookiecutter.repo_name }}/README.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="cookiecutter-repo-name-folder-structure">
+<h1><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}</span></code> folder structure<a class="headerlink" href="#cookiecutter-repo-name-folder-structure" title="Link to this heading"></a></h1>
+<p>This is information about the structure of the created repository contained
+in the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name</span> <span class="pre">}}</span></code> folder within the <code class="docutils literal notranslate"><span class="pre">govcookiecutter</span></code> repository.
+Some of these files may not be present in the actual created repository, as this is
+customised based on the user’s answers to the prompts on set-ups.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dot_govcookiecutter.html"><code class="docutils literal notranslate"><span class="pre">.govcookiecutter</span></code> folder overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dot_govcookiecutter.html#manifest-json">manifest.json</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dot_govcookiecutter.html#organisational-frameworks">organisational_frameworks/</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html"><code class="docutils literal notranslate"><span class="pre">docs</span></code> folder overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#analytical-quality-assurance-aqa">Analytical quality assurance (AQA)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html"><code class="docutils literal notranslate"><span class="pre">tests</span></code> folder overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source_code.html"><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">cookiecutter.repo_name.lower().replace('</span> <span class="pre">',</span> <span class="pre">'_').replace('-',</span> <span class="pre">'_')</span> <span class="pre">}}</span></code> folder overview</a></li>
+</ul>
+</div>
+<section id="top-level-files">
+<h2>Top-level files<a class="headerlink" href="#top-level-files" title="Link to this heading"></a></h2>
+<section id="rprofile">
+<h3>.Rprofile<a class="headerlink" href="#rprofile" title="Link to this heading"></a></h3>
+<p>A user profile to configure R settings, including environment variables.</p>
+</section>
+<section id="env">
+<h3>.env<a class="headerlink" href="#env" title="Link to this heading"></a></h3>
+<p>A file for storing environment variables.</p>
+</section>
+<section id="envrc">
+<h3>.envrc<a class="headerlink" href="#envrc" title="Link to this heading"></a></h3>
+<p>A file for handing directory-specific environment variables.</p>
+</section>
+<section id="flake8">
+<h3>.flake8<a class="headerlink" href="#flake8" title="Link to this heading"></a></h3>
+<p>A configuration file for the <code class="docutils literal notranslate"><span class="pre">flake8</span></code> Python package that provides linting.</p>
+</section>
+<section id="gitignore">
+<h3>.gitignore<a class="headerlink" href="#gitignore" title="Link to this heading"></a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file to specify that git should not track certain files and folders in this repository.</p>
+</section>
+<section id="lintr">
+<h3>.lintr<a class="headerlink" href="#lintr" title="Link to this heading"></a></h3>
+<p>A file specifying the parameters of R linting.</p>
+</section>
+<section id="pre-commit-config-yaml">
+<h3>pre-commit-config.yaml<a class="headerlink" href="#pre-commit-config-yaml" title="Link to this heading"></a></h3>
+<p>A pre-commit hook file covering linting, secret detection, and styling among other things.</p>
+</section>
+<section id="secrets">
+<h3>.secrets<a class="headerlink" href="#secrets" title="Link to this heading"></a></h3>
+<p>A file for storing secrets and credentials as environment variables. This file should remain in the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>.</p>
+</section>
+<section id="secrets-baseline">
+<h3>.secrets.baseline<a class="headerlink" href="#secrets-baseline" title="Link to this heading"></a></h3>
+<p>A file for configuration of the  <code class="docutils literal notranslate"><span class="pre">detect-secrets</span></code>[detect-secrets] pre-commit hook. <code class="docutils literal notranslate"><span class="pre">detect-secrets</span></code> prevents secrets from being committed
+to the repository. The baseline file flags secret-like data that the user deliberately wishes to commit the to repository.</p>
+</section>
+<section id="code-of-conduct-md">
+<h3>CODE_OF_CONDUCT.md<a class="headerlink" href="#code-of-conduct-md" title="Link to this heading"></a></h3>
+<p>The Code of Conduct describes how contributors should interact with each other on the project.
+It also contains information about the responsibilities of contributors both within and outside
+of the organisation owning the created repository.</p>
+</section>
+<section id="conftest-py">
+<h3>conftest.py<a class="headerlink" href="#conftest-py" title="Link to this heading"></a></h3>
+<p>A file to store shared fixture functions for the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> tests in the <code class="docutils literal notranslate"><span class="pre">tests</span></code> folder.</p>
+</section>
+<section id="contributing-md">
+<h3>CONTRIBUTING.md<a class="headerlink" href="#contributing-md" title="Link to this heading"></a></h3>
+<p>The contributing guidelines for this project, explaining how contributors can
+engage with the created project.</p>
+</section>
+<section id="description">
+<h3>DESCRIPTION<a class="headerlink" href="#description" title="Link to this heading"></a></h3>
+<p>An file containing information about R code to include package information, such as dependencies.</p>
+</section>
+<section id="license">
+<h3>LICENSE<a class="headerlink" href="#license" title="Link to this heading"></a></h3>
+<p>The licence describes how the project can be used or re-used by others. Unless stated otherwise, the codebase is released under
+the MIT License.</p>
+</section>
+<section id="make-bat">
+<h3>make.bat<a class="headerlink" href="#make-bat" title="Link to this heading"></a></h3>
+<p>A file mimicking a Unix/Linux <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> for Windows.</p>
+</section>
+<section id="makefile">
+<h3>Makefile<a class="headerlink" href="#makefile" title="Link to this heading"></a></h3>
+<p>A file containing shortcut commends for Unix/Linux users.</p>
+</section>
+<section id="pyproject-toml">
+<h3>pyproject.toml<a class="headerlink" href="#pyproject-toml" title="Link to this heading"></a></h3>
+<p>A file for Python package building that includes information such as dependencies. It also configures tools such as
+isort, pytest, and bandit.</p>
+</section>
+<section id="readme-md">
+<h3>README.md<a class="headerlink" href="#readme-md" title="Link to this heading"></a></h3>
+<p>A file containing information about the project, such as requirements and instructions for how to run the code. Can
+be editted to add additional information such as a summary of the project.</p>
+</section>
+<section id="setup-cfg">
+<h3>setup.cfg<a class="headerlink" href="#setup-cfg" title="Link to this heading"></a></h3>
+<p>A file containing Python package metadata for use with <code class="docutils literal notranslate"><span class="pre">setuptools</span></code>.</p>
+</section>
+<section id="setup-py">
+<h3>setup.py<a class="headerlink" href="#setup-py" title="Link to this heading"></a></h3>
+<p>A file to set up the created Python package with <code class="docutils literal notranslate"><span class="pre">setuptools</span></code>.</p>
+</section>
+<section id="startup-r">
+<h3>startup.R<a class="headerlink" href="#startup-r" title="Link to this heading"></a></h3>
+<p>A file used by R to set up an environment.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../govcookiecutter_structure/tests.html" class="btn btn-neutral float-left" title="tests folder overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dot_govcookiecutter.html" class="btn btn-neutral float-right" title=".govcookiecutter folder overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
