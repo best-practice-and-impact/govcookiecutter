@@ -53,8 +53,11 @@ select = [
     ]
 
 [tool.ruff]
-line-length = 100
+line-length = 88
 exclude = [
     "[{][{] cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') [}][}]",
     "[{][{] cookiecutter.repo_name [}][}]/tests/"
 ]
+
+[tool.ruff.format]
+line-ending = "lf"
