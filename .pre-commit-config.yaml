@@ -11,13 +11,13 @@ repos:
         name: Check for a blank line at the end of scripts (auto-fixes)
       - id: trailing-whitespace
         name: Check for trailing whitespaces (auto-fixes)
-  - repo: https://github.com/pycqa/isort
-    rev: 6.0.1
-    hooks:
-      - id: isort
-        name: isort - Sort Python imports (auto-fixes)
-        args: [ "--profile", "black", "--filter-files" ]
-        exclude: test_example_module.py|run_pipeline.py
+  # - repo: https://github.com/pycqa/isort
+  #   rev: 6.0.1
+  #   hooks:
+  #     - id: isort
+  #       name: isort - Sort Python imports (auto-fixes)
+  #       args: [ "--profile", "black", "--filter-files" ]
+  #       exclude: test_example_module.py|run_pipeline.py
   # - repo: https://github.com/psf/black
   #   rev: 25.1.0 # Replace by any tag/version: https://github.com/psf/black/tags
   #   hooks:
