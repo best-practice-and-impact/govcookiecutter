@@ -7,10 +7,10 @@ repos:
       - id: check-added-large-files
         name: Check for files larger than 5 MB
         args: [ "--maxkb=5120" ]
-      - id: end-of-file-fixer
-        name: Check for a blank line at the end of scripts (auto-fixes)
-      - id: trailing-whitespace
-        name: Check for trailing whitespaces (auto-fixes)
+      # - id: end-of-file-fixer
+      #   name: Check for a blank line at the end of scripts (auto-fixes)
+      # - id: trailing-whitespace
+      #   name: Check for trailing whitespaces (auto-fixes)
   # - repo: https://github.com/pycqa/isort
   #   rev: 6.0.1
   #   hooks:
