@@ -1,3 +1,3 @@
-```{include} ../README.md
+```{include} ../docs_README.md
 :relative-docs: ../
 ```

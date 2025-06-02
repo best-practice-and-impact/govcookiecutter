@@ -9,7 +9,7 @@ Further detail on folder contents is available:
 ./example.md
 ./hooks.md
 ./tests.md
-../{{ cookiecutter.repo_name }}/README.md
+../{{ cookiecutter.repo_name }}/docs_repo_README.md
 ```
 
 ## Top-level files
