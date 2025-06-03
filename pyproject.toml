@@ -51,6 +51,7 @@ select = [
     # isort
     "I",
     ]
+ignore = ["D203", "E203"]
 
 [tool.ruff]
 line-length = 88
