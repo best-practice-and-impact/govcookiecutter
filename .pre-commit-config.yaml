@@ -25,7 +25,7 @@ repos:
     rev: v0.11.12
     hooks:
       # Run ruff linter.
-      - id: ruff
+      - id: ruff-check
         types_or: [ python, pyi ]
         args: [ --fix ]
       # Run ruff formatter.
