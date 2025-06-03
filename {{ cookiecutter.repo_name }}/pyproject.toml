@@ -52,4 +52,4 @@ exclude = [
 ]
 
 [tool.ruff.format]
-line-ending = "lf"
+line-ending = "auto"
