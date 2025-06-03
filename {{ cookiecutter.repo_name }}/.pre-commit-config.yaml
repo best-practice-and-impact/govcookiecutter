@@ -85,12 +85,15 @@ repos:
       name: ruff check
       description: "Run 'ruff check' for extremely fast Python linting"
       entry: ruff check --force-exclude
+      types_or: [python, pyi, jupyter]
+      args: [--fix]
       language: python
 
     - id: ruff-format
       name: ruff format
       description: "Run 'ruff format' for extremely fast Python formatting"
       entry: ruff format --force-exclude
+      types_or: [python, pyi, jupyter]
       language: python
 
     - id: detect-secrets
