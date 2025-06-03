@@ -81,54 +81,17 @@ repos:
       args:
         - "--maxkb=5120"
 
-    - id: end-of-file-fixer
-      name: Check for a blank line at the end of scripts (auto-fixes)
-      entry: end-of-file-fixer
-      language: system
-      exclude: '\.Rd'
+    - id: ruff-check
+      name: ruff check
+      description: "Run 'ruff check' for extremely fast Python linting"
+      entry: ruff check --force-exclude
+      language: python
 
-    - id: trailing-whitespace
-      name: Check for trailing whitespaces (auto-fixes)
-      entry: trailing-whitespace-fixer
-      language: system
-
-    - id: isort
-      name: isort - Sort python imports (auto-fixes)
-      entry: isort
-      language: system
-      args:
-        - "--profile"
-        - "black"
-        - "--filter-files"
-
-    - id: black
-      name: black - consistent Python code formatting (auto-fixes)
-      entry: black
-      language: system
-      types: [python]
-
-    - id: flake8
-      name: flake8 - Python linting
-      entry: flake8
-      language: system
-      types: [python]
-
-    - id: nbqa-isort
-      name: nbqa-isort - Sort Python imports (notebooks; auto-fixes)
-      entry: nbqa
-      language: system
-      args:
-        - isort
-        - --nbqa-mutate
-
-    - id: nbqa-black
-      name: nbqa-black - consistent Python code formatting (notebooks; auto-fixes)
-      entry: nbqa
-      language: system
-      types: [python]
-      args:
-        - black
-        - --nbqa-mutate
+    - id: ruff-format
+      name: ruff format
+      description: "Run 'ruff format' for extremely fast Python formatting"
+      entry: ruff format --force-exclude
+      language: python
 
     - id: detect-secrets
       name: detect-secrets - Detect secrets in staged code
