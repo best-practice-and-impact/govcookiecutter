@@ -56,8 +56,7 @@ ignore = ["D203", "E203"]
 [tool.ruff]
 line-length = 88
 exclude = [
-    "[{][{] cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') [}][}]",
-    "[{][{] cookiecutter.repo_name [}][}]/tests/"
+    "[{][{] cookiecutter.repo_name [}][}]/"
 ]
 
 [tool.ruff.format]
