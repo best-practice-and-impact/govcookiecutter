@@ -30,7 +30,7 @@ jobs:
       - name: Run pre-commit hooks
         run: pre-commit run --all-files
       - name: Clear ruff cache
-        run: ruff clear
+        run: ruff clean
       - name: Create documentation
         run: |
           if [[ "$RUNNER_OS" == "Linux" || "$RUNNER_OS" == "macOS" ]]; then
