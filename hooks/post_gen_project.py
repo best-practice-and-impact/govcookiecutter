@@ -1,3 +1,4 @@
+import os
 from json import load
 from pathlib import Path
 from shutil import rmtree
@@ -22,6 +23,16 @@ def delete_files_and_folders(paths: Union[Path, str, List[Path], List[str]]) -> 
     paths = [Path(p) for p in paths] if isinstance(paths, List) else [Path(paths)]
     _ = [rmtree(d) for d in paths if d.is_dir() and d.exists()]
     _ = [f.unlink() for f in paths if f.is_file() and f.exists()]
+
+
+def remove_excluded_ruff_path() -> None:
+    """Remove the excluded files from the ruff config in pyproject.toml."""
+    print("Current working directory:", os.getcwd())
+    pyproject_path = Path("pyproject.toml")
+    if pyproject_path.exists():
+        content = pyproject_path.read_text(encoding="utf-8")
+        new_content = content.replace('["**/*"]', "[]")
+        pyproject_path.write_text(new_content, encoding="utf-8")
 
 
 def set_aqa_framework(
@@ -164,3 +175,5 @@ if __name__ == "__main__":
 
     # Remove `DIR_GOVCOOKIECUTTER`
     delete_files_and_folders(DIR_GOVCOOKIECUTTER)
+
+    remove_excluded_ruff_path()
