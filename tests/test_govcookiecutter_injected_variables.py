@@ -39,20 +39,6 @@ PROJECT_VERSION_COUNT = {
     '"{{ cookiecutter.project_version }}"': 1,
     "{{ cookiecutter.project_version }}": 2,
 }
-USING_R_NO_COUNT = {
-    "https://github.com/lorenzwalthert/precommit": 0,
-    "`.lintr`": 0,
-    "`.Rprofile`": 0,
-    "`DESCRIPTION`": 0,
-    "`startup.R`": 0,
-}
-USING_R_YES_COUNT = {
-    "https://github.com/lorenzwalthert/precommit": 0,
-    "`.lintr`": 0,
-    "`.Rprofile`": 0,
-    "`DESCRIPTION`": 0,
-    "`startup.R`": 0,
-}
 
 
 def replace_cookiecutter_jinja2_counts(
@@ -133,67 +119,52 @@ def recursive_open_and_count_search_terms(
 
 # Define the test cases for the `test_injected_counts_correct` test
 args_injected_counts_correct = [
-    ("organisation_name", "org_1", ORGANISATION_NAME_COUNT, {"using_R": "No"}),
-    ("organisation_name", "org_2", ORGANISATION_NAME_COUNT, {"using_R": "Yes"}),
-    ("organisation_handle", "handle_1", ORGANISATION_HANDLE_COUNT, {"using_R": "No"}),
+    ("organisation_name", "org_1", ORGANISATION_NAME_COUNT),
+    ("organisation_name", "org_2", ORGANISATION_NAME_COUNT),
+    ("organisation_handle", "handle_1", ORGANISATION_HANDLE_COUNT),
     (
         "organisation_handle",
         "handle_2",
-        {**ORGANISATION_HANDLE_COUNT, '"{{ cookiecutter.organisation_handle }}",': 0},
-        {"using_R": "Yes"},
+        {**ORGANISATION_HANDLE_COUNT, '"{{ cookiecutter.organisation_handle }}",': 0}
     ),
-    # ("contact_email", "email@1", CONTACT_EMAIL_COUNT, {"using_R": "No"}),
-    # (
-    #    "contact_email",
-    #    "email@2",
-    #    {**CONTACT_EMAIL_COUNT, '"{{ cookiecutter.contact_email }}")': 0},
-    #    {"using_R": "Yes"},
-    # ),
-    ("project_name", "Project_1", PROJECT_NAME_COUNT, {"using_R": "No"}),
+    ("project_name", "Project_1", PROJECT_NAME_COUNT),
     (
         "project_name",
         "Project_2",
-        {**PROJECT_NAME_COUNT, "{{ cookiecutter.project_name }}": 2},
-        {"using_R": "Yes"},
+        {**PROJECT_NAME_COUNT, "{{ cookiecutter.project_name }}": 2}
     ),
-    ("repo_name", "repo_1", REPO_NAME_COUNT, {"using_R": "No"}),
+    ("repo_name", "repo_1", REPO_NAME_COUNT),
     (
         "repo_name",
         "repo_2",
-        {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 2},
-        {"using_R": "Yes"},
+        {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 2}
     ),
-    ("overview", "overview_1", OVERVIEW_COUNT, {"using_R": "No"}),
+    ("overview", "overview_1", OVERVIEW_COUNT),
     (
         "overview",
         "overview_1",
-        {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 2},
-        {"using_R": "Yes"},
+        {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 2}
     ),
-    ("project_version", "project_version_1", PROJECT_VERSION_COUNT, {"using_R": "No"}),
+    ("project_version", "project_version_1", PROJECT_VERSION_COUNT),
     (
         "project_version",
         "project_version_2",
-        {**PROJECT_VERSION_COUNT, "{{ cookiecutter.project_version }}": 1},
-        {"using_R": "Yes"},
+        {**PROJECT_VERSION_COUNT, "{{ cookiecutter.project_version }}": 1}
     ),
-    ("using_R", "No", USING_R_NO_COUNT, {}),
-    ("using_R", "Yes", USING_R_YES_COUNT, {}),
 ]
 
 
 @pytest.mark.parametrize(
     "test_input_variable, test_input_value, "
-    "test_input_variable_counts, test_input_other_context",
+    "test_input_variable_counts",
     args_injected_counts_correct,
 )
 def test_injected_counts_correct(
     cookies,
     test_input_variable: str,
     test_input_value: str,
-    test_input_variable_counts: Dict[str, int],
-    test_input_other_context: Dict[str, str],
-) -> None:
+    test_input_variable_counts: Dict[str, int]
+    ) -> None:
 
     # Generate the expected counts
     test_expected_counts = replace_cookiecutter_jinja2_counts(
@@ -206,7 +177,6 @@ def test_injected_counts_correct(
     test_output_project = cookies.bake(
         extra_context={
             test_input_variable: test_input_value,
-            **test_input_other_context,
         }
     )
 
