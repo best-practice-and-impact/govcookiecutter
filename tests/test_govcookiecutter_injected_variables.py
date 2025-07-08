@@ -17,11 +17,6 @@ ORGANISATION_HANDLE_COUNT = {
     '[u"{{ cookiecutter.organisation_handle }}"],': 0,
     '"{{ cookiecutter.organisation_handle }}",': 0,
 }
-# CONTACT_EMAIL_COUNT = {
-#    "mailto:{{ cookiecutter.contact_email }}": 2,
-#    "[{{ cookiecutter.contact_email }}][email-address].": 1,
-#    '"{{ cookiecutter.contact_email }}")': 0,
-# }
 PROJECT_NAME_COUNT = {
     '"{{ cookiecutter.project_name }}"': 1,
     '"{{ cookiecutter.project_name }}",': 0,
@@ -41,8 +36,8 @@ OVERVIEW_COUNT = {
     "{{ cookiecutter.overview }}": 2,
 }
 PROJECT_VERSION_COUNT = {
-    '"{{ cookiecutter.project_version }}"': 2,
-    "{{ cookiecutter.project_version }}": 1,
+    '"{{ cookiecutter.project_version }}"': 1,
+    "{{ cookiecutter.project_version }}": 2,
 }
 USING_R_NO_COUNT = {
     "https://github.com/lorenzwalthert/precommit": 0,
@@ -52,7 +47,7 @@ USING_R_NO_COUNT = {
     "`startup.R`": 0,
 }
 USING_R_YES_COUNT = {
-    "https://github.com/lorenzwalthert/precommit": 2,
+    "https://github.com/lorenzwalthert/precommit": 0,
     "`.lintr`": 0,
     "`.Rprofile`": 0,
     "`DESCRIPTION`": 0,
@@ -158,28 +153,28 @@ args_injected_counts_correct = [
     (
         "project_name",
         "Project_2",
-        {**PROJECT_NAME_COUNT, "{{ cookiecutter.project_name }}": 3},
+        {**PROJECT_NAME_COUNT, "{{ cookiecutter.project_name }}": 2},
         {"using_R": "Yes"},
     ),
     ("repo_name", "repo_1", REPO_NAME_COUNT, {"using_R": "No"}),
     (
         "repo_name",
         "repo_2",
-        {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 3},
+        {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 2},
         {"using_R": "Yes"},
     ),
     ("overview", "overview_1", OVERVIEW_COUNT, {"using_R": "No"}),
     (
         "overview",
         "overview_1",
-        {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 3},
+        {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 2},
         {"using_R": "Yes"},
     ),
     ("project_version", "project_version_1", PROJECT_VERSION_COUNT, {"using_R": "No"}),
     (
         "project_version",
         "project_version_2",
-        {**PROJECT_VERSION_COUNT, "{{ cookiecutter.project_version }}": 2},
+        {**PROJECT_VERSION_COUNT, "{{ cookiecutter.project_version }}": 1},
         {"using_R": "Yes"},
     ),
     ("using_R", "No", USING_R_NO_COUNT, {}),

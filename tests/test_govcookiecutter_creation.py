@@ -8,13 +8,11 @@ from sphinx.cmd.build import main
 @pytest.mark.parametrize("test_input_repository_hosting_platform", ["GitHub", "GitLab"])
 @pytest.mark.parametrize("test_input_project_name", ["A project", "Another project"])
 @pytest.mark.parametrize("test_input_using_r", ["Yes", "No"])
-@pytest.mark.parametrize("test_input_locked_down_environment", ["Yes", "No"])
 def test_request_template_generated_correctly(
     cookies,
     test_input_repository_hosting_platform: str,
     test_input_project_name: str,
     test_input_using_r: str,
-    test_input_locked_down_environment: str,
 ) -> None:
     """Test the pull or merge request templates are created correctly."""
 
@@ -24,7 +22,6 @@ def test_request_template_generated_correctly(
             "repository_hosting_platform": test_input_repository_hosting_platform,
             "project_name": test_input_project_name,
             "using_R": test_input_using_r,
-            "locked_down_environment": test_input_locked_down_environment,
         }
     )
 
@@ -57,12 +54,10 @@ def test_organisational_framework_correct() -> None:
 
 @pytest.mark.parametrize("test_input_repository_name", ["a", "b"])
 @pytest.mark.parametrize("test_input_using_r", ["Yes", "No"])
-@pytest.mark.parametrize("test_input_locked_down_environment", ["Yes", "No"])
 def test_repo_name_directory_correct(
     cookies,
     test_input_repository_name: str,
     test_input_using_r: str,
-    test_input_locked_down_environment: str,
 ) -> None:
     """Check the project repository is generated with the correct name."""
 
@@ -71,7 +66,6 @@ def test_repo_name_directory_correct(
         extra_context={
             "repo_name": test_input_repository_name,
             "using_R": test_input_using_r,
-            "locked_down_environment": test_input_locked_down_environment,
         }
     )
 
@@ -111,14 +105,12 @@ args_builds_correctly = [
 @pytest.mark.parametrize("test_input_repository_hosting_platform", ["GitHub", "GitLab"])
 @pytest.mark.parametrize("test_input_organisational_framework", ["GDS", "N/A"])
 @pytest.mark.parametrize("test_input_using_r", ["No", "Yes"])
-@pytest.mark.parametrize("test_input_locked_down_environment", ["Yes", "No"])
 def test_builds_correctly(
     cookies,
     test_input_context: Dict[str, str],
     test_input_repository_hosting_platform: str,
     test_input_organisational_framework: str,
     test_input_using_r: str,
-    test_input_locked_down_environment: str,
 ) -> None:
     """Test that the projects are built correctly with no errors."""
 
@@ -129,7 +121,6 @@ def test_builds_correctly(
             "repository_hosting_platform": test_input_repository_hosting_platform,
             "organisational_framework": test_input_organisational_framework,
             "using_R": test_input_using_r,
-            "locked_down_environment": test_input_locked_down_environment,
         }
     )
 
