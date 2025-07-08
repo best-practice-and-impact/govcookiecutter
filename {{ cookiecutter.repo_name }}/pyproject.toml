@@ -1,0 +1,33 @@
+[project]
+name = "{{ cookiecutter.repo_name.lower().replace(' ', '-').replace('_', '-') }}"
+description = "{{ cookiecutter.overview }}"
+version = "{{ cookiecutter.project_version }}"
+authors = [
+    {"name" = "{{ cookiecutter.organisation_handle }}"}
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+dependencies = [
+    "pyyaml"
+]
+
+[project.optional-dependencies]
+dev = [
+    "coverage",
+    "myst-parser",
+    "pytest",
+    "python-dotenv",
+    "Sphinx",
+    "toml"
+]
+
+[tool.setuptools]
+zip-safe = false
+
+[tool.setuptools.packages.find]
+include = ["{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}"]
