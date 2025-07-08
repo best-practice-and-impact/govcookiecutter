@@ -8,8 +8,16 @@ def check_repo_name_structure(repo_name: str) -> None:
     Raises:
         ValueError: If the repository name does not follow the correct structure.
     """
-    if len(repo_name) > 2:
+    print("checking repo name length",repo_name)
+
+    if len(repo_name) > 88:
+        print("checking repo name length")
         raise ValueError(
-            "Repository name must not exceed 88 characters."
+            "Repository name must not exceed 100 characters."
         )
 
+
+if __name__ == "__main__":
+
+    # Check the format of the contact email address supplied is a valid one
+    check_repo_name_structure("{{ cookiecutter.repo_name }}")
