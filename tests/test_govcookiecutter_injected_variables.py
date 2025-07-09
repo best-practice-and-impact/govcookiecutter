@@ -125,46 +125,37 @@ args_injected_counts_correct = [
     (
         "organisation_handle",
         "handle_2",
-        {**ORGANISATION_HANDLE_COUNT, '"{{ cookiecutter.organisation_handle }}",': 0}
+        {**ORGANISATION_HANDLE_COUNT, '"{{ cookiecutter.organisation_handle }}",': 0},
     ),
     ("project_name", "Project_1", PROJECT_NAME_COUNT),
     (
         "project_name",
         "Project_2",
-        {**PROJECT_NAME_COUNT, "{{ cookiecutter.project_name }}": 2}
+        {**PROJECT_NAME_COUNT, "{{ cookiecutter.project_name }}": 2},
     ),
     ("repo_name", "repo_1", REPO_NAME_COUNT),
-    (
-        "repo_name",
-        "repo_2",
-        {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 2}
-    ),
+    ("repo_name", "repo_2", {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 2}),
     ("overview", "overview_1", OVERVIEW_COUNT),
-    (
-        "overview",
-        "overview_1",
-        {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 2}
-    ),
+    ("overview", "overview_1", {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 2}),
     ("project_version", "project_version_1", PROJECT_VERSION_COUNT),
     (
         "project_version",
         "project_version_2",
-        {**PROJECT_VERSION_COUNT, "{{ cookiecutter.project_version }}": 1}
+        {**PROJECT_VERSION_COUNT, "{{ cookiecutter.project_version }}": 1},
     ),
 ]
 
 
 @pytest.mark.parametrize(
-    "test_input_variable, test_input_value, "
-    "test_input_variable_counts",
+    "test_input_variable, test_input_value, " "test_input_variable_counts",
     args_injected_counts_correct,
 )
 def test_injected_counts_correct(
     cookies,
     test_input_variable: str,
     test_input_value: str,
-    test_input_variable_counts: Dict[str, int]
-    ) -> None:
+    test_input_variable_counts: Dict[str, int],
+) -> None:
 
     # Generate the expected counts
     test_expected_counts = replace_cookiecutter_jinja2_counts(

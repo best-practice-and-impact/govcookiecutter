@@ -28,4 +28,3 @@ dev = [
 
 [tool.setuptools]
 zip-safe = false
-

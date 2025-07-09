@@ -11,5 +11,5 @@ __all__ = (
     "check_repo_name_structure",
     "parse_features_json",
     "set_aqa_framework",
-    "set_request_template",   
+    "set_request_template",
 )
