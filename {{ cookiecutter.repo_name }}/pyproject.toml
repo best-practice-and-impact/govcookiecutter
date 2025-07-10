@@ -1,30 +1,30 @@
-# `coverage` configurations
-[tool.coverage.run]
-source = [
-    "./"
+[project]
+name = "{{ cookiecutter.repo_name.lower().replace(' ', '-').replace('_', '-') }}"
+description = "{{ cookiecutter.overview }}"
+version = "{{ cookiecutter.project_version }}"
+authors = [
+    {"name" = "{{ cookiecutter.organisation_handle }}"}
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+dependencies = [
+    "pyyaml"
 ]
 
-[tool.coverage.report]
-exclude_lines = [
-    "if __name__ == .__main__.:"
+[project.optional-dependencies]
+dev = [
+    "coverage",
+    "myst-parser",
+    "pytest",
+    "python-dotenv",
+    "Sphinx",
+    "toml"
 ]
 
-# `isort` configurations
-[tool.isort]
-profile = "black"
-
-# `pytest` configurations
-[tool.pytest.ini_options]
-addopts = [
-    "-vv",
-    "--doctest-modules"
-]
-doctest_optionflags = "NORMALIZE_WHITESPACE"
-testpaths = [
-    "./tests"
-]
-
-# `bandit' configurations
-[tool.bandit]
-exclude_dirs = ["tests", "docs"]
-skips = []
+[tool.setuptools]
+zip-safe = false

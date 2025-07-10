@@ -21,9 +21,6 @@ a virtual environment.
 ## Requirements
 
 - Python 3.9+ installed
-{% if cookiecutter.using_R == "Yes" -%}
-- R 4.2.3+ installed
-{% endif -%}
 - a `.secrets` file with the required [secrets and credentials](#required-secrets-and-credentials)
 - to have [loaded environment variables][docs-loading-environment-variables] from `.env`
 
@@ -39,14 +36,6 @@ python -m pip install -U pip setuptools
 pip install -e .
 ```
 
-{% if cookiecutter.using_R == "Yes" -%}
-While in the root folder in an R console, such as that in Rstudio,
-install the R components with:
-```R
-install.packages(".")
-```
-{% endif -%}
-
 ### Install for contributors (Python only)
 
 To install the contributing requirements, use:
@@ -59,15 +48,6 @@ pre-commit install
 This installs an editable version of the package. This means that when you update the
 package code you do not have to reinstall it for the changes to take effect.
 This saves a lot of time when you test your code.
-
-{% if cookiecutter.using_R == "Yes" -%}
-While in the root folder in an R console, such as that in Rstudio, load the package
-using `devtools`:
-```R
-#install.packages("devtools")
-devtools::load_all()
-```
-{% endif -%}
 
 Remember to update the setup and requirement files inline with any changes to your
 package.

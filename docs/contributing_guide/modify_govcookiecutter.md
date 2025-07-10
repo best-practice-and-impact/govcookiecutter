@@ -118,14 +118,6 @@ For example, for the following Markdown:
 
 The contributing guidelines for this project.
 
-{% if cookiecutter.using_R == "Yes" -%}
-### `DESCRIPTION`
-
-R-specific information related to the project including the name, authors and packages
-necessary for the project.
-
-{% endif -%}
-
 ### `LICENSE`
 
 The licence for this project...
