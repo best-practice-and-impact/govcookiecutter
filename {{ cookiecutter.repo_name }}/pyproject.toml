@@ -1,7 +1,7 @@
 [project]
 name = "{{ cookiecutter.repo_name.lower().replace(' ', '-').replace('_', '-') }}"
 description = "{{ cookiecutter.overview }}"
-version = "{{ cookiecutter.project_version }}"
+version = "0.0.1"
 authors = [
     {"name" = "{{ cookiecutter.organisation_handle }}"}
 ]

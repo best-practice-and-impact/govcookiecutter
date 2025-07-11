@@ -1,20 +1,22 @@
 # `govcookiecutter`
 
-## What is govcookiecutter?
+## What is govcookiecutter-lite?
 
-A cookiecutter template for analytical, Python-, or Python and R-based projects within
+A lightweight cookiecutter template for analytical Python-based projects within
 His Majesty's Government, and wider public sector.
 
 ## How is the template used?
 
-This template helps to set up standardised project structures, and [includes security
-features using pre-commit hooks][docs-pre-commit]. This cookiecutter template also acts
+This template helps to set up standardised project structures. This cookiecutter template also acts
 as an installable template (python projects only).
 
 It also provides an Agile, centralised, and lightweight analytical quality assurance
-(AQA) process. Pull or merge request templates are used to nudge users to complete this
-process. [This helps meet HM Government best practice on producing quality analysis, as
+(AQA) process. [This helps meet HM Government best practice on producing quality analysis, as
 defined in the Aqua Book][aqua-book].
+
+govcookiecutter-lite was developed from the original [govcookiecutter][govcookiecutter] but has
+minimised the project creation to include only the minimum files and structure to quickly setup
+python packages.
 
 [For reasons why we developed `govcookiecutter`, read the blog post][blog-post], and
 [watch the live demonstration from March 2021 on version 0.5.3][youtube].
@@ -85,13 +87,13 @@ Next, open your
 terminal, navigate to the directory where you want your new repository to exist. Then run the following command for the latest stable release:
 
 ```shell
-python -m cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git
+python -m cookiecutter https://github.com/best-practice-and-impact/govcookiecutter-lite.git
 ```
 
 or for a specific branch, tag, or commit SHA `{SPECIFIC}`, run:
 
 ```shell
-python -m cookiecutter https://github.com/best-practice-and-impact/govcookiecutter.git --checkout {SPECIFIC}
+python -m cookiecutter https://github.com/best-practice-and-impact/govcookiecutter-lite.git --checkout {SPECIFIC}
 ```
 
 Follow the prompts; if you are asked to re-download `govcookiecutter`, input `yes`.
@@ -168,6 +170,7 @@ project][drivendata]. Specifically, it uses a modified version of the `help` com
 [cruft]: https://github.com/cruft/cruft
 [docs-pre-commit]: ./CONTRIBUTING.md#getting-started
 [drivendata]: http://drivendata.github.io/cookiecutter-data-science/
+[govcookiecutter]: https://github.com/best-practice-and-impact/govcookiecutter.git
 [homebrew]: https://brew.sh/
 [issue-windows-os]: https://github.com/best-practice-and-impact/govcookiecutter/issues/20
 [pluralsight]: https://www.pluralsight.com/tech-blog/managing-python-environments/

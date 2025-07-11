@@ -35,10 +35,6 @@ OVERVIEW_COUNT = {
     '"{{ cookiecutter.overview }}",': 0,
     "{{ cookiecutter.overview }}": 2,
 }
-PROJECT_VERSION_COUNT = {
-    '"{{ cookiecutter.project_version }}"': 1,
-    "{{ cookiecutter.project_version }}": 2,
-}
 
 
 def replace_cookiecutter_jinja2_counts(
@@ -137,12 +133,6 @@ args_injected_counts_correct = [
     ("repo_name", "repo_2", {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 2}),
     ("overview", "overview_1", OVERVIEW_COUNT),
     ("overview", "overview_1", {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 2}),
-    ("project_version", "project_version_1", PROJECT_VERSION_COUNT),
-    (
-        "project_version",
-        "project_version_2",
-        {**PROJECT_VERSION_COUNT, "{{ cookiecutter.project_version }}": 1},
-    ),
 ]
 
 

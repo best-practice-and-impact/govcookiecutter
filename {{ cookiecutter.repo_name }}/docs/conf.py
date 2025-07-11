@@ -55,9 +55,9 @@ author = "{{ cookiecutter.organisation_handle }}"
 # |version| and |release|, also used in
 # various other places throughout the built documents.
 # The short X.Y.Z version.
-version = "{{ cookiecutter.project_version }}"
+version = "0.0.1"
 # The full version, including alpha/beta/rc tags.
-release = "{{ cookiecutter.project_version }}"
+release = "0.0.1"
 
 # List of patterns, relative to source directory,
 # that match files and directories to

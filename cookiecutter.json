@@ -5,6 +5,5 @@
   "organisational_framework": ["GDS", "N/A"],
   "project_name": "Your new project name",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "overview": "Brief overview of your project.",
-  "project_version": "0.0.1"
+  "overview": "Brief overview of your project."
 }
