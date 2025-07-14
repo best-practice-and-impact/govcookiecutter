@@ -1,6 +1,6 @@
 # `{{ cookiecutter.repo_name }}`
 
-{{ cookiecutter.overview }}
+A placeholder description for your python project
 
 ```{warning}
 Where this documentation refers to the root folder we mean where this README.md is

@@ -31,10 +31,7 @@ REPO_NAME_COUNT = {
     '"{{ cookiecutter.repo_name }}doc"': 1,
     "{{ cookiecutter.repo_name }}": 2,
 }
-OVERVIEW_COUNT = {
-    '"{{ cookiecutter.overview }}",': 0,
-    "{{ cookiecutter.overview }}": 2,
-}
+
 
 
 def replace_cookiecutter_jinja2_counts(
@@ -131,8 +128,6 @@ args_injected_counts_correct = [
     ),
     ("repo_name", "repo_1", REPO_NAME_COUNT),
     ("repo_name", "repo_2", {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 2}),
-    ("overview", "overview_1", OVERVIEW_COUNT),
-    ("overview", "overview_1", {**OVERVIEW_COUNT, "{{ cookiecutter.overview }}": 2}),
 ]
 
 

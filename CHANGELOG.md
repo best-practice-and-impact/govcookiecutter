@@ -18,3 +18,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Project version from setup, default is 0.0.1
 - locked down setup question, not needed as commit hooks have been removed 
 - removed all R files, not included in lite version
+- removed overview setup question, a placeholder has been inserted into readme and project toml

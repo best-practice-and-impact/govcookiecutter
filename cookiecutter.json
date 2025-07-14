@@ -4,6 +4,5 @@
   "organisation_handle": "Your GitHub/GitLab organisation name, for example ukgovdatascience",
   "organisational_framework": ["GDS", "N/A"],
   "project_name": "Your new project name",
-  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "overview": "Brief overview of your project."
+  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}"
 }

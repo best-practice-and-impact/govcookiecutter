@@ -80,7 +80,6 @@ args_builds_correctly = [
         "contact_email": "email@1",
         "project_name": "Project_1",
         "repo_name": "repo_1",
-        "overview": "overview_1",
         "project_version": "version_1",
     },
     {
@@ -89,7 +88,6 @@ args_builds_correctly = [
         "contact_email": "email@2",
         "project_name": "Project_2",
         "repo_name": "repo_2",
-        "overview": "overview_2",
         "project_version": "version_2",
     },
 ]
