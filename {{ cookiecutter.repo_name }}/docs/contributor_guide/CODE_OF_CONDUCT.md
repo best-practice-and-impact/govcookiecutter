@@ -10,7 +10,7 @@ Code][civil-service-code].
 
 Where this Code of Conduct says:
 
-- "Project", we mean this {{ cookiecutter.repository_hosting_platform }} repository, `{{ cookiecutter.repo_name }}` ;
+- "Project", we mean this git repository, `{{ cookiecutter.repo_name }}` ;
 - "Maintainer", we mean active developers of the primary project team(s) behind `{{ cookiecutter.organisation_handle }}`; and
 - "Leadership", we mean `{{ cookiecutter.organisation_handle }}` organisation owners, line managers, and other
   leadership within the {{ cookiecutter.organisation_name }}.

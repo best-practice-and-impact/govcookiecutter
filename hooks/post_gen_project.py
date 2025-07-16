@@ -50,62 +50,6 @@ def set_aqa_framework(
     _ = Path(dir_organisational_framework_aqa).rename(dir_cookiecutter_docs_aqa)
 
 
-def set_request_template(
-    path_organisational_framework_request_template: Union[Path, str],
-    dir_govcookiecutter: Union[Path, str],
-    repository_hosting_platform: str,
-) -> None:
-    """Set a pull or merge request template in the outputted project structure for a
-    specific organisation.
-
-    A pull request template is created if the user chooses GitHub as their repository
-    hosting platform. A merge request template is created if they choose GitLab instead.
-
-    Args:
-        path_organisational_framework_request_template: A file path to the specific
-            organisation pull or merge request template.
-        dir_govcookiecutter: A folder path to the outputted `govcookiecutter` template.
-        repository_hosting_platform: The repository hosting platform. Must be one of
-            "GitHub" or "GitLab" (case insensitive).
-
-    Returns:
-        A organisation-specific pull or merge request template in the correct location,
-        depending on their choice of GitHub or GitLab as the repository hosting
-        platform. If neither GitHub or GitLab are chosen, a `ValueError` is raised.
-
-    """
-
-    # Define the file path where the request template will be moved, which is dependent
-    # on the repository hosting platform. If the `dir_request_template` is not
-    # initially one of `.github` or `.gitlab`, raise a `ValueError`
-    if repository_hosting_platform.lower() == "github":
-        path_request_template = Path(dir_govcookiecutter).joinpath(
-            f".{repository_hosting_platform.lower()}", "pull_request_template.md"
-        )
-    elif repository_hosting_platform.lower() == "gitlab":
-        path_request_template = Path(dir_govcookiecutter).joinpath(
-            f".{repository_hosting_platform.lower()}",
-            "merge_request_templates",
-            "{{ cookiecutter.project_name }}.md",
-        )
-    else:
-        raise ValueError(
-            "`repository_hosting_platform` must be one of `GitHub` or `GitLab`: "
-            f"{repository_hosting_platform}"
-        )
-
-    # Recursively create all the directories to the parent directory of
-    # `path_request_template` if they do not already exist
-    if not path_request_template.parent.is_dir():
-        path_request_template.parent.mkdir(parents=True, exist_ok=True)
-
-    # Move the `path_organisational_framework_request_template` to
-    # `path_request_template`
-    _ = Path(path_organisational_framework_request_template).rename(
-        path_request_template
-    )
-
-
 def parse_features_json(file: Union[Path, str]) -> List[Path]:
     """Parse a JSON file containing filepaths.
 
@@ -153,16 +97,6 @@ if __name__ == "__main__":
         set_aqa_framework(
             DIR_ORGANISATIONAL_FRAMEWORKS.joinpath("aqa"), Path("docs").joinpath("aqa")
         )
-        set_request_template(
-            DIR_ORGANISATIONAL_FRAMEWORKS.joinpath("request_template.md"),
-            Path.cwd(),
-            "{{ cookiecutter.repository_hosting_platform }}",
-        )
-
-    # Delete files defined in the `manifest.json` file
-    # delete_files_and_folders(
-    #     parse_features_json(Path(".govcookiecutter", "manifest.json"))
-    # )
 
     # Remove `DIR_GOVCOOKIECUTTER`
     delete_files_and_folders(DIR_GOVCOOKIECUTTER)

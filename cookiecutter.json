@@ -1,6 +1,5 @@
 {
   "organisation_name": "Your public sector organisation name, for example Government Digital Service",
-  "repository_hosting_platform": ["GitHub", "GitLab"],
   "organisation_handle": "Your GitHub/GitLab organisation name, for example ukgovdatascience",
   "organisational_framework": ["GDS", "N/A"],
   "project_name": "Your new project name",

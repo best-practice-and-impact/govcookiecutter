@@ -5,42 +5,6 @@ import pytest
 from sphinx.cmd.build import main
 
 
-@pytest.mark.parametrize("test_input_repository_hosting_platform", ["GitHub", "GitLab"])
-@pytest.mark.parametrize("test_input_project_name", ["A project", "Another project"])
-def test_request_template_generated_correctly(
-    cookies,
-    test_input_repository_hosting_platform: str,
-    test_input_project_name: str,
-) -> None:
-    """Test the pull or merge request templates are created correctly."""
-
-    # Create a new project adding extra context; return it's `project_path` attribute
-    test_output_project = cookies.bake(
-        extra_context={
-            "repository_hosting_platform": test_input_repository_hosting_platform,
-            "project_name": test_input_project_name,
-        }
-    )
-
-    # Check that the build passes
-    assert test_output_project.exit_code == 0
-    assert test_output_project.exception is None
-
-    # Define the path to the pull or merge request template
-    test_output = test_output_project.project_path
-    if test_input_repository_hosting_platform == "GitHub":
-        assert test_output.joinpath(".github", "pull_request_template.md").is_file()
-    elif test_input_repository_hosting_platform == "GitLab":
-        assert test_output.joinpath(
-            ".gitlab", "merge_request_templates", f"{test_input_project_name}.md"
-        ).is_file()
-    else:
-        pytest.fail(
-            "Unknown `repository_hosting_platform` value: "
-            f"{test_input_repository_hosting_platform}"
-        )
-
-
 @pytest.mark.skip(
     reason="Unclear how to test this, unless there is a title in each " "framework"
 )
@@ -94,12 +58,10 @@ args_builds_correctly = [
 
 
 @pytest.mark.parametrize("test_input_context", args_builds_correctly)
-@pytest.mark.parametrize("test_input_repository_hosting_platform", ["GitHub", "GitLab"])
 @pytest.mark.parametrize("test_input_organisational_framework", ["GDS", "N/A"])
 def test_builds_correctly(
     cookies,
     test_input_context: Dict[str, str],
-    test_input_repository_hosting_platform: str,
     test_input_organisational_framework: str,
 ) -> None:
     """Test that the projects are built correctly with no errors."""
@@ -108,7 +70,6 @@ def test_builds_correctly(
     test_output_project = cookies.bake(
         extra_context={
             **test_input_context,
-            "repository_hosting_platform": test_input_repository_hosting_platform,
             "organisational_framework": test_input_organisational_framework,
         }
     )

@@ -26,7 +26,6 @@ hooks fail, the generated project will be rolled-back, and deleted.
     :toctree: api/
 
     set_aqa_framework
-    set_request_template
 
 ```
 
