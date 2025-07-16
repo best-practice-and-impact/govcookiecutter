@@ -23,7 +23,7 @@ def test_repo_name_directory_correct(
     # Create a new project adding extra context
     test_output_project = cookies.bake(
         extra_context={
-            "repo_name": test_input_repository_name,
+            "project_name": test_input_repository_name,
         }
     )
 
@@ -43,7 +43,6 @@ args_builds_correctly = [
         "organisation_handle": "handle_1",
         "contact_email": "email@1",
         "project_name": "Project_1",
-        "repo_name": "repo_1",
         "project_version": "version_1",
     },
     {
@@ -51,7 +50,6 @@ args_builds_correctly = [
         "organisation_handle": "handle_2",
         "contact_email": "email@2",
         "project_name": "Project_2",
-        "repo_name": "repo_2",
         "project_version": "version_2",
     },
 ]

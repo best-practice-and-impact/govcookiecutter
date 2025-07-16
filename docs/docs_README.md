@@ -6,8 +6,8 @@ This folder contains documentation for `govcookiecutter`. These are written in M
 Further details to consider when modifying these files are supplied in the [contributing guidance][contributing-guidance].
 ```
 
-To include documentation from the `{{ cookiecutter.repo_name }}`
-folder without duplicating it, refer to it in a file within the `docs/{{ cookiecutter.repo_name }}` folder.
+To include documentation from the `{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}`
+folder without duplicating it, refer to it in a file within the `docs/{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}` folder.
 
 To build the documentation, run:
 

@@ -23,15 +23,6 @@ PROJECT_NAME_COUNT = {
     'u"{{ cookiecutter.project_name }}': 0,
     "{{ cookiecutter.project_name }}": 2,
 }
-REPO_NAME_COUNT = {
-    '"{{ cookiecutter.repo_name }}",': 0,
-    "`{{ cookiecutter.repo_name }}`": 8,
-    "`{{ cookiecutter.repo_name }}`,": 1,
-    '"{{ cookiecutter.repo_name }}.tex",': 0,
-    '"{{ cookiecutter.repo_name }}doc"': 1,
-    "{{ cookiecutter.repo_name }}": 2,
-}
-
 
 
 def replace_cookiecutter_jinja2_counts(
@@ -126,8 +117,6 @@ args_injected_counts_correct = [
         "Project_2",
         {**PROJECT_NAME_COUNT, "{{ cookiecutter.project_name }}": 2},
     ),
-    ("repo_name", "repo_1", REPO_NAME_COUNT),
-    ("repo_name", "repo_2", {**REPO_NAME_COUNT, "{{ cookiecutter.repo_name }}": 2}),
 ]
 
 

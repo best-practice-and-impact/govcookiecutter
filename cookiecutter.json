@@ -2,6 +2,5 @@
   "organisation_name": "Your public sector organisation name, for example Government Digital Service",
   "organisation_handle": "Your GitHub/GitLab organisation name, for example ukgovdatascience",
   "organisational_framework": ["GDS", "N/A"],
-  "project_name": "Your new project name",
-  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}"
+  "project_name": "your_new_project_name"
 }

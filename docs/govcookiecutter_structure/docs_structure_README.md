@@ -9,7 +9,7 @@ Further detail on folder contents is available:
 ./example.md
 ./hooks.md
 ./tests.md
-../{{ cookiecutter.repo_name }}/docs_repo_README.md
+../{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}/docs_repo_README.md
 ```
 
 ## Top-level files
@@ -101,7 +101,7 @@ Python imports are arranged according to the [specification defined by `black`][
 
 #### `pytest`
 
-To run the tests within the `tests`, and `{{ cookiecutter.repo_name }}/tests` folders
+To run the tests within the `tests`, and `{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}/tests` folders
 using the `pytest` Python package, enter the following command:
 
 ```shell
@@ -125,7 +125,7 @@ make coverage_html
 ```
 
 A code coverage report in HTML will be produced on the code in the `hooks` and
-`{{ cookiecutter.repo_name }}/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}` folders.
+`{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}/{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}` folders.
 This HTML report can be accessed at `htmlcov/index.html`.
 
 ### `README.md`

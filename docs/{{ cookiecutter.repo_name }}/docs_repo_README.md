@@ -1,7 +1,7 @@
-# `{{ cookiecutter.repo_name }}` folder structure
+# `{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}` folder structure
 
 This is information about the structure of the created repository contained
-in the `{{ cookiecutter.repo_name }}` folder within the `govcookiecutter` repository.
+in the `{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}` folder within the `govcookiecutter` repository.
 Some of these files may not be present in the actual created repository, as this is
 customised based on the user's answers to the prompts on set-ups.
 

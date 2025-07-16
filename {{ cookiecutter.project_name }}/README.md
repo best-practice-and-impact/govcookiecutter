@@ -1,4 +1,4 @@
-# `{{ cookiecutter.repo_name }}`
+# `{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}`
 
 A placeholder description for your python project
 
@@ -6,7 +6,7 @@ A placeholder description for your python project
 Where this documentation refers to the root folder we mean where this README.md is
 located.
 ```
-## What is `{{ cookiecutter.repo_name }}`?
+## What is `{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}`?
 
 Add a summary of your project here.
 
@@ -59,7 +59,7 @@ To run the pipeline, run the following code in the terminal (either in the root 
 project, or by specifying the path to `run_pipeline.py` from elsewhere).
 
 ```shell
-python src/{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipeline.py
+python src/{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}/run_pipeline.py
 ```
 
 Alternatively, most Python IDEs allow you to run the code directly using a `run` button.
@@ -84,8 +84,8 @@ The cookiecutter template generated for each project will follow this folder str
 
 ```shell
 .
-├── {{ cookiecutter.repo_name }}/
-│   └── {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/
+├── {{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}/
+│   └── {{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}/
 │       ├── example_modules/
 │       │   ├── __init__.py
 │       │   └── example_module.py
@@ -103,7 +103,7 @@ Crown copyright and available under the terms of the Open Government 3.0 licence
 
 ## Contributing
 
-If you want to help us build and improve `{{ cookiecutter.repo_name }}`, please take a look at our
+If you want to help us build and improve `{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}`, please take a look at our
 [contributing guidelines][contributing].
 
 ## Acknowledgements

@@ -4,7 +4,7 @@ from typing import Dict, List
 from dotenv import dotenv_values
 
 # Define a path to the `govcookiecutter` template directory, and its `.env` file
-DIR_TEMPLATE = Path("{{ cookiecutter.repo_name }}")
+DIR_TEMPLATE = Path("{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}")
 PATH_TEMPLATE_ENV = DIR_TEMPLATE.joinpath(".env")
 
 # Define a list of directory names to recursively ignore, as well as a list of
@@ -119,7 +119,7 @@ def define_expected_env_variables(
         ):
             if (
                 d.name.upper()
-                == "{{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}".upper()  # noqa: E501
+                == "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}".upper()  # noqa: E501
             ):
                 env_expected_dir_variable = loop_directories_children(
                     d, env_expected_dir_variable

@@ -7,6 +7,6 @@ This is the contributor guide for the `govcookiecutter` project.
 ../CODE_OF_CONDUCT.md
 ../CONTRIBUTING.md
 ./modify_govcookiecutter.md
-../{{ cookiecutter.repo_name }}/.govcookiecutter/organisational_frameworks/docs_repo_frameworks_README.md
+../{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}/.govcookiecutter/organisational_frameworks/docs_repo_frameworks_README.md
 
 ```
