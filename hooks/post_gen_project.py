@@ -24,32 +24,6 @@ def delete_files_and_folders(paths: Union[Path, str, List[Path], List[str]]) -> 
     _ = [f.unlink() for f in paths if f.is_file() and f.exists()]
 
 
-def set_aqa_framework(
-    dir_organisational_framework_aqa: Union[Path, str],
-    dir_cookiecutter_docs_aqa: Union[Path, str],
-) -> None:
-    """Set a specific organisational analytical quality assurance (AQA) framework.
-
-    Args:
-        dir_organisational_framework_aqa: A folder path that contains a specific
-            organisational AQA framework.
-        dir_cookiecutter_docs_aqa: A folder path within the outputted project
-            structure, where the contents of `dir_organisational_framework_aqa` will
-            reside.
-
-    Returns:
-        The organisation-specific AQA framework in the outputted project structure's
-        `dir_cookiecutter_docs_aqa` folder.
-
-    """
-
-    # Remove the default `docs/aqa` folder, and its contents
-    delete_files_and_folders(dir_cookiecutter_docs_aqa)
-
-    # Copy the relevant organisational AQA framework to the `docs/aqa` folder
-    _ = Path(dir_organisational_framework_aqa).rename(dir_cookiecutter_docs_aqa)
-
-
 def parse_features_json(file: Union[Path, str]) -> List[Path]:
     """Parse a JSON file containing filepaths.
 
@@ -81,22 +55,6 @@ if __name__ == "__main__":
 
     # Define the folder path to `.govcookiecutter`
     DIR_GOVCOOKIECUTTER = Path(".govcookiecutter")
-
-    # Check `{{ cookiecutter.organisational_framework }}` is not `N/A`
-    if "{{ cookiecutter.organisational_framework }}" != "N/A":
-
-        # Define the folder path to the specific organisation framework of interest in
-        # the `organisational_frameworks`
-        # folder
-        DIR_ORGANISATIONAL_FRAMEWORKS = DIR_GOVCOOKIECUTTER.joinpath(
-            "organisational_frameworks", "{{ cookiecutter.organisational_framework }}"
-        )
-
-        # Transfer the `aqa` folder, and the pull/merge request templates to the
-        # correct folder paths
-        set_aqa_framework(
-            DIR_ORGANISATIONAL_FRAMEWORKS.joinpath("aqa"), Path("docs").joinpath("aqa")
-        )
 
     # Remove `DIR_GOVCOOKIECUTTER`
     delete_files_and_folders(DIR_GOVCOOKIECUTTER)

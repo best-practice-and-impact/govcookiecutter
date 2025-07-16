@@ -114,13 +114,6 @@ make docs
 This should create an HTML version of your documentation accessible from
 `docs/_build/index.html`.
 
-## Organisational frameworks
-
-Organisational frameworks are stored in the
-`.govcookiecutter/organisational_frameworks` folder. [If you would like to add your own
-organisation's framework, follow the instructions][docs-govcookiecutter-frameworks] in
-the `README.md` file in that folder.
-
 [code-of-conduct]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/CODE_OF_CONDUCT.md
 [coverage]: https://coverage.readthedocs.io/
 [detect-secrets-repo]: https://github.com/Yelp/detect-secrets/tree/master

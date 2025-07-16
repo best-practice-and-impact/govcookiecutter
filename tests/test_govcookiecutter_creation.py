@@ -5,14 +5,6 @@ import pytest
 from sphinx.cmd.build import main
 
 
-@pytest.mark.skip(
-    reason="Unclear how to test this, unless there is a title in each " "framework"
-)
-def test_organisational_framework_correct() -> None:
-    """Test that the correct organisational framework is built."""
-    pass
-
-
 @pytest.mark.parametrize("test_input_repository_name", ["a", "b"])
 def test_repo_name_directory_correct(
     cookies,
@@ -56,11 +48,9 @@ args_builds_correctly = [
 
 
 @pytest.mark.parametrize("test_input_context", args_builds_correctly)
-@pytest.mark.parametrize("test_input_organisational_framework", ["GDS", "N/A"])
 def test_builds_correctly(
     cookies,
     test_input_context: Dict[str, str],
-    test_input_organisational_framework: str,
 ) -> None:
     """Test that the projects are built correctly with no errors."""
 
@@ -68,7 +58,6 @@ def test_builds_correctly(
     test_output_project = cookies.bake(
         extra_context={
             **test_input_context,
-            "organisational_framework": test_input_organisational_framework,
         }
     )
 

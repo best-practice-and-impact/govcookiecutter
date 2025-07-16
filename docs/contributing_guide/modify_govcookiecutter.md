@@ -197,7 +197,6 @@ then use semantic versioning to number our releases][semver]. This helps our use
 select a different version of `govcookiecutter` to use based on their individual needs.
 
 [cookiecutter]: https://cookiecutter.readthedocs.io
-[docs-organisational-frameworks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/docs/%7B%7B%20cookiecutter.repo_name%20%7D%7D/.govcookiecutter/organisational_frameworks/docs_repo_frameworks_README.md
 [github-issues]: https://github.com/best-practice-and-impact/govcookiecutter/issues
 [html5-email-format]: https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address
 [jinja]: https://jinja.palletsprojects.com
