@@ -37,6 +37,45 @@ The cookiecutter template generated for each project will follow this folder str
     └── ...
 ```
 
+<details>
+<summary>Click to see a more detailed sitemap of the project</summary>
+
+```
+govcookiecutter/
+├── .github/
+│   ├── CODEOWNERS
+│   ├── pull_request_template.md
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   └── workflows/
+│       ├── check_markdown_links.yml
+│       ├── govcookiecutter-build.yml
+│       ├── govcookiecutter-deploy-documentation.yml
+│       └── govcookiecutter-template-build.yml
+├── docs/
+│   ├── index.md
+│   ├── conf.py
+│   ├── contributing_guide/
+│   ├── govcookiecutter_structure/
+│   ├── reference/
+│   ├── _static/
+│   └── _templates/
+├── example/
+├── hooks/
+├── tests/
+│   └── test_post_gen_project/
+├── README.md
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── LICENSE
+├── pyproject.toml
+├── requirements.txt
+└── Makefile
+```
+
+</details>
+
 ## Getting started
 
 First, make sure your system meets the requirements.
