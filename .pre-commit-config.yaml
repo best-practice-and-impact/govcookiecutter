@@ -7,30 +7,6 @@ repos:
       - id: check-added-large-files
         name: Check for files larger than 5 MB
         args: [ "--maxkb=5120" ]
-      - id: end-of-file-fixer
-        name: Check for a blank line at the end of scripts (auto-fixes)
-      - id: trailing-whitespace
-        name: Check for trailing whitespaces (auto-fixes)
-  - repo: https://github.com/pycqa/isort
-    rev: 6.0.1
-    hooks:
-      - id: isort
-        name: isort - Sort Python imports (auto-fixes)
-        args: [ "--profile", "black", "--filter-files" ]
-        exclude: test_example_module.py|run_pipeline.py
-  - repo: https://github.com/psf/black
-    rev: 25.1.0 # Replace by any tag/version: https://github.com/psf/black/tags
-    hooks:
-      - id: black
-        name: black - consistent Python code formatting (auto-fixes)
-        language_version: python # Should be a command that runs python3.6+
-        exclude: test_example_module.py|run_pipeline.py
-  - repo: https://github.com/PyCQA/flake8
-    rev: 7.1.2
-    hooks:
-      - id: flake8
-        name: flake8 - Python linting
-        exclude: test_example_module.py|run_pipeline.py
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.5.0
     hooks:
@@ -45,3 +21,13 @@ repos:
         name: bandit - Checks for vulnerabilities
         args: ["-c", "pyproject.toml"]
         additional_dependencies: ["bandit[toml]"]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.12
+    hooks:
+      # Run ruff linter.
+      - id: ruff-check
+        types_or: [ python, pyi ]
+        args: [ --fix ]
+      # Run ruff formatter.
+      - id: ruff-format
+        types_or: [ python, pyi ]

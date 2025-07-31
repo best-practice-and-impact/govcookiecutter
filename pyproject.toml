@@ -37,3 +37,27 @@ testpaths = [
 [tool.bandit]
 exclude_dirs = ["tests", "docs"]
 skips = []
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    ]
+ignore = ["D203", "E203"]
+
+[tool.ruff]
+line-length = 88
+exclude = [
+    "[{][{] cookiecutter.repo_name [}][}]/"
+]
+
+[tool.ruff.format]
+line-ending = "auto"
