@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased] -
 
 ### Added
-- Sitemap to README.md 
+- Sitemap to README.md
 
 ### Fixed
 
