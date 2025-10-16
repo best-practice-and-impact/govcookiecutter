@@ -19,8 +19,7 @@ this Git repository.
 
 ### `.flake8`
 
-A configuration file for the `flake8` Python package that provides linting. This file
-is based on the common configuration described in the [GDS Way][gds-way-flake8].
+A configuration file for the `flake8` Python package that provides linting.
 
 ### `.gitignore`
 
@@ -152,4 +151,3 @@ make requirements
 [cookiecutter]: https://cookiecutter.readthedocs.io/
 [detect-secrets]: https://github.com/Yelp/detect-secrets
 [docs-pre-commit-hooks]: https://github.com/best-practice-and-impact/govcookiecutter/blob/main/%7B%7B%20cookiecutter.repo_name%20%7D%7D/docs/contributor_guide/CONTRIBUTING.md#getting-started
-[gds-way-flake8]: https://gds-way.cloudapps.digital/manuals/programming-languages/python/python.html#common-configuration
