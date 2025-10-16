@@ -11,8 +11,8 @@ PATH_TEMPLATE_ENV = DIR_TEMPLATE.joinpath(".env")
 # directory names to ignore at the root-level of the `govcookiecutter` template
 # directory, and a list of dictionary names to ignore in certain root-level directories
 EXCLUDE_DIR_NAMES = ["__pycache__", "example_modules"]
-EXCLUDE_ROOT_DIR_NAMES = [*EXCLUDE_DIR_NAMES, ".govcookiecutter"]
-EXCLUDE_SUB_DIR_IN_PARENTS_NAMES = [*EXCLUDE_ROOT_DIR_NAMES, "docs"]
+EXCLUDE_ROOT_DIR_NAMES = [*EXCLUDE_DIR_NAMES, ".govcookiecutter", "data"]
+EXCLUDE_SUB_DIR_IN_PARENTS_NAMES = [*EXCLUDE_ROOT_DIR_NAMES, "docs", "data"]
 
 
 def remove_brackets_and_spaces(path_name: str) -> str:
