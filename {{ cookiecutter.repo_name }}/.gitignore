@@ -864,6 +864,7 @@ data/*
 !data/**/
 data/external/*
 data/raw/*
+!data/raw/README.md
 data/interim/*
 data/processed/*
 !data/external/.gitkeep

@@ -1,8 +1,6 @@
 # Summary
 
-Add your summary here - keep it brief, to the point, and in plain English. [For further
-information about pull requests, check out the GDS
-Way](https://gds-way.cloudapps.digital/standards/pull-requests.html).
+Add your summary here - keep it brief, to the point, and in plain English.
 
 # Checklists
 

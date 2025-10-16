@@ -27,6 +27,10 @@ The cookiecutter template generated for each project will follow this folder str
 .
 └── govcookiecutter/
     ├── {{ cookiecutter.repo_name }}/
+    │   ├── data/
+    │   │   ├── raw/
+    │   │   ├── interim/
+    │   │   └── processed/
     │   └── {{ cookiecutter.repo_name.lower().replace(' ', '_').replace('-', '_') }}/
     │       ├── example_modules/
     │       │   ├── __init__.py
