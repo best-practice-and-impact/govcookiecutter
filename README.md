@@ -141,6 +141,28 @@ Follow the prompts; if you are asked to re-download `govcookiecutter`, input `ye
 Default responses are shown in the squared brackets; to use them, leave your response
 blank, and press enter.
 
+### Setup Questions Overview
+When you run the installer it will ask a few questions to tailor the environment to your workflow.  
+Answer each one according to your current development setup.
+
+#### What does `locked_down_environment` mean?  
+A *locked‑down* environment is one where network access is restricted such that you can only install Python packages via `pip`. In this scenario you cannot fetch pre‑commit hooks (or any other files) directly from GitHub repositories. Typical examples include:
+
+- Corporate Continuous Integration  runners that block outbound git traffic.  
+- Air‑gapped virtual machines or containers that only have access to an internal PyPI mirror.  
+- Secure workstations where only vetted binaries may be installed.
+
+If however you do have unrestricted internet/GitHub access and can pull pre‑commit hooks straight from their repositories, then your environment is not locked down.
+
+
+#### Quick Self‑Check
+
+- **Can you run `git clone https://github.com/...` from the terminal?**  
+  - **No** → answer **Yes** (environment is locked down).  
+- **Are you limited to `pip install <package>` commands only?**  
+  - **Yes** → answer **Yes** (environment is locked down).  
+- **Otherwise** you have full GitHub access → answer **No** (environment is not locked down).
+
 Once you've answered all the prompts, your project will be created. Then:
 
 1. Set up a Python virtual environment — [there are many ways to set up a virtual
