@@ -142,10 +142,10 @@ Default responses are shown in the squared brackets; to use them, leave your res
 blank, and press enter.
 
 ### Setup Questions Overview
-When you run the installer it will ask a few questions to tailor the environment to your workflow.  
+When you run the installer it will ask a few questions to tailor the environment to your workflow.
 Answer each one according to your current development setup.
 
-#### What does `locked_down_environment` mean?  
+#### What does `locked_down_environment` mean?
 A *locked‑down* environment is one where network access is restricted such that you can only install Python packages via `pip`. In this scenario you cannot fetch pre‑commit hooks (or any other files) directly from GitHub repositories. Typical examples include:
 
 - Corporate Continuous Integration  runners that block outbound git traffic.
@@ -166,7 +166,7 @@ If however you do have unrestricted internet/GitHub access and can pull pre‑co
 Once you've answered all the prompts, your project will be created. Then:
 
 1. Set up a Python virtual environment — [there are many ways to set up a virtual
-  environment][pluralsight], so we'll let you decide what's best for you!
+ environment][pluralsight], so we'll let you decide what's best for you!
 
 2. In your terminal, navigate to your new project, and initialise Git
    ```shell
