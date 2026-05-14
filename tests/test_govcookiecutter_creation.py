@@ -48,7 +48,7 @@ def test_request_template_generated_correctly(
 
 
 @pytest.mark.skip(
-    reason="Unclear how to test this, unless there is a title in each " "framework"
+    reason="Unclear how to test this, unless there is a title in each framework"
 )
 def test_organisational_framework_correct() -> None:
     """Test that the correct organisational framework is built."""
