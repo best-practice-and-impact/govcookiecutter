@@ -199,7 +199,6 @@ def test_injected_counts_correct(
     test_input_variable_counts: Dict[str, int],
     test_input_other_context: Dict[str, str],
 ) -> None:
-
     # Generate the expected counts
     test_expected_counts = replace_cookiecutter_jinja2_counts(
         test_input_variable_counts,

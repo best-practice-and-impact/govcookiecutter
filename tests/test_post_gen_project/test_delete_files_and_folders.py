@@ -45,8 +45,8 @@ args_test_delete_files_and_folders = [
 
 
 @pytest.mark.parametrize(
-    "test_input_folder_names, test_extra_folder_names, test_input_filenames, "
-    "test_extra_filenames",
+    "test_input_folder_names, test_extra_folder_names, "
+    "test_input_filenames, test_extra_filenames",
     args_test_delete_files_and_folders,
 )
 class TestDeleteFilesAndFolders:

@@ -1,4 +1,7 @@
 # `govcookiecutter`
+[![Deploy Documentation](https://github.com/best-practice-and-impact/govcookiecutter/actions/workflows/govcookiecutter-deploy-documentation.yml/badge.svg)](https://github.com/best-practice-and-impact/govcookiecutter/actions/workflows/govcookiecutter-deploy-documentation.yml)
+[![template build](https://github.com/best-practice-and-impact/govcookiecutter/actions/workflows/govcookiecutter-template-build.yml/badge.svg)](https://github.com/best-practice-and-impact/govcookiecutter/actions/workflows/govcookiecutter-template-build.yml)
+[![Code style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 ## What is govcookiecutter?
 
