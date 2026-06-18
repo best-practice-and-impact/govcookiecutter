@@ -1,3 +1,9 @@
+
+[project]
+name = 'govcookiecutter'
+version = "0.0.0"
+
+
 # `coverage` configurations
 [tool.coverage.run]
 source = [
@@ -61,3 +67,9 @@ exclude = [
 
 [tool.ruff.format]
 line-ending = "auto"
+
+[tool.setuptools.package-data]
+hooks = ["*.zip"]
+
+[project.scripts]
+start_govcookiecutter = "hooks.packaging_utils:start_govcookiecutter"
